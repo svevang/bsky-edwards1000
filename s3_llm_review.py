@@ -1,0 +1,82 @@
+#!/usr/bin/env python3
+"""Stage 3: stages/01_parsed.json + stages/02_descriptions.json -> stages/03_llm_review.json
+
+Sends rows in batches to Claude (via the `claude` CLI) and asks it to flag rows whose
+title, year and description disagree, or whose title looks mangled. Rows are only
+re-reviewed when their title/year/description change. --limit K reviews just K rows so
+you can check the output early; --redo N re-asks about one row.
+
+Manual: set "ok": true and "pinned": true on an entry to dismiss a flag permanently.
+"""
+import json
+import subprocess
+import sys
+import stage
+
+BATCH = 60
+
+PROMPT = """You are checking a dataset of 1960s films parsed from social-media posts and joined to
+Wikipedia intros. For each row below, decide whether it is CONSISTENT: the description is clearly
+about a film with that title (allowing for missing "The", accents, alternate/foreign titles, and
+minor punctuation), and the film's release year matches `year` (allow +/-1 for
+festival-vs-general release; note it if it differs at all). Also flag titles that look mangled
+(truncated, review text leaked in, wrong casing artifacts) or descriptions about a non-film
+(album, play, person, franchise, remake from another decade).
+
+Reply with ONLY a JSON array, no prose, of the problem rows:
+[{"number": <int>, "issue": "<short reason>", "suggested_title": "<or null>", "suggested_year": <int or null>}]
+Return [] if all rows are consistent.
+
+Rows:
+"""
+
+
+def ask(rows):
+    lines = [json.dumps({"number": int(r["number"]), "title": r["title"], "year": int(r["year"]),
+                         "wikipedia_page": (r["url"] or "").rsplit("/", 1)[-1],
+                         "description": (r["description"] or "")[:350]}, ensure_ascii=False) for r in rows]
+    out = subprocess.run(["claude", "-p", "--output-format", "text"],
+                         input=PROMPT + "\n".join(lines), capture_output=True, text=True, check=True).stdout
+    start, end = out.find("["), out.rfind("]")
+    if start < 0 or end < 0:
+        raise ValueError(f"no JSON array in reply:\n{out[:500]}")
+    return json.loads(out[start:end + 1])
+
+
+def main():
+    a = stage.args(__doc__)
+    parsed = stage.load(stage.PARSED)
+    descs = stage.load(stage.DESCRIPTIONS)
+    reviews = stage.load(stage.LLM_REVIEW, default={})
+    # input row = parsed fields + description fields
+    inputs = {rk: {**parsed[rk], **{k: descs[rk].get(k) for k in ("url", "description", "page")}}
+              for rk in descs if parsed[rk]["number"]}
+
+    def in_fp(r): return stage.fp(r["title"], r["year"], r["description"])
+    def num(r): return r["number"]
+
+    todo = stage.select_todo(a, inputs, reviews, in_fp, num)
+    print(f"{len(inputs)} rows, {len(todo)} to review in batches of {BATCH}", file=sys.stderr)
+    for i in range(0, len(todo), BATCH):
+        batch = [inputs[rk] for rk in todo[i:i + BATCH]]
+        print(f"  batch {i // BATCH + 1}/{-(-len(todo) // BATCH)} (#{batch[0]['number']}-#{batch[-1]['number']})...",
+              file=sys.stderr, end=" ", flush=True)
+        problems = {p["number"]: p for p in ask(batch)}
+        for r in batch:
+            p = problems.get(int(r["number"]))
+            reviews[r["rkey"]] = {"number": r["number"], "title": r["title"], "fp": in_fp(r),
+                                  "ok": p is None, "status": "ok" if p is None else "flagged",
+                                  **({k: v for k, v in p.items() if k != "number"} if p else {})}
+        stage.save(stage.LLM_REVIEW, reviews)
+        print(f"{len(problems)} flagged", file=sys.stderr)
+
+    stage.report("03_llm_review", reviews, inputs)
+    flagged = sorted((v for v in reviews.values() if not v["ok"]), key=lambda v: v["number"])
+    for v in flagged:
+        sug = ", ".join(f"{k.replace('suggested_', '')}={val!r}" for k in ("suggested_title", "suggested_year")
+                        if (val := v.get(k)) not in (None, ""))
+        print(f"  #{v['number']:>3} {v['title']:40} {v['issue']}" + (f"  -> {sug}" if sug else ""))
+
+
+if __name__ == "__main__":
+    main()
