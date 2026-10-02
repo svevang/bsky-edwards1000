@@ -2,8 +2,8 @@
 """One-off: stages/*.json -> entries/<rkey>/*.yaml
 
 Parse is rerun so parsed.yaml holds the automated values; hand corrections become
-override.yaml keys: parse pins -> parsed.<field>, page pins -> wikipedia.page, hand-accepted
-descriptions -> wikipedia.note "", dismissed reviews -> review.ok (+ review.dismissed).
+override.yaml keys: parse pins -> parsed.<field>, page pins -> wikipedia.page, dismissed
+reviews -> review.ok (+ review.dismissed). Hand-accepted description notes are kept as notes.
 Stage files are only written for rows the old stage produced. A row whose old fp was already
 stale keeps that fp, so the new stages redo it. Refuses to touch an existing entries/
 unless --force, which rebuilds it from scratch.
@@ -43,9 +43,8 @@ def build(rk, post, old, d, v, problems):
             override["wikipedia.page"] = d["page"]
         if d["status"] == "not_found":
             w.update(page=None, note=d["note"] or "no film page found")
-        elif d["note"]:  # status set ok by hand over a note: an acceptance
+        elif d["note"]:  # status set ok by hand over a note: keep the automated note
             w["note"] = d["note"].removeprefix("accepted: ")
-            override["wikipedia.note"] = ""
         files["wikipedia"] = w
     if v:
         files["review"] = {k: x for k, x in fields("review", v).items() if k != "dismissed"}
