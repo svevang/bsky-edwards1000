@@ -2,6 +2,7 @@
 """Download all posts by a Bluesky user carrying a given hashtag.
 
 Usage: python3 bsky_tag_dl.py <handle-or-did> <tag-without-#> [outfile.json]
+s0_download.py uses fetch() to write entries/ instead.
 
 Walks the user's public repo (com.atproto.repo.listRecords) and filters
 locally, so it doesn't depend on the search index being complete.
@@ -59,12 +60,9 @@ def tags_of(record):
     return {t.lower() for t in out}
 
 
-def main():
-    if len(sys.argv) < 3:
-        sys.exit(__doc__)
-    actor, tag = sys.argv[1], sys.argv[2].lstrip("#").lower()
-    outfile = sys.argv[3] if len(sys.argv) > 3 else f"{tag}.json"
-
+def fetch(actor, tag):
+    """All of actor's posts carrying #tag, oldest first."""
+    tag = tag.lstrip("#").lower()
     did, pds = resolve(actor)
     print(f"{actor} -> {did} @ {pds}", file=sys.stderr)
 
@@ -87,11 +85,20 @@ def main():
                 })
         cursor = page.get("cursor")
         print(f"  scanned {scanned}, matched {len(matches)}", file=sys.stderr)
-        if not cursor or not page.get("records"):
+        if not cursor:
             break
         time.sleep(0.2)
 
     matches.sort(key=lambda m: m["createdAt"] or "")
+    return matches
+
+
+def main():
+    if len(sys.argv) < 3:
+        sys.exit(__doc__)
+    actor, tag = sys.argv[1], sys.argv[2].lstrip("#").lower()
+    outfile = sys.argv[3] if len(sys.argv) > 3 else f"{tag}.json"
+    matches = fetch(actor, tag)
     with open(outfile, "w") as f:
         json.dump(matches, f, indent=2, ensure_ascii=False)
     print(f"\n{len(matches)} posts with #{tag} -> {outfile}", file=sys.stderr)

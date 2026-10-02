@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage 1: stages/00_posts.json -> stages/01_parsed.json  (number, title, year per post)
+"""Stage 1: entries/*/post.yaml -> parsed.yaml  (number, title, year per post)
 
 Posts look like:
     #Edwards1000SixtiesMovies
@@ -8,13 +8,13 @@ Posts look like:
     <review...>
 The watchlist is 100 films per year in order, so year = 1960 + (number-1)//100.
 
-Each output entry keeps `raw_title_line` and `text_head` so a bad parse can be traced
-back to its source without opening 00_posts.json.
-
-Manual fixes: `./fix.py N title "..."` / `./fix.py N year YYYY` pin the entry; it survives
-re-runs (even --redo/--force) unless the post text itself changes. `./fix.py N unpin` undoes.
+parsed.yaml keeps `raw_title_line` so a bad parse can be traced; post.yaml sits beside it.
+It always holds the automated values: hand fixes (`./fix.py N title "..."`) are overrides.
 """
 import re
+import sys
+import entries
+import schema
 import stage
 
 NUM_RE = re.compile(r"^\s*(\d+)\s*/\s*[12]000\s*:?\s*$", re.M)  # tolerate "200/2000" typo
@@ -62,32 +62,33 @@ def parse(text):
 
 def main():
     a = stage.args(__doc__)
-    posts = {p["url"].rsplit("/", 1)[-1]: p for p in stage.load(stage.POSTS)}
-    parsed = stage.load(stage.PARSED, default={})
 
-    def in_fp(p): return stage.fp(p["text"])
-    def num(p):
-        m = NUM_RE.search(p["text"]); return int(m.group(1)) if m else None
+    def num(v):  # overridden number once parsed, else the one in the post text
+        if "parsed.number" in v["override"] or "parsed" in v:
+            return v["override"].get("parsed.number", (v.get("parsed") or {}).get("number"))
+        m = NUM_RE.search(v["post"]["text"]); return int(m.group(1)) if m else None
 
-    todo = stage.select_todo(a, posts, parsed, in_fp, num)
+    todo = stage.select("parsed", a, num)
+    fields = [k for k in schema.load_schema()["files"]["parsed"]["fields"] if k != "fp"]
     for rk in todo:
-        p = posts[rk]
-        r = parse(p["text"])
-        r.update(rkey=rk, url=p["url"], createdAt=p["createdAt"], fp=in_fp(p),
-                 text_head=re.sub(r"\s+", " ", p["text"])[:160])
-        parsed[rk] = r
-    stage.save(stage.PARSED, parsed)
+        v = entries.view(rk)
+        r = parse(v["post"]["text"])
+        entries.write(rk, "parsed", {"fp": schema.fp("parsed", v), **{k: r[k] for k in fields}})
+        entries.update_status(rk)
+    print(f"parsed {len(todo)} new/changed rows", file=sys.stderr)
+    stage.finish("parsed")
 
-    print(f"parsed {len(todo)} new/changed of {len(posts)} posts", file=__import__("sys").stderr)
-    stage.report("01_parsed", parsed, posts)
-    nums = [r["number"] for r in parsed.values() if r["number"]]
+    views = {rk: v for rk in entries.list_entries()
+             if entries.read(rk, "status") != "deleted" and "parsed" in (v := entries.view(rk))}
+    nums = [v["parsed"]["number"] for v in views.values() if v["parsed"]["number"]]
     dups = sorted({n for n in nums if nums.count(n) > 1})
     gaps = sorted(set(range(1, max(nums) + 1)) - set(nums)) if nums else []
     if dups: print(f"  duplicate numbers: {dups}")
     if gaps: print(f"  missing numbers: {gaps}")
-    for r in sorted(parsed.values(), key=lambda r: r["number"] or 0):
-        if r["status"] == "needs_review":
-            print(f"  #{r['number']} {r['title']!r}: {r['note']}   raw={r['raw_title_line']!r}  rkey={r['rkey']}")
+    for rk, v in sorted(views.items(), key=lambda kv: kv[1]["parsed"]["number"] or 0):
+        r = v["parsed"]
+        if schema.unsure("parsed", v):
+            print(f"  #{r['number']} {r['title']!r}: {r['note']}   raw={r['raw_title_line']!r}  rkey={rk}")
 
 
 if __name__ == "__main__":

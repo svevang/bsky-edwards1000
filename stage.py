@@ -1,25 +1,26 @@
 """Shared helpers for the pipeline stages.
 
-Every stage reads the previous stage's file and writes its own, both JSON dicts keyed
-by post rkey. Each output entry carries "fp": a fingerprint of the input fields it was
-computed from, so a stage only reprocesses rows whose input changed. Manual edits to a
-stage file (pins, overrides) are preserved because they set "pinned": true.
+Every stage reads entry views (entries/<rkey>/, overrides applied) and writes its own file
+per entry as soon as the row finishes. Each stage file carries "fp": a fingerprint of the
+inputs schema.yaml lists for it, so a stage only reprocesses rows whose inputs changed.
+Hand fixes live in override.yaml, which stages never write, so no rerun can clobber them.
 
-Common CLI flags handled by `select_todo`:
+Common CLI flags handled by `select`:
   --force            redo every row
   --redo N[,N...]    redo rows with these watchlist numbers
   --only N[,N...]    consider only rows with these watchlist numbers
   --limit K          process at most K rows this run (lets you check output early)
 
-Pinned entries are skipped even under --force/--redo while their input is unchanged, so a
-hand fix can't be clobbered by a rerun. A stage that re-applies the pin itself (s2 fetching a
-pinned "page") passes redo_pinned=True so --redo N reaches it. `fix.py` sets and clears pins.
+The JSON paths, load and save below are for the old stages/ files (fix.py, status.py,
+s4_join.py) until they are removed.
 """
 import argparse
 import hashlib
 import json
 import os
 import sys
+import entries
+import schema
 
 STAGES = "stages"
 POSTS = f"{STAGES}/00_posts.json"
@@ -64,23 +65,41 @@ def numbers(csv):
     return {int(n) for n in csv.split(",") if n.strip()}
 
 
-def select_todo(a, inputs, existing, input_fp, number_of, redo_pinned=False):
-    """inputs: {rkey: input row}; existing: {rkey: previous output}.
-    Returns rkeys to (re)process, honoring --force/--redo/--only/--limit and pins."""
+def select(name, a, number_of=None):
+    """rkeys whose stage file `name` is missing or stale, or asked for by --force/--redo.
+    Skips deleted entries, entries the file doesn't apply to, and entries whose earlier
+    stage files are missing or stale. number_of(view) gives the watchlist number for
+    --only/--redo; by default the overridden parsed.number."""
+    number_of = number_of or (lambda v: (v.get("parsed") or {}).get("number"))
     redo, only = numbers(a.redo), numbers(a.only)
+    earlier = schema.stage_files()[:schema.stage_files().index(name)]
     todo = []
-    for rk, row in inputs.items():
-        n = number_of(row)
-        if only and n not in only:
+    for rk in entries.list_entries():
+        if entries.read(rk, "status") == "deleted":
             continue
-        prev = existing.get(rk)
-        changed = not prev or prev.get("fp") != input_fp(row)
-        if prev and prev.get("pinned") and not changed and not (redo_pinned and n in redo):
-            continue  # pinned and input unchanged
-        if changed or a.force or n in redo:
-            todo.append(rk)
-    todo.sort(key=lambda rk: number_of(inputs[rk]) or 10**6)
+        v = entries.view(rk)
+        n = number_of(v) if "post" in v else None
+        if "post" not in v or not schema.applies(name, v) or (only and n not in only):
+            continue
+        if any(schema.applies(e, v) and not fresh(e, v) for e in earlier):
+            continue
+        if not fresh(name, v) or a.force or n in redo:
+            todo.append((n is None, n or 0, rk))
+    todo = [rk for *_, rk in sorted(todo)]
     return todo[: a.limit] if a.limit else todo
+
+
+def fresh(name, view):
+    return name in view and view[name].get("fp") == schema.fp(name, view)
+
+
+def finish(stage_name):
+    """Recompute every entry's status (it depends on all stages) and print the counts."""
+    counts = {}
+    for rk in entries.list_entries():
+        s = entries.update_status(rk)
+        counts[s] = counts.get(s, 0) + 1
+    print(f"{stage_name}: {sum(counts.values())} entries {counts}", file=sys.stderr)
 
 
 def report(stage_name, outputs, inputs=None):

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Step 1 (automated): download -> parse -> Wikipedia descriptions -> movies.csv.
-# Every stage writes stages/NN_*.json and only processes new/changed rows, so you can
-# stop after any stage, inspect, fix, and continue.
+# Every stage writes one file per post under entries/<rkey>/ and only processes
+# new/changed rows, so you can stop after any stage, inspect, fix, and continue.
 #
 # Usage: ./step1_build.sh [--skip-download] [stage args...]
 #   stage args (passed to every stage): --force | --redo N,N | --only N,N | --limit K
@@ -17,11 +17,11 @@ TAG="Edwards1000SixtiesMovies"
 hr() { printf '\n\033[1m== %s ==\033[0m\n' "$1"; }
 
 if [[ "${1:-}" == "--skip-download" ]]; then shift; hr "0: download skipped"
-else hr "0: downloading #$TAG posts -> stages/00_posts.json"; uv run python bsky_tag_dl.py "$HANDLE" "$TAG" stages/00_posts.json; fi
+else hr "0: downloading #$TAG posts -> entries/*/post.yaml"; uv run python s0_download.py "$HANDLE" "$TAG"; fi
 
-hr "1: parse titles/years -> stages/01_parsed.json";        uv run python s1_parse.py "$@"
-hr "2: Wikipedia descriptions -> stages/02_descriptions.json"; uv run python s2_descriptions.py "$@"
-hr "4: join -> movies.csv";                                  uv run python s4_join.py
+hr "1: parse titles/years -> entries/*/parsed.yaml";        uv run python s1_parse.py "$@"
+hr "2: Wikipedia descriptions -> entries/*/wikipedia.yaml"; uv run python s2_descriptions.py "$@"
+hr "3: render -> movies.csv";                               uv run python render.py
 
 cat <<'TXT'
 

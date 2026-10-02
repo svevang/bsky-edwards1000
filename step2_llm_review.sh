@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Step 2 (LLM in the loop): Claude reads each row and flags title/year/description
-# disagreements -> stages/03_llm_review.json, then movies.csv is rebuilt with the flags.
+# disagreements -> entries/*/review.yaml, then movies.csv is rebuilt with the flags.
 # Uses the `claude` CLI (your login; no API key). Only rows not yet reviewed, or whose
 # inputs changed, are sent.
 #
@@ -10,7 +10,7 @@ cd "$(dirname "$0")"
 command -v claude >/dev/null || { echo "claude CLI not found"; exit 1; }
 
 uv run python s3_llm_review.py "$@"
-uv run python s4_join.py
+uv run python render.py
 
 cat <<'TXT'
 

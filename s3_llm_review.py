@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
-"""Stage 3: stages/01_parsed.json + stages/02_descriptions.json -> stages/03_llm_review.json
+"""Stage 3: parsed.yaml + wikipedia.yaml -> review.yaml
 
 Sends rows in batches to Claude (via the `claude` CLI) and asks it to flag rows whose
 title, year and description disagree, or whose title looks mangled. Rows are only
-re-reviewed when their title/year/description change. --limit K reviews just K rows so
-you can check the output early; --redo N re-asks about one row.
+re-reviewed when their title/year/description change; each batch is saved as it returns.
+--limit K reviews just K rows so you can check the output early; --redo N re-asks about one row.
 
-Manual: `./fix.py N dismiss "reason"` dismisses a flag; it sticks until the row's inputs change.
+Manual: `./fix.py N dismiss "reason"` dismisses a flag with a review.ok override.
 """
 import json
 import subprocess
 import sys
+import entries
+import schema
 import stage
 
 BATCH = 60
@@ -45,37 +47,33 @@ def ask(rows):
 
 def main():
     a = stage.args(__doc__)
-    parsed = stage.load(stage.PARSED)
-    descs = stage.load(stage.DESCRIPTIONS)
-    reviews = stage.load(stage.LLM_REVIEW, default={})
-    # input row = parsed fields + description fields
-    inputs = {rk: {**parsed[rk], **{k: descs[rk].get(k) for k in ("url", "description", "page")}}
-              for rk in descs if parsed[rk]["number"]}
-
-    def in_fp(r): return stage.fp(r["title"], r["year"], r["description"])
-    def num(r): return r["number"]
-
-    todo = stage.select_todo(a, inputs, reviews, in_fp, num)
-    print(f"{len(inputs)} rows, {len(todo)} to review in batches of {BATCH}", file=sys.stderr)
+    todo = stage.select("review", a)
+    views = {rk: entries.view(rk) for rk in todo}
+    inputs = {rk: {"rkey": rk, **{k: v["parsed"][k] for k in ("number", "title", "year")},
+                   **{k: v["wikipedia"].get(k) for k in ("url", "description")}} for rk, v in views.items()}
+    print(f"{len(todo)} to review in batches of {BATCH}", file=sys.stderr)
     for i in range(0, len(todo), BATCH):
         batch = [inputs[rk] for rk in todo[i:i + BATCH]]
         print(f"  batch {i // BATCH + 1}/{-(-len(todo) // BATCH)} (#{batch[0]['number']}-#{batch[-1]['number']})...",
               file=sys.stderr, end=" ", flush=True)
         problems = {p["number"]: p for p in ask(batch)}
         for r in batch:
-            p = problems.get(int(r["number"]))
-            reviews[r["rkey"]] = {"number": r["number"], "title": r["title"], "fp": in_fp(r),
-                                  "ok": p is None, "status": "ok" if p is None else "flagged",
-                                  **({k: v for k, v in p.items() if k != "number"} if p else {})}
-        stage.save(stage.LLM_REVIEW, reviews)
+            p = problems.get(int(r["number"])) or {}
+            entries.write(r["rkey"], "review", {"fp": schema.fp("review", views[r["rkey"]]), "ok": not p,
+                                                **{k: p.get(k) for k in ("issue", "suggested_title", "suggested_year") if p}})
+            entries.update_status(r["rkey"])
         print(f"{len(problems)} flagged", file=sys.stderr)
+    stage.finish("review")
 
-    stage.report("03_llm_review", reviews, inputs)
-    flagged = sorted((v for v in reviews.values() if not v["ok"]), key=lambda v: v["number"])
+    flagged = sorted((v for rk in entries.list_entries() if entries.read(rk, "status") != "deleted"
+                      and "review" in (v := entries.view(rk)) and schema.applies("review", v)
+                      and schema.unsure("review", v)),
+                     key=lambda v: v["parsed"]["number"] or 0)
     for v in flagged:
+        r = v["review"]
         sug = ", ".join(f"{k.replace('suggested_', '')}={val!r}" for k in ("suggested_title", "suggested_year")
-                        if (val := v.get(k)) not in (None, ""))
-        print(f"  #{v['number']:>3} {v['title']:40} {v['issue']}" + (f"  -> {sug}" if sug else ""))
+                        if (val := r.get(k)) not in (None, ""))
+        print(f"  #{v['parsed']['number']:>3} {v['parsed']['title']:40} {r.get('issue')}" + (f"  -> {sug}" if sug else ""))
 
 
 if __name__ == "__main__":

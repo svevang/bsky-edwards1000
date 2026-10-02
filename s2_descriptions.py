@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
-"""Stage 2: stages/01_parsed.json -> stages/02_descriptions.json  (Wikipedia intro per film)
+"""Stage 2: parsed.yaml -> wikipedia.yaml  (Wikipedia intro per film)
 
 One API call per film (search + intro extract). A candidate page is accepted when it's a
 film, its title matches exactly (ignoring accents/leading article), and the stated release
 year matches; otherwise the best guess is kept with status "needs_review".
 
-Manual fixes: `./fix.py N page "Exact Wikipedia Title"` (pins the page and fetches it).
-Rows are only refetched when title/year change.
+Manual fixes: `./fix.py N page "Exact Wikipedia Title"` sets the wikipedia.page override;
+that page is then fetched directly. Rows are only refetched when title, year or that
+override change. Each row is saved as soon as it's fetched.
 """
 import json
 import re
 import sys
+import entries
+import schema
 import stage
 import time
 import urllib.parse
@@ -77,7 +80,7 @@ def search(title, year):
 
 
 def summary(page):
-    """Fetch one exact page (used for pinned entries)."""
+    """Fetch one exact page (used for a wikipedia.page override)."""
     c = candidates(page, limit=1)
     return c[0] if c and c[0]["title"].lower() == page.lower() else None
 
@@ -121,18 +124,13 @@ def pick(title, year, cands):
 
 def main():
     a = stage.args(__doc__)
-    parsed = {rk: r for rk, r in stage.load(stage.PARSED).items() if r["number"]}
-    descs = stage.load(stage.DESCRIPTIONS, default={})
-
-    def in_fp(r): return stage.fp(r["title"], r["year"])
-    def num(r): return r["number"]
-
-    todo = stage.select_todo(a, parsed, descs, in_fp, num, redo_pinned=True)
-    print(f"{len(parsed)} rows, {len(todo)} to fetch", file=sys.stderr)
+    todo = stage.select("wikipedia", a)
+    print(f"{len(todo)} to fetch", file=sys.stderr)
     for i, rk in enumerate(todo, 1):
-        r = parsed[rk]
+        v = entries.view(rk)
+        r = v["parsed"]
         title, year = r["title"], r["year"]
-        pinned_page = (descs.get(rk) or {}).get("page") if (descs.get(rk) or {}).get("pinned") else None
+        pinned_page = v["override"].get("wikipedia.page")
         try:
             if pinned_page:
                 s = summary(pinned_page)
@@ -142,28 +140,24 @@ def main():
         except Exception as e:
             print(f"  !! #{r['number']} {title}: {e}", file=sys.stderr)
             continue
-        entry = {"number": r["number"], "title": title, "year": year, "fp": in_fp(r),
-                 "page": page, "url": s["url"] if s else None,
-                 "description": s["extract"] if s else None,
-                 "status": "not_found" if not s else "pinned" if pinned_page else "needs_review" if note else "ok",
-                 "note": note}
-        if pinned_page:
-            entry["pinned"] = True
-        descs[rk] = entry
-        mark = {"ok": " ", "pinned": "P", "needs_review": "?", "not_found": "X"}[entry["status"]]
+        entries.write(rk, "wikipedia", {"fp": schema.fp("wikipedia", v), "page": page if s else None,
+                                        "url": s["url"] if s else None,
+                                        "description": s["extract"] if s else None, "note": note})
+        entries.update_status(rk)
+        mark = "X" if not s else "P" if pinned_page else "?" if note else " "
         print(f"  [{mark}] {i}/{len(todo)} #{r['number']} {title} ({year}) -> {page}"
               + (f"  [{note}]" if note else ""), file=sys.stderr)
-        if i % 10 == 0:
-            stage.save(stage.DESCRIPTIONS, descs)
         time.sleep(1.0)
-    stage.save(stage.DESCRIPTIONS, descs)
+    stage.finish("wikipedia")
 
-    stage.report("02_descriptions", descs, parsed)
-    bad = [v for v in descs.values() if v["status"] in ("needs_review", "not_found")]
+    bad = [v for rk in entries.list_entries() if entries.read(rk, "status") != "deleted"
+           and "wikipedia" in (v := entries.view(rk)) and schema.applies("wikipedia", v)
+           and schema.unsure("wikipedia", v)]
     if bad:
-        print("review these (set \"page\" + \"pinned\": true, then --redo N):", file=sys.stderr)
-        for v in sorted(bad, key=lambda v: v["number"]):
-            print(f"  #{v['number']} {v['title']} -> {v['page']}: {v['note']}", file=sys.stderr)
+        print("review these (./fix.py N page \"Wikipedia Title\"):", file=sys.stderr)
+        for v in sorted(bad, key=lambda v: v["parsed"]["number"] or 0):
+            print(f"  #{v['parsed']['number']} {v['parsed']['title']} -> {v['wikipedia']['page']}: "
+                  f"{v['wikipedia']['note']}", file=sys.stderr)
 
 
 if __name__ == "__main__":
