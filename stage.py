@@ -10,42 +10,12 @@ Common CLI flags handled by `select`:
   --redo N[,N...]    redo rows with these watchlist numbers
   --only N[,N...]    consider only rows with these watchlist numbers
   --limit K          process at most K rows this run (lets you check output early)
-
-The JSON paths, load and save below are for the old stages/ files (s4_join.py) until
-they are removed.
 """
 import argparse
 import hashlib
-import json
-import os
 import sys
 import entries
 import schema
-
-STAGES = "stages"
-POSTS = f"{STAGES}/00_posts.json"
-PARSED = f"{STAGES}/01_parsed.json"
-DESCRIPTIONS = f"{STAGES}/02_descriptions.json"
-LLM_REVIEW = f"{STAGES}/03_llm_review.json"
-FINAL = "movies.csv"
-
-
-def load(path, default=None):
-    try:
-        with open(path) as f:
-            return json.load(f)
-    except FileNotFoundError:
-        if default is None:
-            sys.exit(f"{path} not found — run the previous stage first")
-        return default
-
-
-def save(path, data):
-    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
-    tmp = path + ".tmp"
-    with open(tmp, "w") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-    os.replace(tmp, path)
 
 
 def fp(*parts):
@@ -100,11 +70,3 @@ def finish(stage_name):
         s = entries.update_status(rk)
         counts[s] = counts.get(s, 0) + 1
     print(f"{stage_name}: {sum(counts.values())} entries {counts}", file=sys.stderr)
-
-
-def report(stage_name, outputs, inputs=None):
-    counts = {}
-    for v in outputs.values():
-        counts[v.get("status", "?")] = counts.get(v.get("status", "?"), 0) + 1
-    extra = f", {len(inputs) - len(outputs)} not yet processed" if inputs is not None and len(inputs) > len(outputs) else ""
-    print(f"{stage_name}: {len(outputs)} rows {counts}{extra}", file=sys.stderr)
