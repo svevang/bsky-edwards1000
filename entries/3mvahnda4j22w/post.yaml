@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mvahnda4j22w
+cid: bafyreihrxumjhe4p5yumugcfbw3ekomllhrg754mvv3n5iri4nnx5jtade
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mvahnda4j22w
+createdAt: '2026-09-11T11:29:42.633Z'
+text: "#Edwards1000SixtiesMovies \n\n483/1000:\nSEANCE ON A WET AFTERNOON\n\nThis is definitely a unique film of 60s British cinema, since it intricately takes its audience on an unusually disturbing yet fascinating subject matter: a medium's elaborate scheme to prove that her psychic skills are not a joke."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n483/1000:\nSEANCE ON A WET AFTERNOON\n\nThis is definitely a unique film of 60s British cinema, since it intricately takes its audience on an unusually disturbing yet fascinating subject matter: a medium's elaborate scheme to prove that her psychic skills are not a joke."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidf7d73bwccbylvnyrsrpc7csylygxsztwwt65n7rcwoo3qda3y34
+        size: 49401
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 640
+        height: 480
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-09-11T11:29:42.633Z'

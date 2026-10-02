@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mppcfxs3vc27
+cid: bafyreiarp7k74cvqm6lyknq7ahml4xpf7n55xzxl523h7sq77r653b3f5e
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mppcfxs3vc27
+createdAt: '2026-07-03T00:34:53.339Z'
+text: "#Edwards1000SixtiesMovies \n\n412/1000:\nTHE TRAIN\n\nThis action-packed movie from Frankenheimer shows that Lancaster is also great in the action film genre aside from his Western and drama roles. It's crazily superb how deeply spectacular this wartime railway film is, despite not being filmed in color."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n412/1000:\nTHE TRAIN\n\nThis action-packed movie from Frankenheimer shows that Lancaster is also great in the action film genre aside from his Western and drama roles. It's crazily superb how deeply spectacular this wartime railway film is, despite not being filmed in color."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicsfwnpvjwq4jhkpzozjhiyda7vcbdz5etk24udjyfgtv4swej2si
+        size: 57853
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-07-03T00:34:53.339Z'

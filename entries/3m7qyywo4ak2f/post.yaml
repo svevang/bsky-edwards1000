@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m7qyywo4ak2f
+cid: bafyreicobx7gz672kgdd5ccl7piirkclu6rddp5f5uivgpax4f5sw54enu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m7qyywo4ak2f
+createdAt: '2025-12-12T02:08:45.696Z'
+text: "#Edwards1000SixtiesMovies \n\n227/1000:\nBURN, WITCH BURN (aka NIGHT OF THE EAGLE)\n\nA minor British horror film that has a convoluted plot but still has some underappreciated features in it. If you're not interested in witchcraft and the occult, then please don't bother to watch this movie anymore lol."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n227/1000:\nBURN, WITCH BURN (aka NIGHT OF THE EAGLE)\n\nA minor British horror film that has a convoluted plot but still has some underappreciated features in it. If you're not interested in witchcraft and the occult, then please don't bother to watch this movie anymore lol."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreih3owyq5hguhufxp2j76zpphfi4k5wvpn37kq37c3rpcpcv4tmwqe
+        size: 165669
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 856
+        height: 482
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-12-12T02:08:45.696Z'

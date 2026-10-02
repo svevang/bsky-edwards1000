@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m4kx6rqius2e
+cid: bafyreidbc7p7swdczyfmbbrhhx2vqly55xtstmwvlyrktmikdkfzerncmy
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m4kx6rqius2e
+createdAt: '2025-11-01T12:04:41.064Z'
+text: "#Edwards1000SixtiesMovies \n\n199/1000:\nADA\n\nThis political drama is completely relevant, as it explored corruption and transparency in a way that gave respect to U.S. state governments. It covers a husband and wife battling crooked politics as governor and lieutenant governor, respectively."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n199/1000:\nADA\n\nThis political drama is completely relevant, as it explored corruption and transparency in a way that gave respect to U.S. state governments. It covers a husband and wife battling crooked politics as governor and lieutenant governor, respectively."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifbjfzpdcm6mtvx4542rbav2y2c7ej5nhyrpm3fams3g6qa54voxm
+        size: 675821
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 2000
+        height: 1125
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-11-01T12:04:41.064Z'

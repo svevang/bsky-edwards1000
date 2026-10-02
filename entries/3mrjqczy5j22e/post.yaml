@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mrjqczy5j22e
+cid: bafyreieqp24tkqf545zuuesee2eq2otauvsmmettmhizysy7trf53o2rou
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mrjqczy5j22e
+createdAt: '2026-07-26T06:18:12.202Z'
+text: "#Edwards1000SixtiesMovies \n\n435/1000:\nTHE MOON-SPINNERS\n\nAmong the Hayley Mills films of the 60s that were released by Disney, this makes a total difference. Not only it is in a darker tone in comparison to other Disney movies of the same period, but it features a sparkly swan song from Pola Negri."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n435/1000:\nTHE MOON-SPINNERS\n\nAmong the Hayley Mills films of the 60s that were released by Disney, this makes a total difference. Not only it is in a darker tone in comparison to other Disney movies of the same period, but it features a sparkly swan song from Pola Negri."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigvexbem2bmoyz47aallo6wpfd46jflvcwmgg2utpdlacmmvxdrw4
+        size: 89712
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-07-26T06:18:12.202Z'

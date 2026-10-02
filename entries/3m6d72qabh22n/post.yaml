@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m6d72qabh22n
+cid: bafyreieuk4zg5biroexzlaaz2zrn6beomczcnndkkvpck2h2d2varvjv7a
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m6d72qabh22n
+createdAt: '2025-11-23T20:54:40.552Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  213/1000:
+  THE MUSIC MAN
+
+  I've always shown great love for this wondrous film adaptation of Meredith Willson's lovely musical, with energetic song numbers, the colorful small-town setting, and a spectacular ending scene. Also loved Shirley Jones' singing and aura here.
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    213/1000:
+    THE MUSIC MAN
+
+    I've always shown great love for this wondrous film adaptation of Meredith Willson's lovely musical, with energetic song numbers, the colorful small-town setting, and a spectacular ending scene. Also loved Shirley Jones' singing and aura here.
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidmocxm2aw4gg5bwjtgpu3di6pee6uclktni2oxixxlwuelsg6vvy
+        size: 133788
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 701
+        height: 438
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-11-23T20:54:40.552Z'

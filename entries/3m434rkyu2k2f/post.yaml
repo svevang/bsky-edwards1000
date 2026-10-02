@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m434rkyu2k2f
+cid: bafyreickuqvauk4jynzeegc7bt3mr3hlmawmt3tmqdoln4iia7fcf3kcni
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m434rkyu2k2f
+createdAt: '2025-10-26T05:02:04.427Z'
+text: "#Edwards1000SixtiesMovies \n\n191/1000:\nA MAJORITY OF ONE\n\nThis comedy-drama movie turned out to be a well-crafted effort in my opinion. While the premise of a budding relationship between a Japanese widower and a Brooklyn Jewish widow is interesting, Alec isn't convincing as the Japanese guy."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n191/1000:\nA MAJORITY OF ONE\n\nThis comedy-drama movie turned out to be a well-crafted effort in my opinion. While the premise of a budding relationship between a Japanese widower and a Brooklyn Jewish widow is interesting, Alec isn't convincing as the Japanese guy."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicwsa5pt3sioyzclkakdibvbrl4ko5zrzs6gtjs35s3dbjs2wjwzu
+        size: 60946
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-10-26T05:02:04.427Z'

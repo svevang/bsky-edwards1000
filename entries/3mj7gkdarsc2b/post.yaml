@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mj7gkdarsc2b
+cid: bafyreige7w3r7axbg5zw5hhyah2d3jvrstxituy5prp5cxzj2rovmaonnu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mj7gkdarsc2b
+createdAt: '2026-04-11T08:35:08.961Z'
+text: "#Edwards1000SixtiesMovies \n\n341/1000:\nLOVE WITH THE PROPER STRANGER\n\nI have nothing but praise for the chemistry between Natalie and the King of Cool in this drama-romance film. Love can indeed form between two strangers as long as they both understand each other's personal feelings and emotions."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n341/1000:\nLOVE WITH THE PROPER STRANGER\n\nI have nothing but praise for the chemistry between Natalie and the King of Cool in this drama-romance film. Love can indeed form between two strangers as long as they both understand each other's personal feelings and emotions."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: Natalie Wood and Steve McQueen
+      image:
+        ref:
+          $link: bafkreiamhm223nes5trhl3ho3etv3vdyw6dxjjnpz4peayi75i526lo66e
+        size: 59227
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-04-11T08:35:08.961Z'

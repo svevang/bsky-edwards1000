@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lzavlzyzr22u
+cid: bafyreia7ux3i3efec4wkspa64p2lubr6cjqw7vugvoqnqsqi7wldje4ggq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lzavlzyzr22u
+createdAt: '2025-09-20T07:54:06.205Z'
+text: "#Edwards1000SixtiesMovies \n\n148/1000:\nFLOWER DRUM SONG\n\nThis is not just your ordinary musical film of the 60s, as it gives great emphasis to the difference between modern and traditional values among Asian-Americans in contemporary San Francisco's Chinatown district. Nancy Kwan charms a lot here."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n148/1000:\nFLOWER DRUM SONG\n\nThis is not just your ordinary musical film of the 60s, as it gives great emphasis to the difference between modern and traditional values among Asian-Americans in contemporary San Francisco's Chinatown district. Nancy Kwan charms a lot here."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifooxdjrc5n5nsecv5kw7wr5q73gmfn7wcdd2qpgjdqfxb4cmbbhm
+        size: 72179
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-09-20T07:54:06.205Z'

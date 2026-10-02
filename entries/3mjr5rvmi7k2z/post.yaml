@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mjr5rvmi7k2z
+cid: bafyreieivg2mpox3lvad3hz7tda7qtazoux6hiyuhryxfivcwfukvaakoi
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mjr5rvmi7k2z
+createdAt: '2026-04-18T09:46:14.710Z'
+text: "#Edwards1000SixtiesMovies \n\n349/1000:\nCOURTSHIP OF EDDIE'S FATHER\n\nWhile Glenn Ford and Shirley Jones gets top-billed as two apartment neighbors hesitant to get to know each other, the real protagonist of this family comedy-drama is Ron Howard's character Eddie, who wants them to be a real couple."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n349/1000:\nCOURTSHIP OF EDDIE'S FATHER\n\nWhile Glenn Ford and Shirley Jones gets top-billed as two apartment neighbors hesitant to get to know each other, the real protagonist of this family comedy-drama is Ron Howard's character Eddie, who wants them to be a real couple."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigygxqlfxy4fmkdf6utgokkeecyedn5mjjoiflnynzofcf4arju5y
+        size: 136094
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-04-18T09:46:14.710Z'

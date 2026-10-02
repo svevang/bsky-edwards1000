@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mdyloothps2n
+cid: bafyreicsrsn5nb76clfonenuota7izts7d7mje7ngyls34sbu47qombjxu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mdyloothps2n
+createdAt: '2026-02-04T00:12:27.739Z'
+text: "#Edwards1000SixtiesMovies \n\n279/1000: \nROME ADVENTURE\n\nAnother excellent film from the brilliant mind of Delmer Daves, which provided an avenue for Suzanne Pleshette to shine brightly in her film debut. This romance movie may serve as some sort of a travelogue for those who wish to travel to Italy."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n279/1000: \nROME ADVENTURE\n\nAnother excellent film from the brilliant mind of Delmer Daves, which provided an avenue for Suzanne Pleshette to shine brightly in her film debut. This romance movie may serve as some sort of a travelogue for those who wish to travel to Italy."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibm223d4ftevboixcsueiv3ionnodh3feyrrz6g43ejjsujbgci3e
+        size: 76564
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-02-04T00:12:27.739Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m3tmojpbzs25
+cid: bafyreih3ttnedsmabgza7wyhsw4ipdu7zzymh22z4o7bgsy5jsjxqfz3b4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m3tmojpbzs25
+createdAt: '2025-10-23T05:25:24.379Z'
+text: "#Edwards1000SixtiesMovies \n\n186/1000:\nTHE SECRET WAYS \n\nThis underrated Richard Widmark film is somewhat a crossover between a Hitchcockian thriller, a 1960s spy film and Casablanca (1942). You'll definitely enjoy seeing the cinematography here, which highly evokes film noirs such as Third Man..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n186/1000:\nTHE SECRET WAYS \n\nThis underrated Richard Widmark film is somewhat a crossover between a Hitchcockian thriller, a 1960s spy film and Casablanca (1942). You'll definitely enjoy seeing the cinematography here, which highly evokes film noirs such as Third Man..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibhxjkcsclcanf2tb4c5wpgi3i7yey73iepnt6k4xqdg5fwuu23wi
+        size: 67943
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-10-23T05:25:24.379Z'

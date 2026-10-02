@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lpdmjyhols2z
+cid: bafyreiddm5av36ggqbxjlmgluujgsip2wtzgntqz443hf4lolcyetufaga
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lpdmjyhols2z
+createdAt: '2025-05-17T03:37:56.732Z'
+text: "#Edwards1000SixtiesMovies \n\n1/1000:\nTHE MAGNIFICENT SEVEN\n\nThis is basically Kurosawa's \"Seven Samurai\" transposed to a rugged, Western setting. Magnificence is assured due to the captivating performances, engaging fight sequences, picturesque cinematography and Elmer Bernstein's iconic theme."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n1/1000:\nTHE MAGNIFICENT SEVEN\n\nThis is basically Kurosawa's \"Seven Samurai\" transposed to a rugged, Western setting. Magnificence is assured due to the captivating performances, engaging fight sequences, picturesque cinematography and Elmer Bernstein's iconic theme."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicgs6fkktu4leacqldp3ajkit5jvlye5rjwv6t3frt2kgonpxutza
+        size: 112423
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-05-17T03:37:56.732Z'

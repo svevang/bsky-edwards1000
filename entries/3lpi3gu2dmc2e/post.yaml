@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lpi3gu2dmc2e
+cid: bafyreicbadydzrkyfbt2fe5e3ow74fi5fo4is63lzwtvrpryhsjjjah3qm
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lpi3gu2dmc2e
+createdAt: '2025-05-18T22:15:16.511Z'
+text: "#Edwards1000SixtiesMovies \n\n5/1000:\nLA DOLCE VITA\n\nDirected by Federico Fellini, this movie, brilliantly explores the episodic journey of a journalist named Marcello as he lives the \"dolce vita\" (sweet life) in 60s Rome. Ekberg, despite her limited time, completely steals the show."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n5/1000:\nLA DOLCE VITA\n\nDirected by Federico Fellini, this movie, brilliantly explores the episodic journey of a journalist named Marcello as he lives the \"dolce vita\" (sweet life) in 60s Rome. Ekberg, despite her limited time, completely steals the show."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigoqtuxtvseqbyb7mvp6klmanvnyzutx3zubzgwpku7j36y7esdke
+        size: 74155
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-05-18T22:15:16.511Z'

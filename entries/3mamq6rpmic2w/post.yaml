@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mamq6rpmic2w
+cid: bafyreic6owaixyt43xtqmz244rry6iq47djfzg4bnkvlxbn3x6k4chb2ti
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mamq6rpmic2w
+createdAt: '2025-12-23T02:45:30.855Z'
+text: "#Edwards1000SixtiesMovies \n\n240/1000:\nTHE BRAIN THAT WOULDN'T DIE\n\nThis B horror film delivered some sort of campy terror to my nerves, but was still fun and entertaining due to its cheesy 1960s lounge music, low-budget aesthetic and the deformed creature's resemblance to Sloth from Goonies."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n240/1000:\nTHE BRAIN THAT WOULDN'T DIE\n\nThis B horror film delivered some sort of campy terror to my nerves, but was still fun and entertaining due to its cheesy 1960s lounge music, low-budget aesthetic and the deformed creature's resemblance to Sloth from Goonies."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidgy4rwpixvtw3cpkjwtsxbsw5jruwebfnvewlt73adjutrwugt74
+        size: 68506
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-12-23T02:45:30.855Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mrzg4ppvkc23
+cid: bafyreicjgw4vufiq32d5jaqgakfc6eq3554rnurtsdjg7hydx7oaknsrkm
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mrzg4ppvkc23
+createdAt: '2026-08-01T11:58:18.515Z'
+text: "#Edwards1000SixtiesMovies \n\n442/1000:\nSEND ME NO FLOWERS \n\nAfter successful pairings in Pillow Talk and Lover Come Back, Rock and Doris reunited for this romantic comedy. This tale of a hypochondriac ensuring his wife's future may not be as funny as their previous movies but was still enjoyable."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n442/1000:\nSEND ME NO FLOWERS \n\nAfter successful pairings in Pillow Talk and Lover Come Back, Rock and Doris reunited for this romantic comedy. This tale of a hypochondriac ensuring his wife's future may not be as funny as their previous movies but was still enjoyable."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiedert2ejeelhiiwohjzke6bfgcllpbqofe5hihlpts357zrzqjuq
+        size: 95845
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 742
+        height: 413
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-01T11:58:18.515Z'

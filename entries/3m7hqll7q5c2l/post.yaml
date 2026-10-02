@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m7hqll7q5c2l
+cid: bafyreicqqhfwoejrttzvjpfy2je6zxuz74w6y2uzxx2bhpfgym4oi7useu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m7hqll7q5c2l
+createdAt: '2025-12-08T09:44:09.922Z'
+text: "#Edwards1000SixtiesMovies \n\n226/1000:\nGIRLS! GIRLS! GIRLS! \n\nThis Elvis film will help you realize that love and friendship matters most over material things that are of sentimental value. A sailor moonlighting as a part-time singer has to find a way to purchase a boat which he and his father built."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n226/1000:\nGIRLS! GIRLS! GIRLS! \n\nThis Elvis film will help you realize that love and friendship matters most over material things that are of sentimental value. A sailor moonlighting as a part-time singer has to find a way to purchase a boat which he and his father built."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigkcpvcrkfgbumnfyvmmotroijps6ughryzzn2it3nraib6i6kf3e
+        size: 156959
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 800
+        height: 450
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-12-08T09:44:09.922Z'

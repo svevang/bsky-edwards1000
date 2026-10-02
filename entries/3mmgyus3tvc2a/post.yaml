@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mmgyus3tvc2a
+cid: bafyreickklcstxkpojs7m2hviauqkjonjshcmhg3sijjnqadxihnitt374
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mmgyus3tvc2a
+createdAt: '2026-05-22T13:07:20.473Z'
+text: "#Edwards1000SixtiesMovies \n\n389/1000:\nTWICE-TOLD TALES\n\nVincent Price has once more delivered a timeless horror anthology film, this time based on three stories by Nathaniel Hawthorne. My personal favorite of the three segments of this movie is the one based on the story \"House of the Seven Gables.\""
+record:
+  text: "#Edwards1000SixtiesMovies \n\n389/1000:\nTWICE-TOLD TALES\n\nVincent Price has once more delivered a timeless horror anthology film, this time based on three stories by Nathaniel Hawthorne. My personal favorite of the three segments of this movie is the one based on the story \"House of the Seven Gables.\""
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreib7hpvr44raygkrc36nbt77mw4vyr2zss3l3htymr7xahuxifexe4
+        size: 78714
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-22T13:07:20.473Z'

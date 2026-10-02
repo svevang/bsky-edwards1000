@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lzzuag7mls2m
+cid: bafyreig43ax3vdridqcfzj2odukzgdjmtwmxyczlrupqc4wggx2klzasz4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lzzuag7mls2m
+createdAt: '2025-09-30T06:06:16.067Z'
+text: "#Edwards1000SixtiesMovies \n\n164/1000:\nSOMETHING WILD\n\nThree aspects set this drama film apart from other movies of the year 1961: 1) its somewhat realistic portrayal of post-traumatic stress disorder (PTSD); 2) a rhythmic score composed by an American music legend; and 3) a Saul Bass title sequence."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n164/1000:\nSOMETHING WILD\n\nThree aspects set this drama film apart from other movies of the year 1961: 1) its somewhat realistic portrayal of post-traumatic stress disorder (PTSD); 2) a rhythmic score composed by an American music legend; and 3) a Saul Bass title sequence."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibuyzc7gxhlqww2pyzgdnjvkq7p27jrdoddf4pylk5yyhtzjet4ya
+        size: 50614
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-09-30T06:06:16.067Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mtdfujrxgc2t
+cid: bafyreian2wycb7hnfadpizit3volv7rezwvkngxe2s6v6huwbhicughmmy
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mtdfujrxgc2t
+createdAt: '2026-08-18T04:45:32.821Z'
+text: "#Edwards1000SixtiesMovies \n\n459/1000:\nBEDTIME STORY \n\nNow I can see the reason why this cult comedy movie about two con men got remade twice after its release: because it is pure comedy gold from start to finish. Brando tried his hand at making audiences laugh with this film, and he succeeded."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n459/1000:\nBEDTIME STORY \n\nNow I can see the reason why this cult comedy movie about two con men got remade twice after its release: because it is pure comedy gold from start to finish. Brando tried his hand at making audiences laugh with this film, and he succeeded."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiaocdxdmzcgt42atl4vkazdxedq7jju6ykqcxo5ohs2xbjuuzv434
+        size: 354985
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 1280
+        height: 720
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-18T04:45:32.821Z'

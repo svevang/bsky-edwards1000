@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mlikz6q5ak27
+cid: bafyreihxlxzwp2n4ui7usandrcvowfwienqr6v63q3nqtifjmqqajyw2bi
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mlikz6q5ak27
+createdAt: '2026-05-10T10:39:23.400Z'
+text: "#Edwards1000SixtiesMovies \n\n379/1000:\nTHE UGLY AMERICAN\n\nIn one of his finest performances, Brando stars as an American diplomat who is appointed as ambassador of a fictional southeast Asian country to oversee the construction/paving of a so-called \"freedom road,\" but the peace is threatened by war."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n379/1000:\nTHE UGLY AMERICAN\n\nIn one of his finest performances, Brando stars as an American diplomat who is appointed as ambassador of a fictional southeast Asian country to oversee the construction/paving of a so-called \"freedom road,\" but the peace is threatened by war."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreid7zjjud3d3zmax6nkoqzlv7s3ir5tzpuqs5lwg2vp7n37hl34rru
+        size: 64956
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 736
+        height: 416
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-10T10:39:23.400Z'

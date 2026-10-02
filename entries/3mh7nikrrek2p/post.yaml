@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mh7nikrrek2p
+cid: bafyreigh2patmgt7espmrrpueoe4shr7mafygrrmbsv7pisbcrpko3qasi
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mh7nikrrek2p
+createdAt: '2026-03-16T23:49:02.681Z'
+text: "#Edwards1000SixtiesMovies \n\n314/1000:\nBYE BYE BIRDIE \n\nWhat makes this musical-comedy movie above-average is Margret singing directly to the audience at the beginning and ending in full color. Jesse Pearson as the singer Conrad Birdie, though, is not in the same league as Elvis Presley."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n314/1000:\nBYE BYE BIRDIE \n\nWhat makes this musical-comedy movie above-average is Margret singing directly to the audience at the beginning and ending in full color. Jesse Pearson as the singer Conrad Birdie, though, is not in the same league as Elvis Presley."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiffdq5rl4fh3aay5i6623b3d7c6337taszqq5unadxxxerhtb5bau
+        size: 95307
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-03-16T23:49:02.681Z'

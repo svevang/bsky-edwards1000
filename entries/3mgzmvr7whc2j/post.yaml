@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mgzmvr7whc2j
+cid: bafyreighkazwcyhaedok7u6wb6c6wkctrts4kbu4bzro3m4zw4q6bnouu4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mgzmvr7whc2j
+createdAt: '2026-03-14T14:22:33.495Z'
+text: "#Edwards1000SixtiesMovies \n\n310/1000:\nJASON AND THE ARGONAUTS \n\nLooks like one of the best films about Greek mythology is due for a rewatch. Harryhausen's awesome stop-motion visual effects will always make this epic adventure movie an unforgettable, must-see entry in the chronicles of 60s cinema."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n310/1000:\nJASON AND THE ARGONAUTS \n\nLooks like one of the best films about Greek mythology is due for a rewatch. Harryhausen's awesome stop-motion visual effects will always make this epic adventure movie an unforgettable, must-see entry in the chronicles of 60s cinema."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicfnxjzdtl3wd3udna5flm6hrk2hwsly4qiueu3pzivjej66xft4m
+        size: 129898
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-03-14T14:22:33.495Z'

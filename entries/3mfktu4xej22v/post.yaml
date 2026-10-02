@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mfktu4xej22v
+cid: bafyreihrpmjr3rztc4qlk2hhssx42seefu6jiong7exfr2mqzg33qd2j24
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mfktu4xej22v
+createdAt: '2026-02-23T23:51:47.178Z'
+text: "#Edwards1000SixtiesMovies \n\n297/1000:\nJOURNEY TO THE SEVENTH PLANET\n\nA scientific expedition to the planet Uranus is menaced by a giant brain that can make illusions real, especially women. Bright lighting spices up the cheaply made sets and special effects, making this a visually stunning B-film."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n297/1000:\nJOURNEY TO THE SEVENTH PLANET\n\nA scientific expedition to the planet Uranus is menaced by a giant brain that can make illusions real, especially women. Bright lighting spices up the cheaply made sets and special effects, making this a visually stunning B-film."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihaglswcwnz5nva5r7sjkf4vne2lwdl6lho7iwbav7nluajk3pk4y
+        size: 79800
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-02-23T23:51:47.178Z'

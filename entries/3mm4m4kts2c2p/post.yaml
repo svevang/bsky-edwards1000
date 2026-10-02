@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mm4m4kts2c2p
+cid: bafyreifbpb2chroi4eicfih5zdypajr7glnago64mfqwsymfp5nhagiaai
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mm4m4kts2c2p
+createdAt: '2026-05-18T09:52:25.299Z'
+text: "#Edwards1000SixtiesMovies \n\n385/1000:\nTOYS IN THE ATTIC\n\nI was kinda bored and restless while watching this film adaptation of a play by Lillian Hellman, the author of The Children's Hour. But despite the presence of stars such as Dean Martin, I didn't enjoy this drama movie because it's complicated"
+record:
+  text: "#Edwards1000SixtiesMovies \n\n385/1000:\nTOYS IN THE ATTIC\n\nI was kinda bored and restless while watching this film adaptation of a play by Lillian Hellman, the author of The Children's Hour. But despite the presence of stars such as Dean Martin, I didn't enjoy this drama movie because it's complicated"
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: Yvette Mimieux as Dean Martin's character's wife
+      image:
+        ref:
+          $link: bafkreihx5ya6mrzcfmod5ojmudyvqp23e2lmiq43joizbhx3fjzj4anmia
+        size: 231681
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 856
+        height: 482
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-18T09:52:25.299Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lqleygboxc2l
+cid: bafyreibyp5drmidldbrn7wfbxmncyepb6at6nqqztvosxz4mhy2exlt5ly
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lqleygboxc2l
+createdAt: '2025-06-01T23:09:20.585Z'
+text: "#Edwards1000SixtiesMovies \n\n23/1000:\nTHE UNFORGIVEN\n\nNot to be confused with Eastwood's more familiar Western of the same name, this  frontier movie is the answer to the question \"Did Audrey Hepburn ever star in a cowboy movie?\" The supporting roles, especially that of Lillian Gish, are remarkable."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n23/1000:\nTHE UNFORGIVEN\n\nNot to be confused with Eastwood's more familiar Western of the same name, this  frontier movie is the answer to the question \"Did Audrey Hepburn ever star in a cowboy movie?\" The supporting roles, especially that of Lillian Gish, are remarkable."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibsmgjfzxc46f5ewm4suzgjvcw2wvtffe3vzbjdjpywpxom4mtaay
+        size: 88096
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-01T23:09:20.585Z'

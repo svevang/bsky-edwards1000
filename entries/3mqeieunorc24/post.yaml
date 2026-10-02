@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mqeieunorc24
+cid: bafyreig24cnager5rjcspspylout43wpfvbhgm5yaukdvc2ynnx2cezmwa
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mqeieunorc24
+createdAt: '2026-07-11T10:47:33.443Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  417/1000:
+  ZORBA THE GREEK
+
+  You'll laugh, cry and get motivated once you get to see this comedy-drama movie set in the Greek island of Crete. Quinn gives a career-best performance as a sociable Greek who changes the perspective of a nervous English writer that he meets.
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    417/1000:
+    ZORBA THE GREEK
+
+    You'll laugh, cry and get motivated once you get to see this comedy-drama movie set in the Greek island of Crete. Quinn gives a career-best performance as a sociable Greek who changes the perspective of a nervous English writer that he meets.
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreid6xz3yp7llov72jfbnzawo6vxjhyiytog34csdq7qu75kctfqkge
+        size: 113865
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-07-11T10:47:33.443Z'

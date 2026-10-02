@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mkznpqjp6s2e
+cid: bafyreigkdl6ktsrxgs2qlxmsgoi52v5snqyeckytt56i3vdscgo7iscnkq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mkznpqjp6s2e
+createdAt: '2026-05-04T12:17:51.670Z'
+text: "#Edwards1000SixtiesMovies \n\n370/1000:\nTHE RUNNING MAN '63\n\nThis is not a previous version of the sci-fi dystopian film of the same title starring Arnold, but rather, it is a different movie with a standalone story. I didn't like the complicated plot, but I did loved Laurence Harvey's blonde hairdo."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n370/1000:\nTHE RUNNING MAN '63\n\nThis is not a previous version of the sci-fi dystopian film of the same title starring Arnold, but rather, it is a different movie with a standalone story. I didn't like the complicated plot, but I did loved Laurence Harvey's blonde hairdo."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreic7xkgoznggmjc3w55kwyt73k3c5nhrx3u5osrgzzuwiejai2nume
+        size: 84450
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-04T12:17:51.670Z'

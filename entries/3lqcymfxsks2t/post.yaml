@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lqcymfxsks2t
+cid: bafyreichatrjjdoammfv7vgnpc77ztzgnkbirp3kbjw4ipvfns6gllghd4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lqcymfxsks2t
+createdAt: '2025-05-29T15:06:34.788Z'
+text: "#Edwards1000SixtiesMovies \n\n19/1000:\nSWISS FAMILY ROBINSON\n\nLove this family-adventure movie so much because I completely appreciated the way the Robinsons adjusted so easily to island life after being shipwrecked. Bonus points to Sessue Hayakawa for playing a perfectly intimidating foe here."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n19/1000:\nSWISS FAMILY ROBINSON\n\nLove this family-adventure movie so much because I completely appreciated the way the Robinsons adjusted so easily to island life after being shipwrecked. Bonus points to Sessue Hayakawa for playing a perfectly intimidating foe here."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibwd5zybvrej3j22vf4vvkawgeceqo2b4qvpwjvfz67z2emitthi4
+        size: 116899
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 783
+        height: 391
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-05-29T15:06:34.788Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lzmw6tupvk23
+cid: bafyreigbzach7rpzwihankcvsuxu5hugpztcohd3fsovbyiqr27viq5ib4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lzmw6tupvk23
+createdAt: '2025-09-25T02:36:34.153Z'
+text: "#Edwards1000SixtiesMovies \n\n155/1000:\nCOME SEPTEMBER \n\nThis underrated Rock Hudson romantic comedy film, both set and shot in scenic Italian places, explores a millionaire who finds out that his luxurious vacation villa has been turned into a hotel by its steward, and the guests are all teenagers..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n155/1000:\nCOME SEPTEMBER \n\nThis underrated Rock Hudson romantic comedy film, both set and shot in scenic Italian places, explores a millionaire who finds out that his luxurious vacation villa has been turned into a hotel by its steward, and the guests are all teenagers..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifgvt7hqtpfdke6kpw37ax4orttyfz5ekklmsgr2t6c3vxcvhemfu
+        size: 77428
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-09-25T02:36:34.153Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ms52ea2gn22e
+cid: bafyreihv7sd4pwnwhpemr77fjvs4jpwqapie6st6plbmvre4fh6ef75ymu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ms52ea2gn22e
+createdAt: '2026-08-02T22:38:24.569Z'
+text: "#Edwards1000SixtiesMovies \n\n446/1000:\nMARRIAGE ITALIAN STYLE\n\nSophia and Marcello once more reunites for a remarkable romance-drama film from director De Sica, which is all about a naive woman who spent two decades longing for her love interest, a cynical businessman, to return her feelings."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n446/1000:\nMARRIAGE ITALIAN STYLE\n\nSophia and Marcello once more reunites for a remarkable romance-drama film from director De Sica, which is all about a naive woman who spent two decades longing for her love interest, a cynical businessman, to return her feelings."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreie3edxqtcixl6fobxgy7fttnfprodoozp2yz4yxku7u4jyxagh6xi
+        size: 102786
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-02T22:38:24.569Z'

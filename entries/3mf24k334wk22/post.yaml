@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mf24k334wk22
+cid: bafyreiatcydzpl2tk4w5zwkjvx2matld7nfsqyeyjwmego6kxrbo2eehci
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mf24k334wk22
+createdAt: '2026-02-17T08:11:57.762Z'
+text: "#Edwards1000SixtiesMovies \n\n291/1000:\nTENDER IS THE NIGHT\n\nThis may be one of the best adaptations of a novel by F. Scott Fitzgerald. Robards and Jones both give defining performances which gives this drama film its earnest, heartfelt moments. Also has one of the best theme songs I've ever heard."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n291/1000:\nTENDER IS THE NIGHT\n\nThis may be one of the best adaptations of a novel by F. Scott Fitzgerald. Robards and Jones both give defining performances which gives this drama film its earnest, heartfelt moments. Also has one of the best theme songs I've ever heard."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreih7e3h7ag3f34gt5d5mbdcxpmim333zrvh2svt4tonse6t5ll6vlu
+        size: 64262
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 623
+        height: 492
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-02-17T08:11:57.762Z'

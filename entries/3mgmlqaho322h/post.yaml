@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mgmlqaho322h
+cid: bafyreidq3fhbxxde4f6digeqtb2v3p52f6rzyjyqg2bfsdqn7ivsjzhrne
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mgmlqaho322h
+createdAt: '2026-03-09T09:56:57.789Z'
+text: "#Edwards1000SixtiesMovies \n\n301/1000:\nTHE BIRDS \n\nHitchcock's classic thriller movie about a series of deadly bird attacks on a coastal California town pretty still holds up even in the present day. With advancements in VFX, this can be easily remade, but for me, a remake's longer necessary."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n301/1000:\nTHE BIRDS \n\nHitchcock's classic thriller movie about a series of deadly bird attacks on a coastal California town pretty still holds up even in the present day. With advancements in VFX, this can be easily remade, but for me, a remake's longer necessary."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiejmtkrd6u73w6x6tfoqfnjzqrpdcsnarnukt36vlnexjy7lgw3ri
+        size: 424441
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 1280
+        height: 720
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-03-09T09:56:57.789Z'

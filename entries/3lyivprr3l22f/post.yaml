@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lyivprr3l22f
+cid: bafyreied2fdvx6dao3idnxwthdo5oqi7wga5jb7whqwilip3vr3mflb3ce
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lyivprr3l22f
+createdAt: '2025-09-10T18:52:18.061Z'
+text: "#Edwards1000SixtiesMovies \n\n138/1000:\nWHISTLE DOWN THE WIND\n\nIn a role that heavily differentiates and departs from her usual family-oriented films, Hayley brilliantly portrays a young farm girl who mistakenly believes a stranger hiding in their barn to be Christ who has returned from heaven..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n138/1000:\nWHISTLE DOWN THE WIND\n\nIn a role that heavily differentiates and departs from her usual family-oriented films, Hayley brilliantly portrays a young farm girl who mistakenly believes a stranger hiding in their barn to be Christ who has returned from heaven..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiewz6qk74b3qdj44zkp7iy6kb2dqu3mqzlma5bgg573jaimxpckiq
+        size: 103565
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-09-10T18:52:18.061Z'

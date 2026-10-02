@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mkgmkfwsgs22
+cid: bafyreidrdo2jbv2oey5froslyhy44nd55nok43ztie7rno7pgw2sloq5yy
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mkgmkfwsgs22
+createdAt: '2026-04-26T22:36:24.044Z'
+text: "#Edwards1000SixtiesMovies \n\n360/1000:\nDEAD RINGER\n\nReleased in the wake of the massive success of Baby Jane, this crime-horror movie marks the second time Bette has played identical twins. Great direction by the guy who played Victor Laszlo results in a highly enjoyable black and white watch."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n360/1000:\nDEAD RINGER\n\nReleased in the wake of the massive success of Baby Jane, this crime-horror movie marks the second time Bette has played identical twins. Great direction by the guy who played Victor Laszlo results in a highly enjoyable black and white watch."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreid2bjquv2u4mghrvsnjdhcr6qyoiwwrcajfddlrieqk5iesunpnye
+        size: 91953
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-04-26T22:36:24.044Z'

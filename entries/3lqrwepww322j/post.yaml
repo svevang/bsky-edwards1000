@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lqrwepww322j
+cid: bafyreibyn5fqvngqee6b3v2e5t7kcmvlqdwwboz5lmrc37jaevvh3fz5mu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lqrwepww322j
+createdAt: '2025-06-04T13:36:25.412Z'
+text: "#Edwards1000SixtiesMovies \n\n26/1000:\nNORTH TO ALASKA\n\nAnother enjoyable movie starring the Duke and the ever-gorgeous Capucine, which is all about a miner-prospector who brings back a beautiful dancer to console his heartbroken partner, but ends up falling in love with the lady herself."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n26/1000:\nNORTH TO ALASKA\n\nAnother enjoyable movie starring the Duke and the ever-gorgeous Capucine, which is all about a miner-prospector who brings back a beautiful dancer to console his heartbroken partner, but ends up falling in love with the lady herself."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibqub5febclystqk2z4mmv4ydekesd7sglbpisrhixfjd2b3qbgw4
+        size: 94037
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-04T13:36:25.412Z'

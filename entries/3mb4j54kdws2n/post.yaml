@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mb4j54kdws2n
+cid: bafyreieokssmpnr72ddzlpv3jqiyp3bnkz24tn366dbqmjf3a6fsbwojxi
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mb4j54kdws2n
+createdAt: '2025-12-29T09:21:54.720Z'
+text: "#Edwards1000SixtiesMovies \n\n247/1000:\nTALES OF TERROR\n\nThree macabre short stories by Edgar Allan Poe are brought to life on the big screen by Corman, with sumptuous results. These tales involve a widower mourning his dead wife; a derelict and his wife's black cat; and a hypnotized dying guy."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n247/1000:\nTALES OF TERROR\n\nThree macabre short stories by Edgar Allan Poe are brought to life on the big screen by Corman, with sumptuous results. These tales involve a widower mourning his dead wife; a derelict and his wife's black cat; and a hypnotized dying guy."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiehwa5ueig5qcid4wajxgmme5r7phuhrmtfxywpbbi46pq4cj2tom
+        size: 79058
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-12-29T09:21:54.720Z'

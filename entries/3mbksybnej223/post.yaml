@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mbksybnej223
+cid: bafyreigyt32hkalwj4khsqesqqdagqzmkfsbsqhyxmjljvsf46y4iejzh4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mbksybnej223
+createdAt: '2026-01-04T01:55:26.052Z'
+text: "#Edwards1000SixtiesMovies \n\n256/1000:\nDIAMOND HEAD\n\nSet in Hawaii in the year of its U.S. statehood, this is all about a rich but bigoted pineapple grower who tries to control everyone around him, including his younger sister. He learns the hard way that power or wealth can't buy love or happiness."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n256/1000:\nDIAMOND HEAD\n\nSet in Hawaii in the year of its U.S. statehood, this is all about a rich but bigoted pineapple grower who tries to control everyone around him, including his younger sister. He learns the hard way that power or wealth can't buy love or happiness."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: Charlton Heston and France Nuyen
+      image:
+        ref:
+          $link: bafkreigaegocahyoiuniywfztmya7e6aebukae5lc4ow2kst44e77h56aa
+        size: 113802
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 686
+        height: 447
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-01-04T01:55:26.052Z'

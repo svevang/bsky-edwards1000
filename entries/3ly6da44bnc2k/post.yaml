@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ly6da44bnc2k
+cid: bafyreigkrbgzdghyksx34iey36cj4c7hwap5xahb4niti4uokhrkomjc7i
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ly6da44bnc2k
+createdAt: '2025-09-06T13:54:47.297Z'
+text: "#Edwards1000SixtiesMovies \n\n131/1000:\nLOVER COME BACK\n\nDoris and Rock (in their second movie together) deliver a comedic look into the competitive world of advertising and marketing, as well as a fascinating rivalry that can turn into a full romance. Plus, Rock looked handsome with a beard..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n131/1000:\nLOVER COME BACK\n\nDoris and Rock (in their second movie together) deliver a comedic look into the competitive world of advertising and marketing, as well as a fascinating rivalry that can turn into a full romance. Plus, Rock looked handsome with a beard..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihigbwbcnpjpkxhzgvyuhtct77qafafpkfgk6zawjedyrinkhv5kq
+        size: 102992
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-09-06T13:54:47.297Z'

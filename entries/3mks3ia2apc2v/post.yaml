@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mks3ia2apc2v
+cid: bafyreib765jgp56iyf775k6wwqf7td3vsc5wua6m6zu2qo4gdrquxkirlq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mks3ia2apc2v
+createdAt: '2026-05-01T12:02:54.007Z'
+text: "#Edwards1000SixtiesMovies \n\n365/1000:\nKINGS OF THE SUN\n\nThis fictional historical drama depicts a Mayan kingdom moving northward to the coast of present-day United States, but conflict arises between the king and a Native American chief whose people originally occupies the place."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n365/1000:\nKINGS OF THE SUN\n\nThis fictional historical drama depicts a Mayan kingdom moving northward to the coast of present-day United States, but conflict arises between the king and a Native American chief whose people originally occupies the place."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: Yul Brynner as Native American chief Black Eagle
+      image:
+        ref:
+          $link: bafkreigvnxmatdj6ef7ymgcs2uqvhtqplp5umzz3zjhjzxkacrv2tyugki
+        size: 72283
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-01T12:02:54.007Z'

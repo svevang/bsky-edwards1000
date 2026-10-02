@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lv5a2rjsvs2k
+cid: bafyreie43otr3ri3zu6anpir2pxdnnbhqp6a5stz3o52w6q64c4uxr6r7e
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lv5a2rjsvs2k
+createdAt: '2025-07-29T23:09:52.581Z'
+text: "#Edwards1000SixtiesMovies \n\n100/1000:\nADVENTURES OF HUCKLEBERRY FINN 1960\n\nFinally, I've capped my 100 films for  year 1960 with this good cinematic adaptation of an all-time American literary classic. Every scene in this adventure flick is an enjoyable watch, and Tony Randall shines as a con man."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n100/1000:\nADVENTURES OF HUCKLEBERRY FINN 1960\n\nFinally, I've capped my 100 films for  year 1960 with this good cinematic adaptation of an all-time American literary classic. Every scene in this adventure flick is an enjoyable watch, and Tony Randall shines as a con man."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihayldrlmgvduq73z3unoffymloh2hocxhzwi4iky4taqiumwxbve
+        size: 108902
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-29T23:09:52.581Z'

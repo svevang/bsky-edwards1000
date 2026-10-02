@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ms4zeaaxh22e
+cid: bafyreiauy5roosjbooteu7nl52klqrzjpc3h2axfk4cuvhunigs2rqmgnm
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ms4zeaaxh22e
+createdAt: '2026-08-02T22:20:31.041Z'
+text: "#Edwards1000SixtiesMovies \n\n445/1000:\nCARRY ON CLEO \n\nTo be honest, this is the very first entry in the long-running \"Carry On\" film series that I watched, because I was totally curious how Cleopatra's historical relationships with Julius Caesar and Marc Antony were heavily satirized and parodied."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n445/1000:\nCARRY ON CLEO \n\nTo be honest, this is the very first entry in the long-running \"Carry On\" film series that I watched, because I was totally curious how Cleopatra's historical relationships with Julius Caesar and Marc Antony were heavily satirized and parodied."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihp3zqjno7kdakwlmnyqtd3hx6pmbxkr6eeog2x3vqma6vdejhmda
+        size: 61725
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 468
+        height: 280
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-02T22:20:31.041Z'

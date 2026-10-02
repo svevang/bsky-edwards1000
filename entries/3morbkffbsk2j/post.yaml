@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3morbkffbsk2j
+cid: bafyreibbmzbt4gtvs5jafg65mpzjc3bst3wbbvr5ocsjegxieezk225cli
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3morbkffbsk2j
+createdAt: '2026-06-21T01:59:35.924Z'
+text: "#Edwards1000SixtiesMovies \n\n401/1000:\nDR. STRANGELOVE\n\nI'm officially resuming my 1000 movies of the 1960s watchlist with a revisit to Kubrick's hilarious satire on nuclear warfare. Sellers' three characters, most especially the titular one, still pumps up the excitement within me after a long time."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n401/1000:\nDR. STRANGELOVE\n\nI'm officially resuming my 1000 movies of the 1960s watchlist with a revisit to Kubrick's hilarious satire on nuclear warfare. Sellers' three characters, most especially the titular one, still pumps up the excitement within me after a long time."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiahyudfsapnmdwp4grmtidjuqok2cq37krvcwksa6atmjmofk2akq
+        size: 93080
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-06-21T01:59:35.924Z'

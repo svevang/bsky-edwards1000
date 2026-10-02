@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lz7vdpjcgc2f
+cid: bafyreieekcwnhrevaax76mdnvkucouvesbwofkz2ih7rimsiddr7hgv5iu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lz7vdpjcgc2f
+createdAt: '2025-09-19T22:16:47.028Z'
+text: "#Edwards1000SixtiesMovies \n\n147/1000:\nTHE LAST SUNSET\n\nThis lesser Western works effectively for me because Hudson and Douglas pull off a great effort playing two men on opposing sides of the law who fall in love with the same woman. This is an underrated movie that must be seen by more film buffs."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n147/1000:\nTHE LAST SUNSET\n\nThis lesser Western works effectively for me because Hudson and Douglas pull off a great effort playing two men on opposing sides of the law who fall in love with the same woman. This is an underrated movie that must be seen by more film buffs."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidfujk2yaip7r7weihkzgt6qp6si6wlt42ufupbbh5kuxplje4ucm
+        size: 143933
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-09-19T22:16:47.028Z'

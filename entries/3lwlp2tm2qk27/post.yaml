@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lwlp2tm2qk27
+cid: bafyreify4bqmcnqhkxuqsuztmfbuu7ji7q3bp5uketfww4u4lnjalg3qzu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lwlp2tm2qk27
+createdAt: '2025-08-17T10:40:48.857Z'
+text: "#Edwards1000SixtiesMovies \n\n103/1000:\nONE HUNDRED AND ONE DALMATIANS\n\nThis Disney animated film explores a Dalmatian dog couple's quest to rescue their adorable, cute puppies from the menacing Cruella de Vil and the criminal Badun brothers, who plan to use their skin to make Cruella's coat."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n103/1000:\nONE HUNDRED AND ONE DALMATIANS\n\nThis Disney animated film explores a Dalmatian dog couple's quest to rescue their adorable, cute puppies from the menacing Cruella de Vil and the criminal Badun brothers, who plan to use their skin to make Cruella's coat."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidgciva6dchogvocy3vou4vdvysgk5r3vsc4fbwrfty4lbzsvuqdm
+        size: 158166
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-08-17T10:40:48.857Z'

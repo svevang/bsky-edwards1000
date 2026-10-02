@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lqvbdgarjk25
+cid: bafyreihyk3ejxfocg7qmkmqscnrk34y5twck6gvqriajnhr6xbz6u7j2rm
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lqvbdgarjk25
+createdAt: '2025-06-05T21:30:32.069Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  27/1000:
+  PLEASE DON'T EAT THE DAISIES
+
+  Doris looks lovelier in this family/romantic comedy film as a mother of four and a drama critic's wife, while the movie itself is a lively portrait of the contrast between city and suburban life, as told from a rom-com point of view.
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    27/1000:
+    PLEASE DON'T EAT THE DAISIES
+
+    Doris looks lovelier in this family/romantic comedy film as a mother of four and a drama critic's wife, while the movie itself is a lively portrait of the contrast between city and suburban life, as told from a rom-com point of view.
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibv7tmc5pr3vkofo3gz7cswfn42qcknzzpf7shojsorfutu2rmome
+        size: 195098
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 856
+        height: 482
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-05T21:30:32.069Z'

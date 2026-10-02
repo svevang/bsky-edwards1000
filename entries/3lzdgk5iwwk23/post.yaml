@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lzdgk5iwwk23
+cid: bafyreih6wkq5d6drncca6o2tq4jukvrly6mxs4tldek6fnd4pdakrouq3a
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lzdgk5iwwk23
+createdAt: '2025-09-21T08:02:35.837Z'
+text: "#Edwards1000SixtiesMovies \n\n150/1000:\nGIDGET GOES HAWAIIAN\n\nThe first sequel film to the highly successful surfer girl movie Gidget, this has a completely different cast and setting, but with the same beloved characters. The only thing that keeps this sequel afloat is Carl Reiner as Gidget's dad."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n150/1000:\nGIDGET GOES HAWAIIAN\n\nThe first sequel film to the highly successful surfer girl movie Gidget, this has a completely different cast and setting, but with the same beloved characters. The only thing that keeps this sequel afloat is Carl Reiner as Gidget's dad."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreie3gn4n3pthhy5jxi7hroyxbwmjaug6bhtp6sow2mf5v46u4tgchm
+        size: 70891
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-09-21T08:02:35.837Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ltiapow7kc2n
+cid: bafyreianbbfuvwfvrxrwmcrqgolihw476hrrodtt3jfhvxg6qa3sso5bkm
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ltiapow7kc2n
+createdAt: '2025-07-08T21:30:28.343Z'
+text: "#Edwards1000SixtiesMovies \n\n72/1000:\nTWO-WAY STRETCH\n\nIt looks like I had a mixed reception to this little-known Peter Sellers comedy movie. While I was bored by the already cliched premise of a jewel robbery, the character dialogue and the strict yet funny chief warden made me laugh out loud!"
+record:
+  text: "#Edwards1000SixtiesMovies \n\n72/1000:\nTWO-WAY STRETCH\n\nIt looks like I had a mixed reception to this little-known Peter Sellers comedy movie. While I was bored by the already cliched premise of a jewel robbery, the character dialogue and the strict yet funny chief warden made me laugh out loud!"
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreienbpwqkbshevye453ercnr5jpk4o4zxxmwb5qgf3nyoxiwemelay
+        size: 65923
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-08T21:30:28.343Z'

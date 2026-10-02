@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lx5l4tclt22v
+cid: bafyreiekkmbopke5gha7xejms23mss5jdchoewaps7ptdx4nihmug3bg4m
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lx5l4tclt22v
+createdAt: '2025-08-24T13:18:15.973Z'
+text: "#Edwards1000SixtiesMovies \n\n114/1000:\nONE-EYED JACKS\n\nHave you ever wondered if there was something underrated among Western films in the 60s? For me, this would be the answer. Brando delivers such an uplifting performance, as well as the supporting players. Malden excels as the enemy sheriff."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n114/1000:\nONE-EYED JACKS\n\nHave you ever wondered if there was something underrated among Western films in the 60s? For me, this would be the answer. Brando delivers such an uplifting performance, as well as the supporting players. Malden excels as the enemy sheriff."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidod62p6hiibexkaojohagnpckbqdg4qsrl5ll5m5mveh5wji4n4a
+        size: 93762
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-08-24T13:18:15.973Z'

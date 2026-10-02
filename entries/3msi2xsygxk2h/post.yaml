@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3msi2xsygxk2h
+cid: bafyreid4ej2tdmadgefdy2nuvp7vbhl3uf7t3fussvwo7beqxmrw7ibboq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3msi2xsygxk2h
+createdAt: '2026-08-07T07:48:39.083Z'
+text: "#Edwards1000SixtiesMovies \n\n450/1000:\nRED DESERT \n\nAntonioni creates a world that is so engrossed in so much industrialization and technological advances that the characters have already forgotten to express their human side. The best highlight is of course, Monica Vitti's emotionally deep acting."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n450/1000:\nRED DESERT \n\nAntonioni creates a world that is so engrossed in so much industrialization and technological advances that the characters have already forgotten to express their human side. The best highlight is of course, Monica Vitti's emotionally deep acting."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibaqzxuhay7wfzgtysgo3uikfhwy3gea2tqij2sg2ih7txxtlpbt4
+        size: 82680
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-07T07:48:39.083Z'

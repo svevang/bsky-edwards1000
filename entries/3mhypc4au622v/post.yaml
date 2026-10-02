@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mhypc4au622v
+cid: bafyreifcgudg5vgfxocfu6rldltamblmnr5krqcbfpzssujpilkze6ogx4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mhypc4au622v
+createdAt: '2026-03-26T22:57:47.061Z'
+text: "#Edwards1000SixtiesMovies \n\n326/1000:\nCAPTAIN NEWMAN, M.D.\n\nSet in the neuropsychiatric ward of an U.S. Army hospital in Arizona, this comedy-drama film explores an army doctor's treatment of three patients: a colonel dissociated from his past, a catatonic captain, and a corporal with PTSD."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n326/1000:\nCAPTAIN NEWMAN, M.D.\n\nSet in the neuropsychiatric ward of an U.S. Army hospital in Arizona, this comedy-drama film explores an army doctor's treatment of three patients: a colonel dissociated from his past, a catatonic captain, and a corporal with PTSD."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibmvvtj3er5uk7ac2nclkmx3gnn2bk3tihabm4y6oim2nvgxn6cqi
+        size: 67098
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-03-26T22:57:47.061Z'

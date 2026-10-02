@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mkc4rin7pc2e
+cid: bafyreidjutk7dtcaflgpsroah7b6jximivfdqjkgucweuetuvws26svfiq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mkc4rin7pc2e
+createdAt: '2026-04-25T03:43:22.936Z'
+text: "#Edwards1000SixtiesMovies \n\n358/1000:\nTAKE HER, SHE'S MINE \n\nUnlike other comedies starring Jimmy Stewart, this is not much seen nor mentioned in retrospectives of his career. But I checked this one, and it turns out that it has its own funny moments, most especially the costume party."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n358/1000:\nTAKE HER, SHE'S MINE \n\nUnlike other comedies starring Jimmy Stewart, this is not much seen nor mentioned in retrospectives of his career. But I checked this one, and it turns out that it has its own funny moments, most especially the costume party."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidbwwnrsxc6ltmamr3agkmppchhwdx3z4wj2vzedp5qsv3puc4gdq
+        size: 102785
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 620
+        height: 336
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-04-25T03:43:22.936Z'

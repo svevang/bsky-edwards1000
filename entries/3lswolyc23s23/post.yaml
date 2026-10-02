@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lswolyc23s23
+cid: bafyreidagysdhnhssllkadjfcr4i2gs2oub5b2yem55qcs5yjzd33di2pa
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lswolyc23s23
+createdAt: '2025-07-01T21:51:01.052Z'
+text: "#Edwards1000SixtiesMovies \n\n62/1000:\nTHE LEECH WOMAN\n\nIn this under-appreciated horror/sci-fi movie, a physician unhappily married to an aging, alcoholic woman journeys to Tanganyinka in Africa to look for a drug that will help his wife be restored to youth..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n62/1000:\nTHE LEECH WOMAN\n\nIn this under-appreciated horror/sci-fi movie, a physician unhappily married to an aging, alcoholic woman journeys to Tanganyinka in Africa to look for a drug that will help his wife be restored to youth..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigowuqluoppbatcqppwmm2yt6bqjttuz3ivol6ofmvfw4m7oxljpa
+        size: 71158
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-01T21:51:01.052Z'

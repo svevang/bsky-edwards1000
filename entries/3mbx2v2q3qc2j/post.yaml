@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mbx2v2q3qc2j
+cid: bafyreididudq7wd24k7lxygtoazink6ixjqlatplafojmckwlepxgerv3i
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mbx2v2q3qc2j
+createdAt: '2026-01-08T22:48:44.910Z'
+text: "#Edwards1000SixtiesMovies \n\n260/1000:\nSTATE FAIR 1962\n\nI never have seen truthfully the previous film versions of the Rodgers-Hammerstein musical aside from this one, but I've noticed this to be dull and bland in its musical numbers. Margret is gorgeously electric in her screen debut, though."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n260/1000:\nSTATE FAIR 1962\n\nI never have seen truthfully the previous film versions of the Rodgers-Hammerstein musical aside from this one, but I've noticed this to be dull and bland in its musical numbers. Margret is gorgeously electric in her screen debut, though."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidtinsaz32dgt3peicd45jjywbhumflhvovdns7mmcnbzkujoteae
+        size: 141290
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-01-08T22:48:44.910Z'

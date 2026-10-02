@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lxlxf6dge22k
+cid: bafyreicdt2spgwtc4bwszrdnuid7kujffyiiwqqys5wjjso5q3oetwzneq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lxlxf6dge22k
+createdAt: '2025-08-30T06:34:57.202Z'
+text: "#Edwards1000SixtiesMovies \n\n123/1000:\nWILD IN THE COUNTRY\n\nThis is a film that is completely different from other Elvis roles that I've seen, not just because of the intense drama throughout the scenes, but also because of how brilliant Elvis portrayed the deep emotions of his character here..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n123/1000:\nWILD IN THE COUNTRY\n\nThis is a film that is completely different from other Elvis roles that I've seen, not just because of the intense drama throughout the scenes, but also because of how brilliant Elvis portrayed the deep emotions of his character here..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiev5jmta3frthqutdmuptxiod47ewyybopf4aqdyubdnweonwsmpa
+        size: 64568
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-08-30T06:34:57.202Z'

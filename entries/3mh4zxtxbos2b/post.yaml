@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mh4zxtxbos2b
+cid: bafyreidjrlbfm3jhg77ffd5lnfegb2rpcrbtns6uaehnl32vksajkgbp4y
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mh4zxtxbos2b
+createdAt: '2026-03-15T22:54:21.325Z'
+text: "#Edwards1000SixtiesMovies \n\n313/1000:\nTHE NUTTY PROFESSOR 1963\n\nI'd say that this is Jerry Lewis' magnum opus as actor-director-writer, as he delivers his best performance as a nearsighted college instructor who concocts a mixture that makes him the opposite way around: suave and good-looking."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n313/1000:\nTHE NUTTY PROFESSOR 1963\n\nI'd say that this is Jerry Lewis' magnum opus as actor-director-writer, as he delivers his best performance as a nearsighted college instructor who concocts a mixture that makes him the opposite way around: suave and good-looking."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreid5ypaw4c6gfgpytfvhzlmrt6fdsi2pr2h5s3asmdy4lp4h47zbiy
+        size: 175316
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-03-15T22:54:21.325Z'

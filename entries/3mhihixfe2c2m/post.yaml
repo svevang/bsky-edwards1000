@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mhihixfe2c2m
+cid: bafyreicxhr6xlabg4i3el72nkx5erau5pi42iaiynb33syju7mwpq3u2lm
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mhihixfe2c2m
+createdAt: '2026-03-20T11:55:51.098Z'
+text: "#Edwards1000SixtiesMovies \n\n319/1000:\nHUD \n\nStill pretty holds up for me even on my third rewatch. Newman blows off a lot of steam as the insensitive, disrespectful Hud Bannon who brings up a lot of tension with people he comes into contact with, most especially his strict, highly principled father"
+record:
+  text: "#Edwards1000SixtiesMovies \n\n319/1000:\nHUD \n\nStill pretty holds up for me even on my third rewatch. Newman blows off a lot of steam as the insensitive, disrespectful Hud Bannon who brings up a lot of tension with people he comes into contact with, most especially his strict, highly principled father"
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidsz3bxft4uhcjktsbllk43cp242ymqkvs7o4svqs5aehvlkwh6hu
+        size: 91125
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-03-20T11:55:51.098Z'

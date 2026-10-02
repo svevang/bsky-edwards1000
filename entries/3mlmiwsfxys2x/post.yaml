@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mlmiwsfxys2x
+cid: bafyreib2wa3agxqf5fuqxhu7ozmcc55dqp6kev26gdfaa24bie3pinacjy
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mlmiwsfxys2x
+createdAt: '2026-05-12T00:12:54.869Z'
+text: "#Edwards1000SixtiesMovies \n\n380/1000:\nTHE GUN HAWK\n\nIt has been a while since I saw a movie starring Rory Calhoun, but his handsome looks was still the same. Got to lament that this Western faded into obscurity long after its release, because I found it good after I watched it throughout."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n380/1000:\nTHE GUN HAWK\n\nIt has been a while since I saw a movie starring Rory Calhoun, but his handsome looks was still the same. Got to lament that this Western faded into obscurity long after its release, because I found it good after I watched it throughout."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiclq5agzksh6ejzirhs6udq56vx7cnycabcfqnydp26qeewmyg27a
+        size: 93581
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 800
+        height: 450
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-12T00:12:54.869Z'

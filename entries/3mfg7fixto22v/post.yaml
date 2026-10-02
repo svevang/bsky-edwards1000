@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mfg7fixto22v
+cid: bafyreido2bhbvqwyh3f2vq3xcjrowvyx7a324s6cqzuczk27hu37b453wi
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mfg7fixto22v
+createdAt: '2026-02-22T03:35:02.670Z'
+text: "#Edwards1000SixtiesMovies\n\n295/1000:\nTHE PASSWORD IS COURAGE \n\nThis has been so far, one of the few comedies taking place at war time which I have watched. While Bogarde's performance as Sgt. Maj. Coward is relatively a fun one, this would have been better if it was retooled as a biopic instead."
+record:
+  text: "#Edwards1000SixtiesMovies\n\n295/1000:\nTHE PASSWORD IS COURAGE \n\nThis has been so far, one of the few comedies taking place at war time which I have watched. While Bogarde's performance as Sgt. Maj. Coward is relatively a fun one, this would have been better if it was retooled as a biopic instead."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifgqqhdbjadcrmd2ovbdz4wwqxu2jme7ggeo6pcmy5ewxbhfoluqu
+        size: 83454
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-02-22T03:35:02.670Z'

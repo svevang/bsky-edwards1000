@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mtsj4itlck2a
+cid: bafyreieg63vsxlvcx2okxp4wxg3csb3ubbcqmp5cq6dbhzu5g5ewhumgni
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mtsj4itlck2a
+createdAt: '2026-08-24T04:53:37.580Z'
+text: "#Edwards1000SixtiesMovies \n\n465/1000:\nKISS ME, STUPID\n\nIn this underrated comedy film from legendary director Billy Wilder, Dean stars as a fictionalized version of himself who stays at the house of a songwriter in a small town, who hires a local waitress to pretend as the songwriter's wife..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n465/1000:\nKISS ME, STUPID\n\nIn this underrated comedy film from legendary director Billy Wilder, Dean stars as a fictionalized version of himself who stays at the house of a songwriter in a small town, who hires a local waitress to pretend as the songwriter's wife..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibc7cs3xlovbj3unmjr2q6mbpgq7ihxvfxyaldk4rlodcqj5ml4fa
+        size: 84190
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-24T04:53:37.580Z'

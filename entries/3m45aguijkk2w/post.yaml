@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m45aguijkk2w
+cid: bafyreihuqs3gfaouambd5iodimzp55i34h2glqlkjbmum6llq26oqktkym
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m45aguijkk2w
+createdAt: '2025-10-27T01:12:59.723Z'
+text: "#Edwards1000SixtiesMovies \n\n193/1000:\nSAIL A CROOKED SHIP\n\nLooks like this comedy caper movie is an underrated one, given that this is lesser-seen or mentioned nowadays. You can see a lot of funny moments throughout, such as the \"dirty sandwich\" and the heist scenes  that takes place in Boston."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n193/1000:\nSAIL A CROOKED SHIP\n\nLooks like this comedy caper movie is an underrated one, given that this is lesser-seen or mentioned nowadays. You can see a lot of funny moments throughout, such as the \"dirty sandwich\" and the heist scenes  that takes place in Boston."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidlic7t5vz4l6kfbbgg536sszs3z25kcymu36d7hbgm4m3v2gllr4
+        size: 73818
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-10-27T01:12:59.723Z'

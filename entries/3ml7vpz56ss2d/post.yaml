@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ml7vpz56ss2d
+cid: bafyreifc26uloboqa4i3hfnykxyjjphuzudoeo327ohn4afaz5cq2l7qqu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ml7vpz56ss2d
+createdAt: '2026-05-06T23:57:09.085Z'
+text: "#Edwards1000SixtiesMovies \n\n374/1000:\nSHOWDOWN\n\nThis black and white Western film starring Audie Murphy has an interesting premise, but the execution and acting isn't quite good enough to make this properly stand out among other Westerns released around the same time. To admit it, I was so, so bored"
+record:
+  text: "#Edwards1000SixtiesMovies \n\n374/1000:\nSHOWDOWN\n\nThis black and white Western film starring Audie Murphy has an interesting premise, but the execution and acting isn't quite good enough to make this properly stand out among other Westerns released around the same time. To admit it, I was so, so bored"
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreih4lon3bum44owbfmfmhjubbykfluw25vjwiieetcylwmejqcxbae
+        size: 124273
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 800
+        height: 450
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-06T23:57:09.085Z'

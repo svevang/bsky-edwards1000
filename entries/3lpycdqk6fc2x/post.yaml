@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lpycdqk6fc2x
+cid: bafyreietgjeqqy3u3i7s23mp5tcbgfwh7hoy4bpw6j26cgldjzffrvtv3a
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lpycdqk6fc2x
+createdAt: '2025-05-25T09:01:24.178Z'
+text: "#Edwards1000SixtiesMovies \n\n14/1000:\nBUTTERFIELD 8\n\nAdapted from John O'Hara's bestseller, Liz Taylor (in her first Oscar-winning role) plays the role of a socialite-model whose personal and romantic life gets complicated after getting involved with a guy who has married into a wealthy family."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n14/1000:\nBUTTERFIELD 8\n\nAdapted from John O'Hara's bestseller, Liz Taylor (in her first Oscar-winning role) plays the role of a socialite-model whose personal and romantic life gets complicated after getting involved with a guy who has married into a wealthy family."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigiheomfhpqlr3nrudneq3akm46dsgndfqyzeti4qgsbjfm6u7hz4
+        size: 89348
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-05-25T09:01:24.178Z'

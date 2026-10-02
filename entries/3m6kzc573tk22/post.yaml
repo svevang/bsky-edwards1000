@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m6kzc573tk22
+cid: bafyreidkjzwf4tc3akzizy47dgo5uxf24bixepx4bbc5e4nc35mpa7jcuy
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m6kzc573tk22
+createdAt: '2025-11-26T23:32:44.479Z'
+text: "#Edwards1000SixtiesMovies \n\n216/1000:\nMUTINY ON THE BOUNTY (1962 version)\n\nLewis Milestone launches this film version of the historical 1789 mutiny aboard the HMS Bounty with lavish sets, exotic locations and \na huge replica of the ship, but it fails to capture the spark expected by its audience."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n216/1000:\nMUTINY ON THE BOUNTY (1962 version)\n\nLewis Milestone launches this film version of the historical 1789 mutiny aboard the HMS Bounty with lavish sets, exotic locations and \na huge replica of the ship, but it fails to capture the spark expected by its audience."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidjd2gxlfdh6vnhw5eh5einjlwcj4ncygs4l5mqahtwqmaznpytcy
+        size: 94590
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-11-26T23:32:44.479Z'

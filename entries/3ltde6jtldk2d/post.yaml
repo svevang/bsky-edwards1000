@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ltde6jtldk2d
+cid: bafyreihwwdelavlnx2yiwdnrk7xkoo7ixw5umxmkrt3io3bodon4qfdwsa
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ltde6jtldk2d
+createdAt: '2025-07-06T22:49:08.877Z'
+text: "#Edwards1000SixtiesMovies \n\n70/1000:\nCIRCUS OF HORRORS\n\nNow this is a horror movie that doesn't have any ghosts or supernatural creatures in it...A plastic surgeon escaping the police for a case of malpractice buys a rundown circus and under an assumed name, chooses women for his \"Temple of Beauty\""
+record:
+  text: "#Edwards1000SixtiesMovies \n\n70/1000:\nCIRCUS OF HORRORS\n\nNow this is a horror movie that doesn't have any ghosts or supernatural creatures in it...A plastic surgeon escaping the police for a case of malpractice buys a rundown circus and under an assumed name, chooses women for his \"Temple of Beauty\""
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidau2xo5r6ylpce2xjhvlcyd2mntzj473pdjnouhksuhc34an24ru
+        size: 79426
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-06T22:49:08.877Z'

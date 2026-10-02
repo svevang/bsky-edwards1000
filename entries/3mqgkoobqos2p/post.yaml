@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mqgkoobqos2p
+cid: bafyreigi4rpry55esofumpvafc3h2oyltwncgvxp2hsmxq62s7t6o43you
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mqgkoobqos2p
+createdAt: '2026-07-12T06:34:09.293Z'
+text: "#Edwards1000SixtiesMovies \n\n420/1000:\nWHAT A WAY TO GO\n\nWhenever I google Shirley MacLaine, this film always turns up among the top search results. Now I certainly know why: Shirley wears the best costumes of her movie career, and this movie pays homage to four different eras of cinema history."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n420/1000:\nWHAT A WAY TO GO\n\nWhenever I google Shirley MacLaine, this film always turns up among the top search results. Now I certainly know why: Shirley wears the best costumes of her movie career, and this movie pays homage to four different eras of cinema history."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreianu2axtsocny7gb5dtdsd5qtrvzua3seerspufpa23plhh6gsx2e
+        size: 80598
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-07-12T06:34:09.293Z'

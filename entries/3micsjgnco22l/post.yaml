@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3micsjgnco22l
+cid: bafyreifovihcooxhiyl24ltulmpbdjjbgos7yckcl44qjf6zuv3wtt4hvu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3micsjgnco22l
+createdAt: '2026-03-30T23:22:11.449Z'
+text: "#Edwards1000SixtiesMovies \n\n332/1000:\nTHE THRILL OF IT ALL\n\nA highly fun and hilarious Doris-starring romantic comedy which also seeks to give its audience a lesson or two at life-work balance. The concept of Doris starring as a soap company commercial model is a unique aspect of her 60s movies."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n332/1000:\nTHE THRILL OF IT ALL\n\nA highly fun and hilarious Doris-starring romantic comedy which also seeks to give its audience a lesson or two at life-work balance. The concept of Doris starring as a soap company commercial model is a unique aspect of her 60s movies."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibjzhgbmrdav5225m3qcql24v5nspkhjd6baspilputityvq2fbji
+        size: 39524
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-03-30T23:22:11.449Z'

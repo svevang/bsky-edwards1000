@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lxlgd7gaic2h
+cid: bafyreihimewxsawmzn5vqmzj4z3n6qxj3ywpqjn56yxfebzdwnjebnpone
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lxlgd7gaic2h
+createdAt: '2025-08-30T01:29:37.630Z'
+text: "#Edwards1000SixtiesMovies\n \n122/1000:\nPIT AND THE PENDULUM \n\nAnother excellent Poe adaptation produced by Corman and American International just made my day! Brilliant visuals, enjoyable script and exquisite scares go hand-in-hand to make this Vincent Price movie a fascinating horror flick to watch."
+record:
+  text: "#Edwards1000SixtiesMovies\n \n122/1000:\nPIT AND THE PENDULUM \n\nAnother excellent Poe adaptation produced by Corman and American International just made my day! Brilliant visuals, enjoyable script and exquisite scares go hand-in-hand to make this Vincent Price movie a fascinating horror flick to watch."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibivrwsy6vol4bdfhjhb3kzospsnvkai375ejsciijmxtqtigoiam
+        size: 56830
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 732
+        height: 419
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-08-30T01:29:37.630Z'

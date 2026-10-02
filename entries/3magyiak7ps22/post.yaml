@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3magyiak7ps22
+cid: bafyreihgxcdwb6dvfkscfvenfahuztagoq2p43a4a7csg4uxuf7ggwojse
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3magyiak7ps22
+createdAt: '2025-12-20T19:57:59.892Z'
+text: "#Edwards1000SixtiesMovies \n\n236/1000:\nRIDE THE HIGH COUNTRY\n\nPeckinpah's second film had me craving for more Westerns, as it integrated the value of friendship into more common Western themes. This is also a fitting tribute for both aging yet excellent leads Randolph Scott and Joel McCrea."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n236/1000:\nRIDE THE HIGH COUNTRY\n\nPeckinpah's second film had me craving for more Westerns, as it integrated the value of friendship into more common Western themes. This is also a fitting tribute for both aging yet excellent leads Randolph Scott and Joel McCrea."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifif4u5hxvjd2qbp5w6zi4gqibtxo32nbd2gzzc5232dnqyudt7w4
+        size: 96089
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 740
+        height: 414
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-12-20T19:57:59.892Z'

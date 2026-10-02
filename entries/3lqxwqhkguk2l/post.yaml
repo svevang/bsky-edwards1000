@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lqxwqhkguk2l
+cid: bafyreigxgcq5asma57phrjtuh5e7zp5ko5phcuqn2t6los6454nkktaeda
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lqxwqhkguk2l
+createdAt: '2025-06-06T22:58:57.681Z'
+text: "#Edwards1000SixtiesMovies \n\n30/1000:\nTHE FUGITIVE KIND\n\nI consider this drama film to be a hidden gem of 60s cinema due to the intense performances of the leads, the interesting and engaging storyline, the masterful direction of Lumet, and Brando looking slick in a snakeskin coat."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n30/1000:\nTHE FUGITIVE KIND\n\nI consider this drama film to be a hidden gem of 60s cinema due to the intense performances of the leads, the interesting and engaging storyline, the masterful direction of Lumet, and Brando looking slick in a snakeskin coat."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreic2xpplfwsjst2c5idh3sffyjzqb5bajxtaqvxmscivyghangkit4
+        size: 83383
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-06T22:58:57.681Z'

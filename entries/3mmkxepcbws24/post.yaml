@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mmkxepcbws24
+cid: bafyreie5uuxfn7cedroklgahyqxk4oseslpuooy3wsqx4d642ffjr2gfre
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mmkxepcbws24
+createdAt: '2026-05-24T02:51:05.901Z'
+text: "#Edwards1000SixtiesMovies \n\n393/1000:\nHEAVENS ABOVE\n\nThe third of Sellers' three 1963 movies that made it to my watchlist. He plays a caring prison chaplain who becomes the vicar of an upper-class English country town due to mistaken identity. What follows next is a great hybrid of comedy and drama."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n393/1000:\nHEAVENS ABOVE\n\nThe third of Sellers' three 1963 movies that made it to my watchlist. He plays a caring prison chaplain who becomes the vicar of an upper-class English country town due to mistaken identity. What follows next is a great hybrid of comedy and drama."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifr7vxo6sgbrt7g2yuxhhy2lfsdfcutthkkg5v4ofzm3r37kuxp44
+        size: 41944
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 352
+        height: 264
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-24T02:51:05.901Z'

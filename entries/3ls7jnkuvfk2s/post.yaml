@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ls7jnkuvfk2s
+cid: bafyreicghbk5jvlgv3e7x5ymtfnjfhwiu2w7cmjogdti3c2xwakkqkf43q
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ls7jnkuvfk2s
+createdAt: '2025-06-22T16:51:11.413Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  52/1000:
+  NEVER ON SUNDAY
+
+  There are several reasons to watch this romantic comedy film: Melina's beautiful and charming performance; the Pygmalion-like storyline; the comedic moments, and the iconic, catchy theme song. It's full of fun and excitement in each scene.
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    52/1000:
+    NEVER ON SUNDAY
+
+    There are several reasons to watch this romantic comedy film: Melina's beautiful and charming performance; the Pygmalion-like storyline; the comedic moments, and the iconic, catchy theme song. It's full of fun and excitement in each scene.
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreieied5p7awzy6x6zx6ekrk7euyh6lagjznvade472yccrck2wacxy
+        size: 81777
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-22T16:51:11.413Z'

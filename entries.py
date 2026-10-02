@@ -72,8 +72,13 @@ def write(rk, name, data):
 def view(rk):
     """{"post", stage files...: as read, absent when missing; "override": override.yaml}.
     Each override file.field replaces that field, but only in a stage file that exists."""
-    v = {n: d for n in ("post", *schema.stage_files()) if (d := read(rk, n)) is not None}
-    v["override"] = read(rk, "override") or {}
+    files = {n: d for n in ("post", *schema.stage_files()) if (d := read(rk, n)) is not None}
+    return overlay({**files, "override": read(rk, "override") or {}})
+
+
+def overlay(files):
+    """Apply files["override"] over copies of the other files, as view() does."""
+    v = {**files, "override": files.get("override") or {}}
     for key, value in v["override"].items():
         file, field = key.split(".", 1)
         if file in v and file != "override":

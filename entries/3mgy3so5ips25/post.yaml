@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mgy3so5ips25
+cid: bafyreib3amjr6adhv33whbjqcz7ivdqdgufjk2elrvdkg5hvugmbvknl2e
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mgy3so5ips25
+createdAt: '2026-03-13T23:43:56.257Z'
+text: "#Edwards1000SixtiesMovies \n\n308/1000:\n8 1/2\n\nWidely considered as one of Fellini's best movies, this drama film explores a film director whose personal and professional life is in a rocky state who fantasizes about past women in his life and dreams of his parents and wonderful childhood."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n308/1000:\n8 1/2\n\nWidely considered as one of Fellini's best movies, this drama film explores a film director whose personal and professional life is in a rocky state who fantasizes about past women in his life and dreams of his parents and wonderful childhood."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidnyykrevskp7lmjhmdi3bh2xdthv6wbg7zuxzay73ioakb7twgtq
+        size: 57283
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-03-13T23:43:56.257Z'

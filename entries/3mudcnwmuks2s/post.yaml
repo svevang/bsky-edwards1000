@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mudcnwmuks2s
+cid: bafyreibc6jmf5vj6dzngh5s6wlqzznvsmggnqvqe3sm4vn3zf7fpgzc4sq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mudcnwmuks2s
+createdAt: '2026-08-30T21:13:21.853Z'
+text: "#Edwards1000SixtiesMovies \n\n471/1000:\nGOODBYE CHARLIE \n\nThis comedy-fantasy film from Minnelli may sound like it is his most energy-filled effort. Reincarnation is presented in a funny, hilarious way by Debbie Reynolds, who plays a woman who has the spirit of a killed womanizing screenwriter."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n471/1000:\nGOODBYE CHARLIE \n\nThis comedy-fantasy film from Minnelli may sound like it is his most energy-filled effort. Reincarnation is presented in a funny, hilarious way by Debbie Reynolds, who plays a woman who has the spirit of a killed womanizing screenwriter."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreics2uzust47ekszhhcwy6anifwsr7tagnaua2ffihx2buhhepxvnq
+        size: 277888
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 856
+        height: 482
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-30T21:13:21.853Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mtl5p6wtss2s
+cid: bafyreibm73gpyki2zb3r6zbzsljeg2stmi34kkhbfsfbylihllgz7m6tae
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mtl5p6wtss2s
+createdAt: '2026-08-21T06:40:41.693Z'
+text: "#Edwards1000SixtiesMovies \n\n463/1000:\nTHE PUMPKIN EATER\n\nAnne Bancroft once more delivers an acclaim-worthy performance in a dramatic role after her Oscar-winning turn in Miracle Worker two years ago. Her emotions of happiness, sadness, anger, as well as her eye movements or contact are authentic."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n463/1000:\nTHE PUMPKIN EATER\n\nAnne Bancroft once more delivers an acclaim-worthy performance in a dramatic role after her Oscar-winning turn in Miracle Worker two years ago. Her emotions of happiness, sadness, anger, as well as her eye movements or contact are authentic."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiddiyzfm7icm3owkc5kdc4iqpnqtihdm5czauhcdwbcokmyx7jrfy
+        size: 86079
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-21T06:40:41.693Z'

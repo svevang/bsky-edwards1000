@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lzhjicfz7s23
+cid: bafyreiho3kkhfk3hu6zg52eszqezhh5qu4xysalpcw6qhrdiwvzqmmxyoa
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lzhjicfz7s23
+createdAt: '2025-09-22T23:05:54.050Z'
+text: "#Edwards1000SixtiesMovies \n\n153/1000:\nCOLOSSUS OF RHODES\n\nI never thought that the great cinema maestro Sergio Leone directed this ancient Greek historical epic, which makes use of the great wonder Colossus as a plot device. Leone starts his career with a simple yet enjoyable masterpiece..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n153/1000:\nCOLOSSUS OF RHODES\n\nI never thought that the great cinema maestro Sergio Leone directed this ancient Greek historical epic, which makes use of the great wonder Colossus as a plot device. Leone starts his career with a simple yet enjoyable masterpiece..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreig2jn2da6ykililimleee6lbz2evqvdxkviyxyibpswcy3xkiz7e4
+        size: 116859
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-09-22T23:05:54.050Z'

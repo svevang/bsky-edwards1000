@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lx4xyapags2y
+cid: bafyreieqww57bqf33nyvbziby7hl7espkbls6bwlgx44bpmhw4qxp4ebf4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lx4xyapags2y
+createdAt: '2025-08-24T07:35:41.148Z'
+text: "#Edwards1000SixtiesMovies \n\n113/1000:\nTHE COMANCHEROS \n\nThis decent, mid-notch Western was the last movie directed by legendary Hollywood director Michael Curtiz. This is not just an ordinary Western for me, as it involved a lot of action, valiant Texas Rangers, and a secret society of gunrunners."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n113/1000:\nTHE COMANCHEROS \n\nThis decent, mid-notch Western was the last movie directed by legendary Hollywood director Michael Curtiz. This is not just an ordinary Western for me, as it involved a lot of action, valiant Texas Rangers, and a secret society of gunrunners."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifdgk32oa7trokaz33ygewaavz7dthrvrumvb5ahlkipx7lcx3ayi
+        size: 214066
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 856
+        height: 482
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-08-24T07:35:41.148Z'

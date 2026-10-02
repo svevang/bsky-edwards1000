@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lsettr4bm225
+cid: bafyreiaowatns2ybmj4xsvzo3ds5e6zfbadezv4gxmmvtsg7tlfta7jolu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lsettr4bm225
+createdAt: '2025-06-24T19:36:55.384Z'
+text: "#Edwards1000SixtiesMovies \n\n54/1000:\nLEAGUE OF GENTLEMEN\n\nStarring an all-star cast of British cinema, this comedy caper movie may be seen as an incredible alternative to Ocean's 11 of the same year. The unique militaristic style in preparing for the bank heist makes this a good watch."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n54/1000:\nLEAGUE OF GENTLEMEN\n\nStarring an all-star cast of British cinema, this comedy caper movie may be seen as an incredible alternative to Ocean's 11 of the same year. The unique militaristic style in preparing for the bank heist makes this a good watch."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreif7epluew2tt6kqcg5crmc3twwbgnicmtv4qm6wnjwvm75eujtczi
+        size: 85850
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-24T19:36:55.384Z'

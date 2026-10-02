@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lqpyrc2cyk2a
+cid: bafyreicapxqerzlpotminz27k623ii53weoeo3psfaf5c53oigs2lpzxaq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lqpyrc2cyk2a
+createdAt: '2025-06-03T19:13:55.055Z'
+text: "#Edwards1000SixtiesMovies\n\n25/1000:\nTHE LOST WORLD\n\nAn adaptation of Arthur Conan Doyle's sci-fi novel, this adventure movie is propelled by stunning special effects, spectacular scenes, and of course, the towering dinosaurs, created before the birth of CGI. \nJurassic Park of the '60s, simply put."
+record:
+  text: "#Edwards1000SixtiesMovies\n\n25/1000:\nTHE LOST WORLD\n\nAn adaptation of Arthur Conan Doyle's sci-fi novel, this adventure movie is propelled by stunning special effects, spectacular scenes, and of course, the towering dinosaurs, created before the birth of CGI. \nJurassic Park of the '60s, simply put."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifvc6dvnmkyorchiuuifvmvrlexswarmlvpgiedxag4iykvc6oqhi
+        size: 149639
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-03T19:13:55.055Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mbullqnrbc2x
+cid: bafyreift34mttxzh2cmrgu7jfh53tg6f4646vpap3gf4bv4eapdwxzulnu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mbullqnrbc2x
+createdAt: '2026-01-07T23:09:46.761Z'
+text: "#Edwards1000SixtiesMovies \n\n259/1000:\nHELL IS FOR HEROES \n\nWhat makes this Steve McQueen starrer a great standout among the war films I've watched is the realistic depiction of U.S. Army GIs and their experiences in the line of combat during WWII, as well as the full-blast action near the ending."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n259/1000:\nHELL IS FOR HEROES \n\nWhat makes this Steve McQueen starrer a great standout among the war films I've watched is the realistic depiction of U.S. Army GIs and their experiences in the line of combat during WWII, as well as the full-blast action near the ending."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiczwihtungwi7kc7wl45xydwefgsb2wk7nvrrtkkb33nc4vlavjaq
+        size: 101991
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-01-07T23:09:46.761Z'

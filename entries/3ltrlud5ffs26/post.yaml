@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ltrlud5ffs26
+cid: bafyreicth3l5o7vnx3hk7clywu2o7fqz6sn5ztghgudwjgya7b634brw5y
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ltrlud5ffs26
+createdAt: '2025-07-12T14:43:52.573Z'
+text: "#Edwards1000SixtiesMovies \n\n75/1000:\nTHE TRUTH \n\nBrigitte Bardot gives a tour de force performance as a liberated yet emotionally troubled young woman who stands trial for murdering her lover, a young conductor, and her indecent and impulsive past which led to the crime, as told in flashbacks."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n75/1000:\nTHE TRUTH \n\nBrigitte Bardot gives a tour de force performance as a liberated yet emotionally troubled young woman who stands trial for murdering her lover, a young conductor, and her indecent and impulsive past which led to the crime, as told in flashbacks."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiapqclrjqoq3phmuhurassypl2b47dbzqgpp7nvsde6ph3vpt3gxm
+        size: 53213
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-12T14:43:52.573Z'

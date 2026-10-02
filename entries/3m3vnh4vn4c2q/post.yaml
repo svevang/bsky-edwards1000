@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m3vnh4vn4c2q
+cid: bafyreido6c3jc4g36azb23ulpgkj2ljyyxhjwcxq6cw7lqrxowwpwq7shy
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m3vnh4vn4c2q
+createdAt: '2025-10-24T00:44:29.303Z'
+text: "#Edwards1000SixtiesMovies \n\n187/1000:\nALL IN A NIGHT'S WORK\n\nThis romantic comedy film is a perfect display of lovely chemistry between Dean and Shirley, who play a newspaper company heir and a researcher, respectively. This movie has its great moments but still lacks a little bit of charm."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n187/1000:\nALL IN A NIGHT'S WORK\n\nThis romantic comedy film is a perfect display of lovely chemistry between Dean and Shirley, who play a newspaper company heir and a researcher, respectively. This movie has its great moments but still lacks a little bit of charm."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiatrdpqdxcvnia7dssmtkkg63zqnufx4p6xfsclvimor7rvacbl2a
+        size: 105984
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-10-24T00:44:29.303Z'

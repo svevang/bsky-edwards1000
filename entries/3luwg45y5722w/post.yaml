@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3luwg45y5722w
+cid: bafyreiglrtqh5h7i3tv4buykcq6k4fmjo7mwzvtaqobbddpyemsbpruscm
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3luwg45y5722w
+createdAt: '2025-07-27T06:09:23.466Z'
+text: "#Edwards1000SixtiesMovies \n\n96/1000:\nTHE FACTS OF LIFE\n\nTwo of America's greatest entertainers, Bob and Lucille, make such a perfect chemistry together in this romance comedy movie. It involves two married people who fall in love with each other while on a vacation without their respective spouses."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n96/1000:\nTHE FACTS OF LIFE\n\nTwo of America's greatest entertainers, Bob and Lucille, make such a perfect chemistry together in this romance comedy movie. It involves two married people who fall in love with each other while on a vacation without their respective spouses."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreib7li5ram42weuhftkkynw532uqlz5cmqr5v74c3ryojxhujhyfz4
+        size: 112646
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 686
+        height: 447
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-27T06:09:23.466Z'

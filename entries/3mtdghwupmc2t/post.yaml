@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mtdghwupmc2t
+cid: bafyreig7cwvikzhpgikp4pzlqwmxlqqjwfs5xsdksu547uo7hmlnxv6nia
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mtdghwupmc2t
+createdAt: '2026-08-18T04:56:24.122Z'
+text: "#Edwards1000SixtiesMovies \n\n460/1000:\nTHE NAKED KISS \n\nOne of director Sam Fuller's boldest efforts, this crime-drama movie focuses on a former prostitute's relocation to a small town to redeem herself. It features top-notch acting and cinematography that makes it a curious watch among film fans."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n460/1000:\nTHE NAKED KISS \n\nOne of director Sam Fuller's boldest efforts, this crime-drama movie focuses on a former prostitute's relocation to a small town to redeem herself. It features top-notch acting and cinematography that makes it a curious watch among film fans."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifaqysvfalq3iu4mmiww3uurbrv4spylpfdfzd6w6fdzhf2mqcxse
+        size: 83813
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 588
+        height: 330
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-18T04:56:24.122Z'

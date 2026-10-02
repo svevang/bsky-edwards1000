@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mhr3a2aflk2d
+cid: bafyreib2sgdlhbvytozoxkh4yzrkiyyeq3zsyi633s5srfgx53y4ubqrim
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mhr3a2aflk2d
+createdAt: '2026-03-23T22:10:04.836Z'
+text: "#Edwards1000SixtiesMovies \n\n324/1000:\nTOM JONES\n\nThis high-spirited picaresque film adaptation of Fielding's novel kept me focused and interested. Finney evocatively portrays the title character which brings a lot of life to the movie itself. And this is perfectly shot in the English countryside."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n324/1000:\nTOM JONES\n\nThis high-spirited picaresque film adaptation of Fielding's novel kept me focused and interested. Finney evocatively portrays the title character which brings a lot of life to the movie itself. And this is perfectly shot in the English countryside."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: Albert Finney and Susannah York
+      image:
+        ref:
+          $link: bafkreie6xfzbpczp4vbw5nilcjlc65s4kztx2cgrkqey5vvqmsjsrrz7gi
+        size: 96252
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-03-23T22:10:04.836Z'

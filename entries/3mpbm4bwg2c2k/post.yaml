@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mpbm4bwg2c2k
+cid: bafyreidyja4shscd5foejaiwuh6sieujx3r52cibaxhptzxq5pwrrb7nmu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mpbm4bwg2c2k
+createdAt: '2026-06-27T13:51:09.523Z'
+text: "#Edwards1000SixtiesMovies \n\n407/1000:\nMARNIE\n\nThis mystery-thriller movie is somewhat different from Hitchcock's other films, because it presents a psychological analysis of the title character, Marnie, and how she came to be an impulsive, distressed thief and liar, instead of the usual suspense."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n407/1000:\nMARNIE\n\nThis mystery-thriller movie is somewhat different from Hitchcock's other films, because it presents a psychological analysis of the title character, Marnie, and how she came to be an impulsive, distressed thief and liar, instead of the usual suspense."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreic2edrwnuqdk2rkcilbeskgw4rz37tylnugg5psq5ekdaudcly3vi
+        size: 76773
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 690
+        height: 345
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-06-27T13:51:09.523Z'

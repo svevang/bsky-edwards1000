@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m2zrmvfhxs2c
+cid: bafyreic53zynxtoyjt4n2w3v6mizhzkt2bzyy5ud4ebermbwdhnke4m7fa
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m2zrmvfhxs2c
+createdAt: '2025-10-12T22:44:45.047Z'
+text: "#Edwards1000SixtiesMovies \n\n175/1000:\nSUSAN SLADE\n\nDelmer Daves wrote and directed this drama-romance film as a follow-up to the critical and commercial success of Parrish, released earlier in the same year. Connie Stevens' acting may be a weak point but her chemistry with Troy Donahue hits the spot"
+record:
+  text: "#Edwards1000SixtiesMovies \n\n175/1000:\nSUSAN SLADE\n\nDelmer Daves wrote and directed this drama-romance film as a follow-up to the critical and commercial success of Parrish, released earlier in the same year. Connie Stevens' acting may be a weak point but her chemistry with Troy Donahue hits the spot"
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiaaknfi32tclqudh6yqfzgnjibirlvyuvg457mssideumcuj7k4sm
+        size: 63503
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-10-12T22:44:45.047Z'

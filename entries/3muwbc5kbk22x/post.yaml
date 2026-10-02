@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3muwbc5kbk22x
+cid: bafyreief4llxoyry762gq3jofu5fek47cz6zm4vi7azocq6ulwkwktr6s4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3muwbc5kbk22x
+createdAt: '2026-09-07T10:09:27.741Z'
+text: "#Edwards1000SixtiesMovies \n\n477/1000:\nMURDER MOST FOUL\n\nPerhaps the most complicated to understand (at least for me) among the four Miss Marple movies with Margaret Rutherford. In this mystery, she is unconvinced of a murderer's guilt, which brings her to a theatrical company to investigate."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n477/1000:\nMURDER MOST FOUL\n\nPerhaps the most complicated to understand (at least for me) among the four Miss Marple movies with Margaret Rutherford. In this mystery, she is unconvinced of a murderer's guilt, which brings her to a theatrical company to investigate."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreif6yj746hod3u7ppkkxwdpltxdg5tfehz2jwyrd4rbg2tp3izvke4
+        size: 69810
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-09-07T10:09:27.741Z'

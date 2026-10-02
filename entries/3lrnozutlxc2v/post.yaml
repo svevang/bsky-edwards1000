@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lrnozutlxc2v
+cid: bafyreihiscdl334os4mph7skt6ct67pfhawavariu5zvyxyuuykdwenb2y
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lrnozutlxc2v
+createdAt: '2025-06-15T14:39:37.908Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  44/1000:
+  CINDERFELLA
+
+  Jerry Lewis entertained audiences with a gender-swapped take on the classic fairy tale by Perrault, wherein the main characters become male and the love interest becomes female. The premise is still the same but the setting is changed to a mansion.
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    44/1000:
+    CINDERFELLA
+
+    Jerry Lewis entertained audiences with a gender-swapped take on the classic fairy tale by Perrault, wherein the main characters become male and the love interest becomes female. The premise is still the same but the setting is changed to a mansion.
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihgzoeksxqelj3twvn4yb4db3ggdzdx2o4nck4ip5l6sqjdwcohhq
+        size: 119149
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-15T14:39:37.908Z'

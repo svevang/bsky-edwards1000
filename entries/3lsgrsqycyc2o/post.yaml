@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lsgrsqycyc2o
+cid: bafyreiduliijfktdzyllaqzu6q6v4kappzyjgrszcq4ra4saysxciari3u
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lsgrsqycyc2o
+createdAt: '2025-06-25T14:05:53.694Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  55/1000:
+  BEYOND THE TIME BARRIER
+
+  This time, I ventured into the B movie territory with this sci-fi film. Although this time travel flick is a pleasure in terms of design, the premise and the ending brought complete shock to me. And 2024 is a triangle-based future lol.
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    55/1000:
+    BEYOND THE TIME BARRIER
+
+    This time, I ventured into the B movie territory with this sci-fi film. Although this time travel flick is a pleasure in terms of design, the premise and the ending brought complete shock to me. And 2024 is a triangle-based future lol.
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigkuc5ins37f2z6ucjbefcwmb6gj5mntzr4uxjahis67teudn4t3y
+        size: 69088
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-25T14:05:53.694Z'

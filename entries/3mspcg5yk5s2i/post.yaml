@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mspcg5yk5s2i
+cid: bafyreiex24ylevz3mk2f3wnzpj2g57ket3lqapwbsuznlumoj4ja2hkkwi
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mspcg5yk5s2i
+createdAt: '2026-08-10T04:50:34.704Z'
+text: "#Edwards1000SixtiesMovies \n\n453/1000:\nWOMAN OF STRAW \n\nConnery portrays an against-type role in this underrated thriller as a scheming nephew of a wheelchair-bound tycoon who plans to get his hands on his uncle's wealth. To carry out his plot, he persuades his hired female nurse to marry his uncle.."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n453/1000:\nWOMAN OF STRAW \n\nConnery portrays an against-type role in this underrated thriller as a scheming nephew of a wheelchair-bound tycoon who plans to get his hands on his uncle's wealth. To carry out his plot, he persuades his hired female nurse to marry his uncle.."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreieo2ozd6vvaxoctvkuyaghgcxnoz6bwkji5forwzjwe4p3tjwenyu
+        size: 98579
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-10T04:50:34.704Z'

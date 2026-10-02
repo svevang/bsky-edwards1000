@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mu22jzab5k2o
+cid: bafyreidnbl2lmxq36ohsozb32uyias55gke3cbrapi6kdue4nvufwbseii
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mu22jzab5k2o
+createdAt: '2026-08-27T04:54:02.788Z'
+text: "#Edwards1000SixtiesMovies \n\n468/1000:\nROBINSON CRUSOE ON MARS\n\nThis sci-fi movie is a visually stunning treatment of Defoe's classic story, only that it takes place on the red planet instead. Imaginatively speaking, this delivers well on its premise, even with the use of a monkey as the sidekick."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n468/1000:\nROBINSON CRUSOE ON MARS\n\nThis sci-fi movie is a visually stunning treatment of Defoe's classic story, only that it takes place on the red planet instead. Imaginatively speaking, this delivers well on its premise, even with the use of a monkey as the sidekick."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiertizlbqpjvobtxmposabbsppxqlcbg2buwtvkjs3oudbt436fne
+        size: 104524
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 416
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-27T04:54:02.788Z'

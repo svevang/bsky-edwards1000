@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ml7urg5kgs2d
+cid: bafyreibre7ljmab4try5fp54xn7bztotvbg4sqkyfy45x3j3saf65bzr6q
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ml7urg5kgs2d
+createdAt: '2026-05-06T23:40:02.519Z'
+text: "#Edwards1000SixtiesMovies \n\n373/1000:\nA CHILD IS WAITING\n\nThis drama film provides a look at how children diagnosed with intellectual disabilities or special needs cope up with their condition, as well as how are they educated. Judy gives a powerful performance that deserves an Oscar nod."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n373/1000:\nA CHILD IS WAITING\n\nThis drama film provides a look at how children diagnosed with intellectual disabilities or special needs cope up with their condition, as well as how are they educated. Judy gives a powerful performance that deserves an Oscar nod."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreif2lcgmbx4fkzx36sqejyhlkd66o7t7mvjyhmxholdpaqolm7bc7y
+        size: 106619
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-06T23:40:02.519Z'

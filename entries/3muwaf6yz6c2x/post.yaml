@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3muwaf6yz6c2x
+cid: bafyreiaxyohub3q7a37m2ozikpegz3x3dxgjr2u36mv73dhkyf6fezfqm4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3muwaf6yz6c2x
+createdAt: '2026-09-07T09:53:16.175Z'
+text: "#Edwards1000SixtiesMovies \n\n476/1000:\nLADY IN A CAGE \n\nDe Havilland delivers one of the best performances of her late movie career as a woman who gets trapped in the elevator of her spacious house due to a power interruption. A group of delinquents take advantage of her situation by harassing her."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n476/1000:\nLADY IN A CAGE \n\nDe Havilland delivers one of the best performances of her late movie career as a woman who gets trapped in the elevator of her spacious house due to a power interruption. A group of delinquents take advantage of her situation by harassing her."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigwc3htecp4nsuqohxtomsad3punougzx6j6dhabbgqbh7xsuh4va
+        size: 53062
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 737
+        height: 416
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-09-07T09:53:16.175Z'

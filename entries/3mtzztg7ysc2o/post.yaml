@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mtzztg7ysc2o
+cid: bafyreigfnplgijwvj5x5w5dnh5u6mii66wwa3awrmekxscqkyytyc37yr4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mtzztg7ysc2o
+createdAt: '2026-08-27T04:41:24.629Z'
+text: "#Edwards1000SixtiesMovies \n\n467/1000:\nTHE THIRD SECRET\n\nA notable psychologist seemed to have committed suicide, but his teenage daughter, patients and fellow professionals are convinced instead that he was killed. One of the former patients, now a TV producer, tries to solve the puzzle..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n467/1000:\nTHE THIRD SECRET\n\nA notable psychologist seemed to have committed suicide, but his teenage daughter, patients and fellow professionals are convinced instead that he was killed. One of the former patients, now a TV producer, tries to solve the puzzle..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiahoxhz6vkdcedmq7uuu7eolbq27gxduy2uncwi5cp2frhe76kgsa
+        size: 196371
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 856
+        height: 482
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-27T04:41:24.629Z'

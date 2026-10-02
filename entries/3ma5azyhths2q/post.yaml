@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ma5azyhths2q
+cid: bafyreicpbhzahrygvtti4wuk4trrsgjoxiygbpqsxy4p7wzoce4mqncyji
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ma5azyhths2q
+createdAt: '2025-12-16T23:04:27.965Z'
+text: "#Edwards1000SixtiesMovies \n\n233/1000:\nIVAN'S CHILDHOOD\n\nI was emotionally moved after watching this Soviet drama movie, which displayed the harrowing effects of war on an orphaned boy named Ivan. The flashback scenes of Ivan's past, especially the horses eating the peaches, are beautifully shot."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n233/1000:\nIVAN'S CHILDHOOD\n\nI was emotionally moved after watching this Soviet drama movie, which displayed the harrowing effects of war on an orphaned boy named Ivan. The flashback scenes of Ivan's past, especially the horses eating the peaches, are beautifully shot."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiagv52dnin7rtmihe5ftzm2qvknjb5ukb4upqnyhm7cxtlfd47mge
+        size: 78676
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-12-16T23:04:27.965Z'

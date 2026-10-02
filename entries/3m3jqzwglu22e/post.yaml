@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m3jqzwglu22e
+cid: bafyreiecwof5hrrtfxebztzkesmhrmvtarlaeoe7wogkpk5iwkjhiyf4yi
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m3jqzwglu22e
+createdAt: '2025-10-19T07:16:44.416Z'
+text: "#Edwards1000SixtiesMovies \n\n181/1000:\nTAMMY TELL ME TRUE\n\nI watched this comedy film thinking that this is a routine, stand-alone movie starring Sandra Dee, who was popular during the early 60s. I just found out that it is the second of a four-film series, and I need to go check out the others too."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n181/1000:\nTAMMY TELL ME TRUE\n\nI watched this comedy film thinking that this is a routine, stand-alone movie starring Sandra Dee, who was popular during the early 60s. I just found out that it is the second of a four-film series, and I need to go check out the others too."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibc4u5nirjxodecrwregs3ny2eduuhj6bux3wc4nhbwnp37li5xhy
+        size: 110346
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-10-19T07:16:44.416Z'

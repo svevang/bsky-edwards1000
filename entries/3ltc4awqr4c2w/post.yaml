@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ltc4awqr4c2w
+cid: bafyreicjslq2mlupxup5fvmeclovsvmhnfrzykawy2qsc6jh2teuqr772a
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ltc4awqr4c2w
+createdAt: '2025-07-06T10:54:39.852Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  69/1000:
+  CASH McCALL
+
+  This is the first film in my watchlist starring my Hollywood crush Natalie (and James Garner). It's all about a wealthy hotshot who makes his living by buying struggling companies, then restructuring and selling them for a huge price.
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    69/1000:
+    CASH McCALL
+
+    This is the first film in my watchlist starring my Hollywood crush Natalie (and James Garner). It's all about a wealthy hotshot who makes his living by buying struggling companies, then restructuring and selling them for a huge price.
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreid6etqhqr5hghc7xx77bn5j3eyyskvof74yo4fxcn2ri6e366q5r4
+        size: 73663
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-06T10:54:39.852Z'

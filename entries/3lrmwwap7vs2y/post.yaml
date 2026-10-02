@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lrmwwap7vs2y
+cid: bafyreigmlbf6zxgtyczn635rqvblvqatwjvhra3i665p7wimlnolnpdhz4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lrmwwap7vs2y
+createdAt: '2025-06-15T07:28:06.333Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  43/1000:
+  SATURDAY NIGHT AND SUNDAY MORNING
+
+  Albert Finney brings in an all-time high impression in his first major film role as a hardworking factory worker who spends his free time drinking, brawling, and dating two women, one of them already married to his co-worker...
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    43/1000:
+    SATURDAY NIGHT AND SUNDAY MORNING
+
+    Albert Finney brings in an all-time high impression in his first major film role as a hardworking factory worker who spends his free time drinking, brawling, and dating two women, one of them already married to his co-worker...
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiajtsqvttg574c7jztcjamu4vxpqwqe4if7gbut2gdqbpjz5fvm74
+        size: 74749
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-15T07:28:06.333Z'

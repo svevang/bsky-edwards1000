@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lpyxutnjh22m
+cid: bafyreia4wustsdln2ofivxnkego7ziozv2gamrjaz53sizzgbmf6zk4tji
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lpyxutnjh22m
+createdAt: '2025-05-25T15:26:46.438Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  15/1000:
+  FROM THE TERRACE
+
+  Adapted from another John O'Hara bestseller, all of the cast members in this drama-romance film, either lead or supporting, turn in fine performances. Better to choose your true love over a loveless marriage and an ambitious career path.
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    15/1000:
+    FROM THE TERRACE
+
+    Adapted from another John O'Hara bestseller, all of the cast members in this drama-romance film, either lead or supporting, turn in fine performances. Better to choose your true love over a loveless marriage and an ambitious career path.
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreih3arsndpt7pkyekwmlpll6dsxp5vllnefyiydd4dbu3cb7jvq3eq
+        size: 73930
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-05-25T15:26:46.438Z'

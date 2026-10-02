@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mrbquih4kc2s
+cid: bafyreihrhj7uti2nz56zpvj5mek7sjndgxwj6wdxgokuiydqipbxqrsqf4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mrbquih4kc2s
+createdAt: '2026-07-23T02:06:39.865Z'
+text: "#Edwards1000SixtiesMovies \n\n432/1000:\nKWAIDAN\n\nThis artistically ornate Japanese horror film adapts the ff. haunting tales:\n1) a broke samurai marrying a woman with tragic results;\n2) a snow maiden with an attitude;\n3) a blind musician with a ghost audience; and\n4) a creepy reflection on a teacup."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n432/1000:\nKWAIDAN\n\nThis artistically ornate Japanese horror film adapts the ff. haunting tales:\n1) a broke samurai marrying a woman with tragic results;\n2) a snow maiden with an attitude;\n3) a blind musician with a ghost audience; and\n4) a creepy reflection on a teacup."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihbp4hmq5f2f4bvu74lecxbqkvaxd5ilhrutg6asuwhccuombn5la
+        size: 201277
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 800
+        height: 450
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-07-23T02:06:39.865Z'

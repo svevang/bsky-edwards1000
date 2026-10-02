@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lwvybd66is2a
+cid: bafyreialcbk23qkt3wkuk3rh2ds7c5uh2uevlroewt6uudcfmaak6y4pma
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lwvybd66is2a
+createdAt: '2025-08-21T12:52:07.555Z'
+text: "#Edwards1000SixtiesMovies \n\n109/1000:\nYOJIMBO\n\nThis is the first time I watched this Japanese samurai classic, and lo, I was utterly electrified by the unique plot, beautiful cinematography, and spectacular fight scenes. No wonder it got remade as an equally classic Spaghetti Western 3 years later.."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n109/1000:\nYOJIMBO\n\nThis is the first time I watched this Japanese samurai classic, and lo, I was utterly electrified by the unique plot, beautiful cinematography, and spectacular fight scenes. No wonder it got remade as an equally classic Spaghetti Western 3 years later.."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreickqn7z4n53wxynz3ztduouyvvnpyqkc3z3goym423l32un4whgv4
+        size: 69332
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-08-21T12:52:07.555Z'

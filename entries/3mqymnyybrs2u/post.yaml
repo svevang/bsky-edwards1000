@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mqymnyybrs2u
+cid: bafyreigyem4pkoussqfnya5qfrjtav32w2yvza6wbgpxj5qapffeaq3dxq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mqymnyybrs2u
+createdAt: '2026-07-19T10:57:29.736Z'
+text: "#Edwards1000SixtiesMovies \n\n427/1000:\nFIRST MEN IN THE MOON\n\nDespite featuring great stop-motion effects from Harryhausen and adapted from a novel by H.G. Wells, I didn't enjoy this sci-fi adventure movie very much. The plot is full of mystery that enticed me to watch, but it became predictable."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n427/1000:\nFIRST MEN IN THE MOON\n\nDespite featuring great stop-motion effects from Harryhausen and adapted from a novel by H.G. Wells, I didn't enjoy this sci-fi adventure movie very much. The plot is full of mystery that enticed me to watch, but it became predictable."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiemyvn5c5xo7hxjpjkdiuyq3xzcv4nbfbj2d3geq3fapguk7nit3a
+        size: 77809
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-07-19T10:57:29.736Z'

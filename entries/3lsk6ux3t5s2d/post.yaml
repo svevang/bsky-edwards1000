@@ -1,0 +1,47 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lsk6ux3t5s2d
+cid: bafyreibw5qlmmboen4hxeijtg33fl7gfqrpvn233pjlvf6vrbt4evcj5fe
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lsk6ux3t5s2d
+createdAt: '2025-06-26T22:37:45.068Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  56/1000:
+  TORMENTED
+
+  Another B movie, this time in the horror genre, really made up my day. A jazz pianist who let his ex-girlfriend fall to her death is haunted by the woman's crawling hand, footprints and floating head. A creepy must-watch for horror film fans out there.
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    56/1000:
+    TORMENTED
+
+    Another B movie, this time in the horror genre, really made up my day. A jazz pianist who let his ex-girlfriend fall to her death is haunted by the woman's crawling hand, footprints and floating head. A creepy must-watch for horror film fans out there.
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicz4jbqegfn7juh7wckmy4by22mmxtcppwyg4ik2j4lwrlcjrz3ui
+        size: 130932
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 800
+        height: 450
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  labels:
+    $type: com.atproto.label.defs#selfLabels
+    values:
+    - val: graphic-media
+  createdAt: '2025-06-26T22:37:45.068Z'

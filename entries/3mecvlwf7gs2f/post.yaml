@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mecvlwf7gs2f
+cid: bafyreihlisfqd2k6lxyh5tf3kepvcrzgrxgicoulopd64mxiowtfhvg2mq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mecvlwf7gs2f
+createdAt: '2026-02-08T02:36:29.805Z'
+text: "#Edwards1000SixtiesMovies \n\n284/1000:\nWAR HUNT\n\nThis emotionally-weighted war drama set during the Korean War marked Bobby Redford's debut in movies. John Saxon impresses as a psychopathic soldier who directly witnesses the horror of combat in the battlefield. And early-career Pollack and Skerritt."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n284/1000:\nWAR HUNT\n\nThis emotionally-weighted war drama set during the Korean War marked Bobby Redford's debut in movies. John Saxon impresses as a psychopathic soldier who directly witnesses the horror of combat in the battlefield. And early-career Pollack and Skerritt."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiaiu6pvgejniujyejvl6k3nb6x6oqvdjxv24m5levpwjwkou6bp3m
+        size: 98595
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-02-08T02:36:29.805Z'

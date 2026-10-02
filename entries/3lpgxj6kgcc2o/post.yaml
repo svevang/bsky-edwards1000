@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lpgxj6kgcc2o
+cid: bafyreigda24pfsedfiksbr4lv4vji3sgoikbj4amxqmx5z4zbw3nnwvr5a
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lpgxj6kgcc2o
+createdAt: '2025-05-18T11:32:19.908Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  4/1000:
+  THE APARTMENT
+
+  C.C. Baxter lends out his apartment to his employers as a quick way to get promoted up the corporate ladder. Everything works excellent-wise in this film, overall-wise!!!
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    4/1000:
+    THE APARTMENT
+
+    C.C. Baxter lends out his apartment to his employers as a quick way to get promoted up the corporate ladder. Everything works excellent-wise in this film, overall-wise!!!
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreialfcksukqnqbblon557uwadw3bkr7ns4f4zmvozanq5xxx2eqduq
+        size: 78952
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-05-18T11:32:19.908Z'

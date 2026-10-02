@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mtl6fsbm422s
+cid: bafyreifrc574z3i7lfljhtlwtoy47tuya7y6kvj5ufhrddkevx3fgsmcza
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mtl6fsbm422s
+createdAt: '2026-08-21T06:53:20.167Z'
+text: "#Edwards1000SixtiesMovies \n\n464/1000:\nGHIDORAH\n\nThis Japanese kaiju film pays homage to the previous titles in its genre by pitting the beasts Godzilla, Rodan and Mothra against a huge threat: a three-headed destructive monster. Additionally, the twin fairies from Mothra's island re-appear here."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n464/1000:\nGHIDORAH\n\nThis Japanese kaiju film pays homage to the previous titles in its genre by pitting the beasts Godzilla, Rodan and Mothra against a huge threat: a three-headed destructive monster. Additionally, the twin fairies from Mothra's island re-appear here."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicaf5zysvwe363wmitmw3j4xfjbxersovdq554iiemktfhkoi47oa
+        size: 68020
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-21T06:53:20.167Z'

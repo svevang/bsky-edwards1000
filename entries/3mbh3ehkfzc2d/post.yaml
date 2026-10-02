@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mbh3ehkfzc2d
+cid: bafyreiet6xk6zykhhidt33ymxipg3w3iu7drquxjd5qyo2vyi6ryc6rudu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mbh3ehkfzc2d
+createdAt: '2026-01-02T14:14:45.874Z'
+text: "#Edwards1000SixtiesMovies \n\n254/1000:\nTHE 300 SPARTANS\n\nI consider this historical drama film to be a fairly good depiction of the significant Battle of Thermopylae which happened in ancient Greece in 480 BC, despite lacking in momentous scenes and thrilling action throughout."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n254/1000:\nTHE 300 SPARTANS\n\nI consider this historical drama film to be a fairly good depiction of the significant Battle of Thermopylae which happened in ancient Greece in 480 BC, despite lacking in momentous scenes and thrilling action throughout."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifftctulsyfzbmxo4tmjxqepguepiufgoqtnofp4v3wcrccv3jxm4
+        size: 119089
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 655
+        height: 468
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-01-02T14:14:45.874Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3luvmlfyww22c
+cid: bafyreifbljg4xig7rlw7upgerkeayfvntipmywhxmhoc6uom3srgf55j4i
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3luvmlfyww22c
+createdAt: '2025-07-26T22:32:37.907Z'
+text: "#Edwards1000SixtiesMovies \n\n95/1000:\nPORTRAIT IN BLACK\n\nThere's a lot to be said for this melodrama film, which features Lana Turner at the top of her game. There's a lot of intrigue, thrills, and suspense to watch out for. Coulda been more excellent if Hitchcock have directed this one..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n95/1000:\nPORTRAIT IN BLACK\n\nThere's a lot to be said for this melodrama film, which features Lana Turner at the top of her game. There's a lot of intrigue, thrills, and suspense to watch out for. Coulda been more excellent if Hitchcock have directed this one..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihs7vcczvujqowhovsnj6d3fxmrhfhwa2bu6c6vjzxp4e6wt3hgha
+        size: 440699
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 1280
+        height: 720
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-26T22:32:37.907Z'

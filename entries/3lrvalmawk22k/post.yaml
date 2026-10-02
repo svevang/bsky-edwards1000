@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lrvalmawk22k
+cid: bafyreig2rurrw3fffdydmfkm2jnyvr4sroi6ltlpluek6cafc5dpwufylu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lrvalmawk22k
+createdAt: '2025-06-18T14:42:24.672Z'
+text: "#Edwards1000SixtiesMovies \n\n47/1000:\nWHO WAS THAT LADY\n\nThis comedy-romance film, starring real-life couple Tony and Janet, and Dean Martin, made me chuckle all-throughout, especially during the fake FBI card scene and the flooding that took place at the Empire State Building's basement level."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n47/1000:\nWHO WAS THAT LADY\n\nThis comedy-romance film, starring real-life couple Tony and Janet, and Dean Martin, made me chuckle all-throughout, especially during the fake FBI card scene and the flooding that took place at the Empire State Building's basement level."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicxtbg5z74xtifeamxxpltovi4xye53rjuvljufcnirgnrut2n3ge
+        size: 90879
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-18T14:42:24.672Z'

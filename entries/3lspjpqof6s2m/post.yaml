@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lspjpqof6s2m
+cid: bafyreidzk2p2o4ao3llzoscudkmdujbuqh65jil5cqaettgobdogdhxdsq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lspjpqof6s2m
+createdAt: '2025-06-29T01:35:00.385Z'
+text: "#Edwards1000SixtiesMovies \n\n58/1000:\nWILD RIVER\n\nIMO, this has been an underrated movie in Elia Kazan's filmography due to its captivating cinematography of the Tennessee River, a passionate portrayal of life on the river banks, and moving performances from Clift, Remick and Van Fleet."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n58/1000:\nWILD RIVER\n\nIMO, this has been an underrated movie in Elia Kazan's filmography due to its captivating cinematography of the Tennessee River, a passionate portrayal of life on the river banks, and moving performances from Clift, Remick and Van Fleet."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicbmexfbyt4q5q3xllm4izonkjz5frzjczdzzxg433ojozzzbkegq
+        size: 66508
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-29T01:35:00.385Z'

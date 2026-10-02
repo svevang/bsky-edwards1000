@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mmdrovaznk2w
+cid: bafyreidrdkz4vdlsp3qb5xzbisl3cjspvjzy65vq2tko4f5inh6bmm2fo4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mmdrovaznk2w
+createdAt: '2026-05-21T06:20:47.076Z'
+text: "#Edwards1000SixtiesMovies \n\n388/1000:\nGUNFIGHT AT COMANCHE CREEK\n\nIt was nice to see a routine Western movie with Doc McCoy playing a frontier villain and Audie Murphy as an undercover detective investigating a notorious group of criminals taking advantage of fugitives and large bounties on them."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n388/1000:\nGUNFIGHT AT COMANCHE CREEK\n\nIt was nice to see a routine Western movie with Doc McCoy playing a frontier villain and Audie Murphy as an undercover detective investigating a notorious group of criminals taking advantage of fugitives and large bounties on them."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiehzfresoo6wo36rija32tadarnofgtloxvz6zq22edxpmmoxkumi
+        size: 135606
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 685
+        height: 447
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-21T06:20:47.076Z'

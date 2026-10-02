@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lux2o5omb22s
+cid: bafyreifkpsftdhgngdpsupkejc4ddqvvybr33fh56s7glqytxkkeri65qu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lux2o5omb22s
+createdAt: '2025-07-27T12:17:21.968Z'
+text: "#Edwards1000SixtiesMovies \n\n97/1000:\nGUNS OF THE TIMBERLAND\n\nThis Western film is very unique among other movies in the same genre as it seeks to impart an important environmental message: the severe effects of illegal logging of trees on the natural surroundings of a Western frontier town."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n97/1000:\nGUNS OF THE TIMBERLAND\n\nThis Western film is very unique among other movies in the same genre as it seeks to impart an important environmental message: the severe effects of illegal logging of trees on the natural surroundings of a Western frontier town."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicsm7lhzkp36sxequ2nxsvvb3bcacbqmkx32nfdxcsrcnw5rbvoo4
+        size: 83613
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-27T12:17:21.968Z'

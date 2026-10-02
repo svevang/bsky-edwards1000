@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lttskgclj22a
+cid: bafyreifrilxl6bpprfzsdwqhub7abpx3yj4ceuqalbfjgz2bnsjpk4vfs4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lttskgclj22a
+createdAt: '2025-07-13T11:48:56.016Z'
+text: "#Edwards1000SixtiesMovies \n\n78/1000:\nKIDNAPPED \n\nStarring James MacArthur from Swiss Family Robinson, this is a hidden gem among Disney live-action movies released in the 60s. This film is pure spectacle from start to finish. This also reminded me that Scottish Highlands is a great place to hike."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n78/1000:\nKIDNAPPED \n\nStarring James MacArthur from Swiss Family Robinson, this is a hidden gem among Disney live-action movies released in the 60s. This film is pure spectacle from start to finish. This also reminded me that Scottish Highlands is a great place to hike."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibzislvqvjhub4gkmsadxwlxfacn6hfgjl42nkab72rxpewso42sm
+        size: 168155
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 856
+        height: 482
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-13T11:48:56.016Z'

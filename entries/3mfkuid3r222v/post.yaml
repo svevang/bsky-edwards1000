@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mfkuid3r222v
+cid: bafyreibwmcrqheuvj26heum3ussnxu3p6vn4zuembbu2hsecxekl6xl3ki
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mfkuid3r222v
+createdAt: '2026-02-24T00:03:04.702Z'
+text: "#Edwards1000SixtiesMovies \n\n298/1000:\nPERIOD OF ADJUSTMENT\n\nThis comedy-romance film features a lively performance from Jane Fonda and Jim Hutton as a newlywed pair who visit their friends, a couple who are experiencing troubles in their marriage. This being a Christmas movie is another plus factor."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n298/1000:\nPERIOD OF ADJUSTMENT\n\nThis comedy-romance film features a lively performance from Jane Fonda and Jim Hutton as a newlywed pair who visit their friends, a couple who are experiencing troubles in their marriage. This being a Christmas movie is another plus factor."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibny7bpr4xtijdmkuhgkuenqx6johxoludkcezyd3fwstvnk4aocq
+        size: 80645
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 686
+        height: 447
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-02-24T00:03:04.702Z'

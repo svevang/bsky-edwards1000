@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lye7fwtkpk2w
+cid: bafyreiev4d2ssvndnkgvdhv53jvyinfuiutfh773w43b5oducqpevtvcii
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lye7fwtkpk2w
+createdAt: '2025-09-08T22:02:26.569Z'
+text: "#Edwards1000SixtiesMovies \n\n136/1000:\nREPTILICUS\n\nThis sci-fi monster movie from Denmark is more like of a rip-off of more familiar monster films such as Beast from 20,000 Fathoms and Godzilla. Although the premise is a good one, the reptile monster's design and the VFX are of mediocre quality."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n136/1000:\nREPTILICUS\n\nThis sci-fi monster movie from Denmark is more like of a rip-off of more familiar monster films such as Beast from 20,000 Fathoms and Godzilla. Although the premise is a good one, the reptile monster's design and the VFX are of mediocre quality."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifhlkaguohj5wcs5ordhmqiwg74rd6ce74jqqmw2nehr326nsgxg4
+        size: 78284
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-09-08T22:02:26.569Z'

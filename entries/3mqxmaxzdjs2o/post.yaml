@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mqxmaxzdjs2o
+cid: bafyreidsgtyr5wu5k4gcyh3dewppklo7ohcwu4u45qdb4mrixqln2r2x6q
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mqxmaxzdjs2o
+createdAt: '2026-07-19T01:17:32.776Z'
+text: "#Edwards1000SixtiesMovies \n\n424/1000:\nONIBABA\n\nThis high-rated Japanese horror film tells a tale of two women, a mother and her daughter-in law who lost a loved one to warfare and survives by selling valuables belonging to dead samurais. What follows next is a chilling story of a cursed mask..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n424/1000:\nONIBABA\n\nThis high-rated Japanese horror film tells a tale of two women, a mother and her daughter-in law who lost a loved one to warfare and survives by selling valuables belonging to dead samurais. What follows next is a chilling story of a cursed mask..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifhgcqwfjw4vcwata3w3ysnr2wfzfrgzdapkuntzadtckg3k3fnka
+        size: 115860
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-07-19T01:17:32.776Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m7ypshqk3c2l
+cid: bafyreiermeumindc6ma55tivpxbrf6zglxq7pvi235krpvvudwnaur4kxm
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m7ypshqk3c2l
+createdAt: '2025-12-15T03:45:22.979Z'
+text: "#Edwards1000SixtiesMovies \n\n231/1000:\nSWEET BIRD OF YOUTH\n\nA gigolo wanderer now serving as a companion to a faded movie actress returns to his hometown after a long time, but runs into big trouble when he pursues his childhood sweetheart, daughter of the town's most powerful guy."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n231/1000:\nSWEET BIRD OF YOUTH\n\nA gigolo wanderer now serving as a companion to a faded movie actress returns to his hometown after a long time, but runs into big trouble when he pursues his childhood sweetheart, daughter of the town's most powerful guy."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreif7tzkqn4l4uqnu7udcj4pi3w3vmptyqxhs7o5dcqpano57pubc4q
+        size: 99660
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-12-15T03:45:22.979Z'

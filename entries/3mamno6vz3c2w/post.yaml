@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mamno6vz3c2w
+cid: bafyreig3zacf2mfsqfuazycbdiwbxyj4nldovqih23swnqvtmv42ywirwu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mamno6vz3c2w
+createdAt: '2025-12-23T02:00:26.781Z'
+text: "#Edwards1000SixtiesMovies \n\n239/1000:\nTHE SPIRAL ROAD\n\nThis psychological adventure-drama film starring Rock Hudson explores a young physician with a selfish, prideful character working in 1930s Indonesia who must learn to profess belief in a higher spiritual being and accept help from others."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n239/1000:\nTHE SPIRAL ROAD\n\nThis psychological adventure-drama film starring Rock Hudson explores a young physician with a selfish, prideful character working in 1930s Indonesia who must learn to profess belief in a higher spiritual being and accept help from others."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiep7picljnufyfuz7apglspylcns5jlbnlw3uicxhqr7ijmadle7a
+        size: 129887
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-12-23T02:00:26.781Z'

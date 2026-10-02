@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mfbezdq4kk2e
+cid: bafyreid4hiw2h57s6e3izubzshrh5avmmnip3rd3hhre5qryw43fsdargi
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mfbezdq4kk2e
+createdAt: '2026-02-20T05:32:18.258Z'
+text: "#Edwards1000SixtiesMovies \n\n293/1000:\nTHE CABINET OF CALIGARI\n\nThis obscure horror-thriller film is a reboot of the 1920 German silent expressionist classic and was written by the author of Psycho, but unfortunately, it is a mediocre effort compared to other horror movies of the early 60s."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n293/1000:\nTHE CABINET OF CALIGARI\n\nThis obscure horror-thriller film is a reboot of the 1920 German silent expressionist classic and was written by the author of Psycho, but unfortunately, it is a mediocre effort compared to other horror movies of the early 60s."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiaeciceox2af4vynwirblmyzrc4s77leum347nitgetlos6cenbsq
+        size: 67531
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 700
+        height: 394
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-02-20T05:32:18.258Z'

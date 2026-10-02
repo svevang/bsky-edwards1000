@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mbbh6atiy22z
+cid: bafyreib73jub2cneoi37eeltnq6jgg43p2kbs766tqlkjefnbaanv6un7a
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mbbh6atiy22z
+createdAt: '2025-12-31T08:30:03.974Z'
+text: "#Edwards1000SixtiesMovies \n\n251/1000:\nSODOM AND GOMORRAH \n\nBased on the Biblical story of two cities that were destroyed by fire, this epic film explores the story of Lot and the Israelites who settle in a fertile valley adjacent to the two titular cities, both hotbeds of evil, vice and lust."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n251/1000:\nSODOM AND GOMORRAH \n\nBased on the Biblical story of two cities that were destroyed by fire, this epic film explores the story of Lot and the Israelites who settle in a fertile valley adjacent to the two titular cities, both hotbeds of evil, vice and lust."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibg5iigbjkozpgxryah6ziqdxehtecrylkli3fpsewl67x6gwdrrm
+        size: 87772
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-12-31T08:30:03.974Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m3jqokt4vc2e
+cid: bafyreigiqhi6oyem6vpmzzcdgwcxrzthr3u5qcuh5w72ptimnymwjpf4pu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m3jqokt4vc2e
+createdAt: '2025-10-19T07:10:23.137Z'
+text: "#Edwards1000SixtiesMovies \n\n180/1000:\nGOODBYE AGAIN\n\nA middle-aged businesswoman calmly rebuffs the advances of her client's son aged 25, but reconsiders when she learns that her romantic partner has kept up with his playboy lifestyle by dating younger women. Ingrid and Anthony excels and delivers!"
+record:
+  text: "#Edwards1000SixtiesMovies \n\n180/1000:\nGOODBYE AGAIN\n\nA middle-aged businesswoman calmly rebuffs the advances of her client's son aged 25, but reconsiders when she learns that her romantic partner has kept up with his playboy lifestyle by dating younger women. Ingrid and Anthony excels and delivers!"
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifrxqptirxvsu3uzqcvmwdzn6ohtsi6f2e3q3csxwruuwotwdxicq
+        size: 88828
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-10-19T07:10:23.137Z'

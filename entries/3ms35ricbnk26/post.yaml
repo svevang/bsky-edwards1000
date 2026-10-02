@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ms35ricbnk26
+cid: bafyreibqmqyri6bpgotolpxzhsvfezrgysjvemhcwn3weqmjrskbdoqgfq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ms35ricbnk26
+createdAt: '2026-08-02T04:34:11.171Z'
+text: "#Edwards1000SixtiesMovies \n\n444/1000:\nSEX AND THE SINGLE GIRL\n\nThis is one of my favorite films starring my Hollywood crush Natalie. Not only does she wears lovely costumes and accessories, but she also proves to be excellent in delivering a comedic role. Tony Curtis is also hilarious in his role."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n444/1000:\nSEX AND THE SINGLE GIRL\n\nThis is one of my favorite films starring my Hollywood crush Natalie. Not only does she wears lovely costumes and accessories, but she also proves to be excellent in delivering a comedic role. Tony Curtis is also hilarious in his role."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: Natalie Wood
+      image:
+        ref:
+          $link: bafkreigij4m7vhf7b3p4ehn7tv4o4mrmfghamookp3m3fmuvk5dhcvyaxa
+        size: 89646
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-02T04:34:11.171Z'

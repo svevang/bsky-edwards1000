@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lpxx5cc6b22t
+cid: bafyreidzqnjkpuassxdk2comoj2dsfih2zycolcrdmrpq6xvafp57nbdoy
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lpxx5cc6b22t
+createdAt: '2025-05-25T05:40:56.751Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  13/1000:
+  PURPLE NOON
+
+  This is the first-ever film adaptation of a Tom Ripley novel. To be honest, I'd state that Delon's portrayal of the talented psychopath indeniably elevates this movie to classic status. However, he walks into a police trap in the ending...
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    13/1000:
+    PURPLE NOON
+
+    This is the first-ever film adaptation of a Tom Ripley novel. To be honest, I'd state that Delon's portrayal of the talented psychopath indeniably elevates this movie to classic status. However, he walks into a police trap in the ending...
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreia422w4hz3ud56fimngueplgm6xdfm6okeixtijjmgb6msbgs2iju
+        size: 99192
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 640
+        height: 480
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-05-25T05:40:56.751Z'

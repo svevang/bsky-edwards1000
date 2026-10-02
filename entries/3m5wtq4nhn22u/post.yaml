@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m5wtq4nhn22u
+cid: bafyreigadd4r6cfq365x3e7qzudvai3xrpkjp7yplbgwuuinmdngvkpz4u
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m5wtq4nhn22u
+createdAt: '2025-11-18T22:59:56.462Z'
+text: "#Edwards1000SixtiesMovies \n\n207/1000:\nTHAT TOUCH OF MINK \n\nCary and Doris' chemistry works its magic to make this romantic comedy into an absolutely sweet and charmingly entertaining watch. Cary's suave countenance and Doris' witty comedic talents still makes this a must-see for old cinema buffs."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n207/1000:\nTHAT TOUCH OF MINK \n\nCary and Doris' chemistry works its magic to make this romantic comedy into an absolutely sweet and charmingly entertaining watch. Cary's suave countenance and Doris' witty comedic talents still makes this a must-see for old cinema buffs."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiew6x556ndby35jifcf3zx5mt5snqjzp7p5jt2jsqugfguw4nk45q
+        size: 81293
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 686
+        height: 447
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-11-18T22:59:56.462Z'

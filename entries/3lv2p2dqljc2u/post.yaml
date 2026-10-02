@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lv2p2dqljc2u
+cid: bafyreighonlth7babkjgbka4fmndbfkc7k6u2q3llhi4rxa2iufc2qm65u
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lv2p2dqljc2u
+createdAt: '2025-07-28T23:00:05.029Z'
+text: "#Edwards1000SixtiesMovies \n\n99/1000:\nVISIT TO A SMALL PLANET\n\nBelieve it or not, but this is already my penultimate movie of my watchlist for the year 1960. Also my third Jerry Lewis film too as well.\n\nJerry is hilarious as a childish alien who goes to Earth out of curiosity to study human beings."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n99/1000:\nVISIT TO A SMALL PLANET\n\nBelieve it or not, but this is already my penultimate movie of my watchlist for the year 1960. Also my third Jerry Lewis film too as well.\n\nJerry is hilarious as a childish alien who goes to Earth out of curiosity to study human beings."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibxa6wgpsuzrwtvkfjlaoqwnqxzyaucbrjul5stccnqkwva56x5sa
+        size: 66429
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 619
+        height: 495
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-28T23:00:05.029Z'

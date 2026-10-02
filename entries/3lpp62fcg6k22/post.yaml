@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lpp62fcg6k22
+cid: bafyreiclzqmwrebs5wm2agtgqp7hhkitt2nc6cogwoe6o4vq7u3ajwc5a4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lpp62fcg6k22
+createdAt: '2025-05-21T17:50:37.786Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  8/1000:
+  EXODUS
+
+  Based on Leon Uris' bestselling novel, this epic 3-hour Preminger film excellently delivers on its premise: the dangerous voyage of 600 Jewish refugees from Cyprus to Palestine, and eventually the partition that created the modern nation of Israel. 🇮🇱
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    8/1000:
+    EXODUS
+
+    Based on Leon Uris' bestselling novel, this epic 3-hour Preminger film excellently delivers on its premise: the dangerous voyage of 600 Jewish refugees from Cyprus to Palestine, and eventually the partition that created the modern nation of Israel. 🇮🇱
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibqvlamyug4qvzpmi5342fjcgzcsre5l3udm4rs5cf6uxi4w6wvz4
+        size: 106315
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-05-21T17:50:37.786Z'

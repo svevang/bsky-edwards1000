@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lwvlkiiemk27
+cid: bafyreiaaeqmxe46ntamgqlr4vfdw2otn7l3wc5pshzzbohzcwsucgd5xfy
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lwvlkiiemk27
+createdAt: '2025-08-21T09:04:36.482Z'
+text: "#Edwards1000SixtiesMovies \n\n108/1000:\nLA NOTTE\n\nAlthough this film tackled a slowly disintegrating marriage with a sad, dark touch, it was yet another cinematic triumph from Italian cinema maestro Antonioni. Mastroianni and Moreau give authentic performances which best describes a loveless bond."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n108/1000:\nLA NOTTE\n\nAlthough this film tackled a slowly disintegrating marriage with a sad, dark touch, it was yet another cinematic triumph from Italian cinema maestro Antonioni. Mastroianni and Moreau give authentic performances which best describes a loveless bond."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreietneyqmrs26crxj724nxbgnuygew4k33v3qtcratkwpj4ybicqei
+        size: 56782
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-08-21T09:04:36.482Z'

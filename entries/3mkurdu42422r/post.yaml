@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mkurdu42422r
+cid: bafyreihufaxdzkjuqfhivwzdzjgohxjdn6behyt23jgwvpamikxx7cr444
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mkurdu42422r
+createdAt: '2026-05-02T13:39:29.007Z'
+text: "#Edwards1000SixtiesMovies \n\n367/1000:\nSOLDIER IN THE RAIN\n\nThis comedy-drama film starring the King of Cool and Minnesota Fats has left me polarized. While it has its own fun moments (most especially the sauerkraut juice scene), the acting performances doesn't do this movie any kind of favors."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n367/1000:\nSOLDIER IN THE RAIN\n\nThis comedy-drama film starring the King of Cool and Minnesota Fats has left me polarized. While it has its own fun moments (most especially the sauerkraut juice scene), the acting performances doesn't do this movie any kind of favors."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: Jackie Gleason and Steve McQueen
+      image:
+        ref:
+          $link: bafkreih644a2baryqlqpi2vlnbk6v2iwr5xb2hmntbsh6u6eo3e2p4j77y
+        size: 85166
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-02T13:39:29.007Z'

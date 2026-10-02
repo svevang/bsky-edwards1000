@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lrjfnwighc25
+cid: bafyreifpy7rned2xo7a6736hrub4jsaxj6rjez7eyjdvu2lglckxzbi3lq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lrjfnwighc25
+createdAt: '2025-06-13T21:41:14.379Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  40/1000:
+  THE BELLBOY
+
+  The 40th entry on my ultimate 1960s watchlist had great comedian Jerry Lewis writing, producing, directing and starring in this hilarious film about a speechless hotel bellboy who does and loves his work very well, but is clumsy at his performance...
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    40/1000:
+    THE BELLBOY
+
+    The 40th entry on my ultimate 1960s watchlist had great comedian Jerry Lewis writing, producing, directing and starring in this hilarious film about a speechless hotel bellboy who does and loves his work very well, but is clumsy at his performance...
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihy45p7y7zefwbv5xjhkyesolrcrra5ci3ndverwocj2olhvqgtvu
+        size: 49633
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-13T21:41:14.379Z'

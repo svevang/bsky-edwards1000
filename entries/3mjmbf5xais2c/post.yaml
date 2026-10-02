@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mjmbf5xais2c
+cid: bafyreiekhsvdqvngay7bmwr34tehjoohdzhreyxufckstb5egaokl2jhte
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mjmbf5xais2c
+createdAt: '2026-04-16T11:07:23.541Z'
+text: "#Edwards1000SixtiesMovies \n\n348/1000:\nTHE KISS OF THE VAMPIRE \n\nThis is a vampire-themed movie from Hammer Film Productions with an original story, cast and setting. Its ending sequence is unique in a way because it showed an unusual manner of how vampires met their doom: through bats."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n348/1000:\nTHE KISS OF THE VAMPIRE \n\nThis is a vampire-themed movie from Hammer Film Productions with an original story, cast and setting. Its ending sequence is unique in a way because it showed an unusual manner of how vampires met their doom: through bats."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiaxgipoabggmyblgfdjdkbjhfcjkgkpvvf2laqg7fbs5l6wionnjm
+        size: 112206
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 700
+        height: 380
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-04-16T11:07:23.541Z'

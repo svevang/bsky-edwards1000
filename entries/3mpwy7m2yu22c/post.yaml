@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mpwy7m2yu22c
+cid: bafyreic6y6rwii4c42ocgx55q3hqan7f253ayfjzpoqxw7krxy5zph65ny
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mpwy7m2yu22c
+createdAt: '2026-07-06T01:53:40.205Z'
+text: "#Edwards1000SixtiesMovies \n\n413/1000:\nA HARD DAY'S NIGHT\n\nReleased during the height of the Beatles' popularity in the international music scene, this film captures 36 hours in the lives of the iconic band as they prepare for a live performance on television."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n413/1000:\nA HARD DAY'S NIGHT\n\nReleased during the height of the Beatles' popularity in the international music scene, this film captures 36 hours in the lives of the iconic band as they prepare for a live performance on television."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifqbqagwe2n4jftjnmhxpfbpwsdwcr7suo7o7wmby547646jjrgc4
+        size: 102888
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-07-06T01:53:40.205Z'

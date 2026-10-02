@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lx7z2mstxk2b
+cid: bafyreig5yeru5cg55juwblpeln6vlpradst7qhact37yk72zh2ys75hfle
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lx7z2mstxk2b
+createdAt: '2025-08-25T12:32:53.917Z'
+text: "#Edwards1000SixtiesMovies \n\n116/1000:\nTHE INNOCENTS\n\nA genuinely chilling, scary adaptation of the classic horror novella Turn of the Screw, this movie is a triumphant landmark for 60s horror cinema, with its eerie sound design and frightening cinematography which best typifies terror."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n116/1000:\nTHE INNOCENTS\n\nA genuinely chilling, scary adaptation of the classic horror novella Turn of the Screw, this movie is a triumphant landmark for 60s horror cinema, with its eerie sound design and frightening cinematography which best typifies terror."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiabpwcdcy2lp2r6gxifkeb2gndbu7oifss7xzkjef7764inhtilpi
+        size: 68202
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-08-25T12:32:53.917Z'

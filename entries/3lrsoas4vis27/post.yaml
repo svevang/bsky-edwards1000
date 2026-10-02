@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lrsoas4vis27
+cid: bafyreid7g4v6buduql7qbn2zfci72mvnscp3hdwatqsbcwx6czjqaajpga
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lrsoas4vis27
+createdAt: '2025-06-17T14:08:54.901Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  46/1000:
+  SWORD OF SHERWOOD FOREST
+
+  What makes this less familiar among the Robin Hood movies I've seen is that its simple storyline was better suited for a 1-hour TV episode. Although Cushing was good as the Sheriff, the lead roles, including that of Robin, were dull.
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    46/1000:
+    SWORD OF SHERWOOD FOREST
+
+    What makes this less familiar among the Robin Hood movies I've seen is that its simple storyline was better suited for a 1-hour TV episode. Although Cushing was good as the Sheriff, the lead roles, including that of Robin, were dull.
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiesc6vgc574mhwmysvw5m6vaisskwj2funl3roffzf6sjrlrwnlxu
+        size: 74954
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-17T14:08:54.901Z'

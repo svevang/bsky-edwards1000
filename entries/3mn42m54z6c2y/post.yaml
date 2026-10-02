@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mn42m54z6c2y
+cid: bafyreihrbecen55k6f733ts7ki7h2rwmnrleizvsksoeueor3cmhpr33gq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mn42m54z6c2y
+createdAt: '2026-05-30T22:04:12.047Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  397/1000:
+  FOR LOVE OR MONEY (1963)
+
+  Kirk makes a not-so-great attempt at making a romantic comedy film about a lawyer hired by a rich old lady to find suitable husbands for her three pretty daughters. Of the three daughters, I'd state that Mitzi Gaynor was the loveliest.
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    397/1000:
+    FOR LOVE OR MONEY (1963)
+
+    Kirk makes a not-so-great attempt at making a romantic comedy film about a lawyer hired by a rich old lady to find suitable husbands for her three pretty daughters. Of the three daughters, I'd state that Mitzi Gaynor was the loveliest.
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicyeen4b7fl4uhybqnlrlncs4u5p6bhvrt3veiuoq6r4kwgqmqteq
+        size: 85415
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 640
+        height: 479
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-30T22:04:12.047Z'

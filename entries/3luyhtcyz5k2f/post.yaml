@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3luyhtcyz5k2f
+cid: bafyreieppmiy6dxd67jqtjhp7achm4nqa3gjuzhvmgtfmgehblygwghxha
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3luyhtcyz5k2f
+createdAt: '2025-07-28T01:45:33.706Z'
+text: "#Edwards1000SixtiesMovies \n\n98/1000:\nTHE CROWDED SKY\n\nThis less-known aviation disaster film has several similarities to the much-known Airport (1970),  especially the behind-the-scenes drama involving the crew and passengers of a plane. Its premise is a fascinating one that needs more attention."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n98/1000:\nTHE CROWDED SKY\n\nThis less-known aviation disaster film has several similarities to the much-known Airport (1970),  especially the behind-the-scenes drama involving the crew and passengers of a plane. Its premise is a fascinating one that needs more attention."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidvh56hvax6w3q7zte3n5zkdzanvnmnhkumxd42ss4vukmg2qb7ky
+        size: 71978
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-28T01:45:33.706Z'

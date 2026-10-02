@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m43k4ui4ok2m
+cid: bafyreifj2wfbscyl72zzhvkbqwmrlxqyggv2dxicfh3euqbjaaxudlrfoy
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m43k4ui4ok2m
+createdAt: '2025-10-26T09:01:02.109Z'
+text: "#Edwards1000SixtiesMovies \n\n192/1000:\nTHE ERRAND BOY\n\nAfter I'm done watching this Jerry Lewis film, I'm now considering this as one of his best movies. Aside from its comedic, entertaining look at how Hollywood film studios operate daily, Jerry's usual character antics are widely displayed."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n192/1000:\nTHE ERRAND BOY\n\nAfter I'm done watching this Jerry Lewis film, I'm now considering this as one of his best movies. Aside from its comedic, entertaining look at how Hollywood film studios operate daily, Jerry's usual character antics are widely displayed."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiexsjn4w33zhchfxerfa6wumrnzvnxzjjdi7i5hpfodirszy3ooye
+        size: 53115
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 690
+        height: 345
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-10-26T09:01:02.109Z'

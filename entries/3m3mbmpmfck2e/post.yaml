@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m3mbmpmfck2e
+cid: bafyreidbzhf7tjy7ogsh3btd3szsh7fid4fd3g3walaxxtulkmmts3zcra
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m3mbmpmfck2e
+createdAt: '2025-10-20T07:18:54.147Z'
+text: "#Edwards1000SixtiesMovies \n\n184/1000:\nTOO LATE BLUES\n\nDirected by independent cinema pioneer John Cassavetes, this drama film is remarkable in its own right for its self-improvisational way of storytelling. Bobby Darin and Stella Stevens are at the top of their game in this tribute to jazz music."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n184/1000:\nTOO LATE BLUES\n\nDirected by independent cinema pioneer John Cassavetes, this drama film is remarkable in its own right for its self-improvisational way of storytelling. Bobby Darin and Stella Stevens are at the top of their game in this tribute to jazz music."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibjj6r7kz44ja6hyyeqsef2rozowlegsem4zudsiycoqj65lf4y7q
+        size: 56299
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-10-20T07:18:54.147Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3misvgqw7yk2f
+cid: bafyreigz7u2ff56f2twhzs6ahw75g26i7zrqo3yqmuebyfu2m43ucyniru
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3misvgqw7yk2f
+createdAt: '2026-04-06T08:56:58.604Z'
+text: "#Edwards1000SixtiesMovies \n\n333/1000:\nTHE TERROR\n\nI'm once more resuming my 1000-movie watchlist after a week's rest with this underrated horror gem that serves as a definite hallmark of both late-career Boris Karloff and early-career Jack Nicholson, who both deliver genuine performances here"
+record:
+  text: "#Edwards1000SixtiesMovies \n\n333/1000:\nTHE TERROR\n\nI'm once more resuming my 1000-movie watchlist after a week's rest with this underrated horror gem that serves as a definite hallmark of both late-career Boris Karloff and early-career Jack Nicholson, who both deliver genuine performances here"
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibkbingua7ciuvbpez3lqcfozgfqz6jpjy4ub2ptiffxvfrcmz4ym
+        size: 72435
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 640
+        height: 480
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-04-06T08:56:58.604Z'

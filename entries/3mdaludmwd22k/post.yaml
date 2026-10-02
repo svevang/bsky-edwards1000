@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mdaludmwd22k
+cid: bafyreigcbkx4cseruwsqowto66myy5lhqvgxz2hlu5zajukqzi6zaygtwe
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mdaludmwd22k
+createdAt: '2026-01-25T11:11:43.571Z'
+text: "#Edwards1000SixtiesMovies \n\n271/1000:\nJACK THE GIANT KILLER \n\nAlthough it was directed by the director of 7th Voyage of Sinbad, it was initially a surprise to me that Harryhausen didn't produce the stop motion VFX. Still, it was a pretty fine watch for me because it was an enjoyable fantasy flick."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n271/1000:\nJACK THE GIANT KILLER \n\nAlthough it was directed by the director of 7th Voyage of Sinbad, it was initially a surprise to me that Harryhausen didn't produce the stop motion VFX. Still, it was a pretty fine watch for me because it was an enjoyable fantasy flick."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreib3v46frf6avhyttml4nzovebdzcaqcxngeaenwyypgta264bla7y
+        size: 120545
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-01-25T11:11:43.571Z'

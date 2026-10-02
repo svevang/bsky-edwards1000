@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3luqlkdbpyk2x
+cid: bafyreiejmq6njy2smod7fc6f3jxp5hnyhedgsasngkzzpjliclw3shkdaq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3luqlkdbpyk2x
+createdAt: '2025-07-24T22:30:49.060Z'
+text: "#Edwards1000SixtiesMovies \n\n93/1000:\nTHE MOUNTAIN ROAD\n\nOverall, I'd consider this war drama movie an average one, not too lavish or shabby, but less-appreciated as compared to other films in the James Stewart canon. It's a black and white study of a US Army Major working as a demolitions engineer."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n93/1000:\nTHE MOUNTAIN ROAD\n\nOverall, I'd consider this war drama movie an average one, not too lavish or shabby, but less-appreciated as compared to other films in the James Stewart canon. It's a black and white study of a US Army Major working as a demolitions engineer."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihkbzebukfe7sa6bsm3jiki2zyg6yo2qdgtgqa3icaa2cgql5q5cu
+        size: 67626
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-24T22:30:49.060Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mrkkokt5f22z
+cid: bafyreigvooadx5rmyfedihs4ftkb3w422f3k7szm42sy6zniur2fxf4coe
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mrkkokt5f22z
+createdAt: '2026-07-26T14:09:56.225Z'
+text: "#Edwards1000SixtiesMovies \n\n438/1000:\nTHE PAWNBROKER\n\nThis ranks among my top Lumet movies, because of its high-quality b & w cinematography, excellent editing, nice jazz score, and of course, Steiger's provocative performance. The subject matter may be emotional, but it's still a great watch."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n438/1000:\nTHE PAWNBROKER\n\nThis ranks among my top Lumet movies, because of its high-quality b & w cinematography, excellent editing, nice jazz score, and of course, Steiger's provocative performance. The subject matter may be emotional, but it's still a great watch."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: Rod Steiger in the lead role as Sol Nazerman
+      image:
+        ref:
+          $link: bafkreibhpbnegmawpdyor3rpus7w5dbmwx3hrkz5rtvrserrlypl2orgem
+        size: 62547
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-07-26T14:09:56.225Z'

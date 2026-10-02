@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mk2e5gtf4c2s
+cid: bafyreifat3he4nhexraj3w5ljwtzegbx3ozf3f6tdpnpxdgrzssgj5tvia
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mk2e5gtf4c2s
+createdAt: '2026-04-22T01:34:01.958Z'
+text: "#Edwards1000SixtiesMovies \n\n355/1000:\n4 FOR TEXAS \n\nFrank and Dean deliver top-notch entertainment in this underrated Western film as two rival businessmen who are both threatened by an outlaw and a scheming banker, played to fine perfection by Bronson and Buono, respectively."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n355/1000:\n4 FOR TEXAS \n\nFrank and Dean deliver top-notch entertainment in this underrated Western film as two rival businessmen who are both threatened by an outlaw and a scheming banker, played to fine perfection by Bronson and Buono, respectively."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreietbbh2r72uvy6a7pyzbg2ubg6e2o7h2wftx2siliefloyivhtt3m
+        size: 85215
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-04-22T01:34:01.958Z'

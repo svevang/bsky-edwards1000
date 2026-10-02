@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lr2zmaaxdk2q
+cid: bafyreidetkd5fwijp5jadeb4znfqcqkcdgc6tujopgo45hicdjezrspg5i
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lr2zmaaxdk2q
+createdAt: '2025-06-08T04:28:16.259Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  32/1000:
+  WHERE THE BOYS ARE
+
+  The ultimate college spring break film of Old Hollywood. While I'm watching this, I feel like I'm going along with the four Midwestern girls' get-together to sunny Florida not just to relax, but to look for budding romance. Perfection.
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    32/1000:
+    WHERE THE BOYS ARE
+
+    The ultimate college spring break film of Old Hollywood. While I'm watching this, I feel like I'm going along with the four Midwestern girls' get-together to sunny Florida not just to relax, but to look for budding romance. Perfection.
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiati6vt4qhzdhyoit6pl2rctvw5epyquc4rheufck4qzkl2ul3qcm
+        size: 90161
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-08T04:28:16.259Z'

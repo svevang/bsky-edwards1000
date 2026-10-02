@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3me5hs3ytbk2p
+cid: bafyreic2ghvpxrnr4nqabeolrut2b4abpky64776ak3dnwsejwek3ymjz4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3me5hs3ytbk2p
+createdAt: '2026-02-05T22:46:05.907Z'
+text: "#Edwards1000SixtiesMovies \n\n280/1000:\nA MONKEY IN WINTER\n\nOld and New French cinema clashed in a good way with this comedy-drama movie, with Gabin and Belmondo both delivering entertaining comic relief. It is the story of a middle-aged guy with a vow to abstain from drinking in a small French town."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n280/1000:\nA MONKEY IN WINTER\n\nOld and New French cinema clashed in a good way with this comedy-drama movie, with Gabin and Belmondo both delivering entertaining comic relief. It is the story of a middle-aged guy with a vow to abstain from drinking in a small French town."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihsaqs3l2p7zgjicghzleegn6y7yi7uju6pwmgwkmvz2ks2bvxgcq
+        size: 54638
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-02-05T22:46:05.907Z'

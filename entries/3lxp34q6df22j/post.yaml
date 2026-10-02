@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lxp34q6df22j
+cid: bafyreiaz5gdu4clt5edzrh7pchm2h42mm7w6ekbmg7jmqt2ohgadjiedsa
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lxp34q6df22j
+createdAt: '2025-08-31T12:19:48.105Z'
+text: "#Edwards1000SixtiesMovies \n\n125/1000:\nTHE CHILDREN'S HOUR\n\nIn this intensely emotional movie, two dedicated educators named Martha and Karen, who run a private all-girls boarding school, find their lives and reputation destroyed due to a lie spread by an unruly student that they are lovers..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n125/1000:\nTHE CHILDREN'S HOUR\n\nIn this intensely emotional movie, two dedicated educators named Martha and Karen, who run a private all-girls boarding school, find their lives and reputation destroyed due to a lie spread by an unruly student that they are lovers..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigrthynkqr5jsceksef4ldddtdcuimizf3bkssinb4re7augejewm
+        size: 92047
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-08-31T12:19:48.105Z'

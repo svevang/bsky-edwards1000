@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3miztayhwzc2w
+cid: bafyreifnv3ui7idqh7f4m6blgxxo7edw4ldgs53lviubkxpxyrsnwrq4aa
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3miztayhwzc2w
+createdAt: '2026-04-09T03:06:35.880Z'
+text: "#Edwards1000SixtiesMovies \n\n338/1000:\nTHE HAUNTED PALACE\n\nThis gem of a horror flick is not actually a Poe story, but in reality, the first H.P. Lovecraft film adaptation. Corman does an excellent job in creating an creepy atmospheric film that bears all the hallmarks of 60s horror cinema."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n338/1000:\nTHE HAUNTED PALACE\n\nThis gem of a horror flick is not actually a Poe story, but in reality, the first H.P. Lovecraft film adaptation. Corman does an excellent job in creating an creepy atmospheric film that bears all the hallmarks of 60s horror cinema."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreie6474sfbskjnapkckxm2bx3ukimt445qxkxjdz3dfrxdmohhyyoq
+        size: 46914
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-04-09T03:06:35.880Z'

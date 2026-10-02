@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mazk2mgsz22d
+cid: bafyreiejo2rz4bdfm7cx5fh2pv4iavai5uy6fdftdp33onsn4ba3wtbeea
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mazk2mgsz22d
+createdAt: '2025-12-28T05:00:25.260Z'
+text: "#Edwards1000SixtiesMovies \n\n246/1000:\nEXPERIMENT IN TERROR\n\nAn excellently-crafted piece of neo-noir that still contains traces of old film noir, this crime-thriller film from Blake Edwards slowly builds up tension for the viewer as the film progresses. Mancini's theme tune is hauntingly beautiful."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n246/1000:\nEXPERIMENT IN TERROR\n\nAn excellently-crafted piece of neo-noir that still contains traces of old film noir, this crime-thriller film from Blake Edwards slowly builds up tension for the viewer as the film progresses. Mancini's theme tune is hauntingly beautiful."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihxhhe3ws7kp7wsg4unljufsdx26cc4vivijnwtbhccahk3muatwq
+        size: 156909
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 856
+        height: 482
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-12-28T05:00:25.260Z'

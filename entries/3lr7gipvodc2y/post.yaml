@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lr7gipvodc2y
+cid: bafyreihn2goz2yyux5l37fuwuqqfjn2mbfjayxfygm6d4ultbyl6q6255y
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lr7gipvodc2y
+createdAt: '2025-06-09T22:29:36.044Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  35/1000:
+  PEEPING TOM
+
+  It was critically reviled on its original release, but has since then been reappraised as a masterpiece of the thriller genre. A unique, dark look at obsession, voyeurism, fear and violence from the POV of a psychopath cameraman.
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    35/1000:
+    PEEPING TOM
+
+    It was critically reviled on its original release, but has since then been reappraised as a masterpiece of the thriller genre. A unique, dark look at obsession, voyeurism, fear and violence from the POV of a psychopath cameraman.
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiabrxcq4oavizfu25a4nl74lvlbkeysweawiaa4dlogengh5mxtlu
+        size: 78658
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-09T22:29:36.044Z'

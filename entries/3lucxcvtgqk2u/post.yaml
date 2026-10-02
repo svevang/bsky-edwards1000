@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lucxcvtgqk2u
+cid: bafyreih2dt3x3q5sajthnno2ulxxdcy42durxdomzsh2qsq5mjp6oquvcy
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lucxcvtgqk2u
+createdAt: '2025-07-19T12:24:08.658Z'
+text: "#Edwards1000SixtiesMovies \n\n84/1000:\nESTHER AND THE KING\n\nAnother biblical epic film from the year 1960 made it to my watchlist: a film adaptation of the Book of Esther. TBH, Joan Collins is totally miscast as the female lead, and the film itself is not entirely faithful to its Bible source."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n84/1000:\nESTHER AND THE KING\n\nAnother biblical epic film from the year 1960 made it to my watchlist: a film adaptation of the Book of Esther. TBH, Joan Collins is totally miscast as the female lead, and the film itself is not entirely faithful to its Bible source."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreib5uroncokk5gbuqowxujbqhwxvaafqqb5f4l4en4fehc25hrnuiu
+        size: 83267
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 345
+        height: 460
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-19T12:24:08.658Z'

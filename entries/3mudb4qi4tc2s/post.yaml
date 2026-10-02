@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mudb4qi4tc2s
+cid: bafyreihgpieslthxkcrirh2w2jvf67aykz6equarnskaredppeptcygnnu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mudb4qi4tc2s
+createdAt: '2026-08-30T20:45:51.239Z'
+text: "#Edwards1000SixtiesMovies \n\n470/1000:\nLILITH \n\nI totally affirm that this is one of actress Jean Seberg's best film roles, as she portrays with an immense gravitas a captivating yet mentally unstable woman who attracted and fell in love with her occupational therapist."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n470/1000:\nLILITH \n\nI totally affirm that this is one of actress Jean Seberg's best film roles, as she portrays with an immense gravitas a captivating yet mentally unstable woman who attracted and fell in love with her occupational therapist."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: Warren Beatty and Jean Seberg
+      image:
+        ref:
+          $link: bafkreih6rt35krhuhzqkcmyu7iznxlch5ik2g43ax5ci765hvilo3hp2eq
+        size: 99308
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-30T20:45:51.239Z'

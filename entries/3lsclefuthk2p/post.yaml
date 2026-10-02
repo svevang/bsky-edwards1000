@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lsclefuthk2p
+cid: bafyreih4gmhon4lnwgikaoofwunadlygbeatmervsup4ggqyb6z5ayu3je
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lsclefuthk2p
+createdAt: '2025-06-23T21:59:50.876Z'
+text: "#Edwards1000SixtiesMovies \n\n53/1000:\nROCCO AND HIS BROTHERS\n\nIn search of better life, Rosaria Parondi and her 5 sons (Rocco, Simone, Vincenzo, Ciro and Luca) move north to Milan. What follows is an epic, emotional narrative of fame which spirals down into jealousy, bloodshed and self-destruction."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n53/1000:\nROCCO AND HIS BROTHERS\n\nIn search of better life, Rosaria Parondi and her 5 sons (Rocco, Simone, Vincenzo, Ciro and Luca) move north to Milan. What follows is an epic, emotional narrative of fame which spirals down into jealousy, bloodshed and self-destruction."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibzbxzqn6f5oaz6wtmgg3tktjot7vmkrmvrodzxg7jrl34zh5eut4
+        size: 87529
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-23T21:59:50.876Z'

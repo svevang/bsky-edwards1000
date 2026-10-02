@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mjmb65edzs2c
+cid: bafyreigl7bxjxqxznru4hfdnuyjurnhbwdmgc3z6arlxgiicntiocsilcy
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mjmb65edzs2c
+createdAt: '2026-04-16T11:03:28.018Z'
+text: "#Edwards1000SixtiesMovies \n\n347/1000:\nTHE V. I. P. S\n\nReleased some months after Cleopatra, this airport-set drama movie capitalized on the huge publicity surrounding Elizabeth and Richard as a couple. The supporting performances also form part of this film's positive feedback, at least for me."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n347/1000:\nTHE V. I. P. S\n\nReleased some months after Cleopatra, this airport-set drama movie capitalized on the huge publicity surrounding Elizabeth and Richard as a couple. The supporting performances also form part of this film's positive feedback, at least for me."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiedrvm7n6dq43fcf7d5i3cxjfgvs6dbmiga2elnpicz7nrskzgs3e
+        size: 79083
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-04-16T11:03:28.018Z'

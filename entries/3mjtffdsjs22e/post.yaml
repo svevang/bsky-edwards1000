@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mjtffdsjs22e
+cid: bafyreicrnfoeq3bijy7yvbdpt5366nbrjr3yciwjpzdevpocil3emqskli
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mjtffdsjs22e
+createdAt: '2026-04-19T07:07:42.791Z'
+text: "#Edwards1000SixtiesMovies \n\n351/1000:\nTHE SILENCE\n\nThis is the 2nd of 2 films directed by Ingmar Bergman released in 1963 that I watched. It tells the story of two sisters, Ester and Anna, who attempt to cope up with being in a strange, unfamiliar place that appears to be on the verge of war."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n351/1000:\nTHE SILENCE\n\nThis is the 2nd of 2 films directed by Ingmar Bergman released in 1963 that I watched. It tells the story of two sisters, Ester and Anna, who attempt to cope up with being in a strange, unfamiliar place that appears to be on the verge of war."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: Ingrid Thulin and Gunnel Lindblom
+      image:
+        ref:
+          $link: bafkreibqrt3dxmgpdpwrra6nbgzk5z37y6ykvjtl5pf7wkpckbsowno4ge
+        size: 58414
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-04-19T07:07:42.791Z'

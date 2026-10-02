@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mulnqvq3ek2t
+cid: bafyreib3ix4jnz2dmrva7kodf5no63utb6wq7xgwq6u6t6owt3trwzjdye
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mulnqvq3ek2t
+createdAt: '2026-09-03T04:53:10.640Z'
+text: "#Edwards1000SixtiesMovies \n\n475/1000:\nTHE PATSY\n\nJerry Lewis' tale of a seemingly untalented bellboy being groomed to be a huge entertainer has kept me completely hooked, as usually with his other films. The bellboy's journey to stardom is filled with a wide assortment of hilarious situations."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n475/1000:\nTHE PATSY\n\nJerry Lewis' tale of a seemingly untalented bellboy being groomed to be a huge entertainer has kept me completely hooked, as usually with his other films. The bellboy's journey to stardom is filled with a wide assortment of hilarious situations."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicqothp7j6sornjcn7xhfdrakur4nk3wy7bt4yzv3fhh3444irdki
+        size: 79955
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-09-03T04:53:10.640Z'

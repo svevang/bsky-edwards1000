@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m6c6tnyixc2e
+cid: bafyreiguvsfnjedby6sbwa63vyk3qbvx5brzhaxmestj66lzr5sf5s4fum
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m6c6tnyixc2e
+createdAt: '2025-11-23T11:18:03.602Z'
+text: "#Edwards1000SixtiesMovies \n\n212/1000:\nFREUD: THE SECRET PASSION\n\nThis biopic deeply delves into the professional career of Sigmund Freud (brilliantly portrayed by Montgomery Clift), especially on his radical treatment of hysteria using hypnosis and his development of the Oedipus complex theory."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n212/1000:\nFREUD: THE SECRET PASSION\n\nThis biopic deeply delves into the professional career of Sigmund Freud (brilliantly portrayed by Montgomery Clift), especially on his radical treatment of hysteria using hypnosis and his development of the Oedipus complex theory."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifq7t7qziworx7ekmw67mbncu5fiukck3mlkmdc6dfu3a4anwvg4q
+        size: 57674
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-11-23T11:18:03.602Z'

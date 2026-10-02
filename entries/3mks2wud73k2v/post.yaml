@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mks2wud73k2v
+cid: bafyreihahusjojjh544is77ipfyoryc3gsqe3nffbtq3smobcrl7v4uofa
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mks2wud73k2v
+createdAt: '2026-05-01T11:53:11.233Z'
+text: "#Edwards1000SixtiesMovies \n\n364/1000:\nUNDER THE YUM-YUM TREE \n\nLemmon continues his sky-high streak as a romantic comedy star with this pretty decent flick in which he appears as a horny, lovestruck apartment landlord who pushes his gorgeous tenant to dump her boyfriend to give him a chance at love."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n364/1000:\nUNDER THE YUM-YUM TREE \n\nLemmon continues his sky-high streak as a romantic comedy star with this pretty decent flick in which he appears as a horny, lovestruck apartment landlord who pushes his gorgeous tenant to dump her boyfriend to give him a chance at love."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: Jack Lemmon and Carol Lynley
+      image:
+        ref:
+          $link: bafkreibjz2ifsubfcxfnglnr7ns6ayqvt2r4xf424tfang32g3kejf7ele
+        size: 83324
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-01T11:53:11.233Z'

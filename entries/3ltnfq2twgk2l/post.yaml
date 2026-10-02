@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ltnfq2twgk2l
+cid: bafyreife2qj4x6kykzfnpmgonmtdcjfxnc2pi6gfk7t5m2kprcsz4rtyiu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ltnfq2twgk2l
+createdAt: '2025-07-10T22:43:28.252Z'
+text: "#Edwards1000SixtiesMovies \n\n74/1000:\nTHE HYPNOTIC EYE\n\nA popular yet enigmatic hypnotist named Desmond is linked to a series of self-mutilation incidents involving young women. Although released as a routine B horror film, I highly admired how the actors best portrayed the expression of terror."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n74/1000:\nTHE HYPNOTIC EYE\n\nA popular yet enigmatic hypnotist named Desmond is linked to a series of self-mutilation incidents involving young women. Although released as a routine B horror film, I highly admired how the actors best portrayed the expression of terror."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreia4gv5w2ia4vv4s4m3hpndfnec3ly6xjy3nigscy6xjx7fgme2dpa
+        size: 71704
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-10T22:43:28.252Z'

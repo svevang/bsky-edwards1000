@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mrjpawsvx22e
+cid: bafyreiaklnhe2oo6oyh53f3n54pki6mkxfd4svtvpsj3b6nlwg3zelqsg4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mrjpawsvx22e
+createdAt: '2026-07-26T05:59:08.012Z'
+text: "#Edwards1000SixtiesMovies \n\n434/1000:\nTHE CARPETBAGGERS\n\nThis film adaptation of Harold Robbins' novel explores the rise and fall of an ambitious, business-minded industrial tycoon as he expands his family's chemical company into other ventures such as aircraft and motion pictures."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n434/1000:\nTHE CARPETBAGGERS\n\nThis film adaptation of Harold Robbins' novel explores the rise and fall of an ambitious, business-minded industrial tycoon as he expands his family's chemical company into other ventures such as aircraft and motion pictures."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreic32fpckueprnqe7i4skdxmqghk26q4hmjnjtyl7apk7zl56wkoqq
+        size: 296234
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 856
+        height: 482
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-07-26T05:59:08.012Z'

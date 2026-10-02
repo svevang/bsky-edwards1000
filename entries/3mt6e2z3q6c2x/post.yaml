@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mt6e2z3q6c2x
+cid: bafyreicujnwmpfay5ay3fbs6pqvcasntjikxz5d3rxyvjd3xd7c437b2cy
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mt6e2z3q6c2x
+createdAt: '2026-08-16T04:30:04.039Z'
+text: "#Edwards1000SixtiesMovies \n\n457/1000:\n7 FACES OF DR. LAO\n\nOne of the best movies to combine elements of both Western and sci-fi genres, it was a fun and engaging watch for me. Tony Randall pulls off a memorable performance of 7 different whimsical characters, including a male version of Medusa..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n457/1000:\n7 FACES OF DR. LAO\n\nOne of the best movies to combine elements of both Western and sci-fi genres, it was a fun and engaging watch for me. Tony Randall pulls off a memorable performance of 7 different whimsical characters, including a male version of Medusa..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidhkdkxxn4aqu4i3lmfgd35pgnaqybc3dqb77p6lwpoexvvisaf3y
+        size: 84256
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-16T04:30:04.039Z'

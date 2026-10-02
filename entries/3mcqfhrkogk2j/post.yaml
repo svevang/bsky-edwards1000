@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mcqfhrkogk2j
+cid: bafyreiffrtbtgeep2l5e7o2iexg5kvjy4rwomosv7pvdcxodgtsojwfk34
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mcqfhrkogk2j
+createdAt: '2026-01-19T00:34:43.712Z'
+text: "#Edwards1000SixtiesMovies \n\n268/1000:\nTHE L-SHAPED ROOM\n\nAll I can say about this single pregnancy drama film is that Leslie Caron makes this a great, potent and exciting watch on the basis of her strong performance, which truly deserved a Golden Globe win and an Oscar nomination."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n268/1000:\nTHE L-SHAPED ROOM\n\nAll I can say about this single pregnancy drama film is that Leslie Caron makes this a great, potent and exciting watch on the basis of her strong performance, which truly deserved a Golden Globe win and an Oscar nomination."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: Leslie Caron and Tom Bell
+      image:
+        ref:
+          $link: bafkreid4qjzc3zgnvwv4gwtkqfbjgn3tyorb24iox4ggpr374tijfqb2ye
+        size: 87539
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-01-19T00:34:43.712Z'

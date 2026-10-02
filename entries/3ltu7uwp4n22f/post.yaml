@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ltu7uwp4n22f
+cid: bafyreidnpdenx655abmyeacg3skn3jt7yut4ylo33opkmytq4yk5vxyboe
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ltu7uwp4n22f
+createdAt: '2025-07-13T15:47:27.391Z'
+text: "#Edwards1000SixtiesMovies \n\n79/1000:\nTHE THREE WORLDS OF GULLIVER\n\nWith superb stop-motion effects by the great Harryhausen, lavish sets and costumes, and eloquent lines of dialogue, I'd discovered again another hidden gem among my movies released in 1960. This would be a good watch for fantasy fans"
+record:
+  text: "#Edwards1000SixtiesMovies \n\n79/1000:\nTHE THREE WORLDS OF GULLIVER\n\nWith superb stop-motion effects by the great Harryhausen, lavish sets and costumes, and eloquent lines of dialogue, I'd discovered again another hidden gem among my movies released in 1960. This would be a good watch for fantasy fans"
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiaaoc63yzglqmnbhfkqxmvd7v5mnv5rl7kdvfocrn25danpdf26cq
+        size: 80944
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 624
+        height: 352
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-13T15:47:27.391Z'

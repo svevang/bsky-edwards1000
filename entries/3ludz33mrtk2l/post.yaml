@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ludz33mrtk2l
+cid: bafyreic7ffaskbyknkvlw7dxvi5neaj4aunuo6w76xkt23obvm5wjw2orm
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ludz33mrtk2l
+createdAt: '2025-07-19T22:28:13.522Z'
+text: "#Edwards1000SixtiesMovies \n\n85/1000:\nTALL STORY\n\nThis comedy film from Joshua Logan, director of Picnic and South Pacific, has an excellent script, immensely watchable from start to finish, and full of heartwarming performances. No wonder this film jumpstarted Jane's legendary film career..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n85/1000:\nTALL STORY\n\nThis comedy film from Joshua Logan, director of Picnic and South Pacific, has an excellent script, immensely watchable from start to finish, and full of heartwarming performances. No wonder this film jumpstarted Jane's legendary film career..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigo3mb3ucbjyvxdmkosbccr2qqdj6lgakrkxtfhl2kqcefd6ccbne
+        size: 94949
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 625
+        height: 491
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-19T22:28:13.522Z'

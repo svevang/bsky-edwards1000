@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m7x4qmqwrs2t
+cid: bafyreifqxxdcacvmigsjktak2mjelskcsiw3rsjg5xoynqiina354rmrji
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m7x4qmqwrs2t
+createdAt: '2025-12-14T12:31:40.289Z'
+text: "#Edwards1000SixtiesMovies \n\n230/1000:\nGYPSY\n\nThe beauty of this musical film lies in the lavish costumes worn by Natalie's character during her scenes on the stage, as well as its highly stylistic title sequence featuring a real orchestra. Add Rosalind and Karl and you have a top-notch biopic!!!"
+record:
+  text: "#Edwards1000SixtiesMovies \n\n230/1000:\nGYPSY\n\nThe beauty of this musical film lies in the lavish costumes worn by Natalie's character during her scenes on the stage, as well as its highly stylistic title sequence featuring a real orchestra. Add Rosalind and Karl and you have a top-notch biopic!!!"
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreig7n3q6po6vcg2a4bqcq4uagr2lwg5nptt7pcxfb5m4axiw46kizu
+        size: 104869
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-12-14T12:31:40.289Z'

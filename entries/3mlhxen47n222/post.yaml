@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mlhxen47n222
+cid: bafyreifxry76z6w57q3qqjt6ohcvzo4oodnmlshxdjz2gyxxuqd2dub4su
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mlhxen47n222
+createdAt: '2026-05-10T04:47:52.740Z'
+text: "#Edwards1000SixtiesMovies \n\n377/1000:\nA GATHERING OF EAGLES\n\nThis drama film starring Rock Hudson should have done better if only the setting was in wartime and not in the contemporary Cold War period. This also shows that Hudson isn't suited for an authoritative role such as an Air Force higher-up."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n377/1000:\nA GATHERING OF EAGLES\n\nThis drama film starring Rock Hudson should have done better if only the setting was in wartime and not in the contemporary Cold War period. This also shows that Hudson isn't suited for an authoritative role such as an Air Force higher-up."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicqsypr5zfqcjrgxwaamkfxn2henbqc6dxujb3urifrxsl3degb3m
+        size: 78232
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-10T04:47:52.740Z'

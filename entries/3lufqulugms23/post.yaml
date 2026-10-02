@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lufqulugms23
+cid: bafyreifuarkwllmhqs6wghotdrwsqqqr42bgfpyh7va5tovjkquulutvim
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lufqulugms23
+createdAt: '2025-07-20T15:06:45.208Z'
+text: "#Edwards1000SixtiesMovies \n\n88/1000:\nA BREATH OF SCANDAL\n\nSophia once more dazzles audiences in this comedy-romance movie about an Austrian princess who falls in love with an American industrialist, which may put her reputation, crown and her family's standing in total jeopardy..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n88/1000:\nA BREATH OF SCANDAL\n\nSophia once more dazzles audiences in this comedy-romance movie about an Austrian princess who falls in love with an American industrialist, which may put her reputation, crown and her family's standing in total jeopardy..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiduvvs5ba5cyyov6zzru6uwnju2fassys6r56mc2ohss6wnvnhf2u
+        size: 58143
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-20T15:06:45.208Z'

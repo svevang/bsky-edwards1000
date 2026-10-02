@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mhhbcusark2w
+cid: bafyreih5nvkc2mnc5hwzxdcn2cwt7arxnnxy3gqwebjpcblhifm6ip6mam
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mhhbcusark2w
+createdAt: '2026-03-20T00:32:24.831Z'
+text: "#Edwards1000SixtiesMovies \n\n317/1000:\nLORD OF THE FLIES\n\nA black and white adaptation of William Golding's legendary novel about a group of boys marooned on a deserted island who descend into savagery and violence. Shot in a documentary-like manner, it captures perfectly the boys' mental state."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n317/1000:\nLORD OF THE FLIES\n\nA black and white adaptation of William Golding's legendary novel about a group of boys marooned on a deserted island who descend into savagery and violence. Shot in a documentary-like manner, it captures perfectly the boys' mental state."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiac2chigx3x56huejcyavryqyicq35qlzlvjkxja6kk5cm6zhp7o4
+        size: 86700
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-03-20T00:32:24.831Z'

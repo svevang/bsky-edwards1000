@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lxsvcuwfi22a
+cid: bafyreifudewxp24ytbf6knei3id5rlhxp5qalwexvrav3zqzpxb3l6lgda
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lxsvcuwfi22a
+createdAt: '2025-09-02T00:46:30.927Z'
+text: "#Edwards1000SixtiesMovies \n\n126/1000:\nKING OF KINGS \n\nAs a Catholic person, I had definitely mixed emotions after rewatching this film about the life of Christ, because while it was the first movie to show Jesus' face, it was unnecessary to blend historical events with the Biblical account itself."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n126/1000:\nKING OF KINGS \n\nAs a Catholic person, I had definitely mixed emotions after rewatching this film about the life of Christ, because while it was the first movie to show Jesus' face, it was unnecessary to blend historical events with the Biblical account itself."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibrzjptmv5ih74iine66uy53iqj4ereso5leuxvnly6iouftz7kj4
+        size: 75509
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-09-02T00:46:30.927Z'

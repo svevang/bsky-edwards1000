@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ltbph5rjmc23
+cid: bafyreigkfuzyequt54qsn3pjzrkbdsvtuesgatu5xip7vymoslllurys24
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ltbph5rjmc23
+createdAt: '2025-07-06T07:05:29.902Z'
+text: "#Edwards1000SixtiesMovies \n\n68/1000:\nHORRORS OF SPIDER ISLAND\n\nThis is a B horror film produced in Germany that has an interesting setting and premise, but gets totally dragged down by its inconsistent screenplay. The focus is more on the pretty girls rather than the spider creature or the terror."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n68/1000:\nHORRORS OF SPIDER ISLAND\n\nThis is a B horror film produced in Germany that has an interesting setting and premise, but gets totally dragged down by its inconsistent screenplay. The focus is more on the pretty girls rather than the spider creature or the terror."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreig3chf5eegodtbbfdn7jyti36wihwqjhxajkfsnkdpn2obabbtq4q
+        size: 51477
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-06T07:05:29.902Z'

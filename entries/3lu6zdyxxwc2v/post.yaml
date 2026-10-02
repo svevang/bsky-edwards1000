@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lu6zdyxxwc2v
+cid: bafyreialzzdj2fkfnhgelz33ek7rbparr7eyxljjsfp5lydgaffcf2uque
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lu6zdyxxwc2v
+createdAt: '2025-07-17T22:49:54.040Z'
+text: "#Edwards1000SixtiesMovies \n\n83/1000:\nCOMANCHE STATION\n\nA rocky and rugged terrain, outlaws after a handsome reward, Indians, and horses crossing a river---these are all themes usually present in a typical Western film. Western film legend Randolph Scott makes this little-known film an uplifting one."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n83/1000:\nCOMANCHE STATION\n\nA rocky and rugged terrain, outlaws after a handsome reward, Indians, and horses crossing a river---these are all themes usually present in a typical Western film. Western film legend Randolph Scott makes this little-known film an uplifting one."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihvo4fu6wmoeyhfigwsr5uckcggperhfrfmmqhpmyztlltmqoc6wq
+        size: 65473
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 416
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-17T22:49:54.040Z'

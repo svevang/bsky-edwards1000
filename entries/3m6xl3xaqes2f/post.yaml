@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m6xl3xaqes2f
+cid: bafyreidbyrjtf5cz5d2ff36ertzpzdhm7pkwwnx5jflgcdagcbzbnyd574
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m6xl3xaqes2f
+createdAt: '2025-12-01T23:23:21.130Z'
+text: "#Edwards1000SixtiesMovies \n\n224/1000:\nL' ECLISSE \n\nAntonioni reached the apex of his  career with this drama-romance film set amidst the classical cityscape of Rome. A pretty literary translator drifts into an affair with a hectic stockbroker after her split from her previous boyfriend, a writer."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n224/1000:\nL' ECLISSE \n\nAntonioni reached the apex of his  career with this drama-romance film set amidst the classical cityscape of Rome. A pretty literary translator drifts into an affair with a hectic stockbroker after her split from her previous boyfriend, a writer."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidvvoiyg7r4onwuexgf67cdpau5wjxjdfhcbncphsrauxjbr4diki
+        size: 73884
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-12-01T23:23:21.130Z'

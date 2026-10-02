@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m6bd2jyuzc2m
+cid: bafyreia24taaozzcxj4sgsmabkx2kbwhk22uojcdggjmvjq35uunq7tipa
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m6bd2jyuzc2m
+createdAt: '2025-11-23T03:00:49.515Z'
+text: "#Edwards1000SixtiesMovies \n\n211/1000: \nBILLY BUDD\n\nTerence Stamp makes a pretty exceptional impression in his first major film role as a innocent, naive seafarer in the British Navy who is pushed to the limit by the cruelty of his vessel's master-in-arms, eventually driving him to commit murder."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n211/1000: \nBILLY BUDD\n\nTerence Stamp makes a pretty exceptional impression in his first major film role as a innocent, naive seafarer in the British Navy who is pushed to the limit by the cruelty of his vessel's master-in-arms, eventually driving him to commit murder."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreid7oeldjk7hr7os7rhsldbix4axosv3an7vuqwvxefjqrofhml2om
+        size: 126330
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-11-23T03:00:49.515Z'

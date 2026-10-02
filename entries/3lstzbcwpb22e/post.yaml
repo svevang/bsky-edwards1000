@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lstzbcwpb22e
+cid: bafyreidw7frsrxq47ljueozo5lz35ibyegcdadvbusr6asj7io7shg4jwa
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lstzbcwpb22e
+createdAt: '2025-06-30T20:23:55.065Z'
+text: "#Edwards1000SixtiesMovies \n\n61/1000:\nSONS AND LOVERS\n\nRight from the film's start, I've noticed that Dean Stockwell should have been nominated for an Oscar for his melodramatic performance here. The storyline may have been so much sad, but look at the other aspects and it's still a great film."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n61/1000:\nSONS AND LOVERS\n\nRight from the film's start, I've noticed that Dean Stockwell should have been nominated for an Oscar for his melodramatic performance here. The storyline may have been so much sad, but look at the other aspects and it's still a great film."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibjxk2ejpe4kixzkkcz2wh4va2j2ko7uxfhsezlwgbmvsvfk4xkyi
+        size: 116700
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 856
+        height: 482
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-30T20:23:55.065Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mlrje4zis224
+cid: bafyreiddxggu2qte3antyf7dkx55ukpffso4cbha6zheonuv563dfrum2y
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mlrje4zis224
+createdAt: '2026-05-14T00:03:40.894Z'
+text: "#Edwards1000SixtiesMovies \n\n382/1000:\nMOVE OVER, DARLING\n\nAlthough the image below shows James Garner with co-star Polly Bergen, the real star of this comedy-romance movie is none other than Doris, with her pristine, youthful looks and radiant charm. Another unforgettable character by Thelma as well"
+record:
+  text: "#Edwards1000SixtiesMovies \n\n382/1000:\nMOVE OVER, DARLING\n\nAlthough the image below shows James Garner with co-star Polly Bergen, the real star of this comedy-romance movie is none other than Doris, with her pristine, youthful looks and radiant charm. Another unforgettable character by Thelma as well"
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidjfgogdzc7buuccejc5kl2plzng7urzituc63q45t76bgq4veu2u
+        size: 87650
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-14T00:03:40.894Z'

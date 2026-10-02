@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m3p6xizc2c24
+cid: bafyreibm4vxf4qfbgw4e4joim4eu4lwoeuykb3nq55a4kdfgjymty5cgnu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m3p6xizc2c24
+createdAt: '2025-10-21T11:09:14.310Z'
+text: "#Edwards1000SixtiesMovies \n\n185/1000:\nLOVE IN A GOLDFISH BOWL\n\nThis now-obscure and lesser-mentioned romantic comedy movie relates two platonic friends from college, one male and the other female, spending a weekend together. The female college student is courted by a handsome US Coast Guard member."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n185/1000:\nLOVE IN A GOLDFISH BOWL\n\nThis now-obscure and lesser-mentioned romantic comedy movie relates two platonic friends from college, one male and the other female, spending a weekend together. The female college student is courted by a handsome US Coast Guard member."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreieqvnbrmxu2zjqrh5vjrcikncxhm2eucb2vm3lsxyewurheqbbij4
+        size: 109356
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 856
+        height: 482
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-10-21T11:09:14.310Z'

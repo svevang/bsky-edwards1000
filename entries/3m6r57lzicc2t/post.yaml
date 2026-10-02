@@ -1,0 +1,35 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m6r57lzicc2t
+cid: bafyreieajvkgi6ajriephph6xabs5rtyc5trkww4nx3cf2wscko5eyghbi
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m6r57lzicc2t
+createdAt: '2025-11-29T09:58:52.762Z'
+text: "#Edwards1000SixtiesMovies \n\n219/1000:\nLOLITA (original version)\n\nKubrick's film adaptation of Nabokov's controversial novel is a great meditation on themes of obsession, sex, and youthful affection. Mason portrays credibly the middle-aged professor obsessively infatuated with a teenage female."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n219/1000:\nLOLITA (original version)\n\nKubrick's film adaptation of Nabokov's controversial novel is a great meditation on themes of obsession, sex, and youthful affection. Mason portrays credibly the middle-aged professor obsessively infatuated with a teenage female."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifzfns3fscj2k3d757qhaszgsrvqd5kngtv5d2nzzauzv3krfmsn4
+        size: 93508
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  labels:
+    $type: com.atproto.label.defs#selfLabels
+    values:
+    - val: nudity
+  createdAt: '2025-11-29T09:58:52.762Z'

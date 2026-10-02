@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lyqtmbmdgs2w
+cid: bafyreiagn76ixdirla3suc7qhdkbjsdtpppp75k6hiszb3ev3u6aj5oibe
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lyqtmbmdgs2w
+createdAt: '2025-09-13T22:35:50.867Z'
+text: "#Edwards1000SixtiesMovies \n\n140/1000:\nPOCKETFUL OF MIRACLES\n\nThis may not be memorable as other films directed by Frank Capra, but its 137-minute showcase of sheer comedy and a Cinderella-like transformation was worth the watch. Glenn Ford and Bette Davis are fantastic in their characters..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n140/1000:\nPOCKETFUL OF MIRACLES\n\nThis may not be memorable as other films directed by Frank Capra, but its 137-minute showcase of sheer comedy and a Cinderella-like transformation was worth the watch. Glenn Ford and Bette Davis are fantastic in their characters..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreib3gk35ldqer6spkely4t5fxkfjrt4nf74lyjt6ljurirx6nb7f5a
+        size: 73992
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-09-13T22:35:50.867Z'

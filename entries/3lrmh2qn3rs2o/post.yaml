@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lrmh2qn3rs2o
+cid: bafyreibnrclwnemwkndcpjxmixjytidoo4y6x5uauo3zqzlw25gmabodsy
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lrmh2qn3rs2o
+createdAt: '2025-06-15T02:44:17.380Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  42/1000:
+  FLAMING STAR
+
+  The second Elvis film on my watchlist deeply exhibits the fact that Elvis can portray a dramatic role on par with his musical/comedic characters. It is totally difficult to choose between two sides: the whites or the native Kiowa tribesmen...
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    42/1000:
+    FLAMING STAR
+
+    The second Elvis film on my watchlist deeply exhibits the fact that Elvis can portray a dramatic role on par with his musical/comedic characters. It is totally difficult to choose between two sides: the whites or the native Kiowa tribesmen...
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreid6babpvgzzkxdemd5hgxvv67qzcdw2lp2ki6uv76y5b4zobxp4vi
+        size: 69769
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-15T02:44:17.380Z'

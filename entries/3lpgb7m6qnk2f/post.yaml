@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lpgb7m6qnk2f
+cid: bafyreig6aj7uvuorbb4oo2iibprzgenkrfeekvea3gfbqt2edus6ibahya
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lpgb7m6qnk2f
+createdAt: '2025-05-18T04:53:16.360Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  3/1000:
+  PSYCHO
+
+  Broadly considered as Hitchcock's magnum opus, Psycho is a perfect blend of the psychological thriller, mystery and horror genres. The bathroom scene still resonates with film buffs like me even 60 years after originally released. Norman Bates rocks!!!
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    3/1000:
+    PSYCHO
+
+    Broadly considered as Hitchcock's magnum opus, Psycho is a perfect blend of the psychological thriller, mystery and horror genres. The bathroom scene still resonates with film buffs like me even 60 years after originally released. Norman Bates rocks!!!
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiglq4tprcut7rx25to72zsqqj2eyx5d4hvofi2ciupplktfulit6i
+        size: 51166
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-05-18T04:53:16.360Z'

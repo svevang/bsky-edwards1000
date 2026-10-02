@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mi5qxc3bbc2f
+cid: bafyreihwxbdgoyxvdyn5iqlnna2b3rdzkmczmrjipk64uzgzfhmep3z3aa
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mi5qxc3bbc2f
+createdAt: '2026-03-28T23:10:50.249Z'
+text: "#Edwards1000SixtiesMovies \n\n328/1000:\nJOHNNY COOL\n\nThe story of a notorious Italian convict's rise and fall in the American Mafia during the 60s. It works well due to Henry Silva's performance but should have been more better if Sammy's eyepatched small role has been greatly expanded..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n328/1000:\nJOHNNY COOL\n\nThe story of a notorious Italian convict's rise and fall in the American Mafia during the 60s. It works well due to Henry Silva's performance but should have been more better if Sammy's eyepatched small role has been greatly expanded..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiahvvcyhjlqrj4czspqikgnblysqu5oxkbt47i7cu3v5czuumf3ii
+        size: 95642
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-03-28T23:10:50.249Z'

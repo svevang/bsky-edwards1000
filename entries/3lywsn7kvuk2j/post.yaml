@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lywsn7kvuk2j
+cid: bafyreifncxhsrjhxxai2s6ykdn4dcqctd2k2azjldsofw3esr3yufeoxrq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lywsn7kvuk2j
+createdAt: '2025-09-16T07:34:26.988Z'
+text: "#Edwards1000SixtiesMovies \n\n144/1000:\nTHE DAY THE EARTH CAUGHT FIRE\n\nThis sci-fi movie uniquely depicts tension among the staff of a newspaper's office, as the planet Earth is on the verge of hurtling towards the sun due to an altered orbit. Sepia and monochrome beautifully come together here."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n144/1000:\nTHE DAY THE EARTH CAUGHT FIRE\n\nThis sci-fi movie uniquely depicts tension among the staff of a newspaper's office, as the planet Earth is on the verge of hurtling towards the sun due to an altered orbit. Sepia and monochrome beautifully come together here."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicf7yqrn23dvzyyrsjqcboc7erldmzxznopuaw2ugcv4llnms45my
+        size: 99432
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-09-16T07:34:26.988Z'

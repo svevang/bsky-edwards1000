@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ltzcppmtbk22
+cid: bafyreigqqt2nowbrnjuyfsuy6omh4hplhzzydzdfjmr7tdrfb4js5ldv24
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ltzcppmtbk22
+createdAt: '2025-07-15T16:21:32.127Z'
+text: "#Edwards1000SixtiesMovies \n\n81/1000:\nTHE RAT RACE\n\nAn aspiring musician who has moved to New York City in search of work falls in love with a dancer with whom he shares his rented room with. If you think living in a big city like NYC is an easy one, it usually comes with troubles and challenges..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n81/1000:\nTHE RAT RACE\n\nAn aspiring musician who has moved to New York City in search of work falls in love with a dancer with whom he shares his rented room with. If you think living in a big city like NYC is an easy one, it usually comes with troubles and challenges..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicbjniajkcnrspvlmzzw25v25pil6erg7zx4ipfcfksawdcwt6yzy
+        size: 60477
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-15T16:21:32.127Z'

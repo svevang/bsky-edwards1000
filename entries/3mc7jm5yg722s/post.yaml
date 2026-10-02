@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mc7jm5yg722s
+cid: bafyreiap77iir5cdtq6xwtjkgmoprlfokokdqaspt6g3qnryypzmdgfjvq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mc7jm5yg722s
+createdAt: '2026-01-12T07:33:30.356Z'
+text: "#Edwards1000SixtiesMovies \n\n263/1000:\nLONELINESS OF THE LONG DISTANCE RUNNER\n\nThis British kitchen sink drama film produced yet another excellent talent in the person of Tom Courtenay, who carries the entire emotional weight of the movie itself with his acting that is totally worthy of the spotlight"
+record:
+  text: "#Edwards1000SixtiesMovies \n\n263/1000:\nLONELINESS OF THE LONG DISTANCE RUNNER\n\nThis British kitchen sink drama film produced yet another excellent talent in the person of Tom Courtenay, who carries the entire emotional weight of the movie itself with his acting that is totally worthy of the spotlight"
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreia62bf6eqn7ldzv3lboxx3p5i7cjyvospl2gpaxfc7libu65yqdla
+        size: 61617
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-01-12T07:33:30.356Z'

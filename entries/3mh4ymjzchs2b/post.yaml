@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mh4ymjzchs2b
+cid: bafyreiexcndzxhryvydjuo5vgot6uzsx3w4ngj75ibxny5dkciaqphudja
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mh4ymjzchs2b
+createdAt: '2026-03-15T22:30:08.065Z'
+text: "#Edwards1000SixtiesMovies \n\n312/1000:\nTHE HAUNTING\n\nI love everything about this horror movie from Robert Wise (the director of the musical classics West Side Story and Sound of Music). Its eerie cinematography and genuine expressions of terror from the cast is just totally perfection!!!"
+record:
+  text: "#Edwards1000SixtiesMovies \n\n312/1000:\nTHE HAUNTING\n\nI love everything about this horror movie from Robert Wise (the director of the musical classics West Side Story and Sound of Music). Its eerie cinematography and genuine expressions of terror from the cast is just totally perfection!!!"
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiai5qtuqaymsarhlpo2sxnr5wcby265ghxlwzff4wxzzh5ma23ya4
+        size: 86405
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-03-15T22:30:08.065Z'

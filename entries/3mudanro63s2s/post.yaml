@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mudanro63s2s
+cid: bafyreie2frbkb2qw6zskclsokausrrowkyjmpnosiicf637bqtt7uxvqem
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mudanro63s2s
+createdAt: '2026-08-30T20:37:29.157Z'
+text: "#Edwards1000SixtiesMovies \n\n469/1000:\nROBIN AND THE 7 HOODS\n\nSinatra and his fellow entertainers Dean and Sammy retell the classic folk legend of Robin Hood, now set in Chicago during the Prohibition era. What piqued my interest was the dinner scene with Barbara Rush's version of Maid Marian...."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n469/1000:\nROBIN AND THE 7 HOODS\n\nSinatra and his fellow entertainers Dean and Sammy retell the classic folk legend of Robin Hood, now set in Chicago during the Prohibition era. What piqued my interest was the dinner scene with Barbara Rush's version of Maid Marian...."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreie3nc2dyi73huoouru2yyolrgeg2eilqzrumxkqwhlwqmmxhfvcfy
+        size: 71231
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-30T20:37:29.157Z'

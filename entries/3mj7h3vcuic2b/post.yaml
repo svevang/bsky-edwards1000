@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mj7h3vcuic2b
+cid: bafyreifdnlyuwgo5d562aqp46aire4df4owa5nnpfoyjyftb72qyurgxyy
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mj7h3vcuic2b
+createdAt: '2026-04-11T08:44:58.346Z'
+text: "#Edwards1000SixtiesMovies \n\n342/1000:\nX: THE MAN WITH THE X-RAY EYES\n\nIMO, this sci-fi horror film may just be among the top 10 movies starring Milland. Brilliant visual effects, created long before CGI was born, depict how Milland's character's ultimately disastrous X-ray vision perceive things."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n342/1000:\nX: THE MAN WITH THE X-RAY EYES\n\nIMO, this sci-fi horror film may just be among the top 10 movies starring Milland. Brilliant visual effects, created long before CGI was born, depict how Milland's character's ultimately disastrous X-ray vision perceive things."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifeva4aldh4tw6rkm3i6q4tbdjcxfuqqgwtpvrsfj3che3vsqnuyu
+        size: 104731
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-04-11T08:44:58.346Z'

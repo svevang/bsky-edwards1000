@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3msucfrvcpk2g
+cid: bafyreibbc2c7varjuj2beqhevd4e7x3piw27qjdipaz3smqx4uhxr6egzm
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3msucfrvcpk2g
+createdAt: '2026-08-12T04:33:40.710Z'
+text: "#Edwards1000SixtiesMovies \n\n455/1000:\nGOOD NEIGHBOR SAM\n\nLemmon once more delights audiences with his humorous, hilarious character in this comedy-romance film, in which he plays an art director/husband who pretends to be married to his wife's bestfriend who just recently got divorced..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n455/1000:\nGOOD NEIGHBOR SAM\n\nLemmon once more delights audiences with his humorous, hilarious character in this comedy-romance film, in which he plays an art director/husband who pretends to be married to his wife's bestfriend who just recently got divorced..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibi2gv3ah63nml2wty35c5vx4axgnhmsrxhewn7gqvrbob3q36uii
+        size: 91343
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-12T04:33:40.710Z'

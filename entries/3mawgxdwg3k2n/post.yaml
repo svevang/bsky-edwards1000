@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mawgxdwg3k2n
+cid: bafyreifas7ljieleerx4wo5h6bhdl3xt3tinj7apcioxdsjk75trfi3p74
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mawgxdwg3k2n
+createdAt: '2025-12-26T23:26:55.213Z'
+text: "#Edwards1000SixtiesMovies \n\n245/1000:\nSANJURO\n\nKurosawa's companion piece/follow-up to his classic Yojimbo is more comedic and less elaborate in tone than the previous film. My expectations of an similar movie full of action scenes may not be met, but I still loved Toshiro Mifune's performance."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n245/1000:\nSANJURO\n\nKurosawa's companion piece/follow-up to his classic Yojimbo is more comedic and less elaborate in tone than the previous film. My expectations of an similar movie full of action scenes may not be met, but I still loved Toshiro Mifune's performance."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihf63gqeqwxrbacjgp4qiiviwnef2v73oabisbbsihm6ykccis5ty
+        size: 78124
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-12-26T23:26:55.213Z'

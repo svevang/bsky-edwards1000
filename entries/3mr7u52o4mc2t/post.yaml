@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mr7u52o4mc2t
+cid: bafyreib3goe7klhpqgjhddzjz6yrgulot7vfedwhm65ut3mjsdc7busd6q
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mr7u52o4mc2t
+createdAt: '2026-07-22T07:59:49.179Z'
+text: "#Edwards1000SixtiesMovies \n\n431/1000:\nMASQUE OF THE RED DEATH\n\nThe truth about this horror movie is that it is colorfully and visually stunning, with vibrant cinematography and creative wardrobe by the characters. I'd vouch for this film as the best Roger Corman-directed flick."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n431/1000:\nMASQUE OF THE RED DEATH\n\nThe truth about this horror movie is that it is colorfully and visually stunning, with vibrant cinematography and creative wardrobe by the characters. I'd vouch for this film as the best Roger Corman-directed flick."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigdksabomwn32kk2wdhwlbjm36gd4rqjrkcbdejn3ef4s576htz4u
+        size: 82130
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-07-22T07:59:49.179Z'

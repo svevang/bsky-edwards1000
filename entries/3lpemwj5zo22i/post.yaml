@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lpemwj5zo22i
+cid: bafyreiewh5lrzlb5ueheak2towacwojejsvv4yonqiufc2telsbqaa6vh4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lpemwj5zo22i
+createdAt: '2025-05-17T13:17:36.634Z'
+text: "#Edwards1000SixtiesMovies \n\n2/1000:\nOCEAN'S ELEVEN\n\nDespite the huge popularity of Soderbergh/Clooney's remake film(s), the original version remains to be a cult classic in its own right. Loved the title sequence's minimalistic design, the heartwarming dialogue and the Rat Pack chemistry."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n2/1000:\nOCEAN'S ELEVEN\n\nDespite the huge popularity of Soderbergh/Clooney's remake film(s), the original version remains to be a cult classic in its own right. Loved the title sequence's minimalistic design, the heartwarming dialogue and the Rat Pack chemistry."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifbfsdzjyejd3nlnqx6h7erccm4nrvf4qlwbbxgecr3im5aszddpm
+        size: 74337
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-05-17T13:17:36.634Z'

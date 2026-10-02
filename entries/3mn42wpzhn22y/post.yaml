@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mn42wpzhn22y
+cid: bafyreiculrqn33tfho7deyweimqsjkfz7i6pkpbjmlfbwl3yqzyvkhzsga
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mn42wpzhn22y
+createdAt: '2026-05-30T22:10:07.418Z'
+text: "#Edwards1000SixtiesMovies \n\n398/1000:\nTHE HOOK (1963)\n\nAn underrated war drama movie that is set during the Korean War, it stars Kirk with Oscar nominee Nick Adams and Robert Walker's son as three soldiers who struggle with their inner emotions as they are about to execute an enemy Korean soldier."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n398/1000:\nTHE HOOK (1963)\n\nAn underrated war drama movie that is set during the Korean War, it stars Kirk with Oscar nominee Nick Adams and Robert Walker's son as three soldiers who struggle with their inner emotions as they are about to execute an enemy Korean soldier."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihbqkeshqmcbdqlcgadsv3vmpm4zpjgg63oj7muixjqxs6gvwkmji
+        size: 266241
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 1280
+        height: 720
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-30T22:10:07.418Z'

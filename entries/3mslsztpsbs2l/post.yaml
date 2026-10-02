@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mslsztpsbs2l
+cid: bafyreiefj76mumau7rqk25g734fs5f5dnqgjw6oijo73kadvnbdx37ffw4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mslsztpsbs2l
+createdAt: '2026-08-08T19:37:15.945Z'
+text: "#Edwards1000SixtiesMovies \n\n451/1000:\nTHE BEST MAN (1964)\n\nThis is an average political drama which deals with two frontrunners vying for their party's nomination as presidential candidate, and how they went to great lengths to get that opportunity. Lee Tracy's performance should have won an Oscar.."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n451/1000:\nTHE BEST MAN (1964)\n\nThis is an average political drama which deals with two frontrunners vying for their party's nomination as presidential candidate, and how they went to great lengths to get that opportunity. Lee Tracy's performance should have won an Oscar.."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidnhjy6vqfmafoe44zzgs3gitqjbnfw75fdblmyysxasxpuhpyzje
+        size: 96037
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-08T19:37:15.945Z'

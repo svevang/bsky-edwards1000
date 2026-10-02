@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mtl56jfrwc2s
+cid: bafyreieau4oymiueelzqshtmm6i54or6hcd3ndgdwnc5ntns6pa6aosmje
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mtl56jfrwc2s
+createdAt: '2026-08-21T06:31:22.242Z'
+text: "#Edwards1000SixtiesMovies \n\n462/1000:\n633 SQUADRON\n\nAlthough this war film has a lot in common with the more familiar The Dam Busters, the only good highlight that resonated with me are the picruresque aerial battle scenes, which some say influenced the \"trench run\" in the first Star Wars movie."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n462/1000:\n633 SQUADRON\n\nAlthough this war film has a lot in common with the more familiar The Dam Busters, the only good highlight that resonated with me are the picruresque aerial battle scenes, which some say influenced the \"trench run\" in the first Star Wars movie."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigv7jfvezg6bk4ziowxmcxkjbvuhbewufqfvvvfp2vkozbbyit2bq
+        size: 81882
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 495
+        height: 384
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-21T06:31:22.242Z'

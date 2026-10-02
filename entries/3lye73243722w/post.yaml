@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lye73243722w
+cid: bafyreid2wu67crp4jhkwfw3dpox7t5va6zi6mfkmaiem2ashdfjpw2lahe
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lye73243722w
+createdAt: '2025-09-08T21:56:20.872Z'
+text: "#Edwards1000SixtiesMovies \n\n135/1000:\nPARIS BLUES \n\nA hidden gem of 60s cinema and featuring two legendary actors of the same decade, this drama film revolves around two American jazz musicians living and working in Paris who must decide between love or music after meeting two tourist girls."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n135/1000:\nPARIS BLUES \n\nA hidden gem of 60s cinema and featuring two legendary actors of the same decade, this drama film revolves around two American jazz musicians living and working in Paris who must decide between love or music after meeting two tourist girls."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifc3y3vlvsmdxg5bd3ybhrfl6boq3bybpoedqy55kzbdyqvdxdgei
+        size: 69210
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-09-08T21:56:20.872Z'

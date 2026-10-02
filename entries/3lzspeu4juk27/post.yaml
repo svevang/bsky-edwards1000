@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lzspeu4juk27
+cid: bafyreiapub3g7l54zgi5tzfdzvj2wgqbqt5thzhacn6bb73c3ffxzfk6uq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lzspeu4juk27
+createdAt: '2025-09-27T09:50:37.995Z'
+text: "#Edwards1000SixtiesMovies \n\n160/1000:\nGREYFRIARS BOBBY\n\nNow this is a heartwarming account of a Skye terrier dog who chose to remain loyal to its elderly master by sleeping near his graveyard when he died. Magnificently shot in the Scottish highlands, you'll definitely enjoy this Disney family film."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n160/1000:\nGREYFRIARS BOBBY\n\nNow this is a heartwarming account of a Skye terrier dog who chose to remain loyal to its elderly master by sleeping near his graveyard when he died. Magnificently shot in the Scottish highlands, you'll definitely enjoy this Disney family film."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiefikfzlnsovv6ecl74ziaoogoaguyfcbxc6ojk6jeavdozgny4ea
+        size: 93245
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 783
+        height: 391
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-09-27T09:50:37.995Z'

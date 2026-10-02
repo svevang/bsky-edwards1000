@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mmkwkdkeuk24
+cid: bafyreibmzohelcprz3u3qkhgttoz2o2zypjbv55vuqeph3bc23oxv7vmre
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mmkwkdkeuk24
+createdAt: '2026-05-24T02:36:21.167Z'
+text: "#Edwards1000SixtiesMovies \n\n391/1000:\nBLACK ZOO\n\nThis horror film is all about a ruthless zookeeper who has trained his beastly animals to ferociously attack those who have stood on his way. In a chilling turn of events, it turns out that the zookeeper's mute assistant is in fact, his own son."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n391/1000:\nBLACK ZOO\n\nThis horror film is all about a ruthless zookeeper who has trained his beastly animals to ferociously attack those who have stood on his way. In a chilling turn of events, it turns out that the zookeeper's mute assistant is in fact, his own son."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicsolcszchvn72m7watrzgkbitgloh4cezqsxzm4n5mvmhh3tqukm
+        size: 64016
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-24T02:36:21.167Z'

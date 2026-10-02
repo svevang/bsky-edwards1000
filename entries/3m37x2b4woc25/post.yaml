@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m37x2b4woc25
+cid: bafyreiaqvhm6izv3xvuw5hj6ohuucn2dj344q6qh7y6qxmy2dns5q47vya
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m37x2b4woc25
+createdAt: '2025-10-15T09:37:40.703Z'
+text: "#Edwards1000SixtiesMovies \n\n178/1000:\nBY LOVE POSSESSED\n\nWhile the primary focus of this Lana Turner movie is on her character's \naffair with her husband's law partner, it is also important to consider that there is a subplot here featuring George Hamilton, and he once more steals the show!"
+record:
+  text: "#Edwards1000SixtiesMovies \n\n178/1000:\nBY LOVE POSSESSED\n\nWhile the primary focus of this Lana Turner movie is on her character's \naffair with her husband's law partner, it is also important to consider that there is a subplot here featuring George Hamilton, and he once more steals the show!"
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreighd5navoeuw5xmopolsdfrdbrz6irvv6rsl267quti3p5fytscg4
+        size: 95840
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 640
+        height: 480
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-10-15T09:37:40.703Z'

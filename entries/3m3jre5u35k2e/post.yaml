@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m3jre5u35k2e
+cid: bafyreia4ixrlucfhjqqufbv2qfx4lhqdgqy6wsfeaclpdvl6ruy2xgvxda
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m3jre5u35k2e
+createdAt: '2025-10-19T07:22:27.744Z'
+text: "#Edwards1000SixtiesMovies \n\n182/1000:\nSHADOW OF THE CAT\n\nThis Universal-produced horror film explores a seemingly harmless cat which caused the deaths of some people residing in the mansion in which her mistress was murdered. I consider this as a hidden gem because of the cat's unique POV."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n182/1000:\nSHADOW OF THE CAT\n\nThis Universal-produced horror film explores a seemingly harmless cat which caused the deaths of some people residing in the mansion in which her mistress was murdered. I consider this as a hidden gem because of the cat's unique POV."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicq65pvwa566e2xibuy4p34uy2pdngp73zbzlhgkirxgw72zqxgwe
+        size: 75893
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-10-19T07:22:27.744Z'

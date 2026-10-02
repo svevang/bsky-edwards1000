@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3miuc3wjwnk25
+cid: bafyreihdommfauw6ricp6ofj2invxmtik4jugsivv7jk3lanewe5ooj4di
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3miuc3wjwnk25
+createdAt: '2026-04-06T22:16:13.774Z'
+text: "#Edwards1000SixtiesMovies \n\n335/1000:\nSPENCER'S MOUNTAIN\n\nFor me, this is a decent family drama that features genuine performances by Henry Fonda, Maureen O'Hara and James MacArthur. The story just doesn't focus on the Spencer family...it also explores the tightknit community to which they belong."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n335/1000:\nSPENCER'S MOUNTAIN\n\nFor me, this is a decent family drama that features genuine performances by Henry Fonda, Maureen O'Hara and James MacArthur. The story just doesn't focus on the Spencer family...it also explores the tightknit community to which they belong."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiaontowk73xczvjwj6dwmglj4gyzm4hago3ezkuman66nh54tdjzy
+        size: 105820
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 686
+        height: 447
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-04-06T22:16:13.774Z'

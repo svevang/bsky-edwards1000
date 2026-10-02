@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3me5iok5ems2p
+cid: bafyreihjtd5zzjw6ezem4zrj7qlbzlutd27yay4druzlcpbf7qpyg24l6m
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3me5iok5ems2p
+createdAt: '2026-02-05T23:02:00.293Z'
+text: "#Edwards1000SixtiesMovies \n\n281/1000:\n13 WEST STREET\n\nThis crime film starring Ladd and Steiger is definitely underrating in every aspect---story, performances, cinematography, etc. I think its premise of unknown juveniles attacking the lead will keep you watching this movie up to the ending."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n281/1000:\n13 WEST STREET\n\nThis crime film starring Ladd and Steiger is definitely underrating in every aspect---story, performances, cinematography, etc. I think its premise of unknown juveniles attacking the lead will keep you watching this movie up to the ending."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidibabpzx4tp6ykk6nog57ys4xsw4ty32y66gvm5tkwmt3brx3pfi
+        size: 77946
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 686
+        height: 447
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-02-05T23:02:00.293Z'

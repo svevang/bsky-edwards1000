@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mplnpoez7k2w
+cid: bafyreiahws5kxrt4ygvwwzvyobahopib637qbe3ueoxdsf42zlku5jivw4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mplnpoez7k2w
+createdAt: '2026-07-01T13:46:31.235Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  411/1000:
+  ZULU
+
+  It's been my third time already watching this epic war film set during the Anglo-Zulu War in southern Africa in the late 19th century. Aside from the excellent cinematography, the most unforgettable highlight is Caine's impressive breakthrough performance.
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    411/1000:
+    ZULU
+
+    It's been my third time already watching this epic war film set during the Anglo-Zulu War in southern Africa in the late 19th century. Aside from the excellent cinematography, the most unforgettable highlight is Caine's impressive breakthrough performance.
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicmmk7s6atf365ync6futpfndlucgwhiettkvwn46mllb7a4iuaum
+        size: 91116
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-07-01T13:46:31.235Z'

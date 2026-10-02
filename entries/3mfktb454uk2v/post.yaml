@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mfktb454uk2v
+cid: bafyreianxijuf4lk7hdzayi4eqnyjygeh2lmzq2l7cxxygjz5pnbbguqgu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mfktb454uk2v
+createdAt: '2026-02-23T23:41:08.784Z'
+text: "#Edwards1000SixtiesMovies \n\n296/1000:\nMY GEISHA\n\nShirley MacLaine totally dazzles in this romantic comedy movie as a resourceful, versatile film actress who unknowingly lands the lead in her husband's latest film, an adaptation of Puccini's Madame Butterfly, by disguising as a young geisha."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n296/1000:\nMY GEISHA\n\nShirley MacLaine totally dazzles in this romantic comedy movie as a resourceful, versatile film actress who unknowingly lands the lead in her husband's latest film, an adaptation of Puccini's Madame Butterfly, by disguising as a young geisha."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihwt3viijnsdk2tpkevppgrfbgmmgrvb4dhrn6kd5anu5wqpvvhry
+        size: 64562
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-02-23T23:41:08.784Z'

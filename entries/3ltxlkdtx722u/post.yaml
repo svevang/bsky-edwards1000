@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ltxlkdtx722u
+cid: bafyreihbhlxz5bc26tppdl6e6q5raizaduicpepze6gncsn5n4qta3aidu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ltxlkdtx722u
+createdAt: '2025-07-14T23:54:16.201Z'
+text: "#Edwards1000SixtiesMovies \n\n80/1000:\nTHE GALLANT HOURS\n\nTBH, I never enjoyed watching this war-drama film at all since it lacked the necessary action sequences which would have qualified it a better flick, but there's still one good thing here: Cagney's performance as Admiral Halsey."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n80/1000:\nTHE GALLANT HOURS\n\nTBH, I never enjoyed watching this war-drama film at all since it lacked the necessary action sequences which would have qualified it a better flick, but there's still one good thing here: Cagney's performance as Admiral Halsey."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreif6si47jnrmqgy7unyptmolc6yoxdh5l2rmhwarebzheotjsv456y
+        size: 88753
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-14T23:54:16.201Z'

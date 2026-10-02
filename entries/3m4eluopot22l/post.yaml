@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m4eluopot22l
+cid: bafyreigpp4dg3wpx5ccnpnou7tve75eamld6y7pxikrqav6dfy6wbi2xui
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m4eluopot22l
+createdAt: '2025-10-29T23:26:12.760Z'
+text: "#Edwards1000SixtiesMovies \n\n196/1000:\nROMANOFF AND JULIET \n\nUstinov writes, produces and directs this political satire lost to time. This is a loose update of Shakespeare's classic Romeo & Juliet story for an early-60s contemporary setting. Ustinov is talented but the film is otherwise mediocre."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n196/1000:\nROMANOFF AND JULIET \n\nUstinov writes, produces and directs this political satire lost to time. This is a loose update of Shakespeare's classic Romeo & Juliet story for an early-60s contemporary setting. Ustinov is talented but the film is otherwise mediocre."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiai6pzlszngu5vz7exvcvj7yg2neupb7yikyafnkzbbv6yqic3n2i
+        size: 83404
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 640
+        height: 480
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-10-29T23:26:12.760Z'

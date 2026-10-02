@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mtl432tyrc2s
+cid: bafyreifj7a64adjq53io3oru5jbugnk2f4smck7yb6sa2bauhk22n2lpku
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mtl432tyrc2s
+createdAt: '2026-08-21T06:11:32.527Z'
+text: "#Edwards1000SixtiesMovies \n\n461/1000:\nISLAND OF THE BLUE DOLPHINS\n\nThis is a soft-heartening tale of survival of a Native American girl on the island where her tribe used to reside before relocating to the mainland. I just totally admire the girl's determination and courage with a dog as her partner"
+record:
+  text: "#Edwards1000SixtiesMovies \n\n461/1000:\nISLAND OF THE BLUE DOLPHINS\n\nThis is a soft-heartening tale of survival of a Native American girl on the island where her tribe used to reside before relocating to the mainland. I just totally admire the girl's determination and courage with a dog as her partner"
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiajw4f5h5udc656guaq52e3k3t42xbn2k7ibg6kqeo7ssa3vlttoi
+        size: 103553
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 600
+        height: 464
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-08-21T06:11:32.527Z'

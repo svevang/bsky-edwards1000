@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mlrj3zoejk24
+cid: bafyreiepy5dybpvyqhpjf3rirhczrainiwti2omqw7nw4jkzkec7qxl67m
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mlrj3zoejk24
+createdAt: '2026-05-13T23:59:08.948Z'
+text: "#Edwards1000SixtiesMovies \n\n381/1000:\nANY NUMBER CAN WIN \n\nYears before The Sicilian Clan was released, Gabin and Delon have already successfully collaborated on a great crime film that is a must-watch for fans of the genre. The ending scene, which I would never spoil, is just so incredible..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n381/1000:\nANY NUMBER CAN WIN \n\nYears before The Sicilian Clan was released, Gabin and Delon have already successfully collaborated on a great crime film that is a must-watch for fans of the genre. The ending scene, which I would never spoil, is just so incredible..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiacofev5onlnmmhetxrq4jben2znidekztxh6duaxrxmgla43mx6i
+        size: 71204
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-13T23:59:08.948Z'

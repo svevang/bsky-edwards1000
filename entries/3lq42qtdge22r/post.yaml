@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lq42qtdge22r
+cid: bafyreieqb4clvit763kt657xnggfph2nczpvmh2lxxwi4ac3swk4v2qrva
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lq42qtdge22r
+createdAt: '2025-05-26T20:56:12.326Z'
+text: "#Edwards1000SixtiesMovies \n\n16/1000:\nTHE GRASS IS GREENER\n\nA love triangle develops between a married couple, an oil tycoon and a socialite, set entirely within a country manor which has been opened for public tours. The four leads are humorous, and the title sequence with babies is cute."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n16/1000:\nTHE GRASS IS GREENER\n\nA love triangle develops between a married couple, an oil tycoon and a socialite, set entirely within a country manor which has been opened for public tours. The four leads are humorous, and the title sequence with babies is cute."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigzqudeezlvydqozsym6ueec666jjnok5o7meuidzx2fcgruvor34
+        size: 83485
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-05-26T20:56:12.326Z'

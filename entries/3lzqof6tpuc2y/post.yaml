@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lzqof6tpuc2y
+cid: bafyreiaxhjfjn2cccd345emv3kpflc4j2gwsa4uccagicy7kqramy5mwn4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lzqof6tpuc2y
+createdAt: '2025-09-26T14:27:36.014Z'
+text: "#Edwards1000SixtiesMovies \n\n159/1000:\nACCATTONE\n\nThis is Pasolini's first movie as a highly respected yet unconventional  director. Franco Citti gives a compelling performance as a pimp whose good lifestyle goes out of control due to various circumstances. Also, the poor side of Rome is seen here."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n159/1000:\nACCATTONE\n\nThis is Pasolini's first movie as a highly respected yet unconventional  director. Franco Citti gives a compelling performance as a pimp whose good lifestyle goes out of control due to various circumstances. Also, the poor side of Rome is seen here."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiaw4y47emuifvcz4yzzwj3qn2l7s7ujj6zjakbsqiivbyhk4llodu
+        size: 311052
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 1200
+        height: 675
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-09-26T14:27:36.014Z'

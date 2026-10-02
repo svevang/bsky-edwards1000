@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m6nhz76jvs2q
+cid: bafyreidnurrskyfzj5ifkswqmtg6t6u4yiitxjp2ydystaqd2mehslcfja
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m6nhz76jvs2q
+createdAt: '2025-11-27T23:01:30.172Z'
+text: "#Edwards1000SixtiesMovies \n\n217/1000:\nCAPE FEAR (original version)\n\nEven with its equally classic remake, nothing can compare to this psychological masterpiece which strips down terror with less gore or violence. Mitchum gives a career-best performance that is highly menacing and intimidating."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n217/1000:\nCAPE FEAR (original version)\n\nEven with its equally classic remake, nothing can compare to this psychological masterpiece which strips down terror with less gore or violence. Mitchum gives a career-best performance that is highly menacing and intimidating."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihieudzbr7axhgqnqhrdifwo5agrbur664r7jcqkce2rt6v6r56tm
+        size: 109701
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-11-27T23:01:30.172Z'

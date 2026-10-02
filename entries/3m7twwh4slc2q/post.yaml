@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m7twwh4slc2q
+cid: bafyreiboj6n7h4fqj3xmy7pydwgloxlo2qkmbiwjcagb4p22tr7czo2mhm
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m7twwh4slc2q
+createdAt: '2025-12-13T06:09:34.018Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  228/1000:
+  DAYS OF WINE AND ROSES
+
+  An account of a couple's relationship fueled, motivated and ruined by alcoholism. Lemmon and Remick efficiently conveyed the emotions brought about by alcohol addiction with their splendid acting, and Mancini's theme song is a total blast!
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    228/1000:
+    DAYS OF WINE AND ROSES
+
+    An account of a couple's relationship fueled, motivated and ruined by alcoholism. Lemmon and Remick efficiently conveyed the emotions brought about by alcohol addiction with their splendid acting, and Mancini's theme song is a total blast!
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreib4ru6dihda4x4s4hxp3oxkou6mk4lnpsqohnhi6ujgnzj5ctve3u
+        size: 96492
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-12-13T06:09:34.018Z'

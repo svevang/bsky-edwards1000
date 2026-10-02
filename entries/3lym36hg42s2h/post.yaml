@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lym36hg42s2h
+cid: bafyreibgfn6gsezzwgxozwdxevwo2peqzi4npxrl3yltvmqqcgq6hsdws4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lym36hg42s2h
+createdAt: '2025-09-12T01:07:58.434Z'
+text: "#Edwards1000SixtiesMovies \n\n139/1000:\nTHE PHANTOM PLANET\n\nA typical, routine sci-fi film of the 60s and one of several B movies featured on the Mystery Science Theater 3000, this underrated film explores an astronaut crash-landing on an asteroid of tiny aliens, later being shrunken to their size..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n139/1000:\nTHE PHANTOM PLANET\n\nA typical, routine sci-fi film of the 60s and one of several B movies featured on the Mystery Science Theater 3000, this underrated film explores an astronaut crash-landing on an asteroid of tiny aliens, later being shrunken to their size..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicdfmfn3dk3e7nuvoata652hcc2uuuxge6wgfqb3gdoxdg2drzt7i
+        size: 100691
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-09-12T01:07:58.434Z'

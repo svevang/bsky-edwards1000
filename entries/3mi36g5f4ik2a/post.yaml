@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mi36g5f4ik2a
+cid: bafyreiddex6kuaoqplirnxf7zuqevif3z3nleycsbvm3dbehx6kxnc7rgu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mi36g5f4ik2a
+createdAt: '2026-03-27T22:33:48.064Z'
+text: "#Edwards1000SixtiesMovies \n\n327/1000:\nSUMMER HOLIDAY \n\nAt first, I thought this would be another boring musical film to watch, but eventually found this one a lot entertaining, most especially during the musical numbers that showcased British singer Cliff Richard's distinctive voice."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n327/1000:\nSUMMER HOLIDAY \n\nAt first, I thought this would be another boring musical film to watch, but eventually found this one a lot entertaining, most especially during the musical numbers that showcased British singer Cliff Richard's distinctive voice."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifl6w7tesit2c4ojzjcrbvl2misyexiuixcmhljqu5ljtdixfvgcy
+        size: 111932
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-03-27T22:33:48.064Z'

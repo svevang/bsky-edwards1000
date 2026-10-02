@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m4kxkbr7ek2e
+cid: bafyreiezoqpuksrzwpr4vrqo266ni44k7xoznme6xzb4thf5erczjdybve
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m4kxkbr7ek2e
+createdAt: '2025-11-01T12:11:06.987Z'
+text: "#Edwards1000SixtiesMovies \n\n200/2000:\nVIRIDIANA \n\nFinally, I've reached another milestone in my 1000-movie watchlist of the 1960s by revisiting a now-landmark of Spanish cinema and one of Buñuel's best movies. It is essentially two stories interwoven into one film, but the focus on the lead remains."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n200/2000:\nVIRIDIANA \n\nFinally, I've reached another milestone in my 1000-movie watchlist of the 1960s by revisiting a now-landmark of Spanish cinema and one of Buñuel's best movies. It is essentially two stories interwoven into one film, but the focus on the lead remains."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicjhwtgwd36lhxzx6hbjqvahj2g3kajg26w2ybfrxmew76uweezua
+        size: 73114
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-11-01T12:11:06.987Z'

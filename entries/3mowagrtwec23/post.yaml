@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mowagrtwec23
+cid: bafyreibtpgm6qeib654xovuyf47dfcf4brnj6deyxw5mcnb4v5yeigj67y
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mowagrtwec23
+createdAt: '2026-06-23T01:22:59.719Z'
+text: "#Edwards1000SixtiesMovies \n\n404/1000:\nTOPKAPI\n\nThis crime comedy film is so-named because it takes place mainly in transcontinental, cosmopolitan Istanbul. While Melina and Schell look ravishing as the lady and gentleman thieves respectively, this movie owes its appeal to Ustinov as the funny crook."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n404/1000:\nTOPKAPI\n\nThis crime comedy film is so-named because it takes place mainly in transcontinental, cosmopolitan Istanbul. While Melina and Schell look ravishing as the lady and gentleman thieves respectively, this movie owes its appeal to Ustinov as the funny crook."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: Melina Mercouri
+      image:
+        ref:
+          $link: bafkreidq2tzvyn3d77psgvnix5lhudy5owdhqmxcqk5uwehnktyzxzimyq
+        size: 60096
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-06-23T01:22:59.719Z'

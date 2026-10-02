@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ltjxhgbqys2j
+cid: bafyreifpst326s3q4ueo4zqxtzwnriccqxp6kii6x4xojgi2yrcgmwiyg4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ltjxhgbqys2j
+createdAt: '2025-07-09T13:50:06.656Z'
+text: "#Edwards1000SixtiesMovies \n\n73/1000:\nTHE STORY OF RUTH\n\nFor today's motion picture, I opted to watch a movie that is based on a Bible story, particularly the Book of Ruth in the Old Testament. This is a pretty great biblical film that deserves much love and appreciation, and I enjoyed it well."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n73/1000:\nTHE STORY OF RUTH\n\nFor today's motion picture, I opted to watch a movie that is based on a Bible story, particularly the Book of Ruth in the Old Testament. This is a pretty great biblical film that deserves much love and appreciation, and I enjoyed it well."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiccvvp2ekxooglscxp5zjrqn2aazlfz4diyob3fakb4rdg3poqawi
+        size: 89183
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-09T13:50:06.656Z'

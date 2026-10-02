@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ltsizyb4fk2r
+cid: bafyreiedwlswoluvml7d3aqslf4f25ogzypevbe6u7klsxn526hvxvznly
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ltsizyb4fk2r
+createdAt: '2025-07-12T23:26:01.005Z'
+text: "#Edwards1000SixtiesMovies \n\n76/1000:\nTHE CITY OF THE DEAD\n\nThis is another disappointment for me in the horror genre, as I found  that although Christopher Lee gets top billing, he doesn't play the main horror character. This film deals with modern-day practice of witchcraft in a small, gloomy town."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n76/1000:\nTHE CITY OF THE DEAD\n\nThis is another disappointment for me in the horror genre, as I found  that although Christopher Lee gets top billing, he doesn't play the main horror character. This film deals with modern-day practice of witchcraft in a small, gloomy town."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihli7wjqqbjsvk3ngrbrvueyc6ac5pxdg6ada2sgrik2pd2m2d2li
+        size: 70637
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-12T23:26:01.005Z'

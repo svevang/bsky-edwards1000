@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mgs2y2gvhk2x
+cid: bafyreigh3iwvwcu2dikeyi5npf66ocx4gcl3cqgjoyyemg2n6hffabcvpq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mgs2y2gvhk2x
+createdAt: '2026-03-11T14:13:04.726Z'
+text: "#Edwards1000SixtiesMovies \n\n303/1000:\nCLEOPATRA (LIZ TAYLOR'S VERSION)\n\nNevermind the professional and personal issues that plagued the production of this historical biopic of Ancient Egypt's last queen. All I really cared about is the magnificent, splendid visuals and Liz's sophisticated acting."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n303/1000:\nCLEOPATRA (LIZ TAYLOR'S VERSION)\n\nNevermind the professional and personal issues that plagued the production of this historical biopic of Ancient Egypt's last queen. All I really cared about is the magnificent, splendid visuals and Liz's sophisticated acting."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: Elizabeth Taylor and Richard Burton
+      image:
+        ref:
+          $link: bafkreictd46bzoqlje4tcu2of4ghg3ucay3ig72cpnyv7crck2oj2tszkq
+        size: 81178
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-03-11T14:13:04.726Z'

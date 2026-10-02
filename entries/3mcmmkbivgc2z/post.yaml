@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mcmmkbivgc2z
+cid: bafyreiawg4rgncbkuxuwkx2sh37vsirgbexw5vmkb2tgetbmfxpzxpkofy
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mcmmkbivgc2z
+createdAt: '2026-01-17T12:30:44.798Z'
+text: "#Edwards1000SixtiesMovies \n\n267/1000:\n40 POUNDS OF TROUBLE \n\nThis Tony Curtis-starring film, directed by the legendary Norman Jewison, is a underrated, hidden gem of 1960s comedy cinema, if you're going to look at it from a wider perspective. Lots of fun moments and scenes made me enjoy this one."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n267/1000:\n40 POUNDS OF TROUBLE \n\nThis Tony Curtis-starring film, directed by the legendary Norman Jewison, is a underrated, hidden gem of 1960s comedy cinema, if you're going to look at it from a wider perspective. Lots of fun moments and scenes made me enjoy this one."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreic2bnm2fft5ho7smevwnuynormidpc234n7yxihectil7wehmreui
+        size: 93934
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-01-17T12:30:44.798Z'

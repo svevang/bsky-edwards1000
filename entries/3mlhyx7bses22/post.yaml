@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mlhyx7bses22
+cid: bafyreihi5cbituskboegosqrfomqcyfbux456knp57ase6xflu4eswe4u4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mlhyx7bses22
+createdAt: '2026-05-10T05:16:09.540Z'
+text: "#Edwards1000SixtiesMovies \n\n378/1000:\nTHE SLIME PEOPLE\n\nThis B-movie features a group of strange monsters who invade L.A. and a small group of people who fight to survive in the deserted city. This film is full of surrealistic-looking visuals (that is, the monsters) that will keep you stay tuned."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n378/1000:\nTHE SLIME PEOPLE\n\nThis B-movie features a group of strange monsters who invade L.A. and a small group of people who fight to survive in the deserted city. This film is full of surrealistic-looking visuals (that is, the monsters) that will keep you stay tuned."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihgle2mvzfgcwzb3wwwo2pi5mg4ntarjfup44ok4ii36ku4iyn7bu
+        size: 40587
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 450
+        height: 257
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-10T05:16:09.540Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m2kq2iye3c24
+cid: bafyreihcg2yoeyqbyy3lumca3ktnbigcfuco4uavmtmydk4qkr7v4jxvlq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m2kq2iye3c24
+createdAt: '2025-10-06T23:06:38.226Z'
+text: "#Edwards1000SixtiesMovies \n\n169/1000:\nTOWN WITHOUT PITY\n\nSet in a quiet, small town in Germany, a tough U.S. major defends four U.S. Army soldiers accused of molesting a local German girl in the town's outskirts. I didn't find anything special here except for the Tiomkin-composed theme song."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n169/1000:\nTOWN WITHOUT PITY\n\nSet in a quiet, small town in Germany, a tough U.S. major defends four U.S. Army soldiers accused of molesting a local German girl in the town's outskirts. I didn't find anything special here except for the Tiomkin-composed theme song."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigmisg2djwgaqrdzzws5sfc2qnt337sn7ywuy77chnufims7xoak4
+        size: 86903
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-10-06T23:06:38.226Z'

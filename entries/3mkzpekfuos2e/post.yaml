@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mkzpekfuos2e
+cid: bafyreia6usu4sd7hufuppm4gb226f4dwxlhyeduxn3e5cbwvfsnhotuhyu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mkzpekfuos2e
+createdAt: '2026-05-04T12:47:23.661Z'
+text: "#Edwards1000SixtiesMovies \n\n371/1000:\nSAVAGE SAM\n\nThis Disney family film is the sequel to the much-beloved classic Old Yeller (1957). It follows the story of Yeller's son Savage Sam, who tracks the trail of Apache Indians who has captured the two farmer brothers who keeps him as a pet."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n371/1000:\nSAVAGE SAM\n\nThis Disney family film is the sequel to the much-beloved classic Old Yeller (1957). It follows the story of Yeller's son Savage Sam, who tracks the trail of Apache Indians who has captured the two farmer brothers who keeps him as a pet."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreie7gkgecogbvhuk4ry3rr27egdlrn6m4ixezvsm75yggqo5gizfxm
+        size: 87688
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-04T12:47:23.661Z'

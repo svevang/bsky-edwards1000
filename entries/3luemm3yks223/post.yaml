@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3luemm3yks223
+cid: bafyreicjiuzcmgixhmrov7xdi43xq6qany4ossk6o4u5ie7b3khxgicd2u
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3luemm3yks223
+createdAt: '2025-07-20T04:17:45.426Z'
+text: "#Edwards1000SixtiesMovies \n\n86/1000:\nSONG WITHOUT END\n\nA two-hour biographical film about the great composer and pianist Franz Liszt, it focuses more on his interpersonal relationships with his fellow colleagues and most especially, his tumultuous love affair with a European princess."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n86/1000:\nSONG WITHOUT END\n\nA two-hour biographical film about the great composer and pianist Franz Liszt, it focuses more on his interpersonal relationships with his fellow colleagues and most especially, his tumultuous love affair with a European princess."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicq7vvwbygai7bi5nrexjw5phslzeprzhvg3ofes3m7o5hrcc3s3a
+        size: 49274
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 672
+        height: 288
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-20T04:17:45.426Z'

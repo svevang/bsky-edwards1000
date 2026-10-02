@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mcaqy2vews2y
+cid: bafyreie6nz3vr6wzcvk7cg6txngrys2s5k5xo5nzhh47dy25pylszp74xe
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mcaqy2vews2y
+createdAt: '2026-01-12T19:18:05.715Z'
+text: "#Edwards1000SixtiesMovies \n\n264/1000:\nTWO FOR THE SEESAW\n\nA Nebraska lawyer, who is going through a painful divorce from his wife back home, moves to NYC for a fresh start. He falls in love with a bohemian dancer, but feels that he must come to terms with his failed marriage first."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n264/1000:\nTWO FOR THE SEESAW\n\nA Nebraska lawyer, who is going through a painful divorce from his wife back home, moves to NYC for a fresh start. He falls in love with a bohemian dancer, but feels that he must come to terms with his failed marriage first."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: Robert Mitchum and Shirley MacLaine
+      image:
+        ref:
+          $link: bafkreic6mkpqb75kknhiyrroevnfh4rvpknuix5vxooxfwlgw4v3n2vc2y
+        size: 98807
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-01-12T19:18:05.715Z'

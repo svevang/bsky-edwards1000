@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lrknzlhzx222
+cid: bafyreif2b4jeqiho5uau42hcnppyju3q7os7pbpofkww3y3qeef6xt3z5m
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lrknzlhzx222
+createdAt: '2025-06-14T09:43:35.158Z'
+text: "#Edwards1000SixtiesMovies \n\n41/1000:\nSINK THE BISMARCK \n\nA pretty superb war film that chronicles the efforts of the British Navy to sink and destroy the mighty German battleship Bismarck. The warships are uniquely realistic despite being scale models, and Kenneth More and Dana Wynter are great."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n41/1000:\nSINK THE BISMARCK \n\nA pretty superb war film that chronicles the efforts of the British Navy to sink and destroy the mighty German battleship Bismarck. The warships are uniquely realistic despite being scale models, and Kenneth More and Dana Wynter are great."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigrrehvsbvjqcrt5jw34oasrctupmqt2xpbzja6lhbczya4silgnq
+        size: 66370
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-14T09:43:35.158Z'

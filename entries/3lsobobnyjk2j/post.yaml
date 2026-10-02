@@ -1,0 +1,43 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lsobobnyjk2j
+cid: bafyreiaswrdl6xfdymf5z5h3wa7b3hdb3hzfy6pwilqjv6i5bt33sllqhu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lsobobnyjk2j
+createdAt: '2025-06-28T13:38:21.410Z'
+text: |-
+  #Edwards1000SixtiesMovies
+
+  57/1000:
+  SHOOT THE PIANO PLAYER
+
+  Truffaut's follow-up movie to 400 Blows is a tale of a classical pianist, who has renamed himself and taken to working at a small Paris bar, being chased by two mobsters who are after his brothers, whom he aided in their escape...
+record:
+  text: |-
+    #Edwards1000SixtiesMovies
+
+    57/1000:
+    SHOOT THE PIANO PLAYER
+
+    Truffaut's follow-up movie to 400 Blows is a tale of a classical pianist, who has renamed himself and taken to working at a small Paris bar, being chased by two mobsters who are after his brothers, whom he aided in their escape...
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidojfgnidbf6do6e76qyh4yyvq6wfovd5iq44badxrauh3wxjioki
+        size: 50932
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 613
+        height: 430
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-28T13:38:21.410Z'

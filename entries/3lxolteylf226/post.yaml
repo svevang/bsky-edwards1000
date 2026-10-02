@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lxolteylf226
+cid: bafyreigakonrb2bcpvw247hda6nr3qe3vzlo6s65wt63m5psvo5xt5lpgq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lxolteylf226
+createdAt: '2025-08-31T07:46:08.272Z'
+text: "#Edwards1000SixtiesMovies \n\n124/1000:\nMYSTERIOUS ISLAND\n\nAlthough he doesn't appear until very much later, Herbert Lom effectively steals the show as the best version of Captain Nemo. You'll definitely enjoy every spectacular scene here, ranging from a volcanic eruption to a giant octopus fight."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n124/1000:\nMYSTERIOUS ISLAND\n\nAlthough he doesn't appear until very much later, Herbert Lom effectively steals the show as the best version of Captain Nemo. You'll definitely enjoy every spectacular scene here, ranging from a volcanic eruption to a giant octopus fight."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihg4v7r7fypz6n7mwapaipnz7euzl54wieioe4pbzz3jx3ltbsbba
+        size: 75703
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-08-31T07:46:08.272Z'

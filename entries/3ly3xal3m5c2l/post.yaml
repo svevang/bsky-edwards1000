@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ly3xal3m5c2l
+cid: bafyreifp7gl4ogyiqimvugubugpupgzq6jru4ce7epgx64pvafres2f2oy
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ly3xal3m5c2l
+createdAt: '2025-09-05T15:14:58.624Z'
+text: "#Edwards1000SixtiesMovies \n\n130/1000:\nTHE NAKED EDGE\n\nWhile this is known to audiences as the final film role of screen legend Gary Cooper, this mystery-thriller movie significantly lacks the thrill and suspense that would qualify it as a true classic of the 60s. Besides, Coop visibly looked aged..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n130/1000:\nTHE NAKED EDGE\n\nWhile this is known to audiences as the final film role of screen legend Gary Cooper, this mystery-thriller movie significantly lacks the thrill and suspense that would qualify it as a true classic of the 60s. Besides, Coop visibly looked aged..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifdr74cjwqx2jt4cte2jnw33hcors4ggtkpuqdvfxryukkb2ap7n4
+        size: 69193
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-09-05T15:14:58.624Z'

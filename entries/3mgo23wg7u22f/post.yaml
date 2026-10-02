@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mgo23wg7u22f
+cid: bafyreidualvicxk2uggvbrtoftgip2vdjidziqwfy4a5j57rx5c2l5axtm
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mgo23wg7u22f
+createdAt: '2026-03-09T23:46:42.020Z'
+text: "#Edwards1000SixtiesMovies \n\n302/1000:\nTHE GREAT ESCAPE\n\nSturges' superb direction, spectacular stunts, an impressive all-star cast, a beautiful Bernstein music score and of course, McQueen's magnificent presence on the motorcycle all come together to make this the best prison break film of all time."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n302/1000:\nTHE GREAT ESCAPE\n\nSturges' superb direction, spectacular stunts, an impressive all-star cast, a beautiful Bernstein music score and of course, McQueen's magnificent presence on the motorcycle all come together to make this the best prison break film of all time."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: Steve McQueen in a scene from The Great Escape (1963).
+      image:
+        ref:
+          $link: bafkreiggv3dwm23xdazbcywooj37r626mnst4iuucvrx3gu7ayes5ijuqe
+        size: 72820
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-03-09T23:46:42.020Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3miwuolgjt22p
+cid: bafyreic2xohfemc3etbnyi4w2n4scydook6gf2m7m2goqtut4kd6ysdtnq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3miwuolgjt22p
+createdAt: '2026-04-07T22:54:06.514Z'
+text: "#Edwards1000SixtiesMovies \n\n336/1000:\nDAY OF THE TRIFFIDS\n\nI think this underrated film about tall, carnivorous plants devouring people and animals should be given a taste of a 4K or at least an HD remaster for more people to appreciate its visual design and visceral storytelling."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n336/1000:\nDAY OF THE TRIFFIDS\n\nI think this underrated film about tall, carnivorous plants devouring people and animals should be given a taste of a 4K or at least an HD remaster for more people to appreciate its visual design and visceral storytelling."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifsb2rplfhtaw4r4fknzauw5wrpokbpxb6s7smogublzyzxvmx5bm
+        size: 60124
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-04-07T22:54:06.514Z'

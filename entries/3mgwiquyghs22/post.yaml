@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mgwiquyghs22
+cid: bafyreibt674qfdfb76wwv2xj4j7g5eivqsd2ihbtwjchf6pultwqonsnzm
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mgwiquyghs22
+createdAt: '2026-03-13T08:30:15.466Z'
+text: "#Edwards1000SixtiesMovies \n\n305/1000:\nMcLINTOCK\n\nI've never seen how perfectly the comedy and the Western genres are blended until I saw this movie starring the Duke. There are a lot of fun moments in this totally underrated film, particularly the mud fight and the spanking scenes."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n305/1000:\nMcLINTOCK\n\nI've never seen how perfectly the comedy and the Western genres are blended until I saw this movie starring the Duke. There are a lot of fun moments in this totally underrated film, particularly the mud fight and the spanking scenes."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: John Wayne, Maureen O'Hara and Yvonne De Carlo
+      image:
+        ref:
+          $link: bafkreiaadq5hwtarkyrrke2l7ohm66vifwddr6ve2en3wxzsqsbabvfr2a
+        size: 105615
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-03-13T08:30:15.466Z'

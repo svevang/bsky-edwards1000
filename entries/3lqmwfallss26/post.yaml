@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lqmwfallss26
+cid: bafyreihcd6gn3ciyuhlknomdia6fjdb3i3xqf6qctwpkxiie3gdmnqjtw4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lqmwfallss26
+createdAt: '2025-06-02T13:53:24.174Z'
+text: "#Edwards1000SixtiesMovies\n\n24/1000:\n13 GHOSTS \n\nHorror filmmaker William Castle surely created a sensation with this cult horror movie:  special photographic color effects to present the ghostly creatures to the audience. And a bonus: the Wicked Witch plays the creepy housekeeper here."
+record:
+  text: "#Edwards1000SixtiesMovies\n\n24/1000:\n13 GHOSTS \n\nHorror filmmaker William Castle surely created a sensation with this cult horror movie:  special photographic color effects to present the ghostly creatures to the audience. And a bonus: the Wicked Witch plays the creepy housekeeper here."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreic53zed7pjwi64nd4ntkijcbcfiznudokw344esmrbkmcg6zx6azq
+        size: 67440
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-02T13:53:24.174Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mhjqeyi4cc2z
+cid: bafyreievytwpiyaof7ahs45hkzlzrbfja2jm7hekzb6utjrtjccksauit4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mhjqeyi4cc2z
+createdAt: '2026-03-21T00:07:21.434Z'
+text: "#Edwards1000SixtiesMovies \n\n320/1000:\nDONOVAN'S REEF\n\nI'd like to say that this is an underrated movie in both filmographies of the Duke and director John Ford. The comedic chops of the Duke, Lee Marvin, Cesar Romero, Elizabeth Allen and other supporting characters are in full swing throughout."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n320/1000:\nDONOVAN'S REEF\n\nI'd like to say that this is an underrated movie in both filmographies of the Duke and director John Ford. The comedic chops of the Duke, Lee Marvin, Cesar Romero, Elizabeth Allen and other supporting characters are in full swing throughout."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreidmufsq2ilnaf2cxoxajyhqjujmebslldzobop7yi4xbvxn76qhji
+        size: 235882
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 853
+        height: 480
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-03-21T00:07:21.434Z'

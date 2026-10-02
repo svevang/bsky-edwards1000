@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3ltt4oi5er227
+cid: bafyreiafmfsxvwk6rt67gjbgduivwv3roqkvltq2yjqrt3ea4xgztm3rdq
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3ltt4oi5er227
+createdAt: '2025-07-13T05:17:29.842Z'
+text: "#Edwards1000SixtiesMovies \n\n77/1000:\nSCENT OF MYSTERY (aka HOLIDAY IN SPAIN)\n\nThe strength of this Cinerama mystery movie lies in its cinematography---breathtaking, panoramic, scenic. Denholm Elliott is splendid as an English gentleman on vacation in Spain who discovers a murder plot of a heiress..."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n77/1000:\nSCENT OF MYSTERY (aka HOLIDAY IN SPAIN)\n\nThe strength of this Cinerama mystery movie lies in its cinematography---breathtaking, panoramic, scenic. Denholm Elliott is splendid as an English gentleman on vacation in Spain who discovers a murder plot of a heiress..."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigfn2y5ffsoxpvhf4gylcotri5h3bvsl5dctqjvitodji5ytgrtdi
+        size: 92081
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-07-13T05:17:29.842Z'

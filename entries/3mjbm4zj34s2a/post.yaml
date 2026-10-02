@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mjbm4zj34s2a
+cid: bafyreigqxzucngksjgzbda3wfwe5k6qtn3z25p3rd4d3k6bzvi7fujsko4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mjbm4zj34s2a
+createdAt: '2026-04-12T05:20:24.463Z'
+text: "#Edwards1000SixtiesMovies \n\n344/1000:\nTHE CARDINAL\n\nDirected by cinema legend Otto Preminger, this 3-hour film is an epic treatment of a young Catholic priest's journey to becoming a cardinal of the church, facing racial biases, Nazism, personal demons, family issues, and dilemmas along the way."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n344/1000:\nTHE CARDINAL\n\nDirected by cinema legend Otto Preminger, this 3-hour film is an epic treatment of a young Catholic priest's journey to becoming a cardinal of the church, facing racial biases, Nazism, personal demons, family issues, and dilemmas along the way."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigalrnbzoygqqxofogy2t46nqu7xytoiew7gob5slso5ewkokf4ga
+        size: 740682
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 1299
+        height: 1122
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-04-12T05:20:24.463Z'

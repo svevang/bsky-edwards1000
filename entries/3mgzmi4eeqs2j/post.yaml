@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mgzmi4eeqs2j
+cid: bafyreifo4staqqftbfar5ix2qs4kckqbx2al7qcyiuo4fg6pgmznvcmr6i
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mgzmi4eeqs2j
+createdAt: '2026-03-14T14:14:55.393Z'
+text: "#Edwards1000SixtiesMovies \n\n309/1000:\nTHE PINK PANTHER \n\nThe first movie in the Pink Panther film franchise introduced the comical wit of bumbling police inspector Jacques Clouseau, portrayed to deep perfection by Sellers, as he investigates the notorious thief known as \" The Phantom.\""
+record:
+  text: "#Edwards1000SixtiesMovies \n\n309/1000:\nTHE PINK PANTHER \n\nThe first movie in the Pink Panther film franchise introduced the comical wit of bumbling police inspector Jacques Clouseau, portrayed to deep perfection by Sellers, as he investigates the notorious thief known as \" The Phantom.\""
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicsc5jzqusasrofg32cr3b57dnmhzwvehmnpugayffkv2bd7niym4
+        size: 62492
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-03-14T14:14:55.393Z'

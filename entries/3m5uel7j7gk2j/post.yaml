@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m5uel7j7gk2j
+cid: bafyreihzck6hngqbefrympxcusx3e4evkmpxkui3cjicahc53alwps7uv4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m5uel7j7gk2j
+createdAt: '2025-11-17T23:23:26.093Z'
+text: "#Edwards1000SixtiesMovies \n\n206/1000:\nWHATEVER HAPPENED TO BABY JANE?\n\nA classic tale of a Hollywood sibling rivalry that has way gone too far, this psychological thriller film's critical and commercial appeal somewhat revitalized Bette and Joan's careers, who were already in their twilight years."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n206/1000:\nWHATEVER HAPPENED TO BABY JANE?\n\nA classic tale of a Hollywood sibling rivalry that has way gone too far, this psychological thriller film's critical and commercial appeal somewhat revitalized Bette and Joan's careers, who were already in their twilight years."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiculpeilo4ka2hqfkri2ohskirlkupm2l34csbwhlotop722jb5di
+        size: 73057
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-11-17T23:23:26.093Z'

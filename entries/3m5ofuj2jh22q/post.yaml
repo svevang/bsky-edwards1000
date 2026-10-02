@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m5ofuj2jh22q
+cid: bafyreihu34ijz47pgictplgpc2b3wkr3dmrbeajeer3pdnkeycmd2br7ze
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m5ofuj2jh22q
+createdAt: '2025-11-15T14:30:33.399Z'
+text: "#Edwards1000SixtiesMovies \n\n202/1000:\nDR. NO\n\nIt's hard to be not forever proud of this legendary spy flick, as it is the film that sparked one of the longest and most beloved cinema series in history...James Bond 007. Now-iconic features such as the gunbarrel opening were first used here."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n202/1000:\nDR. NO\n\nIt's hard to be not forever proud of this legendary spy flick, as it is the film that sparked one of the longest and most beloved cinema series in history...James Bond 007. Now-iconic features such as the gunbarrel opening were first used here."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicf24sk44n3ycxzqoe66r7555isig76z3xvnfdhyfbyl6obmtb2t4
+        size: 82998
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-11-15T14:30:33.399Z'

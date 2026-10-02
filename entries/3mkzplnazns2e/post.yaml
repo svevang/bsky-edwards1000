@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mkzplnazns2e
+cid: bafyreihbxclyygcte5mopobjtnsj2i5cxf42xmarr5jry7bg2iuptuzgpm
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mkzplnazns2e
+createdAt: '2026-05-04T12:51:21.529Z'
+text: "#Edwards1000SixtiesMovies \n\n372/1000: \nIT HAPPENED AT THE WORLD'S FAIR\n\nThis Elvis film takes a different storytelling approach: while it still features Elvis' singing prowess, it takes on a real-time setting as it occurs during the monumental 1962 World's Fair that happened at Seattle, WA."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n372/1000: \nIT HAPPENED AT THE WORLD'S FAIR\n\nThis Elvis film takes a different storytelling approach: while it still features Elvis' singing prowess, it takes on a real-time setting as it occurs during the monumental 1962 World's Fair that happened at Seattle, WA."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreicqweniz3tsurszlfx2udevbklbrwrveh7v4lmxaiez2anvywvg2u
+        size: 41248
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 470
+        height: 264
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-04T12:51:21.529Z'

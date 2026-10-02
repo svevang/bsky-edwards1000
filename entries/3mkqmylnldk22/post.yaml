@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mkqmylnldk22
+cid: bafyreig5k3ltcqretzskql3rhjn7jgi3jo2jef5x5u6bephxfhyvr3tidu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mkqmylnldk22
+createdAt: '2026-04-30T22:10:57.157Z'
+text: "#Edwards1000SixtiesMovies \n\n363/1000:\nMURDER AT THE GALLOP\n\nThe second film in Margaret Rutherford's Miss Marple movie series brings the elderly, unmarried sleuth to a riding hotel and stable as she investigates a string of murders connected to the mysterious heart attack of an old guy she met."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n363/1000:\nMURDER AT THE GALLOP\n\nThe second film in Margaret Rutherford's Miss Marple movie series brings the elderly, unmarried sleuth to a riding hotel and stable as she investigates a string of murders connected to the mysterious heart attack of an old guy she met."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreihjqvo4ydrn4jbo7vvnq6fhx7msvw2pvdoso4rw2kgsmhqrqpk7qq
+        size: 53619
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-04-30T22:10:57.157Z'

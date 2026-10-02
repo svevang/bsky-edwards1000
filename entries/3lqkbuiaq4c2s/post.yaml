@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lqkbuiaq4c2s
+cid: bafyreicrmzxta75cm6avqwtwzvoobwdcd2hgfyg3udt22dir6ppy6n2j7u
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lqkbuiaq4c2s
+createdAt: '2025-06-01T12:40:47.468Z'
+text: "#Edwards1000SixtiesMovies \n\n22/1000:\nBREATHLESS\n\nThis timeless crime-romance movie did not only launch Godard's career as a director; it helped usher in the highly influential French New Wave cinema as well. Belmondo is captivating in his breakthrough film role as an impulsive, wandering criminal."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n22/1000:\nBREATHLESS\n\nThis timeless crime-romance movie did not only launch Godard's career as a director; it helped usher in the highly influential French New Wave cinema as well. Belmondo is captivating in his breakthrough film role as an impulsive, wandering criminal."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigrv3njqj6di4jcdfxax5eb4nc5rtxn3o3gqirigb7t5uoyt7rbuu
+        size: 92605
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-06-01T12:40:47.468Z'

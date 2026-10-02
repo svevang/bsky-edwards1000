@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mp4enm5vms2c
+cid: bafyreicauswskhlm4vgsjdae7s3o2ywvbeso4pibswjcwoguozbhxase2y
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mp4enm5vms2c
+createdAt: '2026-06-25T11:54:22.033Z'
+text: "#Edwards1000SixtiesMovies \n\n405/1000:\nA FISTFUL OF DOLLARS\n\nThis Western classic's widespread success resulted in the popularization of the spaghetti Western, Eastwood's launching into stardom, and Morricone's emergence as a major composer of film music. Indeed a landmark of 1960s cinema."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n405/1000:\nA FISTFUL OF DOLLARS\n\nThis Western classic's widespread success resulted in the popularization of the spaghetti Western, Eastwood's launching into stardom, and Morricone's emergence as a major composer of film music. Indeed a landmark of 1960s cinema."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifdu7byci4jz2d6nqq2mi5nplpbawj7cb2sq2w436gaps5lj43wdq
+        size: 66636
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-06-25T11:54:22.033Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lpthune5522m
+cid: bafyreidajr7qn5t6kvlrnkfgkleolywmz2t636n3lzpyowxx2oqjeta4ci
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lpthune5522m
+createdAt: '2025-05-23T10:57:01.286Z'
+text: "#Edwards1000SixtiesMovies \n\n11/1000:\nTHE TIME MACHINE '60\n\nBefore the BTTF trilogy was released, this was the most marvelous motion picture concerning time travel. The visual effects are indeniably superb for its time, Yvette is radiant as the female lead and the Morlocks make fine villains!"
+record:
+  text: "#Edwards1000SixtiesMovies \n\n11/1000:\nTHE TIME MACHINE '60\n\nBefore the BTTF trilogy was released, this was the most marvelous motion picture concerning time travel. The visual effects are indeniably superb for its time, Yvette is radiant as the female lead and the Morlocks make fine villains!"
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreien4bmlpqtpv632x53azkxxmn42aurzlpmb26p2zcl4tatbubzb6y
+        size: 96007
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-05-23T10:57:01.286Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3meu7mpykok2n
+cid: bafyreie47jhq4kh4qfj2bwyygmvs6syr3tprpquxrjme5yrhpsqlsbx4sy
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3meu7mpykok2n
+createdAt: '2026-02-14T23:51:09.601Z'
+text: "#Edwards1000SixtiesMovies \n\n289/1000:\nTERM OF TRIAL\n\nOlivier gives an underseen performance as a schoolteacher who gets accused of indecent assault by a female student of his whose feelings he gently refuses. There's a lot of other reasons to love this drama film, especially Sarah Miles in her debut"
+record:
+  text: "#Edwards1000SixtiesMovies \n\n289/1000:\nTERM OF TRIAL\n\nOlivier gives an underseen performance as a schoolteacher who gets accused of indecent assault by a female student of his whose feelings he gently refuses. There's a lot of other reasons to love this drama film, especially Sarah Miles in her debut"
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreib7noivucmgiaalq6sb6chkfe4lynufh7vkgyqxt6wdf2qsc5ixei
+        size: 51789
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-02-14T23:51:09.601Z'

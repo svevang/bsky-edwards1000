@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mqykwmgrvc2u
+cid: bafyreifilyqpsryp7a4wiwi2omxmr3y2ah7nahqw5cglgw5pdmmkuycbee
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mqykwmgrvc2u
+createdAt: '2026-07-19T10:26:31.064Z'
+text: "#Edwards1000SixtiesMovies \n\n426/1000:\nHUSH, HUSH SWEET CHARLOTTE\n\nJust like Baby Jane two years before, this Bette starrer deals with themes of insanity, secrets and traumatic experiences throughout its entire runtime. This would have been another memorable film if Joan Crawford had a role once more"
+record:
+  text: "#Edwards1000SixtiesMovies \n\n426/1000:\nHUSH, HUSH SWEET CHARLOTTE\n\nJust like Baby Jane two years before, this Bette starrer deals with themes of insanity, secrets and traumatic experiences throughout its entire runtime. This would have been another memorable film if Joan Crawford had a role once more"
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: Bette Davis
+      image:
+        ref:
+          $link: bafkreiahnmrsihqsmtiebmexq3zp4pqvnhvhh2fgusboeaqwoon3x5z2j4
+        size: 64636
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-07-19T10:26:31.064Z'

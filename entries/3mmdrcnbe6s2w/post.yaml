@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mmdrcnbe6s2w
+cid: bafyreicd5sb6qpqgf6nmurrfw7pl5lz3h3qrqnys2rvjxz2pxqtjb4mq7e
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mmdrcnbe6s2w
+createdAt: '2026-05-21T06:13:56.045Z'
+text: "#Edwards1000SixtiesMovies \n\n387/1000:\nFLIPPER\n\nThis hidden gem of 60s cinema was totally worth the watch for me, as I enjoyed every minute of cute dolphin vibes throughout. A tender performance from macho actor Chuck Connors is to watch out for, and the underwater scenes are so sparkling!"
+record:
+  text: "#Edwards1000SixtiesMovies \n\n387/1000:\nFLIPPER\n\nThis hidden gem of 60s cinema was totally worth the watch for me, as I enjoyed every minute of cute dolphin vibes throughout. A tender performance from macho actor Chuck Connors is to watch out for, and the underwater scenes are so sparkling!"
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiasxop4m4fr3pgvn5zvvqdiiprowmsnqiwfr3likwicl6u5ktfgme
+        size: 113991
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-05-21T06:13:56.045Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mjxmdxnzec2m
+cid: bafyreihew7or2vpghy6jiny26qnclvrenio7yrs6lu74ulvflyv6w6bc5i
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mjxmdxnzec2m
+createdAt: '2026-04-20T23:22:51.675Z'
+text: "#Edwards1000SixtiesMovies \n\n354/1000:\nTHIS SPORTING LIFE\n\nWhile the lead performances of Richard Harris and Rachel Roberts excellently conveyed the emotional weight of this drama film's story, I was bored and unsatisfied with the other aspects of this movie, which were dull and unappealing."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n354/1000:\nTHIS SPORTING LIFE\n\nWhile the lead performances of Richard Harris and Rachel Roberts excellently conveyed the emotional weight of this drama film's story, I was bored and unsatisfied with the other aspects of this movie, which were dull and unappealing."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreieuib75yzh6jsdthhoxxztyghfiws2x27hce4wexgsoxvqzylbeva
+        size: 53900
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-04-20T23:22:51.675Z'

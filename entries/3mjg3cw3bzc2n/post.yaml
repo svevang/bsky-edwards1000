@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mjg3cw3bzc2n
+cid: bafyreiht34wlzuffvlw2ih2p7b43b6sglrpeoznim7ztcwiebihdd7skd4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mjg3cw3bzc2n
+createdAt: '2026-04-14T00:02:47.295Z'
+text: "#Edwards1000SixtiesMovies \n\n346/1000:\nTHE INCREDIBLE JOURNEY\n\nIt was not until recently that I knew that this Disney family film was remade 30 years after under the title \"Homeward Bound.\" The beauty of the original film lies in its cinematography of the wilderness---lush, picturesque and colorful."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n346/1000:\nTHE INCREDIBLE JOURNEY\n\nIt was not until recently that I knew that this Disney family film was remade 30 years after under the title \"Homeward Bound.\" The beauty of the original film lies in its cinematography of the wilderness---lush, picturesque and colorful."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreieklyazrm7ev6fzevjoc6fsnqin73yuza6ep7euse6j7f2p6npxve
+        size: 137961
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-04-14T00:02:47.295Z'

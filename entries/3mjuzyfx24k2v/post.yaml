@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mjuzyfx24k2v
+cid: bafyreihkyk2z2n6unvhibxwb73xdoydkj7preqivrl2rhzmimrlyeizcky
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mjuzyfx24k2v
+createdAt: '2026-04-19T22:48:57.151Z'
+text: "#Edwards1000SixtiesMovies \n\n353/1000:\nSUNDAY IN NEW YORK\n\nA good-hearted romance that is great for viewing on a lazy weekend afternoon, despite being dated. Of course, it is Jane Fonda who brings an air of charm to this film with her precious presence. And Rod Taylor just proved he could do comedy."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n353/1000:\nSUNDAY IN NEW YORK\n\nA good-hearted romance that is great for viewing on a lazy weekend afternoon, despite being dated. Of course, it is Jane Fonda who brings an air of charm to this film with her precious presence. And Rod Taylor just proved he could do comedy."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreia2rizpovsbwxqfgezthdeakznsgp3c5ucnrd4mjrlm4bw5shzzxe
+        size: 102462
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-04-19T22:48:57.151Z'

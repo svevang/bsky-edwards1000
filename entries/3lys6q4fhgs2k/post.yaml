@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lys6q4fhgs2k
+cid: bafyreifzf5z57ymfoyhzz76ctnreeeagh5squwrjzzry2anvrt47aee75y
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lys6q4fhgs2k
+createdAt: '2025-09-14T11:27:30.515Z'
+text: "#Edwards1000SixtiesMovies \n\n142/1000:\nLOLA\n\nJacques Demy's crystalline first movie heralded the start of a wonderful film universe wherein many of his characters would happily exist and love. Anouk is totally enchanting as a cabaret dancer and a single mom awaiting the return of his first love."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n142/1000:\nLOLA\n\nJacques Demy's crystalline first movie heralded the start of a wonderful film universe wherein many of his characters would happily exist and love. Anouk is totally enchanting as a cabaret dancer and a single mom awaiting the return of his first love."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreif4jn7ygxuzhjmqd35z5cwoh2f4rngxayqcy2hlenm4icjregpsra
+        size: 65023
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-09-14T11:27:30.515Z'

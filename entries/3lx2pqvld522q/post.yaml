@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lx2pqvld522q
+cid: bafyreifsmdlndof4ykw4y5m3igzzaqcbozuk64uychbbps562kf4hswlr4
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lx2pqvld522q
+createdAt: '2025-08-23T10:03:05.196Z'
+text: "#Edwards1000SixtiesMovies \n\n111/1000:\nBLUE HAWAII\n\nElvis yet again delivers a memorable performance in a musical-comedy film with this flick, which is set among the natural beauty of the Hawaiian islands, and proudly showcases the cultures and traditions of the people of Hawaii."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n111/1000:\nBLUE HAWAII\n\nElvis yet again delivers a memorable performance in a musical-comedy film with this flick, which is set among the natural beauty of the Hawaiian islands, and proudly showcases the cultures and traditions of the people of Hawaii."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreibg3cypmko2y6u5yffo2rezcjh2cgclawyrcookif55gmzlh3mxvi
+        size: 139087
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2025-08-23T10:03:05.196Z'
