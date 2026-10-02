@@ -6,7 +6,7 @@ title, year and description disagree, or whose title looks mangled. Rows are onl
 re-reviewed when their title/year/description change. --limit K reviews just K rows so
 you can check the output early; --redo N re-asks about one row.
 
-Manual: set "ok": true and "pinned": true on an entry to dismiss a flag permanently.
+Manual: `./fix.py N dismiss "reason"` dismisses a flag; it sticks until the row's inputs change.
 """
 import json
 import subprocess

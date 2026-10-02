@@ -11,8 +11,8 @@ The watchlist is 100 films per year in order, so year = 1960 + (number-1)//100.
 Each output entry keeps `raw_title_line` and `text_head` so a bad parse can be traced
 back to its source without opening 00_posts.json.
 
-Manual fixes: edit the entry in 01_parsed.json and set "pinned": true — it will survive
-re-runs unless the post text itself changes (or you pass --redo N / --force).
+Manual fixes: `./fix.py N title "..."` / `./fix.py N year YYYY` pin the entry; it survives
+re-runs (even --redo/--force) unless the post text itself changes. `./fix.py N unpin` undoes.
 """
 import re
 import stage

@@ -8,7 +8,12 @@ stage file (pins, overrides) are preserved because they set "pinned": true.
 Common CLI flags handled by `select_todo`:
   --force            redo every row
   --redo N[,N...]    redo rows with these watchlist numbers
+  --only N[,N...]    consider only rows with these watchlist numbers
   --limit K          process at most K rows this run (lets you check output early)
+
+Pinned entries are skipped even under --force/--redo while their input is unchanged, so a
+hand fix can't be clobbered by a rerun. A stage that re-applies the pin itself (s2 fetching a
+pinned "page") passes redo_pinned=True so --redo N reaches it. `fix.py` sets and clears pins.
 """
 import argparse
 import hashlib
@@ -50,21 +55,29 @@ def args(desc):
     p = argparse.ArgumentParser(description=desc)
     p.add_argument("--force", action="store_true")
     p.add_argument("--redo", default="", help="comma-separated watchlist numbers")
+    p.add_argument("--only", default="", help="comma-separated watchlist numbers")
     p.add_argument("--limit", type=int, default=0)
     return p.parse_args()
 
 
-def select_todo(a, inputs, existing, input_fp, number_of):
+def numbers(csv):
+    return {int(n) for n in csv.split(",") if n.strip()}
+
+
+def select_todo(a, inputs, existing, input_fp, number_of, redo_pinned=False):
     """inputs: {rkey: input row}; existing: {rkey: previous output}.
-    Returns rkeys to (re)process, honoring --force/--redo/--limit and pins."""
-    redo = {int(n) for n in a.redo.split(",") if n.strip()}
+    Returns rkeys to (re)process, honoring --force/--redo/--only/--limit and pins."""
+    redo, only = numbers(a.redo), numbers(a.only)
     todo = []
     for rk, row in inputs.items():
+        n = number_of(row)
+        if only and n not in only:
+            continue
         prev = existing.get(rk)
-        if prev and prev.get("pinned") and not (number_of(row) in redo):
-            if prev.get("fp") == input_fp(row):
-                continue  # pinned and input unchanged
-        if a.force or number_of(row) in redo or not prev or prev.get("fp") != input_fp(row):
+        changed = not prev or prev.get("fp") != input_fp(row)
+        if prev and prev.get("pinned") and not changed and not (redo_pinned and n in redo):
+            continue  # pinned and input unchanged
+        if changed or a.force or n in redo:
             todo.append(rk)
     todo.sort(key=lambda rk: number_of(inputs[rk]) or 10**6)
     return todo[: a.limit] if a.limit else todo

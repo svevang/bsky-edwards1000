@@ -4,7 +4,7 @@
 # stop after any stage, inspect, fix, and continue.
 #
 # Usage: ./step1_build.sh [--skip-download] [stage args...]
-#   stage args (passed to every stage): --force | --redo N,N | --limit K
+#   stage args (passed to every stage): --force | --redo N,N | --only N,N | --limit K
 #   e.g. ./step1_build.sh --skip-download --redo 75      # redo one film end-to-end
 #        ./step1_build.sh --skip-download --limit 20     # process 20 rows, then look
 # Inspect: python3 status.py        (counts per stage)
@@ -28,7 +28,7 @@ cat <<'TXT'
 Check:  python3 status.py              # counts per stage
         python3 status.py <number>     # one film's trail through every stage
         column -s, -t < movies.csv | less -S
-Fix:    edit the entry in the stage file where it went wrong, set "pinned": true,
-        then ./step1_build.sh --skip-download --redo <number>
+Fix:    ./fix.py <number> title "..." | year YYYY | page "Wikipedia Title" | unpin
+        (pins the fix and reruns just that row; ./fix.py -h for details)
 Next:   ./step2_llm_review.sh          # LLM pass over rows not yet reviewed
 TXT

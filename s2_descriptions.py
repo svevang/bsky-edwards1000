@@ -5,8 +5,8 @@ One API call per film (search + intro extract). A candidate page is accepted whe
 film, its title matches exactly (ignoring accents/leading article), and the stated release
 year matches; otherwise the best guess is kept with status "needs_review".
 
-Manual fixes: set "page": "Exact Wikipedia Title" and "pinned": true on the entry, then
-re-run with --redo N to fetch that page. Rows are only refetched when title/year change.
+Manual fixes: `./fix.py N page "Exact Wikipedia Title"` (pins the page and fetches it).
+Rows are only refetched when title/year change.
 """
 import json
 import re
@@ -127,7 +127,7 @@ def main():
     def in_fp(r): return stage.fp(r["title"], r["year"])
     def num(r): return r["number"]
 
-    todo = stage.select_todo(a, parsed, descs, in_fp, num)
+    todo = stage.select_todo(a, parsed, descs, in_fp, num, redo_pinned=True)
     print(f"{len(parsed)} rows, {len(todo)} to fetch", file=sys.stderr)
     for i, rk in enumerate(todo, 1):
         r = parsed[rk]
