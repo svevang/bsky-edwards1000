@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mw6hoq3e7c2j
+cid: bafyreiguk4iotebq54vbedulp4u2y6sbagazspubc66lwpj42v6oyqau5e
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mw6hoq3e7c2j
+createdAt: '2026-09-23T09:50:21.812Z'
+text: "#Edwards1000SixtiesMovies \n\n489/1000:\nTHE PLEASURE SEEKERS \n\nThis little-known romance-adventure movie follows three female American tourists: an office clerk, a singer, and a college student hoping to find their true loves while on an enjoyable vacation in sunny Spain."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n489/1000:\nTHE PLEASURE SEEKERS \n\nThis little-known romance-adventure movie follows three female American tourists: an office clerk, a singer, and a college student hoping to find their true loves while on an enjoyable vacation in sunny Spain."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiegxxm2wjk2jd5owmaycenr7vhghcbfizctmvdvg6fjjbp62dd5ve
+        size: 91153
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-09-23T09:50:21.812Z'

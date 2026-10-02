@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mwvgfdwmyk2t
+cid: bafyreibalabhdqu72tngzhcci7ry6ta74qapq5mgr3irvyn2ym7vsfbwbi
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mwvgfdwmyk2t
+createdAt: '2026-10-02T12:58:27.328Z'
+text: "#Edwards1000SixtiesMovies \n\n495/1000:\nINVITATION TO A GUNFIGHTER\n\nA soldier returns home only to find out that his farm has been confiscated and sold by his town's corrupt boss. Moreover, the boss has hired a mysterious hitman to kill the soldier, but the hitman has unconventional plans of his own."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n495/1000:\nINVITATION TO A GUNFIGHTER\n\nA soldier returns home only to find out that his farm has been confiscated and sold by his town's corrupt boss. Moreover, the boss has hired a mysterious hitman to kill the soldier, but the hitman has unconventional plans of his own."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreiaittaebgok3pxz3zkwyvgmu7pnczgv4xojjxfpytwntprfhywmmu
+        size: 65745
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 738
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-10-02T12:58:27.328Z'

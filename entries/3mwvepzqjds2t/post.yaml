@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mwvepzqjds2t
+cid: bafyreiebpkexh2ydwav72rnknsd2ao6kf53u7x7dm2bora2gexsapks2ju
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mwvepzqjds2t
+createdAt: '2026-10-02T12:28:38.247Z'
+text: "#Edwards1000SixtiesMovies \n\n491/1000:\nMcHALE'S NAVY (the movie)\n\nTo be honest, I felt that this theatrical film adaptation of the hit 1960s TV series starring Borgnine looked more like an extended special episode of the sitcom, and as a result, I didn't enjoy it much. One watch was already enough."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n491/1000:\nMcHALE'S NAVY (the movie)\n\nTo be honest, I felt that this theatrical film adaptation of the hit 1960s TV series starring Borgnine looked more like an extended special episode of the sitcom, and as a result, I didn't enjoy it much. One watch was already enough."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreigdrpir4x5nlrpmx7m7cdl52udiwfhqza3hpm77ijvdnj67xkoabq
+        size: 82035
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-10-02T12:28:38.247Z'

@@ -1,0 +1,31 @@
+uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mw6hdxmgsk2j
+cid: bafyreia3hfx2qrfar7tlduejs6o6g6i5qdoicru5kpktw6kz3kvcgtymzu
+url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mw6hdxmgsk2j
+createdAt: '2026-09-23T09:44:20.597Z'
+text: "#Edwards1000SixtiesMovies \n\n488/1000:\nCARRY ON SPYING\n\nThis is the second entry of the long-running \"Carry On\" film series that I have watched on my end. This lampoons the spy film genre of the 60s which was growing in prominence at the time, most especially the James Bond film series."
+record:
+  text: "#Edwards1000SixtiesMovies \n\n488/1000:\nCARRY ON SPYING\n\nThis is the second entry of the long-running \"Carry On\" film series that I have watched on my end. This lampoons the spy film genre of the 60s which was growing in prominence at the time, most especially the James Bond film series."
+  $type: app.bsky.feed.post
+  embed:
+    $type: app.bsky.embed.images
+    images:
+    - alt: ''
+      image:
+        ref:
+          $link: bafkreifpvwnluipmz4yejga7mv73fseo5at46lwlvbjc6r4stkvoywjbh4
+        size: 100005
+        $type: blob
+        mimeType: image/jpeg
+      aspectRatio:
+        width: 739
+        height: 415
+  langs:
+  - en
+  facets:
+  - index:
+      byteEnd: 25
+      byteStart: 0
+    features:
+    - tag: Edwards1000SixtiesMovies
+      $type: app.bsky.richtext.facet#tag
+  createdAt: '2026-09-23T09:44:20.597Z'
