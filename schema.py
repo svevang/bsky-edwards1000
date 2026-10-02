@@ -23,6 +23,11 @@ def fp_inputs(name):
     return load_schema()["files"][name].get("fp", [])
 
 
+def stage_files():
+    """Files a stage writes, in pipeline order: the ones with fingerprint inputs."""
+    return [n for n, f in load_schema()["files"].items() if "fp" in f]
+
+
 def lookup(view, ref):
     file, field = ref.split(".", 1)
     return (view.get(file) or {}).get(field)
@@ -30,3 +35,17 @@ def lookup(view, ref):
 
 def fp(name, view):
     return stage.fp(*(lookup(view, ref) for ref in fp_inputs(name)))
+
+
+def applies(name, view):
+    req = load_schema()["files"][name].get("requires")
+    return not req or bool(lookup(view, req))
+
+
+def unsure(name, view):
+    check = load_schema()["files"][name].get("unsure")
+    if not check:
+        return False
+    negate = check.startswith("not ")
+    value = bool((view.get(name) or {}).get(check.removeprefix("not ")))
+    return value != negate

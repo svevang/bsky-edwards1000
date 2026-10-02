@@ -3,10 +3,15 @@
 Files are named by stage without the extension ("post", "parsed", "wikipedia", "review",
 "override", "status"); schema.yaml describes them. status.yaml is one bare line.
 Every write goes through a temp file and os.replace, so a file is never half-written.
+
+view(rk) is what stages, status and outputs read: the stage files with override.yaml
+applied over them. The overridden keys are view["override"].keys().
 """
 import os
+import sys
 import tempfile
 import yaml
+import schema
 
 ENTRIES = "entries"
 
@@ -62,3 +67,44 @@ def write(rk, name, data):
     except BaseException:
         os.unlink(tmp)
         raise
+
+
+def view(rk):
+    """{"post", stage files...: as read, absent when missing; "override": override.yaml}.
+    Each override file.field replaces that field, but only in a stage file that exists."""
+    v = {n: d for n in ("post", *schema.stage_files()) if (d := read(rk, n)) is not None}
+    v["override"] = read(rk, "override") or {}
+    for key, value in v["override"].items():
+        file, field = key.split(".", 1)
+        if file in v and file != "override":
+            v[file] = {**v[file], field: value}
+    return v
+
+
+def compute_status(v):
+    if "post" not in v:
+        return "pending"
+    names = [n for n in schema.stage_files() if schema.applies(n, v)]
+    if any(n not in v or v[n].get("fp") != schema.fp(n, v) for n in names):
+        return "pending"
+    return "needs_review" if any(schema.unsure(n, v) for n in names) else "ok"
+
+
+def update_status(rk):
+    """Recompute status.yaml from the entry's view; deleted stays deleted. Writes only on change."""
+    old = read(rk, "status")
+    if old == "deleted":
+        return old
+    new = compute_status(view(rk))
+    if new != old:
+        write(rk, "status", new)
+    return new
+
+
+def find(number):
+    """Watchlist number -> rkey, from parsed.number with overrides; deleted entries are skipped."""
+    rks = [rk for rk in list_entries() if read(rk, "status") != "deleted"
+           and (view(rk).get("parsed") or {}).get("number") == number]
+    if len(rks) != 1:
+        sys.exit(f"#{number}: {'not in entries' if not rks else f'{len(rks)} posts share this number: {rks}'}")
+    return rks[0]

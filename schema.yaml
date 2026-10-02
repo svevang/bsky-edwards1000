@@ -3,7 +3,9 @@
 # Stage files carry `fp`: a fingerprint of the inputs listed under `fp`, written as
 # file.field references into the entry's view (stage files with overrides applied).
 # A stage file is fresh when it exists and its stored fp matches the current inputs.
-# A stage file is unsure when the check under `unsure` holds for its view.
+# A stage file only applies to an entry when its `requires` reference is set.
+# A stage file is unsure when the check under `unsure` holds for its view: a field
+# name means the field is set, "not <field>" means it is not.
 
 files:
   post:
@@ -35,6 +37,7 @@ files:
     written_by: s2_descriptions.py
     about: the chosen Wikipedia page and its intro
     fp: [parsed.title, parsed.year, override.wikipedia.page]
+    requires: parsed.number
     unsure: note
     fields:
       fp: fingerprint of the inputs
@@ -47,6 +50,7 @@ files:
     written_by: s3_llm_review.py
     about: the LLM's verdict on title, year and description together
     fp: [parsed.title, parsed.year, wikipedia.description]
+    requires: parsed.number
     unsure: not ok
     fields:
       fp: fingerprint of the inputs
@@ -74,7 +78,7 @@ files:
     about: one line holding the post's status, from the vocabulary below
 
 status:
-  pending: a stage file is missing or its fp is stale
-  needs_review: every stage file is fresh, but one is unsure
-  ok: every stage file is fresh and none is unsure
+  pending: post.yaml or an applicable stage file is missing, or a stage file's fp is stale
+  needs_review: every applicable stage file is fresh, but one is unsure
+  ok: every applicable stage file is fresh and none is unsure
   deleted: the post is gone from the download; stages skip the entry
