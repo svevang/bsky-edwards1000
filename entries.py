@@ -56,12 +56,16 @@ def dump(data):
 
 
 def write(rk, name, data):
-    p = path(rk, name)
-    os.makedirs(os.path.dirname(p), exist_ok=True)
-    fd, tmp = tempfile.mkstemp(dir=os.path.dirname(p), prefix=f".{name}.", suffix=".tmp")
+    save_text(path(rk, name), f"{data}\n" if name == "status" else dump(data))
+
+
+def save_text(p, text):
+    """Write text to p through a temp file in the same directory and os.replace."""
+    os.makedirs(os.path.dirname(p) or ".", exist_ok=True)
+    fd, tmp = tempfile.mkstemp(dir=os.path.dirname(p) or ".", prefix=f".{os.path.basename(p)}.", suffix=".tmp")
     try:
-        with os.fdopen(fd, "w", encoding="utf-8") as f:
-            f.write(f"{data}\n" if name == "status" else dump(data))
+        with os.fdopen(fd, "w", encoding="utf-8", newline="") as f:
+            f.write(text)
         os.chmod(tmp, 0o644)  # mkstemp creates files 0600
         os.replace(tmp, p)
     except BaseException:

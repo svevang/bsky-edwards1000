@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+"""Render movies.csv from entries/: one row per entry that isn't deleted, overrides applied.
+The `overrides` column lists the keys set by hand in override.yaml."""
+import argparse
+import csv
+import io
+import re
+import entries
+
+COLUMNS = ["number", "title", "canonical_title", "year", "qualifier", "description", "wikipedia", "status",
+           "overrides", "parse_note", "desc_note", "llm_issue", "rkey", "url", "createdAt"]
+
+
+def canonical(page):
+    """Wikipedia page title minus its disambiguator: 'The Alamo (1960 film)' -> 'The Alamo'."""
+    return re.sub(r"\s*\([^)]*\)\s*$", "", page) if page else ""
+
+
+def row(rk):
+    v = entries.view(rk)
+    p, w, r, post = (v.get(n) or {} for n in ("parsed", "wikipedia", "review", "post"))
+    return {
+        "number": p.get("number"), "title": p.get("title"), "canonical_title": canonical(w.get("page")),
+        "year": p.get("year"), "qualifier": p.get("qualifier"),
+        "description": w.get("description") or "", "wikipedia": w.get("url") or "",
+        "status": entries.read(rk, "status") or entries.compute_status(v),
+        "overrides": ", ".join(v["override"]),
+        "parse_note": p.get("note", ""), "desc_note": w.get("note", ""),
+        "llm_issue": r.get("issue", "") if r and not r.get("ok") else "",
+        "rkey": rk, "url": post.get("url"), "createdAt": post.get("createdAt"),
+    }
+
+
+def render_csv(out="movies.csv"):
+    rows = [r for r in map(row, entries.list_entries()) if r["status"] != "deleted"]
+    rows.sort(key=lambda r: (r["number"] is None, r["number"] or 0, r["createdAt"] or ""))
+    buf = io.StringIO()
+    w = csv.DictWriter(buf, fieldnames=COLUMNS)
+    w.writeheader()
+    w.writerows(rows)
+    entries.save_text(out, buf.getvalue())
+    return rows
+
+
+def main():
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--out", default="movies.csv")
+    a = p.parse_args()
+    rows = render_csv(a.out)
+    attn = [r for r in rows if r["status"] == "needs_review"]
+    pending = sum(r["status"] == "pending" for r in rows)
+    print(f"{a.out}: {len(rows)} rows; {len(attn)} need attention")
+    for r in attn:
+        why = [s for s in (r["parse_note"], r["desc_note"], r["llm_issue"]) if s]
+        print(f"  #{r['number'] or '?':>3} {r['title'] or '':40} {' | '.join(why)}  rkey={r['rkey']}")
+    if pending:
+        print(f"  {pending} pending (a stage still has to run)")
+
+
+if __name__ == "__main__":
+    main()
