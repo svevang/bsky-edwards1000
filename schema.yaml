@@ -5,7 +5,9 @@
 # A stage file is fresh when it exists and its stored fp matches the current inputs.
 # A stage file only applies to an entry when its `requires` reference is set.
 # A stage file is unsure when the check under `unsure` holds for its view: a field
-# name means the field is set, "not <field>" means it is not.
+# name means the field is set, "not <field>" means it is not. A file with `cleared_by` is
+# never unsure while that reference is set in a file that applies and is fresh: a passing
+# LLM review, which saw the warnings, clears them.
 
 files:
   post:
@@ -24,6 +26,7 @@ files:
     about: watchlist number, title and year read from the post text
     fp: [post.text]
     unsure: note
+    cleared_by: review.ok
     fields:
       fp: fingerprint of the inputs
       number: watchlist number (N in "N/1000")
@@ -39,6 +42,7 @@ files:
     fp: [parsed.title, parsed.year, override.wikipedia.page]
     requires: parsed.number
     unsure: note
+    cleared_by: review.ok
     fields:
       fp: fingerprint of the inputs
       page: Wikipedia page title, or null when none was found
@@ -49,21 +53,24 @@ files:
   review:
     written_by: s3_llm_review.py
     about: the LLM's verdict on title, year and description together
-    fp: [parsed.title, parsed.year, wikipedia.description]
+    fp: [parsed.title, parsed.year, wikipedia.description, parsed.raw_title_line, parsed.note, wikipedia.note]
     requires: parsed.number
     unsure: not ok
     fields:
       fp: fingerprint of the inputs
       ok: true when the row looks consistent
       issue: what looks wrong; only when not ok
+      suggested_page: the LLM's suggested Wikipedia page, or null
       suggested_title: the LLM's suggested title, or null
       suggested_year: the LLM's suggested year, or null
+      certain: true when the LLM is sure its suggestions are right
       dismissed: why a flag was dismissed; only ever set via override
 
   override:
-    written_by: fix.py
+    written_by: fix.py, and s3_llm_review.py for the fixes it is sure of
     about: >-
-      Hand corrections. Each key is a file.field reference and its value replaces that
+      Corrections, by hand or by the LLM review (wikipedia.page, parsed.title and
+      parsed.year only; review.ok and review.dismissed stay hand-set). Each key is a file.field reference and its value replaces that
       field in the entry's view. The stage files keep their computed values underneath,
       so removing a key brings the computed value back.
     examples:

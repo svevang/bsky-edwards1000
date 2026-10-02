@@ -12,7 +12,9 @@
   ./fix.py N unset [KEY ...]              drop these overrides (all of N's when none given)
 
 Overrides live in entries/<rkey>/override.yaml as file.field keys. Stage files keep their
-computed values underneath and no rerun touches the overrides, so a fix stays until unset.
+computed values underneath and no stage rerun touches them, so a fix stays until unset. The
+LLM review (./step2_llm_review.sh) also writes page, title and year fixes there; `unset`
+drops one you don't want (it may propose it again on a later re-review).
 """
 import argparse
 import os

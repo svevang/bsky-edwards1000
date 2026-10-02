@@ -42,9 +42,17 @@ def applies(name, view):
     return not req or bool(lookup(view, req))
 
 
+def cleared(view, ref):
+    """ref is set in a file that applies to the entry and is fresh."""
+    file = ref.split(".", 1)[0]
+    return (file in view and applies(file, view) and view[file].get("fp") == fp(file, view)
+            and bool(lookup(view, ref)))
+
+
 def unsure(name, view):
-    check = load_schema()["files"][name].get("unsure")
-    if not check:
+    f = load_schema()["files"][name]
+    check = f.get("unsure")
+    if not check or f.get("cleared_by") and cleared(view, f["cleared_by"]):
         return False
     negate = check.startswith("not ")
     value = bool((view.get(name) or {}).get(check.removeprefix("not ")))

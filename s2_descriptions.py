@@ -5,9 +5,10 @@ One API call per film (search + intro extract). A candidate page is accepted whe
 film, its title matches exactly (ignoring accents/leading article), and the stated release
 year matches; otherwise the best guess is kept with status "needs_review".
 
-Manual fixes: `./fix.py N page "Exact Wikipedia Title"` sets the wikipedia.page override;
-that page is then fetched directly. Rows are only refetched when title, year or that
-override change. Each row is saved as soon as it's fetched.
+Manual fixes: `./fix.py N page "Exact Wikipedia Title"` (or the LLM review) sets the
+wikipedia.page override; that exact page is then fetched, following redirects. Rows are
+only refetched when title, year or that override change. Each row is saved as soon as it's
+fetched; describe(rk) does one row and is also used by the review stage.
 """
 import json
 import re
@@ -80,21 +81,55 @@ def search(title, year):
 
 
 def summary(page):
-    """Fetch one exact page (used for a wikipedia.page override)."""
-    c = candidates(page, limit=1)
-    return c[0] if c and c[0]["title"].lower() == page.lower() else None
+    """Fetch one page by exact title, following redirects; None when missing or a disambiguation."""
+    res = get(API, action="query", titles=page, redirects=1, prop="extracts|info|pageprops",
+              exintro=1, explaintext=1, inprop="url", ppprop="disambiguation", format="json")
+    for p in (res or {}).get("query", {}).get("pages", {}).values():
+        if "missing" in p or "invalid" in p or "disambiguation" in p.get("pageprops", {}):
+            return None
+        return {"title": p["title"], "extract": (p.get("extract") or "").strip(), "url": p.get("fullurl")}
+    return None
+
+
+def is_film(extract):
+    return bool(re.search(r"\b(film|movie)\b", extract[:400].lower()))
+
+
+def film_title(page):
+    """False when the page's disambiguator names something else, e.g. "(soundtrack)", "(film series)"."""
+    paren = re.search(r"\(([^)]*)\)\s*$", page)
+    return not paren or "film" in paren.group(1).lower() and "series" not in paren.group(1).lower()
+
+
+NOT_ONE_FILM = "series|director|actor|actress|producer|franchise|studio|festival|score|soundtrack|composer|critic"
+GENRES = "comedy|drama|thriller|docudrama|melodrama|western|musical|documentary"
+LINK_WORDS = {"from", "for", "by", "of", "in", "on", "to", "the", "with", "about", "featuring", "song", "album",
+              "single", "soundtrack", "novel", "character", "series", "franchise", "television", "tv", "stage", "play"}
+
+
+def one_film(extract):
+    """True when the intro's first "X is a ..." makes X a single film: "is a 1963 American musical
+    film", "is a 1960 romantic comedy starring", "is the second of four Miss Marple films"; not
+    "a film series", "an American film director" or "a song from the 1961 film"."""
+    m = re.search(r"\b(?:is|was) (an?|the) ", extract[:400])
+    if not m:
+        return False
+    rest = extract[m.end():400]
+    if m.group(1) == "the":
+        return bool(re.match(r"\w+ of (?:\S+\s+){1,4}?films\b", rest))
+    head = re.match(rf"((?:\S+\s+){{0,12}}?)(?:(?:film|movie)\b(?!\s+(?:{NOT_ONE_FILM}))|(?:{GENRES})"
+                    rf"(?=\s+(?:directed|starring|written|produced|about|based|released)\b|[,.(]))", rest, re.I)
+    return bool(head) and not LINK_WORDS & {w.lower() for w in re.findall(r"[\w'-]+", head.group(1))}
 
 
 def score_page(want, year, page, extract):
     """(is_film, title_ok, year_ok) for a candidate page."""
     lead = extract[:400].lower()
-    is_film = bool(re.search(r"\b(film|movie)\b", lead))
-    paren = re.search(r"\(([^)]*)\)\s*$", page)
-    title_ok = norm(page) == want and (not paren or "film" in paren.group(1).lower())
+    title_ok = norm(page) == want and film_title(page)
     # "is a 1961 ... film" is the strongest signal; otherwise the year anywhere near the top
     stated = re.search(r"\bis a(?:n)? (19[5-7]\d)\b", lead)
     year_ok = (int(stated.group(1)) == int(year)) if stated else bool(re.search(rf"\b{year}\b", lead))
-    return (is_film, title_ok, year_ok)
+    return (is_film(extract), title_ok, year_ok)
 
 
 def pick(title, year, cands):
@@ -121,6 +156,22 @@ def pick(title, year, cands):
     return c, s, "; ".join(notes)
 
 
+def describe(rk):
+    """Fetch one entry's page and write its wikipedia.yaml and status; returns what was written."""
+    v = entries.view(rk)
+    title, year = v["parsed"]["title"], v["parsed"]["year"]
+    pinned_page = v["override"].get("wikipedia.page")
+    if pinned_page:
+        s = summary(pinned_page)
+        page, note = (s["title"], "") if s else (None, f"pinned page {pinned_page!r} not found")
+    else:
+        page, s, note = pick(title, year, search(title, year))
+    w = {"fp": schema.fp("wikipedia", v), "page": page if s else None, "url": s["url"] if s else None,
+         "description": s["extract"] if s else None, "note": note}
+    entries.write(rk, "wikipedia", w)
+    entries.update_status(rk)
+    return w
+
 
 def main():
     a = stage.args(__doc__)
@@ -129,23 +180,14 @@ def main():
     for i, rk in enumerate(todo, 1):
         v = entries.view(rk)
         r = v["parsed"]
-        title, year = r["title"], r["year"]
-        pinned_page = v["override"].get("wikipedia.page")
         try:
-            if pinned_page:
-                s = summary(pinned_page)
-                page, note = (pinned_page, "") if s else (None, f"pinned page {pinned_page!r} not found")
-            else:
-                page, s, note = pick(title, year, search(title, year))
+            w = describe(rk)
         except Exception as e:
-            print(f"  !! #{r['number']} {title}: {e}", file=sys.stderr)
+            print(f"  !! #{r['number']} {r['title']}: {e}", file=sys.stderr)
             continue
-        entries.write(rk, "wikipedia", {"fp": schema.fp("wikipedia", v), "page": page if s else None,
-                                        "url": s["url"] if s else None,
-                                        "description": s["extract"] if s else None, "note": note})
-        entries.update_status(rk)
-        mark = "X" if not s else "P" if pinned_page else "?" if note else " "
-        print(f"  [{mark}] {i}/{len(todo)} #{r['number']} {title} ({year}) -> {page}"
+        note = w["note"]
+        mark = "X" if not w["page"] else "P" if "wikipedia.page" in v["override"] else "?" if note else " "
+        print(f"  [{mark}] {i}/{len(todo)} #{r['number']} {r['title']} ({r['year']}) -> {w['page']}"
               + (f"  [{note}]" if note else ""), file=sys.stderr)
         time.sleep(1.0)
     stage.finish("wikipedia")

@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # Step 2 (LLM in the loop): Claude reads each row and flags title/year/description
-# disagreements -> entries/*/review.yaml, then movies.csv is rebuilt with the flags.
+# disagreements -> entries/*/review.yaml, and fixes what it can: a checked Wikipedia page,
+# or a title/year it is certain of, goes to entries/*/override.yaml; those rows are refetched
+# and reviewed again (up to two more rounds). Then movies.csv is rebuilt with the flags.
 # Uses the `claude` CLI (your login; no API key). Only rows not yet reviewed, or whose
 # inputs changed, are sent.
 #
@@ -9,12 +11,14 @@ set -euo pipefail
 cd "$(dirname "$0")"
 command -v claude >/dev/null || { echo "claude CLI not found"; exit 1; }
 
+uv run python s2_descriptions.py  # catch-up: refetch pages a fix left stale; a no-op otherwise
 uv run python s3_llm_review.py "$@"
 uv run python render.py
 
 cat <<'TXT'
 
-For each flagged row: uv run python status.py <number> to see its trail, then either
+Fixes the review made are listed above and in the `overrides` column; ./fix.py <number> unset KEY
+undoes one. For each row still flagged: uv run python status.py <number> to see its trail, then either
   - ./fix.py <number> title "..."   (or: year YYYY)
   - ./fix.py <number> page "Right Wikipedia Title"
   - ./fix.py <number> dismiss "why it's fine"

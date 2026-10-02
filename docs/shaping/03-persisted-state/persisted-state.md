@@ -1,5 +1,5 @@
 ---
-status: shaping
+status: ready
 selected_shape: B
 updated: 2026-10-03
 ---
@@ -72,11 +72,11 @@ kept apart as overrides.
 | B5.2 | Outputs (`movies.csv` now, HTML later) are build artifacts rendered from the entries, leaving out deleted entries |
 | B6   | **Status** |
 | B6.1 | One status per post, from one shared vocabulary: `pending`, `needs_review`, `ok`, `deleted` |
-| B6.2 | After each stage, the status is recomputed from the entry's files: `pending` when a stage is missing or stale, `needs_review` when a stage is unsure, otherwise `ok` |
+| B6.2 | After each stage, the status is recomputed from the entry's files: `pending` when a stage is missing or stale, `needs_review` when a stage is unsure, otherwise `ok`; a fresh passing review, which sees the parse and Wikipedia warnings, clears them |
 | B6.3 | When a post is gone from the download, its entry is kept and its status set to `deleted`; stages skip deleted entries |
 | B7   | **LLM resolution** |
 | B7.1 | For each problem it finds, the review proposes a fix: the Wikipedia page, title or year |
-| B7.2 | A proposed page is fetched and kept only when it exists and is about a film |
+| B7.2 | A proposed page is fetched by exact title, or found by search when that title doesn't exist; it is kept only when it is a single film from within a year of the row's year |
 | B7.3 | Kept fixes are written to `override.yaml`; an existing key is replaced only when the LLM is certain |
 | B7.4 | The LLM never sets `review.ok` or `review.dismissed`; dismissing stays a hand decision |
 | B7.5 | Fixed rows are refetched and reviewed again in the same run, for up to two more rounds; rows still flagged stay `needs_review` |
