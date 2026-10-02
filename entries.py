@@ -117,3 +117,18 @@ def find(number):
     if len(rks) != 1:
         sys.exit(f"#{number}: {'not in entries' if not rks else f'{len(rks)} posts share this number: {rks}'}")
     return rks[0]
+
+
+def set_override(rk, key, value):
+    """Set one file.field override; the stage file keeps its computed value underneath."""
+    write(rk, "override", {**(read(rk, "override") or {}), key: value})
+
+
+def unset_override(rk, keys=None):
+    """Remove these override keys (all when None); override.yaml is deleted once empty."""
+    o = read(rk, "override") or {}
+    o = {k: v for k, v in o.items() if keys is not None and k not in keys}
+    if o:
+        write(rk, "override", o)
+    elif os.path.exists(path(rk, "override")):
+        os.remove(path(rk, "override"))

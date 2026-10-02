@@ -154,7 +154,7 @@ def main():
            and "wikipedia" in (v := entries.view(rk)) and schema.applies("wikipedia", v)
            and schema.unsure("wikipedia", v)]
     if bad:
-        print("review these (./fix.py N page \"Wikipedia Title\"):", file=sys.stderr)
+        print("review these (./fix.py N page \"Wikipedia Title\", or ./fix.py N title/year):", file=sys.stderr)
         for v in sorted(bad, key=lambda v: v["parsed"]["number"] or 0):
             print(f"  #{v['parsed']['number']} {v['parsed']['title']} -> {v['wikipedia']['page']}: "
                   f"{v['wikipedia']['note']}", file=sys.stderr)

@@ -18,5 +18,6 @@ For each flagged row: uv run python status.py <number> to see its trail, then ei
   - ./fix.py <number> title "..."   (or: year YYYY)
   - ./fix.py <number> page "Right Wikipedia Title"
   - ./fix.py <number> dismiss "why it's fine"
+  (./fix.py <number> unset [KEY ...] undoes a fix)
 then ./step2_llm_review.sh to re-review the rows you changed
 TXT

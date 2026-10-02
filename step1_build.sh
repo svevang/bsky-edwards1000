@@ -25,10 +25,10 @@ hr "3: render -> movies.csv";                               uv run python render
 
 cat <<'TXT'
 
-Check:  uv run python status.py              # counts per stage
-        uv run python status.py <number>     # one film's trail through every stage
+Check:  uv run python status.py              # counts by status
+        uv run python status.py <number>     # one film's files, overrides and freshness
         column -s, -t < movies.csv | less -S
-Fix:    ./fix.py <number> title "..." | year YYYY | page "Wikipedia Title" | unpin
-        (pins the fix and reruns just that row; ./fix.py -h for details)
+Fix:    ./fix.py <number> title "..." | year YYYY | page "Wikipedia Title" | unset [KEY ...]
+        (sets an override and reruns just that row; ./fix.py -h for details)
 Next:   ./step2_llm_review.sh          # LLM pass over rows not yet reviewed
 TXT

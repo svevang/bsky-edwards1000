@@ -1,32 +1,58 @@
 #!/usr/bin/env python3
-"""Where is every row in the pipeline? `uv run python status.py [N]` shows one row's full trail."""
+"""Where is every post in the pipeline?
+
+  uv run python status.py       counts by status, computed now (hand edits to override.yaml show)
+  uv run python status.py N     one film's trail: post, each stage file with its overrides, freshness
+"""
 import json
 import sys
+import entries
+import schema
 import stage
 
-posts = {p["url"].rsplit("/", 1)[-1]: p for p in stage.load(stage.POSTS, default=[])}
-files = [("01_parsed", stage.load(stage.PARSED, default={})),
-         ("02_descriptions", stage.load(stage.DESCRIPTIONS, default={})),
-         ("03_llm_review", stage.load(stage.LLM_REVIEW, default={}))]
 
-if len(sys.argv) > 1:  # trail for one watchlist number
-    n = int(sys.argv[1])
-    rk = next((rk for rk, r in files[0][1].items() if r["number"] == n), None)
-    if not rk:
-        sys.exit(f"#{n} not in 01_parsed")
-    print(f"00_posts:\n  {json.dumps(posts[rk]['text'][:300], ensure_ascii=False)}")
-    for name, data in files:
-        e = data.get(rk)
-        print(f"{name}:" + ("\n  " + json.dumps({k: v for k, v in e.items() if k not in ('text_head', 'fp')},
-                                                ensure_ascii=False, indent=2).replace("\n", "\n  ") if e else "  (not yet)"))
-    sys.exit()
+def short(value, n=200):
+    s = repr(value)
+    return s if len(s) <= n else s[:n] + "…"
 
-print(f"00_posts: {len(posts)}")
-for name, data in files:
-    stage.report(name, data, posts)
-    missing = len(posts) - len(data)
-    stale = sum(1 for rk in data if rk in posts and files[0][1].get(rk) and name != "01_parsed"
-                and data[rk].get("fp") != (stage.fp(files[0][1][rk]["title"], files[0][1][rk]["year"]) if name == "02_descriptions"
-                                           else stage.fp(files[0][1][rk]["title"], files[0][1][rk]["year"], files[1][1].get(rk, {}).get("description"))))
-    if stale:
-        print(f"  {stale} rows have stale inputs (will be redone on next run)")
+
+def counts():
+    live, out_of_date, overridden = {}, 0, 0
+    for rk in entries.list_entries():
+        stored, v = entries.read(rk, "status"), entries.view(rk)
+        s = "deleted" if stored == "deleted" else entries.compute_status(v)
+        live[s] = live.get(s, 0) + 1
+        out_of_date += s != stored
+        overridden += bool(v["override"])
+    print(f"{sum(live.values())} entries: {live}")
+    print(f"  {overridden} with overrides, {live.get('deleted', 0)} deleted")
+    if out_of_date:
+        print(f"  {out_of_date} stored statuses are out of date; any stage run refreshes them")
+
+
+def trail(n):
+    rk = entries.find(n)
+    v, o = entries.view(rk), entries.read(rk, "override") or {}
+    if "post" in v:
+        print(f"#{n}  rkey={rk}  {v['post']['url']}")
+        print(f"post:\n  {json.dumps(v['post']['text'][:300], ensure_ascii=False)}")
+    else:
+        print(f"#{n}  rkey={rk}\npost: (no post.yaml)")
+    for name in schema.stage_files():
+        raw = entries.read(rk, name)
+        state = ("not applicable" if not schema.applies(name, v) else "missing" if raw is None
+                 else "fresh" if stage.fresh(name, v) else "stale")
+        print(f"{name}: ({state})")
+        fields = [k for k in (raw or {}) if k != "fp"]
+        fields += [k.split(".", 1)[1] for k in o if k.startswith(f"{name}.") and k.split(".", 1)[1] not in fields]
+        for k in fields:
+            key = f"{name}.{k}"
+            computed = short(raw[k]) if k in (raw or {}) else "(none)"
+            print(f"  {k}: {computed}" + (f" -> {short(o[key])}  (override)" if key in o else ""))
+    print(f"status: {entries.compute_status(v)} (stored: {entries.read(rk, 'status')})")
+
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1 and not sys.argv[1].isdigit():
+        sys.exit(__doc__)
+    trail(int(sys.argv[1])) if len(sys.argv) > 1 else counts()

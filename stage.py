@@ -11,8 +11,8 @@ Common CLI flags handled by `select`:
   --only N[,N...]    consider only rows with these watchlist numbers
   --limit K          process at most K rows this run (lets you check output early)
 
-The JSON paths, load and save below are for the old stages/ files (fix.py, status.py,
-s4_join.py) until they are removed.
+The JSON paths, load and save below are for the old stages/ files (s4_join.py) until
+they are removed.
 """
 import argparse
 import hashlib
