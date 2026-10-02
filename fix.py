@@ -83,7 +83,7 @@ def main():
     v = stage.load(stage.LLM_REVIEW, default={}).get(rk)
     if not v or v["fp"] != stage.fp(r["title"], r["year"], d.get("description")):  # same fp as s3
         print(f"\n#{a.number} will be (re)reviewed on the next ./step2_llm_review.sh")
-    print(f"python3 status.py {a.number}   # see the result")
+    print(f"uv run python status.py {a.number}   # see the result")
 
 
 if __name__ == "__main__":

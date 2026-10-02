@@ -9,12 +9,12 @@ set -euo pipefail
 cd "$(dirname "$0")"
 command -v claude >/dev/null || { echo "claude CLI not found"; exit 1; }
 
-python3 s3_llm_review.py "$@"
-python3 s4_join.py
+uv run python s3_llm_review.py "$@"
+uv run python s4_join.py
 
 cat <<'TXT'
 
-For each flagged row: python3 status.py <number> to see its trail, then either
+For each flagged row: uv run python status.py <number> to see its trail, then either
   - ./fix.py <number> title "..."   (or: year YYYY)
   - ./fix.py <number> page "Right Wikipedia Title"
   - ./fix.py <number> dismiss "why it's fine"

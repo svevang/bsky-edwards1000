@@ -7,8 +7,8 @@
 #   stage args (passed to every stage): --force | --redo N,N | --only N,N | --limit K
 #   e.g. ./step1_build.sh --skip-download --redo 75      # redo one film end-to-end
 #        ./step1_build.sh --skip-download --limit 20     # process 20 rows, then look
-# Inspect: python3 status.py        (counts per stage)
-#          python3 status.py 75     (full trail for film #75)
+# Inspect: uv run python status.py        (counts per stage)
+#          uv run python status.py 75     (full trail for film #75)
 set -euo pipefail
 cd "$(dirname "$0")"
 
@@ -17,16 +17,16 @@ TAG="Edwards1000SixtiesMovies"
 hr() { printf '\n\033[1m== %s ==\033[0m\n' "$1"; }
 
 if [[ "${1:-}" == "--skip-download" ]]; then shift; hr "0: download skipped"
-else hr "0: downloading #$TAG posts -> stages/00_posts.json"; python3 bsky_tag_dl.py "$HANDLE" "$TAG" stages/00_posts.json; fi
+else hr "0: downloading #$TAG posts -> stages/00_posts.json"; uv run python bsky_tag_dl.py "$HANDLE" "$TAG" stages/00_posts.json; fi
 
-hr "1: parse titles/years -> stages/01_parsed.json";        python3 s1_parse.py "$@"
-hr "2: Wikipedia descriptions -> stages/02_descriptions.json"; python3 s2_descriptions.py "$@"
-hr "4: join -> movies.csv";                                  python3 s4_join.py
+hr "1: parse titles/years -> stages/01_parsed.json";        uv run python s1_parse.py "$@"
+hr "2: Wikipedia descriptions -> stages/02_descriptions.json"; uv run python s2_descriptions.py "$@"
+hr "4: join -> movies.csv";                                  uv run python s4_join.py
 
 cat <<'TXT'
 
-Check:  python3 status.py              # counts per stage
-        python3 status.py <number>     # one film's trail through every stage
+Check:  uv run python status.py              # counts per stage
+        uv run python status.py <number>     # one film's trail through every stage
         column -s, -t < movies.csv | less -S
 Fix:    ./fix.py <number> title "..." | year YYYY | page "Wikipedia Title" | unpin
         (pins the fix and reruns just that row; ./fix.py -h for details)

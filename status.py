@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Where is every row in the pipeline? `python3 status.py [N]` shows one row's full trail."""
+"""Where is every row in the pipeline? `uv run python status.py [N]` shows one row's full trail."""
 import json
 import sys
 import stage

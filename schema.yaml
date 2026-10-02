@@ -1,0 +1,80 @@
+# Files in entries/<rkey>/, one directory per post (rkey = last segment of the post URL).
+#
+# Stage files carry `fp`: a fingerprint of the inputs listed under `fp`, written as
+# file.field references into the entry's view (stage files with overrides applied).
+# A stage file is fresh when it exists and its stored fp matches the current inputs.
+# A stage file is unsure when the check under `unsure` holds for its view.
+
+files:
+  post:
+    written_by: bsky_tag_dl.py
+    about: the raw post as downloaded
+    fields:
+      uri: at:// URI of the post
+      cid: content id of this version of the post
+      url: bsky.app link to the post
+      createdAt: when the post was made
+      text: post text
+      record: the full post record from the API
+
+  parsed:
+    written_by: s1_parse.py
+    about: watchlist number, title and year read from the post text
+    fp: [post.text]
+    unsure: note
+    fields:
+      fp: fingerprint of the inputs
+      number: watchlist number (N in "N/1000")
+      title: film title as posted
+      year: release year implied by the number (100 films per year from 1960)
+      qualifier: year or parenthetical from the title line, e.g. "1962 version"
+      raw_title_line: the title line before cleanup
+      note: why the parse needs review; empty when it looks right
+
+  wikipedia:
+    written_by: s2_descriptions.py
+    about: the chosen Wikipedia page and its intro
+    fp: [parsed.title, parsed.year, override.wikipedia.page]
+    unsure: note
+    fields:
+      fp: fingerprint of the inputs
+      page: Wikipedia page title, or null when none was found
+      url: page URL
+      description: intro text of the page
+      note: why the page needs review; empty when it looks right
+
+  review:
+    written_by: s3_llm_review.py
+    about: the LLM's verdict on title, year and description together
+    fp: [parsed.title, parsed.year, wikipedia.description]
+    unsure: not ok
+    fields:
+      fp: fingerprint of the inputs
+      ok: true when the row looks consistent
+      issue: what looks wrong; only when not ok
+      suggested_title: the LLM's suggested title, or null
+      suggested_year: the LLM's suggested year, or null
+      dismissed: why a flag was dismissed; only ever set via override
+
+  override:
+    written_by: fix.py
+    about: >-
+      Hand corrections. Each key is a file.field reference and its value replaces that
+      field in the entry's view. The stage files keep their computed values underneath,
+      so removing a key brings the computed value back.
+    examples:
+      parsed.title: THE V.I.P.s
+      parsed.year: 1964
+      wikipedia.page: La Vérité (film)
+      review.ok: true
+      review.dismissed: festival year
+
+  status:
+    written_by: every stage, after it writes the entry
+    about: one line holding the post's status, from the vocabulary below
+
+status:
+  pending: a stage file is missing or its fp is stale
+  needs_review: every stage file is fresh, but one is unsure
+  ok: every stage file is fresh and none is unsure
+  deleted: the post is gone from the download; stages skip the entry
