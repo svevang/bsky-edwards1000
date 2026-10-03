@@ -72,7 +72,6 @@ def main():
     for rk in todo:
         v = entries.view(rk)
         entries.write(rk, "parsed", {"fp": schema.fp("parsed", v), **parse(v["post"]["text"])})
-        entries.update_status(rk)
     print(f"parsed {len(todo)} new/changed rows", file=sys.stderr)
     stage.finish("parsed")
 

@@ -4,8 +4,8 @@
 Usage: s0_download.py <handle-or-did> <tag-without-#>
 
 post.yaml is only rewritten when the post changed. An entry whose post is missing from the
-download is marked deleted (and skipped by every stage); if it comes back, its status is
-recomputed. A download with no posts at all is refused rather than deleting everything.
+download is marked deleted with deleted.yaml (and skipped by every stage); if it comes back,
+the marker is removed. A download with no posts at all is refused rather than deleting everything.
 """
 import sys
 import entries
@@ -25,14 +25,13 @@ def main():
         seen.add(rk)
         if entries.read(rk, "post") != p:
             entries.write(rk, "post", p)
-            entries.update_status(rk)
             written += 1
-        if entries.read(rk, "status") == "deleted":
-            entries.write(rk, "status", entries.compute_status(entries.view(rk)))
+        if entries.deleted(rk):
+            entries.set_deleted(rk, False)
             back += 1
-    gone = [rk for rk in entries.list_entries() if rk not in seen and entries.read(rk, "status") != "deleted"]
+    gone = [rk for rk in entries.list_entries() if rk not in seen and not entries.deleted(rk)]
     for rk in gone:
-        entries.write(rk, "status", "deleted")
+        entries.set_deleted(rk, True)
     print(f"{len(posts)} posts: {written} new/changed, {back} back from deleted, {len(gone)} newly deleted",
           file=sys.stderr)
     if gone:

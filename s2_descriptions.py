@@ -127,7 +127,7 @@ def pick(title, year, cands):
 
 
 def describe(rk):
-    """Fetch one entry's page and write its wikipedia.yaml and status; returns what was written."""
+    """Fetch one entry's page and write its wikipedia.yaml; returns what was written."""
     v = entries.view(rk)
     title, year = v["parsed"]["title"], v["parsed"]["year"]
     pinned_page = v["override"].get("wikipedia.page")
@@ -139,7 +139,6 @@ def describe(rk):
     w = {"fp": schema.fp("wikipedia", v), "page": page, "url": s["url"] if s else None,
          "description": s["extract"] if s else None, "note": note}
     entries.write(rk, "wikipedia", w)
-    entries.update_status(rk)
     return w
 
 

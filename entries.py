@@ -1,7 +1,8 @@
 """Entry store: one directory per post under entries/, one YAML file per stage.
 
 Files are named by stage without the extension ("post", "parsed", "wikipedia", "review",
-"override", "status"); schema.yaml describes them. status.yaml is one bare line.
+"override"); schema.yaml describes them. An empty deleted.yaml marks a post gone from the
+download. Status is never stored: status(rk) computes it from the files.
 Every write goes through a temp file and os.replace, so a file is never half-written.
 
 view(rk) is what stages, status and outputs read: the stage files with override.yaml
@@ -56,7 +57,7 @@ def dump(data):
 
 
 def write(rk, name, data):
-    save_text(path(rk, name), f"{data}\n" if name == "status" else dump(data))
+    save_text(path(rk, name), dump(data))
 
 
 def save_text(p, text):
@@ -94,20 +95,24 @@ def compute_status(v):
     return "needs_review" if any(schema.unsure(n, v) for n in names) else "ok"
 
 
-def update_status(rk):
-    """Recompute status.yaml from the entry's view; deleted stays deleted. Writes only on change."""
-    old = read(rk, "status")
-    if old == "deleted":
-        return old
-    new = compute_status(view(rk))
-    if new != old:
-        write(rk, "status", new)
-    return new
+def deleted(rk):
+    return os.path.exists(path(rk, "deleted"))
+
+
+def set_deleted(rk, gone):
+    if gone:
+        save_text(path(rk, "deleted"), "")
+    elif deleted(rk):
+        os.remove(path(rk, "deleted"))
+
+
+def status(rk):
+    return "deleted" if deleted(rk) else compute_status(view(rk))
 
 
 def live():
     """(rkey, view) for every entry that isn't deleted."""
-    return ((rk, view(rk)) for rk in list_entries() if read(rk, "status") != "deleted")
+    return ((rk, view(rk)) for rk in list_entries() if not deleted(rk))
 
 
 def find(number):

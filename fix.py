@@ -58,7 +58,6 @@ def main():
     if a.cmd != "dismiss" and stage.ready("wikipedia", v) and not schema.fresh("wikipedia", v):
         print(f"refetching wikipedia -> {s2.describe(rk)['page']}")
         v = entries.view(rk)
-    entries.update_status(rk)
     render.report(render.render_csv())
     shown = schema.lookup(v, "parsed.number") or a.number  # unset may have changed it
     if schema.applies("review", v) and not schema.fresh("review", v):

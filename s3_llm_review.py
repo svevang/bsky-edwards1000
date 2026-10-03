@@ -156,7 +156,6 @@ def resolve(rk, v):
             entries.set_override(rk, key, new)
             applied.append(f"{key.split('.', 1)[1]}={new!r}")
     if applied:
-        entries.update_status(rk)
         s2.describe(rk)
     return applied
 
@@ -196,7 +195,6 @@ def review(todo, fix=True):
             p = problems.get(r["number"]) or {}
             entries.write(rk, "review", {"fp": schema.fp("review", views[rk]), "ok": not p,
                                          **{k: p.get(k) for k in FIELDS if p}})
-            entries.update_status(rk)
         print(f"{len(problems)} flagged", file=sys.stderr)
         for rk in rows:
             v = entries.view(rk)
@@ -232,7 +230,7 @@ def main():
     fixed_views = {rk: entries.view(rk) for rk in fixed}
     for rk, v in sorted(fixed_views.items(), key=lambda kv: (kv[1]["parsed"]["number"] or 0, kv[0])):
         n = v["parsed"]["number"] or 0
-        print(f"  #{n:>3} {v['parsed']['title']:40} {', '.join(fixed[rk])}  -> {entries.read(rk, 'status')}")
+        print(f"  #{n:>3} {v['parsed']['title']:40} {', '.join(fixed[rk])}  -> {entries.compute_status(v)}")
     flagged = sorted((v for _, v in entries.live() if "review" in v and schema.applies("review", v)
                       and schema.unsure("review", v)),
                      key=lambda v: v["parsed"]["number"] or 0)

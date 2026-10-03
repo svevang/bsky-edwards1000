@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Where is every post in the pipeline?
 
-  uv run python status.py       counts by status, computed now (hand edits to override.yaml show)
+  uv run python status.py       counts by status
   uv run python status.py N     one film's trail: post, each stage file with its overrides, freshness
 """
 import json
@@ -16,17 +16,13 @@ def short(value, n=200):
 
 
 def counts():
-    live, out_of_date, overridden = {}, 0, 0
+    counts, overridden = {}, 0
     for rk in entries.list_entries():
-        stored, v = entries.read(rk, "status"), entries.view(rk)
-        s = "deleted" if stored == "deleted" else entries.compute_status(v)
-        live[s] = live.get(s, 0) + 1
-        out_of_date += s != stored
-        overridden += bool(v["override"])
-    print(f"{sum(live.values())} entries: {live}")
-    print(f"  {overridden} with overrides, {live.get('deleted', 0)} deleted")
-    if out_of_date:
-        print(f"  {out_of_date} stored statuses are out of date; any stage run refreshes them")
+        s = entries.status(rk)
+        counts[s] = counts.get(s, 0) + 1
+        overridden += bool(entries.read(rk, "override"))
+    print(f"{sum(counts.values())} entries: {counts}")
+    print(f"  {overridden} with overrides, {counts.get('deleted', 0)} deleted")
 
 
 def trail(n):
@@ -49,7 +45,7 @@ def trail(n):
             key = f"{name}.{k}"
             computed = short(raw[k]) if k in (raw or {}) else "(none)"
             print(f"  {k}: {computed}" + (f" -> {short(o[key])}  (override)" if key in o else ""))
-    print(f"status: {entries.compute_status(v)} (stored: {entries.read(rk, 'status')})")
+    print(f"status: {entries.compute_status(v)}")
 
 
 if __name__ == "__main__":

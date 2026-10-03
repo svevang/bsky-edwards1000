@@ -80,12 +80,13 @@ files:
       review.ok: true
       review.dismissed: festival year
 
-  status:
-    written_by: every stage, after it writes the entry
-    about: one line holding the post's status, from the vocabulary below
+  deleted:
+    written_by: s0_download.py
+    about: empty marker; present while the post is gone from the download
 
+# An entry's status is computed from its files, never stored.
 status:
   pending: post.yaml or an applicable stage file is missing, or a stage file's fp is stale
   needs_review: every applicable stage file is fresh, but one is unsure
   ok: every applicable stage file is fresh and none is unsure
-  deleted: the post is gone from the download; stages skip the entry
+  deleted: deleted.yaml is present; stages skip the entry

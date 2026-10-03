@@ -11,14 +11,13 @@ COLUMNS = ["number", "title", "canonical_title", "year", "qualifier", "descripti
            "overrides", "parse_note", "desc_note", "llm_issue", "rkey", "url", "createdAt"]
 
 
-def row(rk):
-    v = entries.view(rk)
+def row(rk, v):
     p, w, r, post = (v.get(n) or {} for n in ("parsed", "wikipedia", "review", "post"))
     return {
         "number": p.get("number"), "title": p.get("title"), "canonical_title": canonical(w.get("page")),
         "year": p.get("year"), "qualifier": p.get("qualifier"),
         "description": w.get("description") or "", "wikipedia": w.get("url") or "",
-        "status": entries.read(rk, "status") or entries.compute_status(v),
+        "status": entries.compute_status(v),
         "overrides": ", ".join(v["override"]),
         "parse_note": p.get("note", ""), "desc_note": w.get("note", ""),
         "llm_issue": r.get("issue", "") if r and not r.get("ok") else "",
@@ -27,7 +26,7 @@ def row(rk):
 
 
 def render_csv(out="movies.csv"):
-    rows = [r for r in map(row, entries.list_entries()) if r["status"] != "deleted"]
+    rows = [row(rk, v) for rk, v in entries.live()]
     rows.sort(key=lambda r: (r["number"] is None, r["number"] or 0, r["createdAt"] or ""))
     buf = io.StringIO()
     w = csv.DictWriter(buf, fieldnames=COLUMNS)
