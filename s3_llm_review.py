@@ -160,30 +160,24 @@ def resolve(rk, v):
     return applied
 
 
-def try_resolve(rk, v, fixed):
-    try:
-        if applied := resolve(rk, v):
-            fixed[rk] = applied
-    except Exception as e:
-        print(f"  !! #{v['parsed']['number']} {v['parsed']['title']}: {e}", file=sys.stderr)
-
-
-def sweep(skip):
-    """Resolve flagged rows this run didn't review whose saved review has a suggestion, e.g.
-    from a run interrupted before it fixed them. Only Wikipedia is asked; returns the fixes."""
+def fix_flagged(pairs):
+    """Resolve each (rkey, view) whose fresh review is flagged with a suggestion: this run's
+    flags, and earlier runs' left unfixed (e.g. by an interrupted run). Returns {rkey: fixes}."""
     fixed = {}
-    for rk, v in entries.live():
-        if (rk not in skip and stage.ready("review", v)
-                and schema.fresh("review", v) and schema.unsure("review", v)
+    for rk, v in pairs:
+        if not (stage.ready("review", v) and schema.fresh("review", v) and schema.unsure("review", v)
                 and any(v["review"].get(k) not in (None, "") for k in FIXES)):
-            try_resolve(rk, v, fixed)
+            continue
+        try:
+            if applied := resolve(rk, v):
+                fixed[rk] = applied
+        except Exception as e:
+            print(f"  !! #{v['parsed']['number']} {v['parsed']['title']}: {e}", file=sys.stderr)
     return fixed
 
 
-def review(todo, fix=True):
-    """Review rows in batches, saving each batch as it returns; with fix, resolve flagged rows.
-    Returns {rkey: fixes applied} for the rows that got a fix."""
-    fixed = {}
+def review(todo):
+    """Ask about rows in batches, saving each batch's review.yaml as it returns."""
     for i in range(0, len(todo), BATCH):
         views = {rk: entries.view(rk) for rk in todo[i:i + BATCH]}
         rows = {rk: row(v) for rk, v in views.items()}
@@ -196,15 +190,6 @@ def review(todo, fix=True):
             entries.write(rk, "review", {"fp": schema.fp("review", views[rk]), "ok": not p,
                                          **{k: p.get(k) for k in FIELDS if p}})
         print(f"{len(problems)} flagged", file=sys.stderr)
-        for rk in rows:
-            v = entries.view(rk)
-            if not schema.unsure("review", v):  # passed, or dismissed by hand
-                continue
-            if not fix:
-                print(f"    #{rows[rk]['number']} still flagged after {ROUNDS} fix rounds; left for you", file=sys.stderr)
-                continue
-            try_resolve(rk, v, fixed)
-    return fixed
 
 
 def main():
@@ -215,9 +200,10 @@ def main():
     for rnd in range(ROUNDS + 1):
         if rnd:
             print(f"round {rnd + 1}: re-reviewing {len(todo)} fixed rows", file=sys.stderr)
-        new = review(todo, fix=rnd < ROUNDS)
-        if rnd == 0:
-            new.update(sweep(set(todo)))
+        review(todo)
+        if rnd == ROUNDS:
+            break
+        new = fix_flagged(entries.live() if rnd == 0 else ((rk, entries.view(rk)) for rk in todo))
         for rk, f in new.items():
             fixed.setdefault(rk, []).extend(f)
         todo = list(new)  # resolve() refetched each one's page, so it's ready for review
