@@ -61,7 +61,7 @@ kept apart as overrides.
 | B3.3 | `wikipedia.yaml`: chosen page, URL and downloaded intro |
 | B3.4 | `review.yaml`: LLM verdict, issue and suggestions |
 | B3.5 | `override.yaml`: corrections, by hand or by the LLM review, as keys and values; stage files keep the computed values beneath them |
-| B3.6 | `status.yaml`: one line holding the post's status |
+| B3.6 | `deleted.yaml`: an empty marker, present while the post is gone from the download |
 | B4   | **Freshness** |
 | B4.1 | Every stage file carries the `fp` of the inputs it was computed from |
 | B4.2 | A stage is done for an entry when its file exists and its `fp` matches the current inputs |
@@ -72,14 +72,15 @@ kept apart as overrides.
 | B5.2 | Outputs (`movies.csv` now, HTML later) are build artifacts rendered from the entries, leaving out deleted entries |
 | B6   | **Status** |
 | B6.1 | One status per post, from one shared vocabulary: `pending`, `needs_review`, `ok`, `deleted` |
-| B6.2 | After each stage, the status is recomputed from the entry's files: `pending` when a stage is missing or stale, `needs_review` when a stage is unsure, otherwise `ok`; a fresh passing review, which sees the parse and Wikipedia warnings, clears them |
-| B6.3 | When a post is gone from the download, its entry is kept and its status set to `deleted`; stages skip deleted entries |
+| B6.2 | Status is never stored; it is computed from the entry's files whenever it is read: `pending` when a stage is missing or stale, `needs_review` when a stage is unsure, otherwise `ok`; a fresh passing review, which sees the parse and Wikipedia warnings, clears them |
+| B6.3 | When a post is gone from the download, its entry is kept and `deleted.yaml` is written, making its status `deleted`; the marker is removed if the post comes back; stages skip deleted entries |
 | B7   | **LLM resolution** |
 | B7.1 | For each problem it finds, the review proposes a fix: the Wikipedia page, title or year |
 | B7.2 | A proposed page is fetched by exact title, or found by search when that title doesn't exist; it is kept only when it is a single film from within a year of the row's year |
 | B7.3 | Kept fixes are written to `override.yaml`; an existing key is replaced only when the LLM is certain |
 | B7.4 | The LLM never sets `review.ok` or `review.dismissed`; dismissing stays a hand decision |
-| B7.5 | Fixed rows are refetched and reviewed again in the same run, for up to two more rounds; rows still flagged stay `needs_review` |
+| B7.5 | Once every batch is reviewed, each fresh flagged review with a suggestion is resolved, including flags left unfixed by earlier runs |
+| B7.6 | Fixed rows are refetched and reviewed again in the same run, for up to two more rounds; rows still flagged stay `needs_review` |
 
 ---
 
@@ -122,7 +123,7 @@ R7 (A): the downloader and the join write `00_posts.json` and `movies.csv` in pl
 
 | #  | Place | Affordance | Description | Wires Out |
 |----|-------|------------|-------------|-----------|
-| U1 | Editor / git | `entries/<rkey>/*.yaml` | One post's files: post, parsed, wikipedia, review, override, status | |
+| U1 | Editor / git | `entries/<rkey>/*.yaml` | One post's files: post, parsed, wikipedia, review, override, and the deleted marker | |
 | U2 | Editor / git | `schema.yaml` | Entry files, their fields, fingerprint inputs and the status vocabulary | |
 | U3 | Terminal | `fix.py N title\|year\|page\|dismiss\|unset [key]` | Sets or removes an override, then reruns the stages it affects | N12 |
 | U4 | Terminal | `status.py [N]` | Counts posts by status; with N, prints the entry's files and overrides | N3, N6, N14 |
@@ -140,16 +141,16 @@ R7 (A): the downloader and the join write `00_posts.json` and `movies.csv` in pl
 | N3  | entry store | `view(rk)` | Stage files merged, `override.yaml` applied over them; returns values plus overridden keys | N2 |
 | N4  | schema | `fp(file, view)` | Fingerprint of a file's inputs, as listed in the schema | N1 |
 | N5  | stages | `select_todo(file, ...)` | Entries whose file is missing or whose stored `fp` differs from N4; skips `deleted`; honors stage flags | N2, N3, N4 |
-| N6  | status | `update_status(rk)` | Recomputes the one-line `status.yaml`: `deleted`, `pending`, `needs_review` or `ok` | N3, N4, N2 |
-| N7  | download | `bsky_tag_dl.py` | Writes `post.yaml` per post; sets `deleted` on entries whose post is gone | N2, N6 |
-| N8  | parse | `s1_parse.py` | `post.yaml` → `parsed.yaml` | N5, N2, N6 |
-| N9  | describe | `s2_descriptions.py` | Title, year and any `wikipedia.page` override → `wikipedia.yaml` | N5, N2, N6 |
-| N10 | review | `s3_llm_review.py` | Title, year, description → `review.yaml`, batched through `claude -p`; then N15 on flagged rows | N5, N2, N6, N15 |
+| N6  | status | `status(rk)` | Computes the status from the entry's files: `deleted` when `deleted.yaml` exists, else `pending`, `needs_review` or `ok` from the view | N3, N4, N2 |
+| N7  | download | `s0_download.py` | Fetches the posts with `bsky_tag_dl.fetch`; writes `post.yaml` per post; writes `deleted.yaml` for posts that are gone and removes it for posts that came back | N2 |
+| N8  | parse | `s1_parse.py` | `post.yaml` → `parsed.yaml` | N5, N2 |
+| N9  | describe | `s2_descriptions.py` | Title, year and any `wikipedia.page` override → `wikipedia.yaml` | N5, N2 |
+| N10 | review | `s3_llm_review.py` | Title, year, description → `review.yaml`, batched through `claude -p`; then N15 on flagged rows | N5, N2, N15 |
 | N11 | render | `render_csv()` | Entry views, except deleted ones → `movies.csv`, written atomically | N3, U5 |
 | N12 | fix | `set_override(rk, key, value)` / `unset_override(rk, key)` | Edits `override.yaml`; keys are `file.field` (`parsed.title`, `wikipedia.page`, `review.ok`) | N2, N8–N11 |
 | N13 | migration | `migrate.py` | One-off: `stages/*.json` → `entries/`; pins become overrides; computed values regenerated by rerunning parse | N2, N6, N8 |
 | N14 | entry store | `find(number)` | Watchlist number → rkey via `parsed.yaml`; refuses duplicates | N3 |
-| N15 | review | `resolve(rows)` | Asks for fixes, checks proposed pages, writes overrides, refetches and re-reviews; up to two more rounds | N9, N12 |
+| N15 | review | `fix_flagged(rows)` / `resolve(rk, v)` | After all batches, resolves each fresh flagged review with a suggestion: checks proposed pages, writes overrides, refetches; fixed rows are re-reviewed, up to two more rounds | N9, N12 |
 
 ---
 
@@ -191,23 +192,24 @@ R7 (A): the downloader and the join write `00_posts.json` and `movies.csv` in pl
 ```
 ┌─ TRIGGER: ./step1_build.sh, ./step2_llm_review.sh ─────────────────────────┐
 │                                                                            │
-│  N7 download ──► N2 write post.yaml ──► N6 status (deleted if post gone)   │
-│  N8 parse    ─ N5 select(N4 fp) ─ N3 view ──► N2 write parsed.yaml ─► N6   │
-│  N9 describe ─ N5 select(N4 fp) ─ N3 view ──► N2 write wikipedia.yaml ─► N6│
-│  N10 review  ─ N5 select(N4 fp) ─ N3 view ──► N2 write review.yaml ─► N6   │
-│  N11 render  ─ N3 view (not deleted) ──► U5 movies.csv                     │
-│                          N1 schema.yaml feeds N4 and N6                    │
+│  N7 download ──► N2 write post.yaml; deleted.yaml for gone posts           │
+│  N8 parse    ─ N5 select(N4 fp) ─ N3 view ──► N2 write parsed.yaml         │
+│  N9 describe ─ N5 select(N4 fp) ─ N3 view ──► N2 write wikipedia.yaml      │
+│  N10 review  ─ N5 select(N4 fp) ─ N3 view ──► N2 write review.yaml         │
+│      └─► N15 fix flagged ──► N12 override ──► N9 refetch ──► N10 again     │
+│  N11 render  ─ N3 view (not deleted) + N6 status ──► U5 movies.csv         │
+│                       N1 schema.yaml feeds N4 and N6                       │
 └────────────────────────────────────────────────────────────────────────────┘
 
 ┌─ TRIGGER: ./fix.py N <cmd> ────────────────────────────────────────────────┐
 │                                                                            │
 │  N14 find(N) ──► N12 set/unset ──► N2 write override.yaml                  │
-│      └─► N8–N10 --only N ──► N6 status ──► N11 render                      │
+│      └─► N9 refetch if wikipedia went stale ──► N11 render                 │
 └────────────────────────────────────────────────────────────────────────────┘
 
 ┌─ PLACE: status.py ─────────────────────────────────────────────────────────┐
 │                                                                            │
-│  U4 counts ─ N2 read status.yaml for every entry                           │
+│  U4 counts ─ N6 status(rk) for every entry                                 │
 │  U4 N      ─ N14 find(N) ─ N3 view (files + overrides)                     │
 └────────────────────────────────────────────────────────────────────────────┘
 ```
