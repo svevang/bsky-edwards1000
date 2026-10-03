@@ -45,7 +45,7 @@ def list_entries():
 def read(rk, name, default=None):
     try:
         with open(path(rk, name), encoding="utf-8") as f:
-            return yaml.safe_load(f)
+            return yaml.load(f, Loader=yaml.CSafeLoader)
     except FileNotFoundError:
         return default
 
@@ -76,13 +76,8 @@ def save_text(p, text):
 def view(rk):
     """{"post", stage files...: as read, absent when missing; "override": override.yaml}.
     Each override file.field replaces that field, but only in a stage file that exists."""
-    files = {n: d for n in ("post", *schema.stage_files()) if (d := read(rk, n)) is not None}
-    return overlay({**files, "override": read(rk, "override") or {}})
-
-
-def overlay(files):
-    """Apply files["override"] over copies of the other files, as view() does."""
-    v = {**files, "override": files.get("override") or {}}
+    v = {n: d for n in ("post", *schema.stage_files()) if (d := read(rk, n)) is not None}
+    v["override"] = read(rk, "override") or {}
     for key, value in v["override"].items():
         file, field = key.split(".", 1)
         if file in v and file != "override":
@@ -94,7 +89,7 @@ def compute_status(v):
     if "post" not in v:
         return "pending"
     names = [n for n in schema.stage_files() if schema.applies(n, v)]
-    if any(n not in v or v[n].get("fp") != schema.fp(n, v) for n in names):
+    if not all(schema.fresh(n, v) for n in names):
         return "pending"
     return "needs_review" if any(schema.unsure(n, v) for n in names) else "ok"
 
@@ -110,10 +105,14 @@ def update_status(rk):
     return new
 
 
+def live():
+    """(rkey, view) for every entry that isn't deleted."""
+    return ((rk, view(rk)) for rk in list_entries() if read(rk, "status") != "deleted")
+
+
 def find(number):
     """Watchlist number -> rkey, from parsed.number with overrides; deleted entries are skipped."""
-    rks = [rk for rk in list_entries() if read(rk, "status") != "deleted"
-           and (view(rk).get("parsed") or {}).get("number") == number]
+    rks = [rk for rk, v in live() if schema.lookup(v, "parsed.number") == number]
     if len(rks) != 1:
         sys.exit(f"#{number}: {'not in entries' if not rks else f'{len(rks)} posts share this number: {rks}'}")
     return rks[0]

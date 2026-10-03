@@ -13,22 +13,33 @@ import time
 import urllib.parse
 import urllib.request
 
-UA = {"User-Agent": "bsky-tag-downloader/1.0"}
+UA = "bsky-tag-downloader/1.0"
 
 
-def get(url, **params):
+def get(url, ua=UA, **params):
+    """GET url?params as JSON, retrying with backoff (honouring 429 Retry-After); None on 404."""
     if params:
         url += "?" + urllib.parse.urlencode(params)
     for attempt in range(5):
         try:
-            req = urllib.request.Request(url, headers=UA)
-            with urllib.request.urlopen(req, timeout=30) as r:
+            with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": ua}), timeout=30) as r:
                 return json.load(r)
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                return None
+            if attempt == 4:
+                raise
+            if e.code == 429:
+                wait = int(e.headers.get("Retry-After", 0) or 0) or 15 * (attempt + 1)
+                print(f"  429, sleeping {wait}s", file=sys.stderr)
+                time.sleep(wait)
+                continue
+            print(f"  retry ({e})", file=sys.stderr)
         except Exception as e:
             if attempt == 4:
                 raise
             print(f"  retry ({e})", file=sys.stderr)
-            time.sleep(2 * (attempt + 1))
+        time.sleep(2 * (attempt + 1))
 
 
 def resolve(actor):
@@ -52,11 +63,11 @@ def tags_of(record):
     for facet in record.get("facets") or []:
         for f in facet.get("features") or []:
             if f.get("$type") == "app.bsky.richtext.facet#tag":
-                out.add(f["tag"].lower())
+                out.add(f["tag"])
     out.update(record.get("tags") or [])
     for word in record.get("text", "").split():
         if word.startswith("#") and len(word) > 1:
-            out.add(word[1:].strip(".,!?;:)\"'").lower())
+            out.add(word[1:].strip(".,!?;:)\"'"))
     return {t.lower() for t in out}
 
 

@@ -6,9 +6,9 @@ splits at the first dot, so "override.wikipedia.page" reads key "wikipedia.page"
 override file. Missing files or fields count as None.
 """
 import functools
+import hashlib
 import os
 import yaml
-import stage
 
 SCHEMA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "schema.yaml")
 
@@ -23,6 +23,7 @@ def fp_inputs(name):
     return load_schema()["files"][name].get("fp", [])
 
 
+@functools.cache
 def stage_files():
     """Files a stage writes, in pipeline order: the ones with fingerprint inputs."""
     return [n for n, f in load_schema()["files"].items() if "fp" in f]
@@ -34,7 +35,12 @@ def lookup(view, ref):
 
 
 def fp(name, view):
-    return stage.fp(*(lookup(view, ref) for ref in fp_inputs(name)))
+    parts = (lookup(view, ref) for ref in fp_inputs(name))
+    return hashlib.sha1("|".join(str(p) for p in parts).encode()).hexdigest()[:12]
+
+
+def fresh(name, view):
+    return name in view and view[name].get("fp") == fp(name, view)
 
 
 def applies(name, view):
@@ -45,8 +51,7 @@ def applies(name, view):
 def cleared(view, ref):
     """ref is set in a file that applies to the entry and is fresh."""
     file = ref.split(".", 1)[0]
-    return (file in view and applies(file, view) and view[file].get("fp") == fp(file, view)
-            and bool(lookup(view, ref)))
+    return applies(file, view) and fresh(file, view) and bool(lookup(view, ref))
 
 
 def unsure(name, view):

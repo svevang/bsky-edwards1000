@@ -4,16 +4,11 @@ The `overrides` column lists the keys set by hand in override.yaml."""
 import argparse
 import csv
 import io
-import re
 import entries
+from s2_descriptions import canonical
 
 COLUMNS = ["number", "title", "canonical_title", "year", "qualifier", "description", "wikipedia", "status",
            "overrides", "parse_note", "desc_note", "llm_issue", "rkey", "url", "createdAt"]
-
-
-def canonical(page):
-    """Wikipedia page title minus its disambiguator: 'The Alamo (1960 film)' -> 'The Alamo'."""
-    return re.sub(r"\s*\([^)]*\)\s*$", "", page) if page else ""
 
 
 def row(rk):
@@ -46,10 +41,13 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--out", default="movies.csv")
     a = p.parse_args()
-    rows = render_csv(a.out)
+    report(render_csv(a.out), a.out)
+
+
+def report(rows, out="movies.csv"):
     attn = [r for r in rows if r["status"] == "needs_review"]
     pending = sum(r["status"] == "pending" for r in rows)
-    print(f"{a.out}: {len(rows)} rows; {len(attn)} need attention")
+    print(f"{out}: {len(rows)} rows; {len(attn)} need attention")
     for r in attn:
         why = [s for s in (r["parse_note"], r["desc_note"], r["llm_issue"]) if s]
         print(f"  #{r['number'] or '?':>3} {r['title'] or '':40} {' | '.join(why)}  rkey={r['rkey']}")

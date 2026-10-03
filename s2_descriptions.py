@@ -10,42 +10,31 @@ wikipedia.page override; that exact page is then fetched, following redirects. R
 only refetched when title, year or that override change. Each row is saved as soon as it's
 fetched; describe(rk) does one row and is also used by the review stage.
 """
-import json
 import re
 import sys
+import time
 import entries
 import schema
 import stage
-import time
-import urllib.parse
-import urllib.request
+from bsky_tag_dl import get
 
-UA = {"User-Agent": "edwards1000-descriptions/1.0 (personal project)"}
+UA = "edwards1000-descriptions/1.0 (personal project)"
 API = "https://en.wikipedia.org/w/api.php"
-SUMMARY = "https://en.wikipedia.org/api/rest_v1/page/summary/"
 
 
-def get(url, **params):
-    if params:
-        url += "?" + urllib.parse.urlencode(params)
-    for attempt in range(4):
-        try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30) as r:
-                return json.load(r)
-        except urllib.error.HTTPError as e:
-            if e.code == 404:
-                return None
-            if attempt == 3:
-                raise
-            if e.code == 429:
-                wait = int(e.headers.get("Retry-After", 0) or 0) or 15 * (attempt + 1)
-                print(f"  429, sleeping {wait}s", file=sys.stderr)
-                time.sleep(wait)
-                continue
-        except Exception:
-            if attempt == 3:
-                raise
-        time.sleep(2 * (attempt + 1))
+def pages(**params):
+    """One API query with intro extract, url and disambiguation flag; the real, non-disambiguation
+    pages as {title, extract, url}, in search order."""
+    res = get(API, ua=UA, action="query", prop="extracts|info|pageprops", exintro=1, explaintext=1,
+              inprop="url", ppprop="disambiguation", redirects=1, format="json", **params)
+    found = sorted((res or {}).get("query", {}).get("pages", {}).values(), key=lambda p: p.get("index", 99))
+    return [{"title": p["title"], "extract": (p.get("extract") or "").strip(), "url": p.get("fullurl")}
+            for p in found if not ("missing" in p or "invalid" in p or "disambiguation" in p.get("pageprops", {}))]
+
+
+def canonical(page):
+    """Wikipedia page title minus its disambiguator: 'The Alamo (1960 film)' -> 'The Alamo'."""
+    return re.sub(r"\s*\([^)]*\)\s*$", "", page) if page else ""
 
 
 def norm(s):
@@ -57,18 +46,8 @@ def norm(s):
 
 
 def candidates(query, limit=5):
-    """One API call: search + intro extract + url + disambiguation flag for each hit."""
-    res = get(API, action="query", generator="search", gsrsearch=query, gsrlimit=limit,
-              prop="extracts|info|pageprops", exintro=1, explaintext=1, exlimit=limit,
-              inprop="url", ppprop="disambiguation", redirects=1, format="json")
-    pages = (res or {}).get("query", {}).get("pages", {})
-    out = []
-    for p in sorted(pages.values(), key=lambda p: p.get("index", 99)):
-        if "disambiguation" in p.get("pageprops", {}):
-            continue
-        out.append({"title": p["title"], "extract": (p.get("extract") or "").strip(),
-                    "url": p.get("fullurl")})
-    return out
+    """One API call: search + intro extract + url for each hit that isn't a disambiguation."""
+    return pages(generator="search", gsrsearch=query, gsrlimit=limit, exlimit=limit)
 
 
 def search(title, year):
@@ -82,13 +61,7 @@ def search(title, year):
 
 def summary(page):
     """Fetch one page by exact title, following redirects; None when missing or a disambiguation."""
-    res = get(API, action="query", titles=page, redirects=1, prop="extracts|info|pageprops",
-              exintro=1, explaintext=1, inprop="url", ppprop="disambiguation", format="json")
-    for p in (res or {}).get("query", {}).get("pages", {}).values():
-        if "missing" in p or "invalid" in p or "disambiguation" in p.get("pageprops", {}):
-            return None
-        return {"title": p["title"], "extract": (p.get("extract") or "").strip(), "url": p.get("fullurl")}
-    return None
+    return next(iter(pages(titles=page)), None)
 
 
 def is_film(extract):
@@ -149,14 +122,8 @@ def pick(title, year, cands):
         return None, None, "no film page found"
     ranked.sort(key=lambda r: r[0], reverse=True)
     score, c, s = ranked[0]
-    notes = []
-    if not score[0]:
-        notes.append("page may not be a film")
-    if not score[1]:
-        notes.append(f"title mismatch: {c!r}")
-    if not score[2]:
-        notes.append(f"{year} not mentioned")
-    return c, s, "; ".join(notes)
+    notes = ("page may not be a film", f"title mismatch: {c!r}", f"{year} not mentioned")
+    return c, s, "; ".join(n for ok, n in zip(score, notes) if not ok)
 
 
 def describe(rk):
@@ -178,10 +145,9 @@ def describe(rk):
 
 def main():
     a = stage.args(__doc__)
-    todo = stage.select("wikipedia", a)
+    todo = [(rk, entries.view(rk)) for rk in stage.select("wikipedia", a)]
     print(f"{len(todo)} to fetch", file=sys.stderr)
-    for i, rk in enumerate(todo, 1):
-        v = entries.view(rk)
+    for i, (rk, v) in enumerate(todo, 1):
         r = v["parsed"]
         try:
             w = describe(rk)
@@ -195,8 +161,7 @@ def main():
         time.sleep(1.0)
     stage.finish("wikipedia")
 
-    bad = [v for rk in entries.list_entries() if entries.read(rk, "status") != "deleted"
-           and "wikipedia" in (v := entries.view(rk)) and schema.applies("wikipedia", v)
+    bad = [v for _, v in entries.live() if "wikipedia" in v and schema.applies("wikipedia", v)
            and schema.unsure("wikipedia", v)]
     if bad:
         print("review these (./fix.py N page \"Wikipedia Title\", or ./fix.py N title/year):", file=sys.stderr)

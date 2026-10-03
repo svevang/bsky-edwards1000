@@ -12,14 +12,9 @@ Common CLI flags handled by `select`:
   --limit K          process at most K rows this run (lets you check output early)
 """
 import argparse
-import hashlib
 import sys
 import entries
 import schema
-
-
-def fp(*parts):
-    return hashlib.sha1("|".join(str(p) for p in parts).encode()).hexdigest()[:12]
 
 
 def args(desc):
@@ -40,27 +35,25 @@ def select(name, a, number_of=None):
     Skips deleted entries, entries the file doesn't apply to, and entries whose earlier
     stage files are missing or stale. number_of(view) gives the watchlist number for
     --only/--redo; by default the overridden parsed.number."""
-    number_of = number_of or (lambda v: (v.get("parsed") or {}).get("number"))
+    number_of = number_of or (lambda v: schema.lookup(v, "parsed.number"))
     redo, only = numbers(a.redo), numbers(a.only)
-    earlier = schema.stage_files()[:schema.stage_files().index(name)]
     todo = []
-    for rk in entries.list_entries():
-        if entries.read(rk, "status") == "deleted":
+    for rk, v in entries.live():
+        if not ready(name, v):
             continue
-        v = entries.view(rk)
-        n = number_of(v) if "post" in v else None
-        if "post" not in v or not schema.applies(name, v) or (only and n not in only):
+        n = number_of(v)
+        if (only and n not in only) or not (a.force or n in redo or not schema.fresh(name, v)):
             continue
-        if any(schema.applies(e, v) and not fresh(e, v) for e in earlier):
-            continue
-        if not fresh(name, v) or a.force or n in redo:
-            todo.append((n is None, n or 0, rk))
+        todo.append((n is None, n or 0, rk))
     todo = [rk for *_, rk in sorted(todo)]
     return todo[: a.limit] if a.limit else todo
 
 
-def fresh(name, view):
-    return name in view and view[name].get("fp") == schema.fp(name, view)
+def ready(name, v):
+    """The entry has a post, stage file `name` applies to it, and every earlier stage file is fresh."""
+    stages = schema.stage_files()
+    return ("post" in v and schema.applies(name, v)
+            and all(schema.fresh(e, v) for e in stages[:stages.index(name)] if schema.applies(e, v)))
 
 
 def finish(stage_name):

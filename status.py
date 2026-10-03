@@ -8,7 +8,6 @@ import json
 import sys
 import entries
 import schema
-import stage
 
 
 def short(value, n=200):
@@ -32,7 +31,8 @@ def counts():
 
 def trail(n):
     rk = entries.find(n)
-    v, o = entries.view(rk), entries.read(rk, "override") or {}
+    v = entries.view(rk)
+    o = v["override"]
     if "post" in v:
         print(f"#{n}  rkey={rk}  {v['post']['url']}")
         print(f"post:\n  {json.dumps(v['post']['text'][:300], ensure_ascii=False)}")
@@ -41,7 +41,7 @@ def trail(n):
     for name in schema.stage_files():
         raw = entries.read(rk, name)
         state = ("not applicable" if not schema.applies(name, v) else "missing" if raw is None
-                 else "fresh" if stage.fresh(name, v) else "stale")
+                 else "fresh" if schema.fresh(name, v) else "stale")
         print(f"{name}: ({state})")
         fields = [k for k in (raw or {}) if k != "fp"]
         fields += [k.split(".", 1)[1] for k in o if k.startswith(f"{name}.") and k.split(".", 1)[1] not in fields]

@@ -18,17 +18,14 @@ drops one you don't want (it may propose it again on a later re-review).
 """
 import argparse
 import os
-import subprocess
 import sys
 import entries
+import render
+import s2_descriptions as s2
 import schema
 import stage
 
 KEYS = {"title": "parsed.title", "year": "parsed.year", "page": "wikipedia.page"}
-
-
-def run(*cmd):
-    subprocess.run([sys.executable, *cmd], check=True)
 
 
 def main():
@@ -57,13 +54,14 @@ def main():
             sys.exit(f"#{a.number} has no override {', '.join(unknown)}; current: {', '.join(current) or 'none'}")
         entries.unset_override(rk, a.keys or None)
 
-    now = (entries.view(rk).get("parsed") or {}).get("number")  # unset may have changed it
-    if a.cmd != "dismiss" and now:
-        run("s2_descriptions.py", "--only", str(now))  # a no-op unless the change made wikipedia stale
+    v = entries.view(rk)
+    if a.cmd != "dismiss" and stage.ready("wikipedia", v) and not schema.fresh("wikipedia", v):
+        print(f"refetching wikipedia -> {s2.describe(rk)['page']}")
+        v = entries.view(rk)
     entries.update_status(rk)
-    run("render.py")
-    v, shown = entries.view(rk), now or a.number
-    if schema.applies("review", v) and not stage.fresh("review", v):
+    render.report(render.render_csv())
+    shown = schema.lookup(v, "parsed.number") or a.number  # unset may have changed it
+    if schema.applies("review", v) and not schema.fresh("review", v):
         print(f"\n#{shown} will be (re)reviewed on the next ./step2_llm_review.sh")
     print(f"uv run python status.py {shown}   # see the result")
 

@@ -107,7 +107,7 @@ def found(page, year):
 
 def bare(page):
     """Page title without its trailing disambiguator, e.g. "Kid Galahad (1962 film)" -> "kid galahad"."""
-    return re.sub(r"\s*\([^)]*\)\s*$", "", page).replace("_", " ").strip().casefold()
+    return s2.canonical(page).replace("_", " ").strip().casefold()
 
 
 def near_year(extract, year):
@@ -173,12 +173,9 @@ def sweep(skip):
     """Resolve flagged rows this run didn't review whose saved review has a suggestion, e.g.
     from a run interrupted before it fixed them. Only Wikipedia is asked; returns the fixes."""
     fixed = {}
-    for rk in entries.list_entries():
-        if rk in skip or entries.read(rk, "status") == "deleted":
-            continue
-        v = entries.view(rk)
-        if ("post" in v and schema.applies("review", v) and stage.fresh("wikipedia", v)
-                and stage.fresh("review", v) and schema.unsure("review", v)
+    for rk, v in entries.live():
+        if (rk not in skip and stage.ready("review", v)
+                and schema.fresh("review", v) and schema.unsure("review", v)
                 and any(v["review"].get(k) not in (None, "") for k in FIXES)):
             try_resolve(rk, v, fixed)
     return fixed
@@ -225,7 +222,7 @@ def main():
             new.update(sweep(set(todo)))
         for rk, f in new.items():
             fixed.setdefault(rk, []).extend(f)
-        todo = [rk for rk in new if stage.fresh("wikipedia", entries.view(rk))]
+        todo = list(new)  # resolve() refetched each one's page, so it's ready for review
         if not todo:
             break
     stage.finish("review")
@@ -236,8 +233,7 @@ def main():
     for rk, v in sorted(fixed_views.items(), key=lambda kv: (kv[1]["parsed"]["number"] or 0, kv[0])):
         n = v["parsed"]["number"] or 0
         print(f"  #{n:>3} {v['parsed']['title']:40} {', '.join(fixed[rk])}  -> {entries.read(rk, 'status')}")
-    flagged = sorted((v for rk in entries.list_entries() if entries.read(rk, "status") != "deleted"
-                      and "review" in (v := entries.view(rk)) and schema.applies("review", v)
+    flagged = sorted((v for _, v in entries.live() if "review" in v and schema.applies("review", v)
                       and schema.unsure("review", v)),
                      key=lambda v: v["parsed"]["number"] or 0)
     if flagged:

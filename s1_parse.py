@@ -27,17 +27,17 @@ def year_for(number):
 
 def parse(text):
     out = {"number": None, "title": None, "year": None, "qualifier": "",
-           "raw_title_line": "", "status": "ok", "note": ""}
+           "raw_title_line": "", "note": ""}
     m = NUM_RE.search(text)
     if not m:
-        out.update(status="needs_review", note="no N/1000 line")
+        out.update(note="no N/1000 line")
         return out
     out["number"] = int(m.group(1))
     out["year"] = year_for(out["number"])
 
     lines = [l.strip() for l in text[m.end():].split("\n") if l.strip()]
     if not lines:
-        out.update(status="needs_review", note="no title line")
+        out.update(note="no title line")
         return out
     out["raw_title_line"] = lines[0]
     title = re.sub(r"\b([A-Za-z])'\s+", r"\1'", lines[0])  # "L' ECLISSE" -> "L'ECLISSE"
@@ -48,14 +48,14 @@ def parse(text):
         yr = int(ym.group(2)) if ym.group(2) else 1900 + int(ym.group(3))
         out["qualifier"] = str(yr)
         if yr != out["year"]:
-            out.update(status="needs_review", note=f"title says {yr}, position implies {out['year']}")
+            out["note"] = f"title says {yr}, position implies {out['year']}"
 
     qm = re.match(r"^(.*?)\s*\((.*)\)\s*$", title)  # "(1962 version)", "(aka ...)"
     if qm:
         title, out["qualifier"] = qm.group(1).strip(), qm.group(2).strip()
 
     if title.replace("Mc", "MC") != title.upper() or len(title) > 80:
-        out.update(status="needs_review", note=out["note"] or "title line doesn't look like a title")
+        out["note"] = out["note"] or "title line doesn't look like a title"
     out["title"] = title
     return out
 
@@ -69,17 +69,14 @@ def main():
         m = NUM_RE.search(v["post"]["text"]); return int(m.group(1)) if m else None
 
     todo = stage.select("parsed", a, num)
-    fields = [k for k in schema.load_schema()["files"]["parsed"]["fields"] if k != "fp"]
     for rk in todo:
         v = entries.view(rk)
-        r = parse(v["post"]["text"])
-        entries.write(rk, "parsed", {"fp": schema.fp("parsed", v), **{k: r[k] for k in fields}})
+        entries.write(rk, "parsed", {"fp": schema.fp("parsed", v), **parse(v["post"]["text"])})
         entries.update_status(rk)
     print(f"parsed {len(todo)} new/changed rows", file=sys.stderr)
     stage.finish("parsed")
 
-    views = {rk: v for rk in entries.list_entries()
-             if entries.read(rk, "status") != "deleted" and "parsed" in (v := entries.view(rk))}
+    views = {rk: v for rk, v in entries.live() if "parsed" in v}
     nums = [v["parsed"]["number"] for v in views.values() if v["parsed"]["number"]]
     dups = sorted({n for n in nums if nums.count(n) > 1})
     gaps = sorted(set(range(1, max(nums) + 1)) - set(nums)) if nums else []
