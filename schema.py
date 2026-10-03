@@ -52,7 +52,9 @@ def cleared(view, ref):
 def unsure(name, view):
     f = load_schema()["files"][name]
     check = f.get("unsure")
-    if not check or f.get("cleared_by") and cleared(view, f["cleared_by"]):
+    if not check:
+        return False
+    if f.get("cleared_by") and cleared(view, f["cleared_by"]):
         return False
     negate = check.startswith("not ")
     value = bool((view.get(name) or {}).get(check.removeprefix("not ")))

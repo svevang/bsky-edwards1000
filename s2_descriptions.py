@@ -98,7 +98,10 @@ def is_film(extract):
 def film_title(page):
     """False when the page's disambiguator names something else, e.g. "(soundtrack)", "(film series)"."""
     paren = re.search(r"\(([^)]*)\)\s*$", page)
-    return not paren or "film" in paren.group(1).lower() and "series" not in paren.group(1).lower()
+    if not paren:
+        return True
+    disambiguator = paren.group(1).lower()
+    return "film" in disambiguator and "series" not in disambiguator
 
 
 NOT_ONE_FILM = "series|director|actor|actress|producer|franchise|studio|festival|score|soundtrack|composer|critic"
@@ -166,7 +169,7 @@ def describe(rk):
         page, note = (s["title"], "") if s else (None, f"pinned page {pinned_page!r} not found")
     else:
         page, s, note = pick(title, year, search(title, year))
-    w = {"fp": schema.fp("wikipedia", v), "page": page if s else None, "url": s["url"] if s else None,
+    w = {"fp": schema.fp("wikipedia", v), "page": page, "url": s["url"] if s else None,
          "description": s["extract"] if s else None, "note": note}
     entries.write(rk, "wikipedia", w)
     entries.update_status(rk)

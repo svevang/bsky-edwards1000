@@ -232,8 +232,10 @@ def main():
 
     if fixed:
         print("fixed by the review:")
-    for n, rk in sorted((entries.view(rk)["parsed"]["number"] or 0, rk) for rk in fixed):
-        print(f"  #{n:>3} {entries.view(rk)['parsed']['title']:40} {', '.join(fixed[rk])}  -> {entries.read(rk, 'status')}")
+    fixed_views = {rk: entries.view(rk) for rk in fixed}
+    for rk, v in sorted(fixed_views.items(), key=lambda kv: (kv[1]["parsed"]["number"] or 0, kv[0])):
+        n = v["parsed"]["number"] or 0
+        print(f"  #{n:>3} {v['parsed']['title']:40} {', '.join(fixed[rk])}  -> {entries.read(rk, 'status')}")
     flagged = sorted((v for rk in entries.list_entries() if entries.read(rk, "status") != "deleted"
                       and "review" in (v := entries.view(rk)) and schema.applies("review", v)
                       and schema.unsure("review", v)),
