@@ -1,6 +1,6 @@
-fp: e10e1269cef1
+fp: b5d9dcdd0e24
 ok: false
-issue: Description gives 1961 but the row says 1960. That is within ±1, but it differs
+issue: 'Year differs by one: the Wikipedia article gives 1961 and the row says 1960. This is within the allowed ±1, but the title, page and description all match.'
 suggested_page: null
 suggested_title: null
 suggested_year: null
