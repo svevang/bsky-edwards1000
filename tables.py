@@ -63,9 +63,9 @@ def applies(name, v):
 
 
 def unsure(name, v):
-    """The row's own warning: a parse or page note, or a review that isn't ok."""
+    """The row's own warning: a parse or page note, or the review's issue."""
     row = v.get(name) or {}
-    return not row.get("ok") if name == "review" else bool(row.get("note"))
+    return bool(row.get("issue" if name == "review" else "note"))
 
 
 def deciding(v):

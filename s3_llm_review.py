@@ -178,8 +178,8 @@ def review(todo):
                 continue
             for rk, r in rows.items():
                 p = problems.get(r["number"]) or {}
-                entries.write(rk, "review", {"fp": tables.fp("review", views[rk]), "ok": not p,
-                                             **{k: p.get(k) for k in FIELDS if p}})
+                fields = {**{k: p.get(k) for k in FIELDS}, "issue": p.get("issue") or "flagged"} if p else {"issue": None}
+                entries.write(rk, "review", {"fp": tables.fp("review", views[rk]), **fields})
             print(f"{len(problems)} flagged", file=sys.stderr)
     if failed:
         raise SystemExit(f"{failed} review batch(es) failed; rerun to retry them")

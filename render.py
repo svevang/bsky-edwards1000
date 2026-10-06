@@ -21,7 +21,7 @@ def row(rk, v):
         "status": entries.compute_status(v),
         "overrides": ", ".join(v["override"]),
         "parse_note": p.get("note", ""), "desc_note": w.get("note", ""),
-        "llm_issue": r.get("issue", "") if r and not r.get("ok") and not tables.dismissed(v) else "",
+        "llm_issue": "" if tables.dismissed(v) else r.get("issue") or "",
         "rkey": rk, "url": post.get("url"), "createdAt": post.get("createdAt"),
     }
 

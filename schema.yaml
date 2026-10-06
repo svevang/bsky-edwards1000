@@ -39,8 +39,7 @@ files:
     about: the LLM's verdict on title, year and description together
     fields:
       fp: fingerprint of the code version and the row sent to the LLM
-      ok: true when the row looks consistent
-      issue: what looks wrong; only when not ok
+      issue: what looks wrong; null when the row looks consistent
       suggested_page: the LLM's suggested Wikipedia page, or null
       suggested_title: the LLM's suggested title, or null
       suggested_year: the LLM's suggested year, or null
@@ -72,6 +71,6 @@ files:
 status:
   pending: post.yaml or an applicable stage file is missing, or a stage file's fp is stale
   needs_review: every applicable stage file is fresh, but the last one is unsure (the review
-    isn't ok, or, for an entry with no watchlist number, the parse has a note)
+    has an issue, or, for an entry with no watchlist number, the parse has a note)
   ok: every applicable stage file is fresh and none is unsure
   deleted: deleted.yaml is present; stages skip the entry
