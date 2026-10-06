@@ -1,7 +1,7 @@
 ---
 status: ready
 selected_shape: B
-updated: 2026-10-03
+updated: 2026-10-06
 ---
 
 # Shape: Persisted State
@@ -81,6 +81,151 @@ kept apart as overrides.
 | B7.4 | The LLM never sets `review.ok` or `review.dismissed`; dismissing stays a hand decision |
 | B7.5 | Once every batch is reviewed, each fresh flagged review with a suggestion is resolved, including flags left unfixed by earlier runs |
 | B7.6 | Fixed rows are refetched and reviewed again in the same run, for up to two more rounds; rows still flagged stay `needs_review` |
+
+---
+
+## Data Model
+
+Shape B is easiest to reason about as a small database. Each entry file name is a table, each
+`entries/<rkey>/` directory is one row in every table it has a file for, and `rkey` is the primary
+key everywhere. There is no database: the tables, views and predicates below describe what
+`entries.py` and `schema.py` compute from the files.
+
+### Tables
+
+```
+ BASE TABLES (facts; written only from outside: the download, a person, the LLM review)
+ ┌──────────────────────────┐   ┌──────────────────────┐   ┌───────────────────────────────┐
+ │ post                     │   │ deleted   (tombstone)│   │ override         (patch, EAV) │
+ │ rkey PK                  │   │ rkey PK              │   │ rkey  PK                      │
+ │ uri, cid, url, createdAt │   └──────────────────────┘   │ key   PK  'parsed.title' …    │
+ │ text, record             │                              │ value                         │
+ └──────────────────────────┘                              └───────────────────────────────┘
+
+ DERIVED TABLES (memoized results of network/LLM calls; each row stores its input hash)
+ ┌──────────────────────────┐   ┌──────────────────────┐   ┌───────────────────────────────┐
+ │ parsed                   │   │ wikipedia            │   │ review                        │
+ │ rkey PK, fp              │   │ rkey PK, fp          │   │ rkey PK, fp                   │
+ │ number, title, year,     │   │ page, url,           │   │ ok, issue, certain,           │
+ │ qualifier,               │   │ description, note    │   │ suggested_page/title/year     │
+ │ raw_title_line, note     │   └──────────────────────┘   └───────────────────────────────┘
+ └──────────────────────────┘
+```
+
+Base tables hold the real state. Derived tables are caches, but they can't be treated as pure
+views: Wikipedia and the LLM don't answer the same way twice, so a derived row is a memo keyed by
+its input hash (`fp`) and is only recomputed when that hash changes. Each table keeps one row per
+`rkey`, not one per `(rkey, fp)`, so changing an input and changing it back repeats the call.
+
+### Views
+
+```
+ X_v     = X LEFT JOIN override, each 'X.field' override replacing that column   (entries.view)
+ status  = CASE over freshness and unsure, below                                 (entries.status)
+ movies  = SELECT … FROM post, parsed_v, wikipedia_v, review_v WHERE NOT deleted (render.py)
+```
+
+`X_v` joins from `X`, not from `override`: an override only shows once its stage row exists.
+
+### Freshness
+
+One predicate covers every derived table: the stored hash matches the hash of the current inputs,
+read through the views. The inputs are the `fp` lists in `schema.yaml`.
+
+```sql
+fresh(parsed)     :=  parsed.fp    = h(post.text)
+fresh(wikipedia)  :=  wikipedia.fp = h(parsed_v.title, parsed_v.year, override['wikipedia.page'])
+fresh(review)     :=  review.fp    = h(parsed_v.title, parsed_v.year, wikipedia_v.description,
+                                       parsed_v.raw_title_line, parsed_v.note, wikipedia_v.note)
+
+applies(parsed)                         := true
+applies(wikipedia) = applies(review)    := parsed_v.number IS NOT NULL
+```
+
+So every derived row is in one of four states, and every stage moves rows the same way:
+
+```
+ NOT APPLICABLE ◀──▶ MISSING ──refresh──▶ FRESH ──input hash changes──▶ STALE ──refresh──▶ FRESH
+```
+
+A stage is `REFRESH <table> WHERE (missing OR stale) AND every earlier applicable table is fresh`
+(`stage.select` and `stage.ready`), plus `--force`, `--redo` and `--only`.
+
+### Status
+
+Status is a view, not a stored state:
+
+```sql
+CREATE VIEW status AS SELECT rkey, CASE
+  WHEN rkey IN deleted                                          THEN 'deleted'
+  WHEN post IS NULL
+    OR NOT fresh(parsed)
+    OR (applies(wikipedia) AND NOT (fresh(wikipedia) AND fresh(review)))
+                                                                THEN 'pending'
+  WHEN unsure(parsed) OR unsure(wikipedia) OR unsure(review)    THEN 'needs_review'
+  ELSE                                                               'ok'
+END
+
+cleared            := applies(review) AND fresh(review) AND review_v.ok
+unsure(parsed)     := parsed_v.note    <> '' AND NOT cleared
+unsure(wikipedia)  := wikipedia_v.note <> '' AND NOT cleared
+unsure(review)     := NOT review_v.ok
+```
+
+### Writers
+
+```
+   Bluesky API                         person (fix.py)
+       │ s0: MERGE                            │ UPSERT / DELETE
+       ▼                                      ▼
+   ┌──────┐ ┌───────┐                  ┌──────────┐
+   │ post │ │deleted│                  │ override │◀───────────────────────────┐
+   └──┬───┘ └───────┘                  └────┬─────┘                            │
+      │ text                                │ patches *_v; wikipedia.page      │ s3 resolve():
+      ▼                                     │ is also a wikipedia input        │ INSERT certain,
+   ┌────────┐  s1  title,year      ┌────────▼──┐  s2   description,note ┌──────┴─┐ checked fixes
+   │ parsed │─────────────────────▶│ wikipedia │──────────────────────▶ │ review │
+   └────────┘  (Wikipedia API)     └───────────┘   (claude CLI)          └────────┘
+      │ title, year, raw_title_line, note ──────────────────────────────────▲
+```
+
+| Table | Written by | Operation |
+|-------|-----------|-----------|
+| `post` | `s0_download.py` | Upsert each downloaded post when it differs |
+| `deleted` | `s0_download.py` | Insert for posts gone from a non-empty download; delete when they return |
+| `parsed` | `s1_parse.py` | Refresh missing or stale rows |
+| `wikipedia` | `s2_descriptions.py`, also `fix.py` and `s3` for one row | Refresh missing or stale rows |
+| `review` | `s3_llm_review.py` | Refresh missing or stale rows, one batch at a time |
+| `override` | `fix.py`; `s3` for `parsed.title`, `parsed.year`, `wikipedia.page` | Upsert or delete keys; `review.ok` and `review.dismissed` only by hand |
+
+### The review cycle
+
+Every other edge flows one way. The one cycle is `review → override → wikipedia → review`, and
+`ROUNDS` bounds it:
+
+```
+ round 0:  REFRESH review WHERE stale          ─┐
+           fix_flagged(all live rows)           │  INSERT override → REFRESH wikipedia (that row)
+ round 1:  REFRESH review WHERE row was fixed   │  → the review row is now stale
+           fix_flagged(those rows)              │
+ round 2:  REFRESH review WHERE row was fixed  ─┘  stop; rows still flagged stay needs_review
+```
+
+`check()` guards the insert: a title or year needs the LLM to be certain; a page must exist (or be
+found by search), be about a single film from within a year, and replaces an existing override
+only when the LLM is certain.
+
+### Consequences
+
+- **No transactions.** Each file is written atomically, but nothing spans two files: `s3` writes
+  `override` and then refreshes `wikipedia`. A crash in between leaves `wikipedia` stale, which is
+  `pending`, which the next run refreshes (`step2_llm_review.sh` runs `s2` first for this). Every
+  crash point is a valid state, so the `fp` check does the job a transaction would (R6, R7).
+- **`wikipedia.page` has two roles.** It is a stage input (`s2` fetches that exact page) and an
+  output patch (the view shows the override string, not the title `s2` resolved through
+  redirects). The other override keys only patch output.
+- **Undo is a delete.** Removing an override row exposes the computed value underneath; nothing
+  has to be recomputed unless the key was a hash input (R5).
 
 ---
 
@@ -259,4 +404,13 @@ R7 (A): the downloader and the join write `00_posts.json` and `movies.csv` in pl
 ---
 
 ## Open Questions
+
+- **Dismissals outlive the review they dismissed.** `override['review.ok']` patches a derived
+  column but is not in `review`'s hash. When inputs change and a re-review writes `ok: false`, the
+  dismissal still masks it: status stays `ok`, `llm_issue` stays blank, and `fix_flagged` skips
+  the row. Store the dismissed review's `fp` with the dismissal and ignore it once they differ?
+- **A row with a null number can't be fixed.** When the post has no "N/1000" line,
+  `parsed.number` is null, `wikipedia` and `review` don't apply, nothing clears the parse note, and
+  the row stays `needs_review`. `fix.py` finds rows by number, so it can't reach this row; let it
+  accept an rkey too?
 
