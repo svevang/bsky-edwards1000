@@ -49,22 +49,22 @@ files:
       suggested_title: the LLM's suggested title, or null
       suggested_year: the LLM's suggested year, or null
       certain: true when the LLM is sure its suggestions are right
-      dismissed: why a flag was dismissed; only ever set via override
 
   override:
     written_by: fix.py, and s3_llm_review.py for the fixes it is sure of
     about: >-
       Corrections, by hand or by the LLM review (pin.page, parsed.title and parsed.year
-      only; review.ok and review.dismissed stay hand-set). A file.field key replaces that
+      only; dismissed is hand-set). A file.field key replaces that
       field in the entry's view; the stage files keep their computed values underneath, so
       removing a key brings the computed value back. pin.page is a stage input, not a
       patch: stage 2 fetches that exact page, and the view shows the page it resolved to.
+      dismissed clears a flag: it holds the fp of the row it dismissed (the review, or the
+      parse when there is no watchlist number) and lapses once that row changes.
     examples:
       parsed.title: THE V.I.P.s
       parsed.year: 1964
       pin.page: La Vérité (film)
-      review.ok: true
-      review.dismissed: festival year
+      dismissed: {fp: 3f2a9c1b7d4e, reason: festival year}
 
   deleted:
     written_by: s0_download.py

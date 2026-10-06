@@ -49,6 +49,8 @@ def trail(n):
     for k in o:
         if k.split(".", 1)[0] not in tables.TABLES:
             print(f"{k}: {short(o[k])}  (override)")
+    if "dismissed" in o:
+        print(f"  {'holds' if tables.dismissed(v) else 'lapsed: the row has changed since'}")
     print(f"status: {entries.compute_status(v)}")
 
 

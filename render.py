@@ -5,6 +5,7 @@ import argparse
 import csv
 import io
 import entries
+import tables
 from s2_descriptions import canonical
 
 COLUMNS = ["number", "title", "canonical_title", "year", "qualifier", "description", "wikipedia", "status",
@@ -20,7 +21,7 @@ def row(rk, v):
         "status": entries.compute_status(v),
         "overrides": ", ".join(v["override"]),
         "parse_note": p.get("note", ""), "desc_note": w.get("note", ""),
-        "llm_issue": r.get("issue", "") if r and not r.get("ok") else "",
+        "llm_issue": r.get("issue", "") if r and not r.get("ok") and not tables.dismissed(v) else "",
         "rkey": rk, "url": post.get("url"), "createdAt": post.get("createdAt"),
     }
 

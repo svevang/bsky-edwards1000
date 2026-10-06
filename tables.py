@@ -72,6 +72,17 @@ def deciding(v):
     return [n for n in TABLES if applies(n, v)][-1]
 
 
+def dismissed(v):
+    """A hand dismissal holds while the deciding row is the one it dismissed (same fp)."""
+    d = v["override"].get("dismissed") or {}
+    return d.get("fp") == fp(deciding(v), v)
+
+
+def flagged(v):
+    """The deciding row is unsure and nobody dismissed it."""
+    return unsure(deciding(v), v) and not dismissed(v)
+
+
 def all_fresh(v, before=None):
     """Every applicable table (before `before`, when given) is fresh."""
     names = TABLES[:TABLES.index(before)] if before else TABLES

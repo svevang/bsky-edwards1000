@@ -77,15 +77,15 @@ def save_text(p, text):
 
 def view(rk):
     """{"post", stage files...: as read, absent when missing; "parsed": parse(post text);
-    "override": override.yaml}. Each override file.field replaces that field, but only in a
-    file that exists."""
+    "override": override.yaml}. Each override table.field replaces that field, but only in a
+    table that exists; other keys (pin.page, dismissed) are left to the code that reads them."""
     v = {n: d for n in ("post", *tables.STORED) if (d := read(rk, n)) is not None}
     if "post" in v:
         v["parsed"] = parse(v["post"]["text"])
     v["override"] = read(rk, "override") or {}
     for key, value in v["override"].items():
-        file, field = key.split(".", 1)
-        if file in v and file != "override":
+        file, _, field = key.partition(".")
+        if file in tables.TABLES and file in v:
             v[file] = {**v[file], field: value}
     return v
 
@@ -93,7 +93,7 @@ def view(rk):
 def compute_status(v):
     if "post" not in v or not tables.all_fresh(v):
         return "pending"
-    return "needs_review" if tables.unsure(tables.deciding(v), v) else "ok"
+    return "needs_review" if tables.flagged(v) else "ok"
 
 
 def deleted(rk):

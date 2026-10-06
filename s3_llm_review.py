@@ -7,8 +7,7 @@ each: the right Wikipedia page, title or year, and whether it is certain. A prop
 fetched and kept only when it exists and its intro is about a single film; a title or year
 only when certain; an existing override is replaced only when certain. Kept fixes go to
 override.yaml, the row's page is refetched and the row reviewed again, for up to two more
-rounds. Rows still flagged after that stay needs_review. The review never sets review.ok or
-review.dismissed. Flagged rows from earlier runs whose suggestions weren't applied are
+rounds. Rows still flagged after that stay needs_review. Only a person dismisses a flag. Flagged rows from earlier runs whose suggestions weren't applied are
 rechecked (Wikipedia only).
 
 Rows are only re-reviewed when the row sent (tables.request) changes, or tables.VERSION["review"]
@@ -16,7 +15,7 @@ is bumped: bump it when you change PROMPT or how replies become review rows; eac
 returns. --limit K reviews just K rows so you can check the output early; --redo N re-asks
 about one row. These apply to the first round.
 
-Manual: `./fix.py N dismiss "reason"` dismisses a flag with a review.ok override;
+Manual: `./fix.py N dismiss "reason"` dismisses a flag until the row sent for review changes;
 `./fix.py N unset KEY` drops a fix you don't want.
 """
 import json
@@ -157,7 +156,7 @@ def fix_flagged(pairs):
     flags, and earlier runs' left unfixed (e.g. by an interrupted run). Returns {rkey: fixes}."""
     fixed = {}
     for rk, v in pairs:
-        if not (stage.ready("review", v) and tables.fresh("review", v) and tables.unsure("review", v)
+        if not (stage.ready("review", v) and tables.fresh("review", v) and tables.flagged(v)
                 and any(v["review"].get(k) not in (None, "") for k in FIXES)):
             continue
         try:

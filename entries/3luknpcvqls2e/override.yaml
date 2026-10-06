@@ -1,3 +1,4 @@
 pin.page: The Great Impostor
-review.ok: true
-review.dismissed: right film; released early 1961, listed in the 1960 block
+dismissed:
+  fp: a018983c9f64
+  reason: right film; released early 1961, listed in the 1960 block

@@ -1,2 +1,3 @@
-review.ok: true
-review.dismissed: author's short title; page is correct
+dismissed:
+  fp: 8c017c4fe456
+  reason: author's short title; page is correct

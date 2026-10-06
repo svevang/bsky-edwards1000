@@ -8,12 +8,14 @@
   ./fix.py N title "THE V.I.P.s"          parsed.title    -> refetch description, rebuild csv
   ./fix.py N year 1964                    parsed.year     -> refetch description, rebuild csv
   ./fix.py N page "La Vérité (film)"      pin.page        -> fetch that page, rebuild csv
-  ./fix.py N dismiss "festival year"      review.ok (+ review.dismissed) -> rebuild csv
+  ./fix.py N dismiss "festival year"      dismissed       -> rebuild csv
   ./fix.py N unset [KEY ...]              drop these overrides (all of N's when none given)
 
 Overrides live in entries/<rkey>/override.yaml. A file.field key replaces that field in the
 entry's view; the stage file keeps its computed value underneath and no stage rerun touches
-it, so a fix stays until unset. pin.page is an input instead: stage 2 fetches that page. The
+it, so a fix stays until unset. pin.page is an input instead: stage 2 fetches that page.
+A dismissal records the fp of the row it dismissed (the review, or the parse for a post with
+no watchlist number) and lapses once that row changes. The
 LLM review (./step2_llm_review.sh) also writes page, title and year fixes there; `unset`
 drops one you don't want (it may propose it again on a later re-review).
 """
@@ -45,10 +47,10 @@ def main():
     if a.cmd in KEYS:
         entries.set_override(rk, KEYS[a.cmd], a.value)
     elif a.cmd == "dismiss":
-        if not entries.read(rk, "review"):
-            sys.exit(f"#{a.number} has no LLM review yet")
-        entries.set_override(rk, "review.ok", True)
-        entries.set_override(rk, "review.dismissed", a.reason)
+        v = entries.view(rk)
+        if (s := entries.compute_status(v)) != "needs_review":
+            sys.exit(f"#{a.number} is {s}; only a needs_review row can be dismissed")
+        entries.set_override(rk, "dismissed", {"fp": tables.fp(tables.deciding(v), v), "reason": a.reason})
     elif a.cmd == "unset":
         current = entries.read(rk, "override") or {}
         if unknown := [k for k in a.keys if k not in current]:
