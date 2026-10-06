@@ -23,8 +23,8 @@ import sys
 import entries
 import render
 import s2_descriptions as s2
-import schema
 import stage
+import tables
 
 KEYS = {"title": "parsed.title", "year": "parsed.year", "page": "pin.page"}
 
@@ -56,12 +56,12 @@ def main():
         entries.unset_override(rk, a.keys or None)
 
     v = entries.view(rk)
-    if a.cmd != "dismiss" and stage.ready("wikipedia", v) and not schema.fresh("wikipedia", v):
+    if a.cmd != "dismiss" and stage.ready("wikipedia", v) and not tables.fresh("wikipedia", v):
         print(f"refetching wikipedia -> {s2.describe(rk)['page']}")
         v = entries.view(rk)
     render.report(render.render_csv())
-    shown = schema.lookup(v, "parsed.number") or a.number  # unset may have changed it
-    if schema.applies("review", v) and not schema.fresh("review", v):
+    shown = tables.lookup(v, "parsed.number") or a.number  # unset may have changed it
+    if tables.applies("review", v) and not tables.fresh("review", v):
         print(f"\n#{shown} will be (re)reviewed on the next ./step2_llm_review.sh")
     print(f"uv run python status.py {shown}   # see the result")
 

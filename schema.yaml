@@ -1,14 +1,9 @@
 # Files in entries/<rkey>/, one directory per post (rkey = last segment of the post URL).
 # `parsed` has no file: it is computed from the post on every read, like a view.
 #
-# Stage files carry `fp`: a fingerprint of the inputs listed under `fp`, written as
-# file.field references into the entry's view (stage files with overrides applied).
-# A stage file is fresh when it exists and its stored fp matches the current inputs.
-# A stage file only applies to an entry when its `requires` reference is set.
-# A stage file is unsure when the check under `unsure` holds for its view: a field
-# name means the field is set, "not <field>" means it is not. A file with `cleared_by` is
-# never unsure while that reference is set in a file that applies and is fresh: a passing
-# LLM review, which saw the warnings, clears them.
+# This is the data dictionary; tables.py holds the rules. Stage files carry `fp`, a hash of
+# the stage's code version and the exact request it made (tables.request), and are fresh
+# while that hash matches. wikipedia and review only apply to entries with a watchlist number.
 
 files:
   post:
@@ -25,8 +20,6 @@ files:
   parsed:
     written_by: nothing; parse.py computes it from post.text whenever the entry is read
     about: watchlist number, title and year read from the post text
-    unsure: note
-    cleared_by: review.ok
     fields:
       number: watchlist number (N in "N/1000")
       title: film title as posted
@@ -38,12 +31,8 @@ files:
   wikipedia:
     written_by: s2_descriptions.py
     about: the chosen Wikipedia page and its intro
-    fp: [parsed.title, parsed.year, override.pin.page]
-    requires: parsed.number
-    unsure: note
-    cleared_by: review.ok
     fields:
-      fp: fingerprint of the inputs
+      fp: fingerprint of the code version and request (title, year, pin.page)
       page: Wikipedia page title, or null when none was found
       url: page URL
       description: intro text of the page
@@ -52,11 +41,8 @@ files:
   review:
     written_by: s3_llm_review.py
     about: the LLM's verdict on title, year and description together
-    fp: [parsed.title, parsed.year, wikipedia.description, parsed.raw_title_line, parsed.note, wikipedia.note]
-    requires: parsed.number
-    unsure: not ok
     fields:
-      fp: fingerprint of the inputs
+      fp: fingerprint of the code version and the row sent to the LLM
       ok: true when the row looks consistent
       issue: what looks wrong; only when not ok
       suggested_page: the LLM's suggested Wikipedia page, or null
@@ -87,6 +73,7 @@ files:
 # An entry's status is computed from its files, never stored.
 status:
   pending: post.yaml or an applicable stage file is missing, or a stage file's fp is stale
-  needs_review: every applicable stage file is fresh, but one is unsure
+  needs_review: every applicable stage file is fresh, but one is unsure (a parse or page note
+    a passing review hasn't cleared, or a review that isn't ok)
   ok: every applicable stage file is fresh and none is unsure
   deleted: deleted.yaml is present; stages skip the entry

@@ -5,6 +5,8 @@ One API call per film (search + intro extract). A candidate page is accepted whe
 film, its title matches exactly (ignoring accents/leading article), and the stated release
 year matches; otherwise the best guess is kept with status "needs_review".
 
+Bump tables.VERSION["wikipedia"] when you change how a page is searched for, picked or fetched.
+
 Manual fixes: `./fix.py N page "Exact Wikipedia Title"` (or the LLM review) sets the
 pin.page override; that exact page is then fetched, following redirects. Rows are
 only refetched when title, year or that override change. Each row is saved as soon as it's
@@ -14,8 +16,8 @@ import re
 import sys
 import time
 import entries
-import schema
 import stage
+import tables
 from bsky_tag_dl import get
 
 UA = "edwards1000-descriptions/1.0 (personal project)"
@@ -129,14 +131,14 @@ def pick(title, year, cands):
 def describe(rk):
     """Fetch one entry's page and write its wikipedia.yaml; returns what was written."""
     v = entries.view(rk)
-    title, year = v["parsed"]["title"], v["parsed"]["year"]
-    pinned_page = v["override"].get("pin.page")
+    q = tables.request("wikipedia", v)
+    title, year, pinned_page = q["title"], q["year"], q["page"]
     if pinned_page:
         s = summary(pinned_page)
         page, note = (s["title"], "") if s else (None, f"pinned page {pinned_page!r} not found")
     else:
         page, s, note = pick(title, year, search(title, year))
-    w = {"fp": schema.fp("wikipedia", v), "page": page, "url": s["url"] if s else None,
+    w = {"fp": tables.fp("wikipedia", v), "page": page, "url": s["url"] if s else None,
          "description": s["extract"] if s else None, "note": note}
     entries.write(rk, "wikipedia", w)
     return w
@@ -160,8 +162,8 @@ def main():
         time.sleep(1.0)
     stage.finish("wikipedia")
 
-    bad = [v for _, v in entries.live() if "wikipedia" in v and schema.applies("wikipedia", v)
-           and schema.unsure("wikipedia", v)]
+    bad = [v for _, v in entries.live() if "wikipedia" in v and tables.applies("wikipedia", v)
+           and tables.unsure("wikipedia", v)]
     if bad:
         print("review these (./fix.py N page \"Wikipedia Title\", or ./fix.py N title/year):", file=sys.stderr)
         for v in sorted(bad, key=lambda v: v["parsed"]["number"] or 0):

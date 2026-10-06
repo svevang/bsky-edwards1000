@@ -8,7 +8,7 @@ import json
 import sys
 import entries
 import parse
-import schema
+import tables
 
 
 def short(value, n=200):
@@ -35,14 +35,14 @@ def trail(n):
         print(f"post:\n  {json.dumps(v['post']['text'][:300], ensure_ascii=False)}")
     else:
         print(f"#{n}  rkey={rk}\npost: (no post.yaml)")
-    for name in ("parsed", *schema.stage_files()):
+    for name in tables.TABLES:
         if name == "parsed":
             raw = parse.parse(v["post"]["text"]) if "post" in v else None
             state = "computed" if raw else "no post"
         else:
             raw = entries.read(rk, name)
-            state = ("not applicable" if not schema.applies(name, v) else "missing" if raw is None
-                     else "fresh" if schema.fresh(name, v) else "stale")
+            state = ("not applicable" if not tables.applies(name, v) else "missing" if raw is None
+                     else "fresh" if tables.fresh(name, v) else "stale")
         print(f"{name}: ({state})")
         fields = [k for k in (raw or {}) if k != "fp"]
         fields += [k.split(".", 1)[1] for k in o if k.startswith(f"{name}.") and k.split(".", 1)[1] not in fields]
@@ -51,7 +51,7 @@ def trail(n):
             computed = short(raw[k]) if k in (raw or {}) else "(none)"
             print(f"  {k}: {computed}" + (f" -> {short(o[key])}  (override)" if key in o else ""))
     for k in o:
-        if k.split(".", 1)[0] not in ("parsed", *schema.stage_files()):
+        if k.split(".", 1)[0] not in tables.TABLES:
             print(f"{k}: {short(o[k])}  (override)")
     print(f"status: {entries.compute_status(v)}")
 

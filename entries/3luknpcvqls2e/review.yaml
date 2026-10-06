@@ -1,4 +1,4 @@
-fp: b5d9dcdd0e24
+fp: a018983c9f64
 ok: false
 issue: 'Year differs by one: the Wikipedia article gives 1961 and the row says 1960. This is within the allowed ±1, but the title, page and description all match.'
 suggested_page: null

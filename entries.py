@@ -1,7 +1,7 @@
 """Entry store: one directory per post under entries/, one YAML file per stage.
 
 Files are named by stage without the extension ("post", "wikipedia", "review", "override");
-schema.yaml describes them. An empty deleted.yaml marks a post gone from the
+schema.yaml describes them and tables.py holds their rules. An empty deleted.yaml marks a post gone from the
 download. Status is never stored: status(rk) computes it from the files.
 Every write goes through a temp file and os.replace, so a file is never half-written.
 
@@ -12,7 +12,7 @@ import os
 import sys
 import tempfile
 import yaml
-import schema
+import tables
 from parse import parse
 
 ENTRIES = "entries"
@@ -79,7 +79,7 @@ def view(rk):
     """{"post", stage files...: as read, absent when missing; "parsed": parse(post text);
     "override": override.yaml}. Each override file.field replaces that field, but only in a
     file that exists."""
-    v = {n: d for n in ("post", *schema.stage_files()) if (d := read(rk, n)) is not None}
+    v = {n: d for n in ("post", *tables.STORED) if (d := read(rk, n)) is not None}
     if "post" in v:
         v["parsed"] = parse(v["post"]["text"])
     v["override"] = read(rk, "override") or {}
@@ -91,12 +91,9 @@ def view(rk):
 
 
 def compute_status(v):
-    if "post" not in v:
+    if "post" not in v or not tables.all_fresh(v):
         return "pending"
-    names = [n for n in ("parsed", *schema.stage_files()) if schema.applies(n, v)]
-    if not all(schema.fresh(n, v) for n in names):
-        return "pending"
-    return "needs_review" if any(schema.unsure(n, v) for n in names) else "ok"
+    return "needs_review" if any(tables.unsure(n, v) for n in tables.TABLES if tables.applies(n, v)) else "ok"
 
 
 def deleted(rk):
@@ -121,7 +118,7 @@ def live():
 
 def find(number):
     """Watchlist number -> rkey, from parsed.number with overrides; deleted entries are skipped."""
-    rks = [rk for rk, v in live() if schema.lookup(v, "parsed.number") == number]
+    rks = [rk for rk, v in live() if tables.lookup(v, "parsed.number") == number]
     if len(rks) != 1:
         sys.exit(f"#{number}: {'not in entries' if not rks else f'{len(rks)} posts share this number: {rks}'}")
     return rks[0]

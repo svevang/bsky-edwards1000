@@ -2,7 +2,8 @@
 
 Every stage reads entry views (entries/<rkey>/, overrides applied) and writes its own file
 per entry as soon as the row finishes. Each stage file carries "fp": a fingerprint of the
-inputs schema.yaml lists for it, so a stage only reprocesses rows whose inputs changed.
+stage's code version and the request it made (tables.py), so a stage only reprocesses rows
+whose request or code changed.
 Hand fixes live in override.yaml, which stages never write, so no rerun can clobber them.
 
 Common CLI flags handled by `select`:
@@ -14,7 +15,7 @@ Common CLI flags handled by `select`:
 import argparse
 import sys
 import entries
-import schema
+import tables
 
 
 def args(desc):
@@ -39,8 +40,8 @@ def select(name, a):
     for rk, v in entries.live():
         if not ready(name, v):
             continue
-        n = schema.lookup(v, "parsed.number")
-        if (only and n not in only) or not (a.force or n in redo or not schema.fresh(name, v)):
+        n = tables.lookup(v, "parsed.number")
+        if (only and n not in only) or not (a.force or n in redo or not tables.fresh(name, v)):
             continue
         todo.append((n is None, n or 0, rk))
     todo = [rk for *_, rk in sorted(todo)]
@@ -48,10 +49,8 @@ def select(name, a):
 
 
 def ready(name, v):
-    """The entry has a post, stage file `name` applies to it, and every earlier stage file is fresh."""
-    stages = schema.stage_files()
-    return ("post" in v and schema.applies(name, v)
-            and all(schema.fresh(e, v) for e in stages[:stages.index(name)] if schema.applies(e, v)))
+    """The entry has a post, stage file `name` applies to it, and every earlier table is fresh."""
+    return tables.applies(name, v) and tables.all_fresh(v, before=name)
 
 
 def finish(stage_name):

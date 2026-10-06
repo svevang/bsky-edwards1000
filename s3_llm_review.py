@@ -11,7 +11,8 @@ rounds. Rows still flagged after that stay needs_review. The review never sets r
 review.dismissed. Flagged rows from earlier runs whose suggestions weren't applied are
 rechecked (Wikipedia only).
 
-Rows are only re-reviewed when their title/year/description change; each batch is saved as it
+Rows are only re-reviewed when the row sent (tables.request) changes, or tables.VERSION["review"]
+is bumped: bump it when you change PROMPT or how replies become review rows; each batch is saved as it
 returns. --limit K reviews just K rows so you can check the output early; --redo N re-asks
 about one row. These apply to the first round.
 
@@ -24,12 +25,12 @@ import subprocess
 import sys
 import entries
 import s2_descriptions as s2
-import schema
 import stage
+import tables
+from tables import FIXES
 
 BATCH = 60
 ROUNDS = 2  # extra review rounds for rows the review fixed
-FIXES = {"suggested_page": "pin.page", "suggested_title": "parsed.title", "suggested_year": "parsed.year"}
 FIELDS = ("issue", *FIXES, "certain")
 
 PROMPT = """You are checking a dataset of 1960s films parsed from social-media posts and joined to
@@ -65,16 +66,6 @@ Return [] if all rows are consistent.
 
 Rows:
 """
-
-
-def row(v):
-    p, w = v["parsed"], v["wikipedia"]
-    r = {"number": int(p["number"]), "title": p["title"], "posted_title": p.get("raw_title_line"),
-         "year": int(p["year"]), "wikipedia_page": w.get("page"),
-         "description": (w.get("description") or "")[:350]}
-    r.update({k: n for k, n in (("parse_note", p.get("note")), ("wikipedia_note", w.get("note"))) if n})
-    fixes = {k: val for k, val in v["override"].items() if k in FIXES.values()}
-    return {**r, "overrides": fixes} if fixes else r
 
 
 def ask(rows):
@@ -145,7 +136,7 @@ def resolve(rk, v):
     r, n = v["review"], v["parsed"]["number"]
     applied = []
     for field, key in FIXES.items():
-        new, cur = r.get(field), v["wikipedia"].get("page") if key == "pin.page" else schema.lookup(v, key)
+        new, cur = r.get(field), v["wikipedia"].get("page") if key == "pin.page" else tables.lookup(v, key)
         if new in (None, ""):
             continue
         try:
@@ -166,7 +157,7 @@ def fix_flagged(pairs):
     flags, and earlier runs' left unfixed (e.g. by an interrupted run). Returns {rkey: fixes}."""
     fixed = {}
     for rk, v in pairs:
-        if not (stage.ready("review", v) and schema.fresh("review", v) and schema.unsure("review", v)
+        if not (stage.ready("review", v) and tables.fresh("review", v) and tables.unsure("review", v)
                 and any(v["review"].get(k) not in (None, "") for k in FIXES)):
             continue
         try:
@@ -181,14 +172,14 @@ def review(todo):
     """Ask about rows in batches, saving each batch's review.yaml as it returns."""
     for i in range(0, len(todo), BATCH):
         views = {rk: entries.view(rk) for rk in todo[i:i + BATCH]}
-        rows = {rk: row(v) for rk, v in views.items()}
+        rows = {rk: tables.request("review", v) for rk, v in views.items()}
         batch = list(rows.values())
         print(f"  batch {i // BATCH + 1}/{-(-len(todo) // BATCH)} (#{batch[0]['number']}-#{batch[-1]['number']})...",
               file=sys.stderr, end=" ", flush=True)
         problems = {p["number"]: p for p in ask(batch)}
         for rk, r in rows.items():
             p = problems.get(r["number"]) or {}
-            entries.write(rk, "review", {"fp": schema.fp("review", views[rk]), "ok": not p,
+            entries.write(rk, "review", {"fp": tables.fp("review", views[rk]), "ok": not p,
                                          **{k: p.get(k) for k in FIELDS if p}})
         print(f"{len(problems)} flagged", file=sys.stderr)
 
@@ -218,8 +209,8 @@ def main():
     for rk, v in sorted(fixed_views.items(), key=lambda kv: (kv[1]["parsed"]["number"] or 0, kv[0])):
         n = v["parsed"]["number"] or 0
         print(f"  #{n:>3} {v['parsed']['title']:40} {', '.join(fixed[rk])}  -> {entries.compute_status(v)}")
-    flagged = sorted((v for _, v in entries.live() if "review" in v and schema.applies("review", v)
-                      and schema.unsure("review", v)),
+    flagged = sorted((v for _, v in entries.live() if "review" in v and tables.applies("review", v)
+                      and tables.unsure("review", v)),
                      key=lambda v: v["parsed"]["number"] or 0)
     if flagged:
         print("still flagged:")
