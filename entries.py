@@ -93,7 +93,7 @@ def view(rk):
 def compute_status(v):
     if "post" not in v or not tables.all_fresh(v):
         return "pending"
-    return "needs_review" if any(tables.unsure(n, v) for n in tables.TABLES if tables.applies(n, v)) else "ok"
+    return "needs_review" if tables.unsure(tables.deciding(v), v) else "ok"
 
 
 def deleted(rk):

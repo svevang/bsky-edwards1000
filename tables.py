@@ -61,11 +61,15 @@ def applies(name, v):
 
 
 def unsure(name, v):
+    """The row's own warning: a parse or page note, or a review that isn't ok."""
     row = v.get(name) or {}
-    if name == "review":
-        return not row.get("ok")
-    cleared = applies("review", v) and fresh("review", v) and v["review"].get("ok")
-    return bool(row.get("note")) and not cleared
+    return not row.get("ok") if name == "review" else bool(row.get("note"))
+
+
+def deciding(v):
+    """The table whose verdict is the entry's: the last that applies. The review is sent the
+    parse and page notes, so once there is one its verdict replaces theirs."""
+    return [n for n in TABLES if applies(n, v)][-1]
 
 
 def all_fresh(v, before=None):

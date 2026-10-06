@@ -73,7 +73,7 @@ files:
 # An entry's status is computed from its files, never stored.
 status:
   pending: post.yaml or an applicable stage file is missing, or a stage file's fp is stale
-  needs_review: every applicable stage file is fresh, but one is unsure (a parse or page note
-    a passing review hasn't cleared, or a review that isn't ok)
+  needs_review: every applicable stage file is fresh, but the last one is unsure (the review
+    isn't ok, or, for an entry with no watchlist number, the parse has a note)
   ok: every applicable stage file is fresh and none is unsure
   deleted: deleted.yaml is present; stages skip the entry
