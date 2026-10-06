@@ -27,7 +27,6 @@ import sys
 import entries
 import render
 import s2_descriptions as s2
-import stage
 import tables
 from tables import FIXES
 
@@ -67,10 +66,8 @@ def main():
         if rejected:
             entries.set_override(rk, "rejected", rejected)
 
+    s2.refresh([rk])
     v = entries.view(rk)
-    if a.cmd != "dismiss" and stage.ready("wikipedia", v) and not tables.fresh("wikipedia", v):
-        print(f"refetching wikipedia -> {s2.describe(rk)['page']}")
-        v = entries.view(rk)
     render.report(render.render_csv())
     shown = tables.lookup(v, "parsed.number") or rk  # unset may have changed it
     if tables.applies("review", v) and not tables.fresh("review", v):

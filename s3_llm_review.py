@@ -136,7 +136,7 @@ def check(key, new, cur, overrides, certain, year):
 
 
 def resolve(rk, v):
-    """Write the flagged row's kept fixes to override.yaml and refetch its page; returns the fixes."""
+    """Write the flagged row's kept fixes to override.yaml; returns the fixes."""
     r, n = v["review"], v["parsed"]["number"]
     applied = []
     for field, key in FIXES.items():
@@ -151,8 +151,6 @@ def resolve(rk, v):
         if not why:
             entries.set_override(rk, key, new)
             applied.append(f"{key.split('.', 1)[1]}={new!r}")
-    if applied:
-        s2.describe(rk)
     return applied
 
 
@@ -202,7 +200,8 @@ def main():
         new = fix_flagged(entries.live() if rnd == 0 else ((rk, entries.view(rk)) for rk in todo))
         for rk, f in new.items():
             fixed.setdefault(rk, []).extend(f)
-        todo = list(new)  # resolve() refetched each one's page, so it's ready for review
+        s2.refresh(new)
+        todo = [rk for rk in new if stage.ready("review", v := entries.view(rk)) and not tables.fresh("review", v)]
         if not todo:
             break
     stage.finish("review")

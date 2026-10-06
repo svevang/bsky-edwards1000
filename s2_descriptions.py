@@ -10,7 +10,7 @@ Bump tables.VERSION["wikipedia"] when you change how a page is searched for, pic
 Manual fixes: `./fix.py N page "Exact Wikipedia Title"` (or the LLM review) sets the
 pin.page override; that exact page is then fetched, following redirects. Rows are
 only refetched when title, year or that override change. Each row is saved as soon as it's
-fetched; describe(rk) does one row and is also used by the review stage.
+fetched; refresh(rks) refetches just the given rows that went stale, for fix.py and the review.
 """
 import re
 import sys
@@ -148,22 +148,38 @@ def describe(rk):
     return w
 
 
-def main():
-    a = stage.args(__doc__)
-    todo = [(rk, entries.view(rk)) for rk in stage.select("wikipedia", a)]
-    print(f"{len(todo)} to fetch", file=sys.stderr)
-    for i, (rk, v) in enumerate(todo, 1):
+def fetch(todo):
+    """describe() each rkey, printing progress; returns the rkeys fetched."""
+    done = []
+    for i, rk in enumerate(todo, 1):
+        v = entries.view(rk)
         r = v["parsed"]
         try:
             w = describe(rk)
         except Exception as e:
             print(f"  !! #{r['number']} {r['title']}: {e}", file=sys.stderr)
             continue
+        done.append(rk)
         note = w["note"]
         mark = "X" if not w["page"] else "P" if "pin.page" in v["override"] else "?" if note else " "
         print(f"  [{mark}] {i}/{len(todo)} #{r['number']} {r['title']} ({r['year']}) -> {w['page']}"
               + (f"  [{note}]" if note else ""), file=sys.stderr)
         time.sleep(1.0)
+    return done
+
+
+def refresh(rks):
+    """Refetch the pages of these rows that are ready and stale, e.g. after an override changed
+    their title, year or pin; returns the rkeys fetched."""
+    return fetch([rk for rk in rks
+                  if stage.ready("wikipedia", v := entries.view(rk)) and not tables.fresh("wikipedia", v)])
+
+
+def main():
+    a = stage.args(__doc__)
+    todo = stage.select("wikipedia", a)
+    print(f"{len(todo)} to fetch", file=sys.stderr)
+    fetch(todo)
     stage.finish("wikipedia")
 
 
