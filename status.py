@@ -50,6 +50,9 @@ def trail(n):
             key = f"{name}.{k}"
             computed = short(raw[k]) if k in (raw or {}) else "(none)"
             print(f"  {k}: {computed}" + (f" -> {short(o[key])}  (override)" if key in o else ""))
+    for k in o:
+        if k.split(".", 1)[0] not in ("parsed", *schema.stage_files()):
+            print(f"{k}: {short(o[k])}  (override)")
     print(f"status: {entries.compute_status(v)}")
 
 

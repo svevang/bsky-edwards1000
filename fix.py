@@ -7,12 +7,13 @@
 
   ./fix.py N title "THE V.I.P.s"          parsed.title    -> refetch description, rebuild csv
   ./fix.py N year 1964                    parsed.year     -> refetch description, rebuild csv
-  ./fix.py N page "La Vérité (film)"      wikipedia.page  -> fetch that page, rebuild csv
+  ./fix.py N page "La Vérité (film)"      pin.page        -> fetch that page, rebuild csv
   ./fix.py N dismiss "festival year"      review.ok (+ review.dismissed) -> rebuild csv
   ./fix.py N unset [KEY ...]              drop these overrides (all of N's when none given)
 
-Overrides live in entries/<rkey>/override.yaml as file.field keys. Stage files keep their
-computed values underneath and no stage rerun touches them, so a fix stays until unset. The
+Overrides live in entries/<rkey>/override.yaml. A file.field key replaces that field in the
+entry's view; the stage file keeps its computed value underneath and no stage rerun touches
+it, so a fix stays until unset. pin.page is an input instead: stage 2 fetches that page. The
 LLM review (./step2_llm_review.sh) also writes page, title and year fixes there; `unset`
 drops one you don't want (it may propose it again on a later re-review).
 """
@@ -25,7 +26,7 @@ import s2_descriptions as s2
 import schema
 import stage
 
-KEYS = {"title": "parsed.title", "year": "parsed.year", "page": "wikipedia.page"}
+KEYS = {"title": "parsed.title", "year": "parsed.year", "page": "pin.page"}
 
 
 def main():

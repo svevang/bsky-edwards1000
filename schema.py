@@ -1,9 +1,8 @@
 """schema.yaml: the files in an entry, their fingerprint inputs and the status vocabulary.
 
 Fingerprint inputs are file.field references looked up in an entry's view, a dict like
-{"parsed": {...}, "wikipedia": {...}, "override": {"wikipedia.page": ...}}. The reference
-splits at the first dot, so "override.wikipedia.page" reads key "wikipedia.page" of the
-override file. Missing files or fields count as None.
+{"parsed": {...}, "wikipedia": {...}, "override": {"pin.page": ...}}. The reference
+splits at the first dot, so "override.pin.page" reads key "pin.page" of the override file. Missing files or fields count as None.
 """
 import functools
 import hashlib

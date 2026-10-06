@@ -38,7 +38,7 @@ files:
   wikipedia:
     written_by: s2_descriptions.py
     about: the chosen Wikipedia page and its intro
-    fp: [parsed.title, parsed.year, override.wikipedia.page]
+    fp: [parsed.title, parsed.year, override.pin.page]
     requires: parsed.number
     unsure: note
     cleared_by: review.ok
@@ -68,14 +68,15 @@ files:
   override:
     written_by: fix.py, and s3_llm_review.py for the fixes it is sure of
     about: >-
-      Corrections, by hand or by the LLM review (wikipedia.page, parsed.title and
-      parsed.year only; review.ok and review.dismissed stay hand-set). Each key is a file.field reference and its value replaces that
-      field in the entry's view. The stage files keep their computed values underneath,
-      so removing a key brings the computed value back.
+      Corrections, by hand or by the LLM review (pin.page, parsed.title and parsed.year
+      only; review.ok and review.dismissed stay hand-set). A file.field key replaces that
+      field in the entry's view; the stage files keep their computed values underneath, so
+      removing a key brings the computed value back. pin.page is a stage input, not a
+      patch: stage 2 fetches that exact page, and the view shows the page it resolved to.
     examples:
       parsed.title: THE V.I.P.s
       parsed.year: 1964
-      wikipedia.page: La Vérité (film)
+      pin.page: La Vérité (film)
       review.ok: true
       review.dismissed: festival year
 

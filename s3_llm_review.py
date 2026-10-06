@@ -29,7 +29,7 @@ import stage
 
 BATCH = 60
 ROUNDS = 2  # extra review rounds for rows the review fixed
-FIXES = {"suggested_page": "wikipedia.page", "suggested_title": "parsed.title", "suggested_year": "parsed.year"}
+FIXES = {"suggested_page": "pin.page", "suggested_title": "parsed.title", "suggested_year": "parsed.year"}
 FIELDS = ("issue", *FIXES, "certain")
 
 PROMPT = """You are checking a dataset of 1960s films parsed from social-media posts and joined to
@@ -41,7 +41,8 @@ festival-vs-general release; note it if it differs at all). Also flag titles tha
 (album, play, person, franchise, remake from another decade).
 
 `posted_title` is the title line exactly as posted. `overrides`, when present, are corrections
-already made to the row (`wikipedia.page`, `parsed.title`, `parsed.year`); the row already shows them.
+already made to the row (`pin.page`: the Wikipedia page to use; `parsed.title`, `parsed.year`); the
+row already shows them.
 `parse_note` and `wikipedia_note`, when present, are warnings from the automatic parse and page
 match (e.g. "title mismatch"). Judge them: if the row is consistent anyway (an alternate or
 foreign title, punctuation, a festival year), it is not a problem row and the warning is cleared.
@@ -88,7 +89,7 @@ def ask(rows):
 
 def same(key, a, b):
     """Titles compare ignoring case; Wikipedia pages only ignore the first letter's case."""
-    if key != "wikipedia.page":
+    if key != "pin.page":
         return str(a).casefold() == str(b).casefold()
     a, b = (str(x).replace("_", " ").strip() for x in (a, b))
     return a[:1].upper() + a[1:] == b[:1].upper() + b[1:]
@@ -127,7 +128,7 @@ def check(key, new, cur, overrides, certain, year):
         return "already current", new
     if key in overrides and not certain:
         return f"keeps override {overrides[key]!r}, not certain", new
-    if key != "wikipedia.page":
+    if key != "pin.page":
         return (None if certain else "not certain"), new
     s = s2.summary(new) or found(new, year)
     if not s:
@@ -144,7 +145,7 @@ def resolve(rk, v):
     r, n = v["review"], v["parsed"]["number"]
     applied = []
     for field, key in FIXES.items():
-        new, cur = r.get(field), schema.lookup(v, key)
+        new, cur = r.get(field), v["wikipedia"].get("page") if key == "pin.page" else schema.lookup(v, key)
         if new in (None, ""):
             continue
         try:

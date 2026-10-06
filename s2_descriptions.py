@@ -6,7 +6,7 @@ film, its title matches exactly (ignoring accents/leading article), and the stat
 year matches; otherwise the best guess is kept with status "needs_review".
 
 Manual fixes: `./fix.py N page "Exact Wikipedia Title"` (or the LLM review) sets the
-wikipedia.page override; that exact page is then fetched, following redirects. Rows are
+pin.page override; that exact page is then fetched, following redirects. Rows are
 only refetched when title, year or that override change. Each row is saved as soon as it's
 fetched; describe(rk) does one row and is also used by the review stage.
 """
@@ -130,7 +130,7 @@ def describe(rk):
     """Fetch one entry's page and write its wikipedia.yaml; returns what was written."""
     v = entries.view(rk)
     title, year = v["parsed"]["title"], v["parsed"]["year"]
-    pinned_page = v["override"].get("wikipedia.page")
+    pinned_page = v["override"].get("pin.page")
     if pinned_page:
         s = summary(pinned_page)
         page, note = (s["title"], "") if s else (None, f"pinned page {pinned_page!r} not found")
@@ -154,7 +154,7 @@ def main():
             print(f"  !! #{r['number']} {r['title']}: {e}", file=sys.stderr)
             continue
         note = w["note"]
-        mark = "X" if not w["page"] else "P" if "wikipedia.page" in v["override"] else "?" if note else " "
+        mark = "X" if not w["page"] else "P" if "pin.page" in v["override"] else "?" if note else " "
         print(f"  [{mark}] {i}/{len(todo)} #{r['number']} {r['title']} ({r['year']}) -> {w['page']}"
               + (f"  [{note}]" if note else ""), file=sys.stderr)
         time.sleep(1.0)
