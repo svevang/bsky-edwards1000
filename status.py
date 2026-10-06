@@ -3,6 +3,7 @@
 
   uv run python status.py       counts by status
   uv run python status.py N     one film's trail: post, each stage file with its overrides, freshness
+                                (N is a watchlist number or an rkey)
 """
 import json
 import sys
@@ -22,10 +23,11 @@ def counts():
     print(f"  {overridden} with overrides, {counts.get('deleted', 0)} deleted")
 
 
-def trail(n):
-    rk = entries.find(n)
+def trail(ref):
+    rk = entries.find(ref)
     v = entries.view(rk)
     o = v["override"]
+    n = tables.lookup(v, "parsed.number") or "?"
     if "post" in v:
         print(f"#{n}  rkey={rk}  {v['post']['url']}")
         print(f"post:\n  {json.dumps(v['post']['text'][:300], ensure_ascii=False)}")
@@ -55,6 +57,4 @@ def trail(n):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and not sys.argv[1].isdigit():
-        sys.exit(__doc__)
-    trail(int(sys.argv[1])) if len(sys.argv) > 1 else counts()
+    trail(sys.argv[1]) if len(sys.argv) > 1 else counts()

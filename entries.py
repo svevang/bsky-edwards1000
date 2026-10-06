@@ -128,11 +128,15 @@ def live():
     return ((rk, view(rk)) for rk in list_entries() if not deleted(rk))
 
 
-def find(number):
-    """Watchlist number -> rkey, from parsed.number with overrides; deleted entries are skipped."""
-    rks = [rk for rk, v in live() if tables.lookup(v, "parsed.number") == number]
+def find(ref):
+    """An rkey, or a watchlist number (parsed.number with overrides, deleted entries skipped) -> rkey."""
+    if os.path.isdir(os.path.join(ENTRIES, ref)):
+        return ref
+    if not ref.isdigit():
+        sys.exit(f"{ref}: not an rkey in {ENTRIES}/ or a watchlist number")
+    rks = [rk for rk, v in live() if tables.lookup(v, "parsed.number") == int(ref)]
     if len(rks) != 1:
-        sys.exit(f"#{number}: {'not in entries' if not rks else f'{len(rks)} posts share this number: {rks}'}")
+        sys.exit(f"#{ref}: {'not in entries' if not rks else f'{len(rks)} posts share this number, use an rkey: {rks}'}")
     return rks[0]
 
 

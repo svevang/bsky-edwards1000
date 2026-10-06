@@ -4,6 +4,7 @@
 # dependencies = ["pyyaml>=6.0.3"]
 # ///
 """Hand-correct one film with an override, then rerun just what it affects.
+N is the film's watchlist number, or its rkey (for a post with no number, or a shared one).
 
   ./fix.py N title "THE V.I.P.s"          parsed.title    -> refetch description, rebuild csv
   ./fix.py N year 1964                    parsed.year     -> refetch description, rebuild csv
@@ -35,7 +36,7 @@ KEYS = {"title": "parsed.title", "year": "parsed.year", "page": "pin.page"}
 
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("number", type=int)
+    p.add_argument("ref", metavar="N", help="watchlist number or rkey")
     sub = p.add_subparsers(dest="cmd", required=True)
     sub.add_parser("title").add_argument("value")
     sub.add_parser("year").add_argument("value", type=int)
@@ -45,18 +46,18 @@ def main():
     a = p.parse_args()
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-    rk = entries.find(a.number)
+    rk = entries.find(a.ref)
     if a.cmd in KEYS:
         entries.set_override(rk, KEYS[a.cmd], a.value)
     elif a.cmd == "dismiss":
         v = entries.view(rk)
         if (s := entries.compute_status(v)) != "needs_review":
-            sys.exit(f"#{a.number} is {s}; only a needs_review row can be dismissed")
+            sys.exit(f"{a.ref} is {s}; only a needs_review row can be dismissed")
         entries.set_override(rk, "dismissed", {"fp": tables.fp(tables.deciding(v), v), "reason": a.reason})
     elif a.cmd == "unset":
         current = entries.read(rk, "override") or {}
         if unknown := [k for k in a.keys if k not in current]:
-            sys.exit(f"#{a.number} has no override {', '.join(unknown)}; current: {', '.join(current) or 'none'}")
+            sys.exit(f"{a.ref} has no override {', '.join(unknown)}; current: {', '.join(current) or 'none'}")
         keys = a.keys or list(current)
         rejected = {} if "rejected" in keys else current.get("rejected", {})
         for k in keys:
@@ -71,7 +72,7 @@ def main():
         print(f"refetching wikipedia -> {s2.describe(rk)['page']}")
         v = entries.view(rk)
     render.report(render.render_csv())
-    shown = tables.lookup(v, "parsed.number") or a.number  # unset may have changed it
+    shown = tables.lookup(v, "parsed.number") or rk  # unset may have changed it
     if tables.applies("review", v) and not tables.fresh("review", v):
         print(f"\n#{shown} will be (re)reviewed on the next ./step2_llm_review.sh")
     print(f"uv run python status.py {shown}   # see the result")

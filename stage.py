@@ -8,8 +8,8 @@ Hand fixes live in override.yaml, which stages never write, so no rerun can clob
 
 Common CLI flags handled by `select`:
   --force            redo every row
-  --redo N[,N...]    redo rows with these watchlist numbers
-  --only N[,N...]    consider only rows with these watchlist numbers
+  --redo N[,N...]    redo rows with these watchlist numbers or rkeys
+  --only N[,N...]    consider only rows with these watchlist numbers or rkeys
   --limit K          process at most K rows this run (lets you check output early)
 """
 import argparse
@@ -21,27 +21,28 @@ import tables
 def args(desc):
     p = argparse.ArgumentParser(description=desc)
     p.add_argument("--force", action="store_true")
-    p.add_argument("--redo", default="", help="comma-separated watchlist numbers")
-    p.add_argument("--only", default="", help="comma-separated watchlist numbers")
+    p.add_argument("--redo", default="", help="comma-separated watchlist numbers or rkeys")
+    p.add_argument("--only", default="", help="comma-separated watchlist numbers or rkeys")
     p.add_argument("--limit", type=int, default=0)
     return p.parse_args()
 
 
-def numbers(csv):
-    return {int(n) for n in csv.split(",") if n.strip()}
+def refs(csv):
+    return {r.strip() for r in csv.split(",") if r.strip()}
 
 
 def select(name, a):
     """rkeys whose stage file `name` is missing or stale, or asked for by --force/--redo.
     Skips deleted entries, entries the file doesn't apply to, and entries whose earlier
-    stage files are missing or stale. --only/--redo match the overridden parsed.number."""
-    redo, only = numbers(a.redo), numbers(a.only)
+    stage files are missing or stale. --only/--redo match the rkey or the overridden parsed.number."""
+    redo, only = refs(a.redo), refs(a.only)
     todo = []
     for rk, v in entries.live():
         if not ready(name, v):
             continue
         n = tables.lookup(v, "parsed.number")
-        if (only and n not in only) or not (a.force or n in redo or not tables.fresh(name, v)):
+        ids = {rk, str(n)}
+        if (only and not ids & only) or not (a.force or ids & redo or not tables.fresh(name, v)):
             continue
         todo.append((n is None, n or 0, rk))
     todo = [rk for *_, rk in sorted(todo)]
