@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Stage 2: parsed title and year -> wikipedia.yaml  (Wikipedia intro per film)
 
-One API call per film (search + intro extract). A candidate page is accepted when it's a
+One API call per film (search + intro extract), made one after another as Wikipedia's API
+etiquette asks; bsky_tag_dl.get backs off when rate limited. A candidate page is accepted when it's a
 film, its title matches exactly (ignoring accents/leading article), and the stated release
 year matches; otherwise the best guess is kept with status "needs_review".
 
@@ -14,7 +15,6 @@ fetched; refresh(rks) refetches just the given rows that went stale, for fix.py 
 """
 import re
 import sys
-import time
 from urllib.parse import quote
 import entries
 import stage
@@ -62,7 +62,6 @@ def search(title, year):
         c = candidates(q)
         if c:
             return c
-        time.sleep(0.5)
     return []
 
 
@@ -169,7 +168,6 @@ def fetch(todo):
         mark = "X" if not w["page"] else "P" if "pin.page" in v["override"] else "?" if note else " "
         print(f"  [{mark}] {i}/{len(todo)} #{r['number']} {r['title']} ({r['year']}) -> {w['page']}"
               + (f"  [{note}]" if note else ""), file=sys.stderr)
-        time.sleep(1.0)
     return done
 
 

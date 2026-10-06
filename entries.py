@@ -5,6 +5,9 @@ schema.yaml describes them and tables.py holds their rules. An empty deleted.yam
 download. Status is never stored: compute_status(view) works it out from the files.
 Every write goes through a temp file and os.replace, so a file is never half-written.
 
+Views are cached for the life of the process and dropped when the entry is written, so the
+many passes a run makes over every entry read each file once. Treat a view as read-only.
+
 view(rk) is what stages, status and outputs read: the post, its parse (computed, never
 stored) and the stage files, with override.yaml applied over them. The overridden keys are view["override"].keys().
 """
@@ -17,6 +20,7 @@ from bsky_tag_dl import post_url
 from parse import parse
 
 ENTRIES = "entries"
+_views = {}
 
 
 class _Dumper(yaml.SafeDumper):
@@ -59,11 +63,25 @@ def dump(data):
 
 
 def write(rk, name, data):
+    _views.pop(rk, None)
     save_text(path(rk, name), dump(data))
 
 
+def remove(rk, name):
+    _views.pop(rk, None)
+    if os.path.exists(path(rk, name)):
+        os.remove(path(rk, name))
+
+
 def save_text(p, text):
-    """Write text to p through a temp file in the same directory and os.replace."""
+    """Write text to p through a temp file in the same directory and os.replace; a no-op when
+    p already holds exactly that text."""
+    try:
+        with open(p, encoding="utf-8", newline="") as f:
+            if f.read() == text:
+                return
+    except FileNotFoundError:
+        pass
     os.makedirs(os.path.dirname(p) or ".", exist_ok=True)
     fd, tmp = tempfile.mkstemp(dir=os.path.dirname(p) or ".", prefix=f".{os.path.basename(p)}.", suffix=".tmp")
     try:
@@ -77,6 +95,12 @@ def save_text(p, text):
 
 
 def view(rk):
+    if rk not in _views:
+        _views[rk] = _view(rk)
+    return _views[rk]
+
+
+def _view(rk):
     """{"post": post.yaml plus text, createdAt and url taken from its record and uri;
     stage files: as read, absent when missing; "parsed": parse(post text);
     "override": override.yaml}. Each override table.field replaces that field, but only in a
@@ -107,9 +131,10 @@ def deleted(rk):
 
 def set_deleted(rk, gone):
     if gone:
+        _views.pop(rk, None)
         save_text(path(rk, "deleted"), "")
-    elif deleted(rk):
-        os.remove(path(rk, "deleted"))
+    else:
+        remove(rk, "deleted")
 
 
 def status_counts():
@@ -151,5 +176,5 @@ def unset_override(rk, keys=None):
     o = {k: v for k, v in o.items() if keys is not None and k not in keys}
     if o:
         write(rk, "override", o)
-    elif os.path.exists(path(rk, "override")):
-        os.remove(path(rk, "override"))
+    else:
+        remove(rk, "override")

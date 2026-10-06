@@ -21,6 +21,7 @@ Manual: `./fix.py N dismiss "reason"` dismisses a flag until the row sent for re
 import json
 import subprocess
 import sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import entries
 import s2_descriptions as s2
 import stage
@@ -28,6 +29,7 @@ import tables
 from tables import FIXES, TYPES
 
 BATCH = 60
+PARALLEL = 3  # batches sent to claude at once
 ROUNDS = 2  # extra review rounds for rows the review fixed
 FIELDS = ("issue", *FIXES, "certain")
 
@@ -155,25 +157,38 @@ def fix_flagged(pairs):
 
 
 def review(todo):
-    """Ask about rows in batches, saving each batch's review.yaml as it returns."""
+    """Ask about rows in batches, PARALLEL at a time, saving each batch's review.yaml as it
+    returns. A failed batch doesn't stop the others; the run fails once they are saved."""
+    batches = []
     for i in range(0, len(todo), BATCH):
         views = {rk: entries.view(rk) for rk in todo[i:i + BATCH]}
-        rows = {rk: tables.request("review", v) for rk, v in views.items()}
-        batch = list(rows.values())
-        print(f"  batch {i // BATCH + 1}/{-(-len(todo) // BATCH)} (#{batch[0]['number']}-#{batch[-1]['number']})...",
-              file=sys.stderr, end=" ", flush=True)
-        problems = {p["number"]: p for p in ask(batch)}
-        for rk, r in rows.items():
-            p = problems.get(r["number"]) or {}
-            entries.write(rk, "review", {"fp": tables.fp("review", views[rk]), "ok": not p,
-                                         **{k: p.get(k) for k in FIELDS if p}})
-        print(f"{len(problems)} flagged", file=sys.stderr)
+        batches.append((views, {rk: tables.request("review", v) for rk, v in views.items()}))
+    failed = 0
+    with ThreadPoolExecutor(PARALLEL) as pool:
+        asked = {pool.submit(ask, list(rows.values())): (views, rows) for views, rows in batches}
+        for done, future in enumerate(as_completed(asked), 1):
+            views, rows = asked[future]
+            nums = [r["number"] for r in rows.values()]
+            print(f"  batch {done}/{len(batches)} (#{nums[0]}-#{nums[-1]}): ", file=sys.stderr, end="")
+            try:
+                problems = {p["number"]: p for p in future.result()}
+            except Exception as e:
+                failed += 1
+                print(f"failed: {e}", file=sys.stderr)
+                continue
+            for rk, r in rows.items():
+                p = problems.get(r["number"]) or {}
+                entries.write(rk, "review", {"fp": tables.fp("review", views[rk]), "ok": not p,
+                                             **{k: p.get(k) for k in FIELDS if p}})
+            print(f"{len(problems)} flagged", file=sys.stderr)
+    if failed:
+        raise SystemExit(f"{failed} review batch(es) failed; rerun to retry them")
 
 
 def main():
     a = stage.args(__doc__)
     todo = stage.select("review", a)
-    print(f"{len(todo)} to review in batches of {BATCH}", file=sys.stderr)
+    print(f"{len(todo)} to review in batches of {BATCH}, {PARALLEL} at a time", file=sys.stderr)
     fixed = {}
     for rnd in range(ROUNDS + 1):
         if rnd:
