@@ -10,6 +10,7 @@
   ./fix.py N page "La Vérité (film)"      pin.page        -> fetch that page, rebuild csv
   ./fix.py N dismiss "festival year"      dismissed       -> rebuild csv
   ./fix.py N unset [KEY ...]              drop these overrides (all of N's when none given)
+  ./fix.py N unset rejected               let the review propose values you removed again
 
 Overrides live in entries/<rkey>/override.yaml. A file.field key replaces that field in the
 entry's view; the stage file keeps its computed value underneath and no stage rerun touches
@@ -17,7 +18,7 @@ it, so a fix stays until unset. pin.page is an input instead: stage 2 fetches th
 A dismissal records the fp of the row it dismissed (the review, or the parse for a post with
 no watchlist number) and lapses once that row changes. The
 LLM review (./step2_llm_review.sh) also writes page, title and year fixes there; `unset`
-drops one you don't want (it may propose it again on a later re-review).
+drops one you don't want and records its value under `rejected`, so the review won't set it again.
 """
 import argparse
 import os
@@ -27,6 +28,7 @@ import render
 import s2_descriptions as s2
 import stage
 import tables
+from tables import FIXES
 
 KEYS = {"title": "parsed.title", "year": "parsed.year", "page": "pin.page"}
 
@@ -55,7 +57,14 @@ def main():
         current = entries.read(rk, "override") or {}
         if unknown := [k for k in a.keys if k not in current]:
             sys.exit(f"#{a.number} has no override {', '.join(unknown)}; current: {', '.join(current) or 'none'}")
-        entries.unset_override(rk, a.keys or None)
+        keys = a.keys or list(current)
+        rejected = {} if "rejected" in keys else current.get("rejected", {})
+        for k in keys:
+            if k in FIXES.values() and current[k] not in rejected.get(k, []):
+                rejected = {**rejected, k: [*rejected.get(k, []), current[k]]}
+        entries.unset_override(rk, keys)
+        if rejected:
+            entries.set_override(rk, "rejected", rejected)
 
     v = entries.view(rk)
     if a.cmd != "dismiss" and stage.ready("wikipedia", v) and not tables.fresh("wikipedia", v):

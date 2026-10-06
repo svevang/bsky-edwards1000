@@ -59,12 +59,14 @@ files:
       removing a key brings the computed value back. pin.page is a stage input, not a
       patch: stage 2 fetches that exact page, and the view shows the page it resolved to.
       dismissed clears a flag: it holds the fp of the row it dismissed (the review, or the
-      parse when there is no watchlist number) and lapses once that row changes.
+      parse when there is no watchlist number) and lapses once that row changes. rejected
+      lists values removed by hand per key; the LLM review never sets them again.
     examples:
       parsed.title: THE V.I.P.s
       parsed.year: 1964
       pin.page: La Vérité (film)
       dismissed: {fp: 3f2a9c1b7d4e, reason: festival year}
+      rejected: {pin.page: [Mothra (1961 film)]}
 
   deleted:
     written_by: s0_download.py

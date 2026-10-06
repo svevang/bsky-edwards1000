@@ -16,7 +16,7 @@ returns. --limit K reviews just K rows so you can check the output early; --redo
 about one row. These apply to the first round.
 
 Manual: `./fix.py N dismiss "reason"` dismisses a flag until the row sent for review changes;
-`./fix.py N unset KEY` drops a fix you don't want.
+`./fix.py N unset KEY` drops a fix you don't want, and the review won't set that value again.
 """
 import json
 import re
@@ -114,6 +114,9 @@ def check(key, new, cur, overrides, certain, year):
     """(why it is skipped, or None to apply; the value to write) for one suggested fix."""
     if key == "parsed.year":
         new = int(new)
+    rejected = (overrides.get("rejected") or {}).get(key, [])
+    if any(same(key, new, r) for r in rejected):
+        return "removed by hand before", new
     if same(key, new, cur):
         return "already current", new
     if key in overrides and not certain:
@@ -127,6 +130,8 @@ def check(key, new, cur, overrides, certain, year):
         return "page is not about a single film", s["title"]
     if not near_year(s["extract"], year):
         return f"page is not about a film from around {year}", s["title"]
+    if any(same(key, s["title"], r) for r in rejected):
+        return "removed by hand before", s["title"]
     return ("already current" if same(key, s["title"], cur) else None), s["title"]
 
 
