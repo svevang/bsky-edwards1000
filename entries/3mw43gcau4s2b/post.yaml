@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mw43gcau4s2b
 cid: bafyreie6n27xb4gndgcvximsm67yu5wl4wvfcn2iseisoxvlbhupafdywa
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mw43gcau4s2b
-createdAt: '2026-09-22T11:05:34.501Z'
-text: "#Edwards1000SixtiesMovies \n\n487/1000:\nTHE DISORDERLY ORDERLY \n\nAnother outrageously funny comedy featuring Jerry Lewis once again in another laughable role, this time as an orderly at a medical sanitarium. It may be an ordinary comedy film for some, but in reality, it is also a satire of healthcare."
 record:
   text: "#Edwards1000SixtiesMovies \n\n487/1000:\nTHE DISORDERLY ORDERLY \n\nAnother outrageously funny comedy featuring Jerry Lewis once again in another laughable role, this time as an orderly at a medical sanitarium. It may be an ordinary comedy film for some, but in reality, it is also a satire of healthcare."
   $type: app.bsky.feed.post

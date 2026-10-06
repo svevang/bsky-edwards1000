@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mbftnhyahs2z
 cid: bafyreich7jayf6a5ffzbqmfly4dzwfuczw5wyhazydsmbzl25ssnb7ciee
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mbftnhyahs2z
-createdAt: '2026-01-02T02:23:58.640Z'
-text: "#Edwards1000SixtiesMovies \n\n253/1000:\nTHE EXTERMINATING ANGEL\n\nDirector Buñuel made this eerie, surrealistic comic film just a year after the internationally sensational Viridiana. In this bizarre masterpiece, a group of elite people find themselves unable to leave the mansion where they had dinner."
 record:
   text: "#Edwards1000SixtiesMovies \n\n253/1000:\nTHE EXTERMINATING ANGEL\n\nDirector Buñuel made this eerie, surrealistic comic film just a year after the internationally sensational Viridiana. In this bizarre masterpiece, a group of elite people find themselves unable to leave the mansion where they had dinner."
   $type: app.bsky.feed.post

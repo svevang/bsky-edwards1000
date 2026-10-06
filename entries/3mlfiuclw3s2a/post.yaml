@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mlfiuclw3s2a
 cid: bafyreidb3jtxz5ucs7klr56un4ota5uro57pknjzvfen7k35lmu5664qra
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mlfiuclw3s2a
-createdAt: '2026-05-09T05:22:52.983Z'
-text: "#Edwards1000SixtiesMovies \n\n375/1000:\nMAGNET OF DOOM\n\nIn my opinion, this should be included among the most underrated films in French cinema. Belmondo and co-actor Charles Vanel display a certain level of gravitas in their roles similar to that of Thelma & Louise, albeit with a more serious tone."
 record:
   text: "#Edwards1000SixtiesMovies \n\n375/1000:\nMAGNET OF DOOM\n\nIn my opinion, this should be included among the most underrated films in French cinema. Belmondo and co-actor Charles Vanel display a certain level of gravitas in their roles similar to that of Thelma & Louise, albeit with a more serious tone."
   $type: app.bsky.feed.post

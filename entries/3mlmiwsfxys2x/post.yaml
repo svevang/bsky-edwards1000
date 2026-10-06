@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mlmiwsfxys2x
 cid: bafyreib2wa3agxqf5fuqxhu7ozmcc55dqp6kev26gdfaa24bie3pinacjy
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mlmiwsfxys2x
-createdAt: '2026-05-12T00:12:54.869Z'
-text: "#Edwards1000SixtiesMovies \n\n380/1000:\nTHE GUN HAWK\n\nIt has been a while since I saw a movie starring Rory Calhoun, but his handsome looks was still the same. Got to lament that this Western faded into obscurity long after its release, because I found it good after I watched it throughout."
 record:
   text: "#Edwards1000SixtiesMovies \n\n380/1000:\nTHE GUN HAWK\n\nIt has been a while since I saw a movie starring Rory Calhoun, but his handsome looks was still the same. Got to lament that this Western faded into obscurity long after its release, because I found it good after I watched it throughout."
   $type: app.bsky.feed.post

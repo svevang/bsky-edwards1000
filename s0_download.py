@@ -10,7 +10,7 @@ the marker is removed. A download with no posts at all is refused rather than de
 import sys
 import entries
 import stage
-from bsky_tag_dl import fetch
+from bsky_tag_dl import fetch, rkey
 
 
 def main():
@@ -21,7 +21,7 @@ def main():
         sys.exit("download returned no posts; not marking any entries deleted")
     seen, written, back = set(), 0, 0
     for p in posts:
-        rk = p["url"].rsplit("/", 1)[-1]
+        rk = rkey(p["uri"])
         seen.add(rk)
         if entries.read(rk, "post") != p:
             entries.write(rk, "post", p)

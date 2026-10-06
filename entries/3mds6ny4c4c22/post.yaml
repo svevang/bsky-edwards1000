@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mds6ny4c4c22
 cid: bafyreifr32bqhqn2kckr5in37moprfzhizhypfbwy6lghj6gtcru2f75je
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mds6ny4c4c22
-createdAt: '2026-02-01T11:03:26.843Z'
-text: "#Edwards1000SixtiesMovies \n\n276/1000:\nHMS DEFIANT\n\nThis can be considered as \"Crimson Tide\" on a British Royal Navy ship, as it tells the battle of wills between Captain Crawford and his lieutenant Scott-Padget, who have contradicting ways on how to lead the ship's crew."
 record:
   text: "#Edwards1000SixtiesMovies \n\n276/1000:\nHMS DEFIANT\n\nThis can be considered as \"Crimson Tide\" on a British Royal Navy ship, as it tells the battle of wills between Captain Crawford and his lieutenant Scott-Padget, who have contradicting ways on how to lead the ship's crew."
   $type: app.bsky.feed.post

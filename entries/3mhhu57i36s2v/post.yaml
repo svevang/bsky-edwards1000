@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mhhu57i36s2v
 cid: bafyreicshablzczqpsmzaeudijp2kibnqnglwnvytn55xgglm5ry2d3uxe
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mhhu57i36s2v
-createdAt: '2026-03-20T06:09:15.824Z'
-text: "#Edwards1000SixtiesMovies \n\n318/1000:\nTHE GIRL WHO KNEW TOO MUCH\n\nDirected by Italian cinema legend Mario Bava, this mystery-thriller film set in Rome is often considered as the first giallo movie. It explores a young American female tourist caught up in a string of murders committed alphabetically."
 record:
   text: "#Edwards1000SixtiesMovies \n\n318/1000:\nTHE GIRL WHO KNEW TOO MUCH\n\nDirected by Italian cinema legend Mario Bava, this mystery-thriller film set in Rome is often considered as the first giallo movie. It explores a young American female tourist caught up in a string of murders committed alphabetically."
   $type: app.bsky.feed.post

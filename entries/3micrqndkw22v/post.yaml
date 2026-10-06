@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3micrqndkw22v
 cid: bafyreihkvnayeuarobersqheu3wbzuoeqy7xbdkxl2cugjrovzkluezmkm
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3micrqndkw22v
-createdAt: '2026-03-30T23:08:19.630Z'
-text: "#Edwards1000SixtiesMovies \n\n331/1000:\nFUN IN ACAPULCO\n\nThis Elvis comedy-romance film takes place in Acapulco, which by the 60s was already a popular destination for tourists in Mexico. Its storyline concerns a recently fired sailor who turns lifeguard and singer at a major Acapulco hotel."
 record:
   text: "#Edwards1000SixtiesMovies \n\n331/1000:\nFUN IN ACAPULCO\n\nThis Elvis comedy-romance film takes place in Acapulco, which by the 60s was already a popular destination for tourists in Mexico. Its storyline concerns a recently fired sailor who turns lifeguard and singer at a major Acapulco hotel."
   $type: app.bsky.feed.post

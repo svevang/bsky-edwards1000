@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mbapgztso22f
 cid: bafyreibklov3n4uromkfgvjwxfp27pkifh5g6xnaaabn4vgiceinrjp33u
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mbapgztso22f
-createdAt: '2025-12-31T01:25:28.848Z'
-text: "#Edwards1000SixtiesMovies \n\n250/1000:\nIN SEARCH OF THE CASTAWAYS\n\nBased on Jules Verne's novel Captain Grant's Children, this Disney movie perfectly makes use of matte paintings and other special effects to capture the South America-set adventure scenes. A Hayley Mills movie for the ages indeed."
 record:
   text: "#Edwards1000SixtiesMovies \n\n250/1000:\nIN SEARCH OF THE CASTAWAYS\n\nBased on Jules Verne's novel Captain Grant's Children, this Disney movie perfectly makes use of matte paintings and other special effects to capture the South America-set adventure scenes. A Hayley Mills movie for the ages indeed."
   $type: app.bsky.feed.post

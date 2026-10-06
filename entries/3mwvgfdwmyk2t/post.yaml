@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mwvgfdwmyk2t
 cid: bafyreibalabhdqu72tngzhcci7ry6ta74qapq5mgr3irvyn2ym7vsfbwbi
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mwvgfdwmyk2t
-createdAt: '2026-10-02T12:58:27.328Z'
-text: "#Edwards1000SixtiesMovies \n\n495/1000:\nINVITATION TO A GUNFIGHTER\n\nA soldier returns home only to find out that his farm has been confiscated and sold by his town's corrupt boss. Moreover, the boss has hired a mysterious hitman to kill the soldier, but the hitman has unconventional plans of his own."
 record:
   text: "#Edwards1000SixtiesMovies \n\n495/1000:\nINVITATION TO A GUNFIGHTER\n\nA soldier returns home only to find out that his farm has been confiscated and sold by his town's corrupt boss. Moreover, the boss has hired a mysterious hitman to kill the soldier, but the hitman has unconventional plans of his own."
   $type: app.bsky.feed.post

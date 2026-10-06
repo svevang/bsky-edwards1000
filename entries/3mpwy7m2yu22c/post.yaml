@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mpwy7m2yu22c
 cid: bafyreic6y6rwii4c42ocgx55q3hqan7f253ayfjzpoqxw7krxy5zph65ny
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mpwy7m2yu22c
-createdAt: '2026-07-06T01:53:40.205Z'
-text: "#Edwards1000SixtiesMovies \n\n413/1000:\nA HARD DAY'S NIGHT\n\nReleased during the height of the Beatles' popularity in the international music scene, this film captures 36 hours in the lives of the iconic band as they prepare for a live performance on television."
 record:
   text: "#Edwards1000SixtiesMovies \n\n413/1000:\nA HARD DAY'S NIGHT\n\nReleased during the height of the Beatles' popularity in the international music scene, this film captures 36 hours in the lives of the iconic band as they prepare for a live performance on television."
   $type: app.bsky.feed.post

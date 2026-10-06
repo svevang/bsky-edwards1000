@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mr7tgpafy22t
 cid: bafyreifnuepw4ifwz2woujq4nktvplkczmwv4h32zwjcgo7we6vzvclbra
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mr7tgpafy22t
-createdAt: '2026-07-22T07:47:18.974Z'
-text: "#Edwards1000SixtiesMovies \n\n430/1000:\nFALL OF THE ROMAN EMPIRE\n\nWhile this historical epic film was a notable example of a grand, large-scale production that became a total box office dud, this has become an interesting movie to watch, due to its many similarities with Ridley Scott's Gladiator."
 record:
   text: "#Edwards1000SixtiesMovies \n\n430/1000:\nFALL OF THE ROMAN EMPIRE\n\nWhile this historical epic film was a notable example of a grand, large-scale production that became a total box office dud, this has become an interesting movie to watch, due to its many similarities with Ridley Scott's Gladiator."
   $type: app.bsky.feed.post

@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mc5ilob4cc24
 cid: bafyreicoudvkhv35r5jwldrzliszklq4zidjtx6wfhi2sl3uc7d4ojnxdq
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mc5ilob4cc24
-createdAt: '2026-01-11T12:10:00.666Z'
-text: "#Edwards1000SixtiesMovies \n\n261/1000:\nTHE MAGIC SWORD\n\nThis fantasy film's plotline may be a little bit cliche, but it was still a pretty great, campy medieval watch for me. It's full of fun moments that include a magic sword, lots of sorcery, red lighting, resurrected knights and lastly, a dragon."
 record:
   text: "#Edwards1000SixtiesMovies \n\n261/1000:\nTHE MAGIC SWORD\n\nThis fantasy film's plotline may be a little bit cliche, but it was still a pretty great, campy medieval watch for me. It's full of fun moments that include a magic sword, lots of sorcery, red lighting, resurrected knights and lastly, a dragon."
   $type: app.bsky.feed.post

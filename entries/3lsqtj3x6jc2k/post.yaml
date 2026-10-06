@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lsqtj3x6jc2k
 cid: bafyreic6cfb2w5qhplu7fzm74ujtke6g3wgwtpfhp24eljdad643l4jw3q
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lsqtj3x6jc2k
-createdAt: '2025-06-29T14:02:54.514Z'
-text: "#Edwards1000SixtiesMovies \n\n60/1000:\nSEVEN THIEVES\n\nAnother hidden gem of 1960s crime cinema unlocked! This casino heist movie involved a group of seven individuals with different characters, led by a disgraced professor and a career thief, intent on robbing the vault of the casino at Monte Carlo..."
 record:
   text: "#Edwards1000SixtiesMovies \n\n60/1000:\nSEVEN THIEVES\n\nAnother hidden gem of 1960s crime cinema unlocked! This casino heist movie involved a group of seven individuals with different characters, led by a disgraced professor and a career thief, intent on robbing the vault of the casino at Monte Carlo..."
   $type: app.bsky.feed.post

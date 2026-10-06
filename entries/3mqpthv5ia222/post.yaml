@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mqpthv5ia222
 cid: bafyreifsxr4mbpxrs35l6hyyg62iustotvmxwhubaiwrlynwhrnd73naee
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mqpthv5ia222
-createdAt: '2026-07-15T23:05:22.934Z'
-text: "#Edwards1000SixtiesMovies \n\n422/1000:\nBECKET \n\nTwo legendary actors of 60s cinema share the screen together splendidly in this drama movie, based on the story of Thomas Becket, archbishop of Canterbury who clashed with King Henry II of England due to disagreements between church and state."
 record:
   text: "#Edwards1000SixtiesMovies \n\n422/1000:\nBECKET \n\nTwo legendary actors of 60s cinema share the screen together splendidly in this drama movie, based on the story of Thomas Becket, archbishop of Canterbury who clashed with King Henry II of England due to disagreements between church and state."
   $type: app.bsky.feed.post

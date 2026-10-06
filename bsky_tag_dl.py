@@ -42,6 +42,16 @@ def get(url, ua=UA, **params):
         time.sleep(2 * (attempt + 1))
 
 
+def rkey(uri):
+    """at://<did>/app.bsky.feed.post/<rkey> -> <rkey>"""
+    return uri.rsplit("/", 1)[-1]
+
+
+def post_url(uri):
+    """at://<did>/app.bsky.feed.post/<rkey> -> its bsky.app link"""
+    return f"https://bsky.app/profile/{uri.split('/')[2]}/post/{rkey(uri)}"
+
+
 def resolve(actor):
     """handle/DID -> (did, pds_endpoint)"""
     if not actor.startswith("did:"):
@@ -72,7 +82,7 @@ def tags_of(record):
 
 
 def fetch(actor, tag):
-    """All of actor's posts carrying #tag, oldest first."""
+    """All of actor's posts carrying #tag, oldest first, as {uri, cid, record}."""
     tag = tag.lstrip("#").lower()
     did, pds = resolve(actor)
     print(f"{actor} -> {did} @ {pds}", file=sys.stderr)
@@ -85,22 +95,14 @@ def fetch(actor, tag):
         for rec in page.get("records", []):
             scanned += 1
             if tag in tags_of(rec["value"]):
-                rkey = rec["uri"].rsplit("/", 1)[-1]
-                matches.append({
-                    "uri": rec["uri"],
-                    "cid": rec["cid"],
-                    "url": f"https://bsky.app/profile/{did}/post/{rkey}",
-                    "createdAt": rec["value"].get("createdAt"),
-                    "text": rec["value"].get("text", ""),
-                    "record": rec["value"],
-                })
+                matches.append({"uri": rec["uri"], "cid": rec["cid"], "record": rec["value"]})
         cursor = page.get("cursor")
         print(f"  scanned {scanned}, matched {len(matches)}", file=sys.stderr)
         if not cursor:
             break
         time.sleep(0.2)
 
-    matches.sort(key=lambda m: m["createdAt"] or "")
+    matches.sort(key=lambda m: m["record"].get("createdAt") or "")
     return matches
 
 

@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lqpyrc2cyk2a
 cid: bafyreicapxqerzlpotminz27k623ii53weoeo3psfaf5c53oigs2lpzxaq
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lqpyrc2cyk2a
-createdAt: '2025-06-03T19:13:55.055Z'
-text: "#Edwards1000SixtiesMovies\n\n25/1000:\nTHE LOST WORLD\n\nAn adaptation of Arthur Conan Doyle's sci-fi novel, this adventure movie is propelled by stunning special effects, spectacular scenes, and of course, the towering dinosaurs, created before the birth of CGI. \nJurassic Park of the '60s, simply put."
 record:
   text: "#Edwards1000SixtiesMovies\n\n25/1000:\nTHE LOST WORLD\n\nAn adaptation of Arthur Conan Doyle's sci-fi novel, this adventure movie is propelled by stunning special effects, spectacular scenes, and of course, the towering dinosaurs, created before the birth of CGI. \nJurassic Park of the '60s, simply put."
   $type: app.bsky.feed.post

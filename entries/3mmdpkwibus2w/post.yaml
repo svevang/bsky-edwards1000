@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mmdpkwibus2w
 cid: bafyreif77yd4vhk5kkfw2sut6gvgnxc7umxpeks3kq4npr3my74d7dqfte
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mmdpkwibus2w
-createdAt: '2026-05-21T05:42:46.661Z'
-text: "#Edwards1000SixtiesMovies \n\n386/1000:\nMIRACLE OF THE WHITE STALLIONS\n\nThis film tells the true story of the evacuation of the famous white Lipizzaner horses of the Spanish Riding School in Vienna during the Second World War. It's a distinct departure from other Disney films of the same period."
 record:
   text: "#Edwards1000SixtiesMovies \n\n386/1000:\nMIRACLE OF THE WHITE STALLIONS\n\nThis film tells the true story of the evacuation of the famous white Lipizzaner horses of the Spanish Riding School in Vienna during the Second World War. It's a distinct departure from other Disney films of the same period."
   $type: app.bsky.feed.post

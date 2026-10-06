@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3micrevof6k2v
 cid: bafyreiciemnxm4pr7d4gwzyavcmuh24cum6vls2gk37c2bhwaohjrgbsbe
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3micrevof6k2v
-createdAt: '2026-03-30T23:01:45.720Z'
-text: "#Edwards1000SixtiesMovies \n\n330/1000:\nTHE SERVANT\n\nBogarde delivers a striking performance as a seemingly nice  manservant who serves as a butler to a lazy young rich guy, but who has a hidden agenda in mind: to gain advantage over his slothful, loafing master..."
 record:
   text: "#Edwards1000SixtiesMovies \n\n330/1000:\nTHE SERVANT\n\nBogarde delivers a striking performance as a seemingly nice  manservant who serves as a butler to a lazy young rich guy, but who has a hidden agenda in mind: to gain advantage over his slothful, loafing master..."
   $type: app.bsky.feed.post

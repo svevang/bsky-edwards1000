@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mgs2y2gvhk2x
 cid: bafyreigh3iwvwcu2dikeyi5npf66ocx4gcl3cqgjoyyemg2n6hffabcvpq
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mgs2y2gvhk2x
-createdAt: '2026-03-11T14:13:04.726Z'
-text: "#Edwards1000SixtiesMovies \n\n303/1000:\nCLEOPATRA (LIZ TAYLOR'S VERSION)\n\nNevermind the professional and personal issues that plagued the production of this historical biopic of Ancient Egypt's last queen. All I really cared about is the magnificent, splendid visuals and Liz's sophisticated acting."
 record:
   text: "#Edwards1000SixtiesMovies \n\n303/1000:\nCLEOPATRA (LIZ TAYLOR'S VERSION)\n\nNevermind the professional and personal issues that plagued the production of this historical biopic of Ancient Egypt's last queen. All I really cared about is the magnificent, splendid visuals and Liz's sophisticated acting."
   $type: app.bsky.feed.post

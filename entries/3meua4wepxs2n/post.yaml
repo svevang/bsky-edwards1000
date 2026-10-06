@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3meua4wepxs2n
 cid: bafyreia6mlsxdjl4afq5iz634qxcb6dj7jsqkdci5f5svz42rpmvl42eta
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3meua4wepxs2n
-createdAt: '2026-02-15T00:00:13.184Z'
-text: "#Edwards1000SixtiesMovies \n\n290/1000:\nMERRILL'S MARAUDERS \n\nDirector Sam Fuller presents a top-notch war film that is based on the true story of Brig. Gen. Frank Merrill's 5307th Composite Unit, consisting of 3,000 volunteers, who risked their lives behind enemy lines in Burma during WW2."
 record:
   text: "#Edwards1000SixtiesMovies \n\n290/1000:\nMERRILL'S MARAUDERS \n\nDirector Sam Fuller presents a top-notch war film that is based on the true story of Brig. Gen. Frank Merrill's 5307th Composite Unit, consisting of 3,000 volunteers, who risked their lives behind enemy lines in Burma during WW2."
   $type: app.bsky.feed.post

@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lxkgnz6oek2r
 cid: bafyreiejopdkzjfmm3jcqff5x4rhs74mbwnbrwsn6uq7spjzmd6h5ep4ae
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lxkgnz6oek2r
-createdAt: '2025-08-29T16:03:00.443Z'
-text: "#Edwards1000SixtiesMovies \n\n121/1000:\nCURSE OF THE WEREWOLF \n\nThis is Hammer's only werewolf movie, and it's a real epic horror by beautifully condensing a narrative spanning several decades over its 90-minute runtime. The story is unique and brilliant, while the lavish sets are top form!!"
 record:
   text: "#Edwards1000SixtiesMovies \n\n121/1000:\nCURSE OF THE WEREWOLF \n\nThis is Hammer's only werewolf movie, and it's a real epic horror by beautifully condensing a narrative spanning several decades over its 90-minute runtime. The story is unique and brilliant, while the lavish sets are top form!!"
   $type: app.bsky.feed.post

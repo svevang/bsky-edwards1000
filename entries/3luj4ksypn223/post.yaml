@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3luj4ksypn223
 cid: bafyreighpprdjqycj5kyg52rzhdyieyh6rinx5yad3akdx5tvs7ugaftji
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3luj4ksypn223
-createdAt: '2025-07-21T23:14:01.269Z'
-text: "#Edwards1000SixtiesMovies \n\n89/1000:\nTHE SAVAGE INNOCENTS \n\nShot in real Arctic locations in Canada and Greenland, this drama film is all about a naive Eskimo guy with little contact with white people who finds it hard to be understood due to cultural differences..."
 record:
   text: "#Edwards1000SixtiesMovies \n\n89/1000:\nTHE SAVAGE INNOCENTS \n\nShot in real Arctic locations in Canada and Greenland, this drama film is all about a naive Eskimo guy with little contact with white people who finds it hard to be understood due to cultural differences..."
   $type: app.bsky.feed.post

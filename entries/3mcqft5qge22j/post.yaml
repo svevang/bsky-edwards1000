@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mcqft5qge22j
 cid: bafyreicl6oh3elqppclwihabhvr6v6gtobmcqhr65um64ts6nx5nyxzr3y
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mcqft5qge22j
-createdAt: '2026-01-19T00:41:05.602Z'
-text: "#Edwards1000SixtiesMovies \n\n269/1000:\nTARAS BULBA\n\nBased on Gogol's novel and set in 16th-century Ukraine, this historical epic film is centered on Taras Bulba's leadership of the Cossack troops against the Polish and the Turks, and his son's hard choice between love and loyalty to his family."
 record:
   text: "#Edwards1000SixtiesMovies \n\n269/1000:\nTARAS BULBA\n\nBased on Gogol's novel and set in 16th-century Ukraine, this historical epic film is centered on Taras Bulba's leadership of the Cossack troops against the Polish and the Turks, and his son's hard choice between love and loyalty to his family."
   $type: app.bsky.feed.post

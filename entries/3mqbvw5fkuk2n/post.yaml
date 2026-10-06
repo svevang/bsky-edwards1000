@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mqbvw5fkuk2n
 cid: bafyreifjs5rfpkepjobhtern5odmfby7oeomzqejyyny27lqqu3vssvqsy
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mqbvw5fkuk2n
-createdAt: '2026-07-10T10:11:52.468Z'
-text: "#Edwards1000SixtiesMovies \n\n416/1000:\nWOMAN IN THE DUNES\n\nBrilliantly executed and photographed throughout its whole runtime, this Japanese drama-thriller film may be one of the best examples of its cinema not to be helmed by Kurosawa. Emotions of despair and sadness are real and authentic."
 record:
   text: "#Edwards1000SixtiesMovies \n\n416/1000:\nWOMAN IN THE DUNES\n\nBrilliantly executed and photographed throughout its whole runtime, this Japanese drama-thriller film may be one of the best examples of its cinema not to be helmed by Kurosawa. Emotions of despair and sadness are real and authentic."
   $type: app.bsky.feed.post

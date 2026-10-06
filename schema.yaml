@@ -7,14 +7,11 @@
 
 files:
   post:
-    written_by: bsky_tag_dl.py
-    about: the raw post as downloaded
+    written_by: s0_download.py
+    about: the raw post as downloaded; the view adds text and createdAt from the record, and url from uri
     fields:
       uri: at:// URI of the post
       cid: content id of this version of the post
-      url: bsky.app link to the post
-      createdAt: when the post was made
-      text: post text
       record: the full post record from the API
 
   parsed:
@@ -34,7 +31,6 @@ files:
     fields:
       fp: fingerprint of the code version and request (title, year, pin.page)
       page: Wikipedia page title, or null when none was found
-      url: page URL
       description: intro text of the page
       note: why the page needs review; empty when it looks right
 

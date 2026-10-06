@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mkkfj52w6s2w
 cid: bafyreibhhjxryidjke4zuh6ygqdvjujfj5ynyercitapabcrp3iqkbr2yi
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mkkfj52w6s2w
-createdAt: '2026-04-28T10:41:03.927Z'
-text: "#Edwards1000SixtiesMovies \n\n361/1000:\nPT 109 \n\nThis war biopic film dramatizes the wartime experiences of President John F. Kennedy in the US Navy, during which he took charge of a PT boat, had it sunk in battle and signaled the naval authorities for rescue using a message carved in a coconut."
 record:
   text: "#Edwards1000SixtiesMovies \n\n361/1000:\nPT 109 \n\nThis war biopic film dramatizes the wartime experiences of President John F. Kennedy in the US Navy, during which he took charge of a PT boat, had it sunk in battle and signaled the naval authorities for rescue using a message carved in a coconut."
   $type: app.bsky.feed.post

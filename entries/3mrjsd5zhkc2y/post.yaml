@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mrjsd5zhkc2y
 cid: bafyreie5pbjjbycemnfmi6bfxnujg4gor6hbwszwr2ejx3m26db5e4odli
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mrjsd5zhkc2y
-createdAt: '2026-07-26T06:54:03.858Z'
-text: "#Edwards1000SixtiesMovies \n\n436/1000:\nTHE INCREDIBLE MR. LIMPET\n\nKnotts displays full comedic energy in this film as a bored, timid guy who gets his wish come true: to be transformed into a fish. What follows next is a talking fish's quest to assist the US Navy in tracking down German submarines."
 record:
   text: "#Edwards1000SixtiesMovies \n\n436/1000:\nTHE INCREDIBLE MR. LIMPET\n\nKnotts displays full comedic energy in this film as a bored, timid guy who gets his wish come true: to be transformed into a fish. What follows next is a talking fish's quest to assist the US Navy in tracking down German submarines."
   $type: app.bsky.feed.post

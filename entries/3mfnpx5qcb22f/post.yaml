@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mfnpx5qcb22f
 cid: bafyreibkvzgilb4wd7uizcayhcsphmp5kw7eriel75ybhhb6aqakbsksdi
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mfnpx5qcb22f
-createdAt: '2026-02-25T03:19:52.885Z'
-text: "#Edwards1000SixtiesMovies \n\n299/1000:\nESCAPE FROM ZAHRAIN\n\nSet in a fictional Middle East country, this escape adventure film features underrated performances from Yul as a fugitive political leader; Mineo as a young rebel; Warden as a wiseguy oil company employee; and Madlyn as a nurse."
 record:
   text: "#Edwards1000SixtiesMovies \n\n299/1000:\nESCAPE FROM ZAHRAIN\n\nSet in a fictional Middle East country, this escape adventure film features underrated performances from Yul as a fugitive political leader; Mineo as a young rebel; Warden as a wiseguy oil company employee; and Madlyn as a nurse."
   $type: app.bsky.feed.post

@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3m23z6hv3k22a
 cid: bafyreieu52ql7hbihrxirjx6gkhtoglsmklarsqvatvvnq4azsh5hzsozq
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3m23z6hv3k22a
-createdAt: '2025-10-01T02:39:58.894Z'
-text: "#Edwards1000SixtiesMovies \n\n165/1000:\nTHE MASK (1961 Canadian film)\n\nNot to be confused with Carrey's more popular 1994 comedy film of the same name. This little-known horror movie revolves around a cursed Aztec mask that brought strange nightmares to its owners, an archaeologist and a psychiatrist."
 record:
   text: "#Edwards1000SixtiesMovies \n\n165/1000:\nTHE MASK (1961 Canadian film)\n\nNot to be confused with Carrey's more popular 1994 comedy film of the same name. This little-known horror movie revolves around a cursed Aztec mask that brought strange nightmares to its owners, an archaeologist and a psychiatrist."
   $type: app.bsky.feed.post

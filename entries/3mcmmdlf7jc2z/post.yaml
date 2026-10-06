@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mcmmdlf7jc2z
 cid: bafyreic6pxi3bytxnbjcm4pxrdhab7ml57mt5dapniaxqzdckoa552736e
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mcmmdlf7jc2z
-createdAt: '2026-01-17T12:27:00.243Z'
-text: "#Edwards1000SixtiesMovies \n\n266/1000:\nKID GALAHAD (1962 version)\n\nAt first, I thought this Elvis boxing drama movie was a standalone flick with a distinct plot, but I found out while watching this that there was a previous film released in 1937 with the same title. It's a solid remake, indeed."
 record:
   text: "#Edwards1000SixtiesMovies \n\n266/1000:\nKID GALAHAD (1962 version)\n\nAt first, I thought this Elvis boxing drama movie was a standalone flick with a distinct plot, but I found out while watching this that there was a previous film released in 1937 with the same title. It's a solid remake, indeed."
   $type: app.bsky.feed.post

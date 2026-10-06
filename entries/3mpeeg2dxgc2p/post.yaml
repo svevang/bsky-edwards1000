@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mpeeg2dxgc2p
 cid: bafyreid3xj4jsfju3ncjk6tjqdhq2faotlze7gpwmypaidiuckkwmug3py
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mpeeg2dxgc2p
-createdAt: '2026-06-28T16:11:26.385Z'
-text: "#Edwards1000SixtiesMovies \n\n408/1000:\nA SHOT IN THE DARK\n\nIn the second movie of the Pink Panther film series, Inspector Clouseau becomes smitten with a beautiful maid, and is determined to prove her innocent of a murder case that took place at the house where the maid is working."
 record:
   text: "#Edwards1000SixtiesMovies \n\n408/1000:\nA SHOT IN THE DARK\n\nIn the second movie of the Pink Panther film series, Inspector Clouseau becomes smitten with a beautiful maid, and is determined to prove her innocent of a murder case that took place at the house where the maid is working."
   $type: app.bsky.feed.post

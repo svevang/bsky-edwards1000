@@ -13,6 +13,7 @@ import sys
 import tempfile
 import yaml
 import tables
+from bsky_tag_dl import post_url
 from parse import parse
 
 ENTRIES = "entries"
@@ -76,11 +77,15 @@ def save_text(p, text):
 
 
 def view(rk):
-    """{"post", stage files...: as read, absent when missing; "parsed": parse(post text);
+    """{"post": post.yaml plus text, createdAt and url taken from its record and uri;
+    stage files: as read, absent when missing; "parsed": parse(post text);
     "override": override.yaml}. Each override table.field replaces that field, but only in a
     table that exists; other keys (pin.page, dismissed) are left to the code that reads them."""
     v = {n: d for n in ("post", *tables.STORED) if (d := read(rk, n)) is not None}
     if "post" in v:
+        p = v["post"]
+        v["post"] = {**p, "text": p["record"].get("text", ""), "createdAt": p["record"].get("createdAt"),
+                     "url": post_url(p["uri"])}
         v["parsed"] = parse(v["post"]["text"])
     v["override"] = read(rk, "override") or {}
     for key, value in v["override"].items():

@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3lzhjicfz7s23
 cid: bafyreiho3kkhfk3hu6zg52eszqezhh5qu4xysalpcw6qhrdiwvzqmmxyoa
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3lzhjicfz7s23
-createdAt: '2025-09-22T23:05:54.050Z'
-text: "#Edwards1000SixtiesMovies \n\n153/1000:\nCOLOSSUS OF RHODES\n\nI never thought that the great cinema maestro Sergio Leone directed this ancient Greek historical epic, which makes use of the great wonder Colossus as a plot device. Leone starts his career with a simple yet enjoyable masterpiece..."
 record:
   text: "#Edwards1000SixtiesMovies \n\n153/1000:\nCOLOSSUS OF RHODES\n\nI never thought that the great cinema maestro Sergio Leone directed this ancient Greek historical epic, which makes use of the great wonder Colossus as a plot device. Leone starts his career with a simple yet enjoyable masterpiece..."
   $type: app.bsky.feed.post

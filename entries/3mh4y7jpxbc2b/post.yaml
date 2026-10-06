@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mh4y7jpxbc2b
 cid: bafyreif4nhjm3dtwhdxwoqxzrziyviy3h26vmbxosjx6sn7iznotjyzkpu
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mh4y7jpxbc2b
-createdAt: '2026-03-15T22:22:51.531Z'
-text: "#Edwards1000SixtiesMovies \n\n311/1000:\nTHE SWORD IN THE STONE\n\nThis Disney animated film is a family-friendly look at the early life and education of legendary King Arthur, his training under the tutelage of powerful yet forgetful wizard Merlin, and eventually, his successful retrieval of Excalubur."
 record:
   text: "#Edwards1000SixtiesMovies \n\n311/1000:\nTHE SWORD IN THE STONE\n\nThis Disney animated film is a family-friendly look at the early life and education of legendary King Arthur, his training under the tutelage of powerful yet forgetful wizard Merlin, and eventually, his successful retrieval of Excalubur."
   $type: app.bsky.feed.post

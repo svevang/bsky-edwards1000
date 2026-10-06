@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mkglxypvyk22
 cid: bafyreiejekxlhf37b62xp7od6t2svzb5o36gcs3u2qkp7jbiva4buzwpaa
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mkglxypvyk22
-createdAt: '2026-04-26T22:26:06.188Z'
-text: "#Edwards1000SixtiesMovies \n\n359/1000:\nTHE VICTORS\n\nThis all-star war drama film ingeniously intercuts actual newsreel footage of the events of the Second World War with scenes detailing the journey of an infantry squad from Sicily to Germany at the closing of the war."
 record:
   text: "#Edwards1000SixtiesMovies \n\n359/1000:\nTHE VICTORS\n\nThis all-star war drama film ingeniously intercuts actual newsreel footage of the events of the Second World War with scenes detailing the journey of an infantry squad from Sicily to Germany at the closing of the war."
   $type: app.bsky.feed.post

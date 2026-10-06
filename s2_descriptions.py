@@ -15,6 +15,7 @@ fetched; describe(rk) does one row and is also used by the review stage.
 import re
 import sys
 import time
+from urllib.parse import quote
 import entries
 import stage
 import tables
@@ -25,13 +26,17 @@ API = "https://en.wikipedia.org/w/api.php"
 
 
 def pages(**params):
-    """One API query with intro extract, url and disambiguation flag; the real, non-disambiguation
-    pages as {title, extract, url}, in search order."""
-    res = get(API, ua=UA, action="query", prop="extracts|info|pageprops", exintro=1, explaintext=1,
-              inprop="url", ppprop="disambiguation", redirects=1, format="json", **params)
+    """One API query with intro extract and disambiguation flag; the real, non-disambiguation
+    pages as {title, extract}, in search order."""
+    res = get(API, ua=UA, action="query", prop="extracts|pageprops", exintro=1, explaintext=1,
+              ppprop="disambiguation", redirects=1, format="json", **params)
     found = sorted((res or {}).get("query", {}).get("pages", {}).values(), key=lambda p: p.get("index", 99))
-    return [{"title": p["title"], "extract": (p.get("extract") or "").strip(), "url": p.get("fullurl")}
+    return [{"title": p["title"], "extract": (p.get("extract") or "").strip()}
             for p in found if not ("missing" in p or "invalid" in p or "disambiguation" in p.get("pageprops", {}))]
+
+
+def page_url(page):
+    return "https://en.wikipedia.org/wiki/" + quote(page.replace(" ", "_"), safe="()!:,*$;@=+/") if page else ""
 
 
 def canonical(page):
@@ -48,7 +53,7 @@ def norm(s):
 
 
 def candidates(query, limit=5):
-    """One API call: search + intro extract + url for each hit that isn't a disambiguation."""
+    """One API call: search + intro extract for each hit that isn't a disambiguation."""
     return pages(generator="search", gsrsearch=query, gsrlimit=limit, exlimit=limit)
 
 
@@ -138,8 +143,7 @@ def describe(rk):
         page, note = (s["title"], "") if s else (None, f"pinned page {pinned_page!r} not found")
     else:
         page, s, note = pick(title, year, search(title, year))
-    w = {"fp": tables.fp("wikipedia", v), "page": page, "url": s["url"] if s else None,
-         "description": s["extract"] if s else None, "note": note}
+    w = {"fp": tables.fp("wikipedia", v), "page": page, "description": s["extract"] if s else None, "note": note}
     entries.write(rk, "wikipedia", w)
     return w
 

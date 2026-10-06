@@ -1,8 +1,5 @@
 uri: at://did:plc:uidrgvgtx2nbdb2mkhiacpus/app.bsky.feed.post/3mrvqaz7b322f
 cid: bafyreihivp672evjfcip5xrowhqm7pul2p3emd2yhcvstkdzldnxy2lbhy
-url: https://bsky.app/profile/did:plc:uidrgvgtx2nbdb2mkhiacpus/post/3mrvqaz7b322f
-createdAt: '2026-07-31T00:49:01.116Z'
-text: "#Edwards1000SixtiesMovies\n\n440/1000:\nCHEYENNE AUTUMN \n\nAlthough I'm praising the cinematography, direction and sympathetic depiction of the Cheyenne Indians in John Ford's last Western film, the only element that I loathe is the unnecessary inclusion of an entire segment about Wyatt Earp."
 record:
   text: "#Edwards1000SixtiesMovies\n\n440/1000:\nCHEYENNE AUTUMN \n\nAlthough I'm praising the cinematography, direction and sympathetic depiction of the Cheyenne Indians in John Ford's last Western film, the only element that I loathe is the unnecessary inclusion of an entire segment about Wyatt Earp."
   $type: app.bsky.feed.post
