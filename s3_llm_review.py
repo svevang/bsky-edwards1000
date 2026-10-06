@@ -19,14 +19,13 @@ Manual: `./fix.py N dismiss "reason"` dismisses a flag until the row sent for re
 `./fix.py N unset KEY` drops a fix you don't want, and the review won't set that value again.
 """
 import json
-import re
 import subprocess
 import sys
 import entries
 import s2_descriptions as s2
 import stage
 import tables
-from tables import FIXES
+from tables import FIXES, TYPES
 
 BATCH = 60
 ROUNDS = 2  # extra review rounds for rows the review fixed
@@ -88,32 +87,17 @@ def same(key, a, b):
 def found(page, year):
     """A proposed page that doesn't exist (e.g. "Fun in Acapulco (film)" for "Fun in Acapulco"):
     the first search hit with the same title that is a single film from around `year`."""
-    want = bare(page)
+    want = s2.canonical(page.replace("_", " ")).strip()
     for c in s2.candidates(f'"{want}" {year} film'):
-        if (bare(c["title"]) == want and s2.one_film(c["extract"]) and s2.film_title(c["title"])
-                and near_year(c["extract"], year)):
+        if (s2.norm(c["title"]) == s2.norm(want) and s2.one_film(c["extract"]) and s2.film_title(c["title"])
+                and s2.year_ok(c["extract"], year, slack=1)):
             return c
     return None
 
 
-def bare(page):
-    """Page title without its trailing disambiguator, e.g. "Kid Galahad (1962 film)" -> "kid galahad"."""
-    return s2.canonical(page).replace("_", " ").strip().casefold()
-
-
-def near_year(extract, year):
-    """The intro dates the film within a year of `year` ("is a 1963 American film", or the year nearby)."""
-    lead = extract[:400]
-    stated = re.search(r"\b(?:is|was) an? (19\d\d)\b", lead)
-    if stated:
-        return abs(int(stated.group(1)) - int(year)) <= 1
-    return any(re.search(rf"\b{y}\b", lead) for y in (year - 1, year, year + 1))
-
-
 def check(key, new, cur, overrides, certain, year):
     """(why it is skipped, or None to apply; the value to write) for one suggested fix."""
-    if key == "parsed.year":
-        new = int(new)
+    new = TYPES[key](new)
     rejected = (overrides.get("rejected") or {}).get(key, [])
     if any(same(key, new, r) for r in rejected):
         return "removed by hand before", new
@@ -128,7 +112,7 @@ def check(key, new, cur, overrides, certain, year):
         return "page missing or a disambiguation", new
     if not (s2.one_film(s["extract"]) and s2.film_title(s["title"])):
         return "page is not about a single film", s["title"]
-    if not near_year(s["extract"], year):
+    if not s2.year_ok(s["extract"], year, slack=1):
         return f"page is not about a film from around {year}", s["title"]
     if any(same(key, s["title"], r) for r in rejected):
         return "removed by hand before", s["title"]

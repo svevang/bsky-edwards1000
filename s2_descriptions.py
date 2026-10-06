@@ -105,14 +105,19 @@ def one_film(extract):
     return bool(head) and not LINK_WORDS & {w.lower() for w in re.findall(r"[\w'-]+", head.group(1))}
 
 
+def year_ok(extract, year, slack=0):
+    """The intro dates the film within `slack` years of `year`: "is a 1961 ... film" is the
+    strongest signal; otherwise the year anywhere near the top."""
+    lead = extract[:400].lower()
+    stated = re.search(r"\bis a(?:n)? (19[5-7]\d)\b", lead)
+    if stated:
+        return abs(int(stated.group(1)) - int(year)) <= slack
+    return any(re.search(rf"\b{int(year) + d}\b", lead) for d in range(-slack, slack + 1))
+
+
 def score_page(want, year, page, extract):
     """(is_film, title_ok, year_ok) for a candidate page."""
-    lead = extract[:400].lower()
-    title_ok = norm(page) == want and film_title(page)
-    # "is a 1961 ... film" is the strongest signal; otherwise the year anywhere near the top
-    stated = re.search(r"\bis a(?:n)? (19[5-7]\d)\b", lead)
-    year_ok = (int(stated.group(1)) == int(year)) if stated else bool(re.search(rf"\b{year}\b", lead))
-    return (is_film(extract), title_ok, year_ok)
+    return (is_film(extract), norm(page) == want and film_title(page), year_ok(extract, year))
 
 
 def pick(title, year, cands):

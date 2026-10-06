@@ -19,8 +19,10 @@ VERSION = {
 TABLES = ("parsed", "wikipedia", "review")  # pipeline order
 STORED = ("wikipedia", "review")  # memos with a file and an fp
 
-# Review suggestion -> the override key it sets.
-FIXES = {"suggested_page": "pin.page", "suggested_title": "parsed.title", "suggested_year": "parsed.year"}
+# Overrides a person (fix.py <name>) or the review (suggested_<name>) can set: key and type.
+OVERRIDES = {"title": ("parsed.title", str), "year": ("parsed.year", int), "page": ("pin.page", str)}
+FIXES = {f"suggested_{name}": key for name, (key, _) in OVERRIDES.items()}
+TYPES = dict(OVERRIDES.values())
 
 
 def lookup(v, ref):

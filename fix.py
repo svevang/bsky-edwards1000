@@ -28,26 +28,22 @@ import entries
 import render
 import s2_descriptions as s2
 import tables
-from tables import FIXES
-
-KEYS = {"title": "parsed.title", "year": "parsed.year", "page": "pin.page"}
-
+from tables import FIXES, OVERRIDES
 
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("ref", metavar="N", help="watchlist number or rkey")
     sub = p.add_subparsers(dest="cmd", required=True)
-    sub.add_parser("title").add_argument("value")
-    sub.add_parser("year").add_argument("value", type=int)
-    sub.add_parser("page").add_argument("value")
+    for name, (_, type_) in OVERRIDES.items():
+        sub.add_parser(name).add_argument("value", type=type_)
     sub.add_parser("dismiss").add_argument("reason", nargs="?", default="")
     sub.add_parser("unset").add_argument("keys", nargs="*", metavar="KEY")
     a = p.parse_args()
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
     rk = entries.find(a.ref)
-    if a.cmd in KEYS:
-        entries.set_override(rk, KEYS[a.cmd], a.value)
+    if a.cmd in OVERRIDES:
+        entries.set_override(rk, OVERRIDES[a.cmd][0], a.value)
     elif a.cmd == "dismiss":
         v = entries.view(rk)
         if (s := entries.compute_status(v)) != "needs_review":
