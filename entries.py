@@ -2,7 +2,7 @@
 
 Files are named by stage without the extension ("post", "wikipedia", "review", "override");
 schema.yaml describes them and tables.py holds their rules. An empty deleted.yaml marks a post gone from the
-download. Status is never stored: status(rk) computes it from the files.
+download. Status is never stored: compute_status(view) works it out from the files.
 Every write goes through a temp file and os.replace, so a file is never half-written.
 
 view(rk) is what stages, status and outputs read: the post, its parse (computed, never
@@ -107,8 +107,15 @@ def set_deleted(rk, gone):
         os.remove(path(rk, "deleted"))
 
 
-def status(rk):
-    return "deleted" if deleted(rk) else compute_status(view(rk))
+def status_counts():
+    """{status: number of entries}, plus how many entries have overrides."""
+    counts, overridden = {}, 0
+    for rk in list_entries():
+        v = view(rk)
+        s = "deleted" if deleted(rk) else compute_status(v)
+        counts[s] = counts.get(s, 0) + 1
+        overridden += bool(v["override"])
+    return counts, overridden
 
 
 def live():

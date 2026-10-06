@@ -55,8 +55,5 @@ def ready(name, v):
 
 def finish(stage_name):
     """Print how many entries have each status."""
-    counts = {}
-    for rk in entries.list_entries():
-        s = entries.status(rk)
-        counts[s] = counts.get(s, 0) + 1
+    counts, _ = entries.status_counts()
     print(f"{stage_name}: {sum(counts.values())} entries {counts}", file=sys.stderr)

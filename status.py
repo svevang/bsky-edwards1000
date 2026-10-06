@@ -17,11 +17,7 @@ def short(value, n=200):
 
 
 def counts():
-    counts, overridden = {}, 0
-    for rk in entries.list_entries():
-        s = entries.status(rk)
-        counts[s] = counts.get(s, 0) + 1
-        overridden += bool(entries.read(rk, "override"))
+    counts, overridden = entries.status_counts()
     print(f"{sum(counts.values())} entries: {counts}")
     print(f"  {overridden} with overrides, {counts.get('deleted', 0)} deleted")
 

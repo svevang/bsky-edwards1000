@@ -162,14 +162,6 @@ def main():
         time.sleep(1.0)
     stage.finish("wikipedia")
 
-    bad = [v for _, v in entries.live() if "wikipedia" in v and tables.applies("wikipedia", v)
-           and tables.unsure("wikipedia", v)]
-    if bad:
-        print("review these (./fix.py N page \"Wikipedia Title\", or ./fix.py N title/year):", file=sys.stderr)
-        for v in sorted(bad, key=lambda v: v["parsed"]["number"] or 0):
-            print(f"  #{v['parsed']['number']} {v['parsed']['title']} -> {v['wikipedia']['page']}: "
-                  f"{v['wikipedia']['note']}", file=sys.stderr)
-
 
 if __name__ == "__main__":
     main()

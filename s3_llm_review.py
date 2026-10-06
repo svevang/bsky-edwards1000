@@ -209,15 +209,6 @@ def main():
     for rk, v in sorted(fixed_views.items(), key=lambda kv: (kv[1]["parsed"]["number"] or 0, kv[0])):
         n = v["parsed"]["number"] or 0
         print(f"  #{n:>3} {v['parsed']['title']:40} {', '.join(fixed[rk])}  -> {entries.compute_status(v)}")
-    flagged = sorted((v for _, v in entries.live() if "review" in v and tables.applies("review", v)
-                      and tables.unsure("review", v)),
-                     key=lambda v: v["parsed"]["number"] or 0)
-    if flagged:
-        print("still flagged:")
-    for v in flagged:
-        r = v["review"]
-        sug = ", ".join(f"{k.replace('suggested_', '')}={val!r}" for k in FIXES if (val := r.get(k)) not in (None, ""))
-        print(f"  #{v['parsed']['number']:>3} {v['parsed']['title']:40} {r.get('issue')}" + (f"  -> {sug}" if sug else ""))
 
 
 if __name__ == "__main__":
