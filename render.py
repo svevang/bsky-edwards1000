@@ -47,6 +47,11 @@ def report(rows, out="movies.csv"):
     attn = [r for r in rows if r["status"] == "needs_review"]
     pending = sum(r["status"] == "pending" for r in rows)
     print(f"{out}: {len(rows)} rows; {len(attn)} need attention")
+    nums = [r["number"] for r in rows if r["number"]]
+    if dups := sorted({n for n in nums if nums.count(n) > 1}):
+        print(f"  duplicate numbers: {dups}")
+    if gaps := sorted(set(range(1, max(nums, default=0) + 1)) - set(nums)):
+        print(f"  missing numbers: {gaps}")
     for r in attn:
         why = [s for s in (r["parse_note"], r["desc_note"], r["llm_issue"]) if s]
         print(f"  #{r['number'] or '?':>3} {r['title'] or '':40} {' | '.join(why)}  rkey={r['rkey']}")

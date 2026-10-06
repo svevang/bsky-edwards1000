@@ -30,18 +30,16 @@ def numbers(csv):
     return {int(n) for n in csv.split(",") if n.strip()}
 
 
-def select(name, a, number_of=None):
+def select(name, a):
     """rkeys whose stage file `name` is missing or stale, or asked for by --force/--redo.
     Skips deleted entries, entries the file doesn't apply to, and entries whose earlier
-    stage files are missing or stale. number_of(view) gives the watchlist number for
-    --only/--redo; by default the overridden parsed.number."""
-    number_of = number_of or (lambda v: schema.lookup(v, "parsed.number"))
+    stage files are missing or stale. --only/--redo match the overridden parsed.number."""
     redo, only = numbers(a.redo), numbers(a.only)
     todo = []
     for rk, v in entries.live():
         if not ready(name, v):
             continue
-        n = number_of(v)
+        n = schema.lookup(v, "parsed.number")
         if (only and n not in only) or not (a.force or n in redo or not schema.fresh(name, v)):
             continue
         todo.append((n is None, n or 0, rk))

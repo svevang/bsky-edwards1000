@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Step 1 (automated): download -> parse -> Wikipedia descriptions -> movies.csv.
+# Step 1 (automated): download -> Wikipedia descriptions -> movies.csv.
 # Every stage writes one file per post under entries/<rkey>/ and only processes
 # new/changed rows, so you can stop after any stage, inspect, fix, and continue.
 #
@@ -19,9 +19,8 @@ hr() { printf '\n\033[1m== %s ==\033[0m\n' "$1"; }
 if [[ "${1:-}" == "--skip-download" ]]; then shift; hr "0: download skipped"
 else hr "0: downloading #$TAG posts -> entries/*/post.yaml"; uv run python s0_download.py "$HANDLE" "$TAG"; fi
 
-hr "1: parse titles/years -> entries/*/parsed.yaml";        uv run python s1_parse.py "$@"
-hr "2: Wikipedia descriptions -> entries/*/wikipedia.yaml"; uv run python s2_descriptions.py "$@"
-hr "3: render -> movies.csv";                               uv run python render.py
+hr "1: Wikipedia descriptions -> entries/*/wikipedia.yaml"; uv run python s2_descriptions.py "$@"
+hr "2: render -> movies.csv";                               uv run python render.py
 
 cat <<'TXT'
 

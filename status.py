@@ -7,6 +7,7 @@
 import json
 import sys
 import entries
+import parse
 import schema
 
 
@@ -34,10 +35,14 @@ def trail(n):
         print(f"post:\n  {json.dumps(v['post']['text'][:300], ensure_ascii=False)}")
     else:
         print(f"#{n}  rkey={rk}\npost: (no post.yaml)")
-    for name in schema.stage_files():
-        raw = entries.read(rk, name)
-        state = ("not applicable" if not schema.applies(name, v) else "missing" if raw is None
-                 else "fresh" if schema.fresh(name, v) else "stale")
+    for name in ("parsed", *schema.stage_files()):
+        if name == "parsed":
+            raw = parse.parse(v["post"]["text"]) if "post" in v else None
+            state = "computed" if raw else "no post"
+        else:
+            raw = entries.read(rk, name)
+            state = ("not applicable" if not schema.applies(name, v) else "missing" if raw is None
+                     else "fresh" if schema.fresh(name, v) else "stale")
         print(f"{name}: ({state})")
         fields = [k for k in (raw or {}) if k != "fp"]
         fields += [k.split(".", 1)[1] for k in o if k.startswith(f"{name}.") and k.split(".", 1)[1] not in fields]

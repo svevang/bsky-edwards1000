@@ -40,7 +40,8 @@ def fp(name, view):
 
 
 def fresh(name, view):
-    return name in view and view[name].get("fp") == fp(name, view)
+    """Computed files (no fp inputs) are always fresh once present."""
+    return name in view and (not fp_inputs(name) or view[name].get("fp") == fp(name, view))
 
 
 def applies(name, view):

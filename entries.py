@@ -1,18 +1,19 @@
 """Entry store: one directory per post under entries/, one YAML file per stage.
 
-Files are named by stage without the extension ("post", "parsed", "wikipedia", "review",
-"override"); schema.yaml describes them. An empty deleted.yaml marks a post gone from the
+Files are named by stage without the extension ("post", "wikipedia", "review", "override");
+schema.yaml describes them. An empty deleted.yaml marks a post gone from the
 download. Status is never stored: status(rk) computes it from the files.
 Every write goes through a temp file and os.replace, so a file is never half-written.
 
-view(rk) is what stages, status and outputs read: the stage files with override.yaml
-applied over them. The overridden keys are view["override"].keys().
+view(rk) is what stages, status and outputs read: the post, its parse (computed, never
+stored) and the stage files, with override.yaml applied over them. The overridden keys are view["override"].keys().
 """
 import os
 import sys
 import tempfile
 import yaml
 import schema
+from parse import parse
 
 ENTRIES = "entries"
 
@@ -75,9 +76,12 @@ def save_text(p, text):
 
 
 def view(rk):
-    """{"post", stage files...: as read, absent when missing; "override": override.yaml}.
-    Each override file.field replaces that field, but only in a stage file that exists."""
+    """{"post", stage files...: as read, absent when missing; "parsed": parse(post text);
+    "override": override.yaml}. Each override file.field replaces that field, but only in a
+    file that exists."""
     v = {n: d for n in ("post", *schema.stage_files()) if (d := read(rk, n)) is not None}
+    if "post" in v:
+        v["parsed"] = parse(v["post"]["text"])
     v["override"] = read(rk, "override") or {}
     for key, value in v["override"].items():
         file, field = key.split(".", 1)
@@ -89,7 +93,7 @@ def view(rk):
 def compute_status(v):
     if "post" not in v:
         return "pending"
-    names = [n for n in schema.stage_files() if schema.applies(n, v)]
+    names = [n for n in ("parsed", *schema.stage_files()) if schema.applies(n, v)]
     if not all(schema.fresh(n, v) for n in names):
         return "pending"
     return "needs_review" if any(schema.unsure(n, v) for n in names) else "ok"

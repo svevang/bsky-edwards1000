@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage 3: parsed.yaml + wikipedia.yaml -> review.yaml, and override.yaml for what it fixes
+"""Stage 3: parsed title/year + wikipedia.yaml -> review.yaml, and override.yaml for what it fixes
 
 Sends rows in batches to Claude (via the `claude` CLI) and asks it to flag rows whose
 title, year and description disagree, or whose title looks mangled, and to propose a fix for

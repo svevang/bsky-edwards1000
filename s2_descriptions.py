@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage 2: parsed.yaml -> wikipedia.yaml  (Wikipedia intro per film)
+"""Stage 2: parsed title and year -> wikipedia.yaml  (Wikipedia intro per film)
 
 One API call per film (search + intro extract). A candidate page is accepted when it's a
 film, its title matches exactly (ignoring accents/leading article), and the stated release
